@@ -597,11 +597,11 @@ Luo uusi tiedosto. Tekstitiedostoon voi nyt "piirtää" kirjoitusmerkeillä halu
 
 ![](images/nppwhitespace.png)
 
-**Vinkki:** Kentän muokkaaminen voi olla helpompaa, kun painat `Insert`-näppäintä (tekstin korvaustila). Paina `Insert`-näppäintä uudelleen päästäksesi takaisiin normaaliin kirjoitustilaan.
+**Vinkki:** Kentän muokkaaminen voi olla helpompaa, kun painat `Insert`-näppäintä (tekstin korvaustila), jos näppäimistössäsi on sellainen. Paina `Insert`-näppäintä uudelleen päästäksesi takaisin normaaliin kirjoitustilaan.
 
 **Vinkki:** Käytä merkkeinä pelkästään isoja ja pieniä kirjaimia sekä numeroita. Erikoismerkit (Esim £) eivät välttämättä toimi oikein.
 
-Kun olet piirtänyt kentän, klikkaa tallennuskuvaketta, tai mene File » Save (Ctrl + S) ja anna tiedostolle nimeksi esimerkiksi "kentta1.txt" (ilman lainausmerkkejä), jos teit ensimmäisen kentän.
+Kun olet piirtänyt kentän, klikkaa tallennuskuvaketta, tai mene File » Save (Ctrl+S) ja anna tiedostolle nimeksi esimerkiksi "kentta1.txt" (ilman lainausmerkkejä), jos teit ensimmäisen kentän.
 
 Kun kenttä on valmis, palaa Rideriin.
 
@@ -746,9 +746,9 @@ Valitse **File**-valikosta **New...** luodaksesi uuden kuvan. Avautuvaan ikkunaa
 
 ![](images/paintnew.jpeg)
 
-Kuvan zoomaustasoa voi säätää painamalla **Ctrl** pohjaan ja käyttämällä hiiren rullaa tai **+** ja **-** -näppäimiä.
+Kuvan zoomaustasoa voi säätää valikosta View » Zoom In / Zoom Out, tai painamalla **Ctrl** pohjaan ja käyttämällä hiiren rullaa.
 
-Poista vielä valkoinen tausta valitsemalla kaikki (**Ctrl+A**) ja painamalla **Delete**-näppäintä. Nyt kuvan pitäisi näyttää tältä:
+Poista vielä valkoinen tausta valitsemalla kaikki (Edit » Select All tai **Ctrl+A**) ja poistamalla valinta (Edit » Erase Selection tai **Delete**). Nyt kuvan pitäisi näyttää tältä:
 
 ![](images/painttyhja.jpeg)
 

@@ -11,12 +11,12 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
 
 - [x] Nimeä tutoriaalien vaiheet valikossa ja sivujen otsikoissa
       ("Vaihe 2: Pallo liikkeelle" eikä "Vaihe 2").
-- [x] Korjaa `perusteet/projektin-luonti.md`: tyhjä koodilohko, katkennut
+- [x] Korjaa `aloittaminen/projektin-luonti.md`: tyhjä koodilohko, katkennut
       polku "C:", ja "takaisin pong-tutoriaaliin" -linkki, joka olettaa
       lukijan tulleen Pongista.
-- [x] Poista asennus- ja projektinluontiohjeiden kopio `mallit/index.md`:stä
+- [x] Poista asennus- ja projektinluontiohjeiden kopio `tutoriaalit/index.md`:stä
       ja linkitä aloitusosioon.
-- [x] Pura `muut/`-hakemisto: `sisallon-tuonti.md` → `perusteet/`,
+- [x] Pura `muut/`-hakemisto: `sisallon-tuonti.md` → `aloittaminen/`,
       `kuvan-lapinakyvyys.md` → `grafiikka/`. Päivitä linkit.
 - [x] Korvaa trac-wikin linkit (29 kpl): sivuston omiin sivuihin, tai
       ohj1-materiaaliin (`ohjelmointi1.it.jyu.fi/luennot/...`), tai poista.
@@ -55,9 +55,9 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
 
 ## 3. Uudet sivut
 
-- [x] `perusteet/ensimmainen-peli.md`: 10 rivin peli ajonapilla, ctrl-F5,
+- [x] `aloittaminen/ensimmainen-peli.md`: 10 rivin peli ajonapilla, ctrl-F5,
       mitä `Begin` tekee.
-- [x] `perusteet/pelin-rakenne.md`: PhysicsGame vs Game, `Begin`,
+- [x] `aloittaminen/pelin-rakenne.md`: PhysicsGame vs Game, `Begin`,
       koordinaatisto (origo keskellä, y ylös), yksiköt, Level/Camera/Screen.
 - [x] `ohjelmointi/mihin-koodi-kirjoitetaan.md`: paikallinen muuttuja vs
       attribuutti, oma aliohjelma, tapahtumankäsittelijä.
@@ -65,7 +65,7 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
       löydy, kuva ei löydy (Content, Copy if newer), peli ei käynnisty.
 - [x] `viite/pikaohje.md`: yhden sivun cheat sheet yleisimmistä riveistä.
 - [ ] Tarkistuta uudet sivut Jypelin ylläpitäjällä (yksiköt, oletukset,
-      projektimallien nimet). Erityisesti `perusteet/erilaisia-peleja.md`
+      projektimallien nimet). Erityisesti `aloittaminen/erilaisia-peleja.md`
       tarvitsee projektimallien taulukon; trac-linkki poistettu.
 
 ## 4. Sivujen sisäinen rakenne (jatkuva)

@@ -56,8 +56,9 @@ Riveillä tapahtuu tämä:
 2. Asetetaan muodoksi ympyrä ja väriksi punainen.
 3. Lisätään pallo kentälle. **Ilman `Add`-riviä olio ei näy.**
 
-Paina **Ctrl+F5**. Pallo on kentän keskellä, sillä kentän origo on ruudun
-keskipisteessä. Pelin voi sulkea Esc-näppäimellä.
+Aja peli klikkaamalla vihreää kolmiota (**Run**). Pallo on kentän keskellä,
+sillä kentän origo on ruudun keskipisteessä. Ikkunan voi sulkea sen oikeassa
+yläkulmassa olevasta rastista tai Esc-näppäimellä.
 
 ## Painovoima ja lattia
 
@@ -136,6 +137,6 @@ public class Pong : PhysicsGame
 
 - [Miten Jypeli-peli toimii](pelin-rakenne.md): koordinaatisto, kenttä,
   kamera ja pelin osat.
-- [Pong-opas](../mallit/pong/index.md): kokonainen peli vaihe kerrallaan.
+- [Pong-opas](../tutoriaalit/pong/index.md): kokonainen peli vaihe kerrallaan.
 - [Mihin koodi kirjoitetaan](../ohjelmointi/mihin-koodi-kirjoitetaan.md),
   kun peli kasvaa yhtä aliohjelmaa suuremmaksi.

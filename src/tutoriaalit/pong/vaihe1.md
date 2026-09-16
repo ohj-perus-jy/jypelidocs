@@ -113,7 +113,7 @@ public override void Begin()
 
 Huomaa, että vaikka meillä oli muuttuja nimeltä pallo, se olikin aluksi pelissä neliön muotoinen. *Tietokone ei siis ymmärrä mitä muuttujien nimet tarkoittavat.* Se ei yleensä välitä niistä niin kauan kuin nimiä vain käyttää sen mielestä oikein. Nimet ovat kuitenkin tärkeitä ihmisille, jotka yrittävät ymmärtää ohjelmakoodia. Hyvin ja kuvaavasti nimetyt muuttujat ja aliohjelmat helpottavat huomattavasti koodin lukemista niin koodin kirjoittajan kuin lukijankin kannalta! Eihän olisi ymmärrettävää antaa pallolle nimeksi esimerkiksi "kolmio", "olio1" tai "sdaydfs".
 
-Nyt kun ajat ohjelman (Riderissa Ctrl+F5-näppäin), pitäisi keskellä ruutua näkyä pallo, kuten tämän sivun alussa olevassa kuvassa.
+Nyt kun ajat ohjelman (Riderissa vihreä **Run**-kolmio), pitäisi keskellä ruutua näkyä pallo, kuten tämän sivun alussa olevassa kuvassa.
 
 > [!KOKEILE]
 

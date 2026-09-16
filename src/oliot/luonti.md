@@ -65,4 +65,4 @@ pallo.Add(hattu);                // Huom! Hattu lisätään pallon lapsiolioksi
 - [Oliotyypit](oliotyypit.md): PhysicsObject, GameObject, PlatformCharacter ja muut.
 - [Ulkonäkö](ulkonako.md): väri, kuva, koko ja kulma.
 - [Olion tuhoaminen](tuhoaminen.md).
-- [Miten Jypeli-peli toimii](../perusteet/pelin-rakenne.md): koordinaatisto ja miksi olio ei näy.
+- [Miten Jypeli-peli toimii](../aloittaminen/pelin-rakenne.md): koordinaatisto ja miksi olio ei näy.

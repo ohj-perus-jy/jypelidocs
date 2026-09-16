@@ -8,19 +8,6 @@ Riderissa. Ennen tätä Rider ja Jypeli pitää olla asennettuina, ks.
 kuva- ja äänitiedostoja yhtenä kokonaisuutena. Jokainen peli on oma
 projektinsa.
 
-## Yliopiston koneilla: Jypelin projektimallit
-
-Yliopiston koneilla Rider on jo asennettu, mutta Jypelin projektimallit
-pitää asentaa kerran. Avaa Käynnistä-valikosta *Command prompt*, anna komento
-ja paina Enter:
-
-```bash
-dotnet new install Jypeli.Templates
-```
-
-Sen jälkeen voit sulkea Command promptin. Omalla koneella tämä on tehty jo
-asennuksen yhteydessä.
-
 ## Projektin luominen Riderissa
 
 Käynnistä Rider työpöydän pikakuvakkeesta tai Käynnistä-valikosta
@@ -29,7 +16,7 @@ Käynnistä Rider työpöydän pikakuvakkeesta tai Käynnistä-valikosta
 1. Klikkaa **New Solution**.
 2. Valitse vasemmalla olevasta listasta **Fysiikkapeli** (vieritä listaa
    alaspäin). Jos Fysiikkapeliä ei näy, projektimalleja ei ole asennettu;
-   palaa edelliseen kohtaan tai [asennusohjeeseen](asentaminen.md).
+   katso [asennusohje](asentaminen.md#yliopiston-koneilla-jypelin-projektimallit).
 3. Kirjoita **Solution name** -kohtaan pelin nimi, esimerkiksi `Pong`. Käytä
    nimessä vain englanninkielisiä kirjaimia ja numeroita, ei välilyöntejä
    eikä ääkkösiä.
@@ -41,8 +28,9 @@ Käynnistä Rider työpöydän pikakuvakkeesta tai Käynnistä-valikosta
 
 ## Kokeile, että peli käynnistyy
 
-Paina **Ctrl+F5**. Jos ruudulle aukeaa vaaleansininen ikkuna, projekti on
-luotu oikein. Ikkunan voi sulkea Esc-näppäimellä.
+Klikkaa Riderin ikkunan yläreunassa olevaa vihreää kolmiota (**Run**). Jos
+ruudulle aukeaa vaaleansininen ikkuna, projekti on luotu oikein. Ikkunan voi
+sulkea sen oikeassa yläkulmassa olevasta rastista.
 
 Peli on nyt tyhjä. Mitä projektissa on ja mihin koodi kirjoitetaan, kerrotaan
 sivulla [Ensimmäinen peli](ensimmainen-peli.md).
@@ -50,6 +38,6 @@ sivulla [Ensimmäinen peli](ensimmainen-peli.md).
 ## Muut projektimallit
 
 Fysiikkapeli sopii useimpiin peleihin ja sitä käyttävät myös
-[oppaat](../mallit/index.md). Listassa on muitakin malleja, esimerkiksi
+[oppaat](../tutoriaalit/index.md). Listassa on muitakin malleja, esimerkiksi
 tavallinen Peli ilman fysiikkamoottoria. Niistä kerrotaan sivulla
 [Millaisia pelejä voin tehdä?](erilaisia-peleja.md).

@@ -2,7 +2,7 @@
 
 ## Taustamusiikki
 
-Taustamusiikin soittamista varten täytyy ihan ensimmäisenä tuoda taustamusiikiksi haluttu tiedosto mukaan projektiin. Taustamusiikin **tulee olla wav-tiedosto**. Liitä tiedostosi projektiin käyttämällä apuna ohjeita [sisällön tuomisesta](../perusteet/sisallon-tuonti.md).
+Taustamusiikin soittamista varten täytyy ihan ensimmäisenä tuoda taustamusiikiksi haluttu tiedosto mukaan projektiin. Taustamusiikin **tulee olla wav-tiedosto**. Liitä tiedostosi projektiin käyttämällä apuna ohjeita [sisällön tuomisesta](../aloittaminen/sisallon-tuonti.md).
 
 Kun musiikkitiedosto on liitetty projektiin, saa sen soimaan seuraavalla koodilla:
 
@@ -30,7 +30,7 @@ MediaPlayer.IsRepeating = true;
 
 Ihan ensimmäisenä pitää olla äänitiedosto, jota voidaan pelissä soittaa. Niiden tekemiseen on monia työkaluja tai voi hakea internetistä.
 
-Kun äänitiedosto on olemassa, se pitää vielä liittää projektiin. Katso sitä varten ohjeet [sisällön tuomisesta](../perusteet/sisallon-tuonti.md). **Äänen täytyy olla .wav-tiedosto.** Kun äänitiedosto on liitetty projektiin, ääni on valmis soitettavaksi seuraavilla tavoilla:
+Kun äänitiedosto on olemassa, se pitää vielä liittää projektiin. Katso sitä varten ohjeet [sisällön tuomisesta](../aloittaminen/sisallon-tuonti.md). **Äänen täytyy olla .wav-tiedosto.** Kun äänitiedosto on liitetty projektiin, ääni on valmis soitettavaksi seuraavilla tavoilla:
 
 Ääniefektien lataaminen tehdään samaan tapaan kuin kuvien lataaminen. Luokan sisällä (ei välttämättä minkään aliohjelman sisällä) ladataan ääniefekti omaan muuttujaansa:
 

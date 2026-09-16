@@ -113,7 +113,7 @@ MediaPlayer.IsRepeating = true;
 ```
 
 [Äänet ja musiikki](../aanet/aanien-lisays.md) ·
-[Kuvat ja äänet mukaan projektiin](../perusteet/sisallon-tuonti.md)
+[Kuvat ja äänet mukaan projektiin](../aloittaminen/sisallon-tuonti.md)
 
 ## Satunnaisuus
 

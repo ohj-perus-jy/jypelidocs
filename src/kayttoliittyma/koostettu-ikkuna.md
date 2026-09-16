@@ -53,7 +53,7 @@ ruutu.BorderColor = Color.Black;
 ruutu.Image = LoadImage("kuvannimi");
 ```
 
-Kuvan lisäämistä varten muista ohje [sisällön tuomisesta projektiin.](../perusteet/sisallon-tuonti.md)
+Kuvan lisäämistä varten muista ohje [sisällön tuomisesta projektiin.](../aloittaminen/sisallon-tuonti.md)
 
 ## Lapsiolioiden lisääminen
 

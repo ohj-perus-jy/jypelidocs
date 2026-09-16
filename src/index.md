@@ -9,11 +9,11 @@ materiaali perustuu sen kurssin oppeihin.
 
 ## Aloita tästä
 
-1. [Asenna työkalut](perusteet/asentaminen.md) ja
-   [luo uusi projekti](perusteet/projektin-luonti.md).
-2. Tee [ensimmäinen peli](perusteet/ensimmainen-peli.md): pallo, painovoima
+1. [Asenna työkalut](aloittaminen/asentaminen.md) ja
+   [luo uusi projekti](aloittaminen/projektin-luonti.md).
+2. Tee [ensimmäinen peli](aloittaminen/ensimmainen-peli.md): pallo, painovoima
    ja yksi näppäin, kymmenen riviä koodia.
-3. Tee kokonainen peli [Pong-oppaan](mallit/pong/index.md) mukaan vaihe
+3. Tee kokonainen peli [Pong-oppaan](tutoriaalit/pong/index.md) mukaan vaihe
    kerrallaan.
 
 Sen jälkeen oma peli kasvaa aihe kerrallaan [ohjeiden](#ohjeet-kysymyksittain)

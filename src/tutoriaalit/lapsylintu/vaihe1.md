@@ -11,7 +11,7 @@ Tässä ohjeessa neuvotaan Läpsylintu-nimisen pelin tekeminen. Pelissä ohjataa
 - **Jos** teet peliä yliopiston mikroluokassa, muista tallentaa hakemistoon `C:\MyTemp\omanimi`, ei Windowsin Omat tiedostot -hakemistoon! Omalla tietokoneella voit tallentaa projektin mihin haluat.
 - Paina Create.
 
-Kokeile ajaa projektimallista luotu pelisi painamalla ctrl-F5 (joillakin laitteilla pitää painaa fn-näppäintä ctrl ja F5 kanssa), tai yläpalkista klikkaamalla <span class="green">▶</span>.
+Kokeile ajaa projektimallista luotu pelisi klikkaamalla yläpalkista vihreää kolmiota <span class="green">▶</span> (**Run**).
 
 > [!KOKEILE]
 

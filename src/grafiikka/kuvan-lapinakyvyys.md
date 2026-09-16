@@ -6,7 +6,7 @@ Luo uusi kuva. Ota heti alussa huomioon kuvan koko, eli millaisella tarkkuudella
 
 ![](images/PaintPallo.png)
 
-Kun olet piirtänyt, aletaan poistamaan kuvasta niitä osia, jotka halutaan läpinäkyviksi. Valitse taikasauvatyökalu (Magic Wand, näppäinoikotie S) ja klikkaa (yhden kerran) sille alueelle, jonka haluat läpinäkyväksi (tasainen väri lähtee helpoiten).
+Kun olet piirtänyt, aletaan poistamaan kuvasta niitä osia, jotka halutaan läpinäkyviksi. Valitse taikasauvatyökalu (Magic Wand) ja klikkaa (yhden kerran) sille alueelle, jonka haluat läpinäkyväksi (tasainen väri lähtee helpoiten).
 
 Jos haluat valita useita alueita, pidä Shift-näppäin pohjassa ja tee monta valintaa.
 

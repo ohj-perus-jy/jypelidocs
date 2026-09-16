@@ -10,7 +10,7 @@ peli ja tiedät, mihin koodi kirjoitetaan.
 | 3. [Ensimmäinen peli](ensimmainen-peli.md) | Pallo, painovoima ja yksi näppäin. Kymmenen riviä koodia. |
 | 4. [Miten Jypeli-peli toimii](pelin-rakenne.md) | Begin, koordinaatisto, kenttä, kamera, yksiköt ja tapahtumat. |
 | 5. [Kuvat ja äänet mukaan projektiin](sisallon-tuonti.md) | Omien kuva-, ääni- ja tekstitiedostojen lisääminen. |
-| [Millaisia pelejä voin tehdä?](erilaisia-peleja.md) | Esimerkkejä ja projektimallit. |
+| [Millaisia pelejä voin tehdä?](erilaisia-peleja.md) | Fysiikkapelit ja pelit ilman fysiikkaa. |
 
-Seuraavaksi: [Valmiit pelit](../mallit/index.md), joissa tehdään kokonainen peli
+Seuraavaksi: [Valmiit pelit](../tutoriaalit/index.md), joissa tehdään kokonainen peli
 vaihe kerrallaan.

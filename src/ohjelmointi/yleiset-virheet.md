@@ -25,7 +25,7 @@ loppuun ennen kuin huolestut.
 | Oire | Syy | Korjaus |
 | --- | --- | --- |
 | Olio ei näy. | `Add(olio)` puuttuu, tai olio on kameran näkymän ulkopuolella, tai se on toisen olion takana. | Lisää `Add`. Kutsu `Camera.ZoomToLevel()`. Ks. [Kerrokset](../oliot/kerrokset.md). |
-| Peli kaatuu heti ja ilmoituksessa lukee `Could not find file ... Content\...` tai `FileNotFoundException`. | Kuva- tai äänitiedosto ei ole `Content`-kansiossa, tai sen *Copy to Output Directory* -asetus ei ole *Copy if newer*, tai nimi on eri. | Ks. [Kuvat ja äänet mukaan projektiin](../perusteet/sisallon-tuonti.md). |
+| Peli kaatuu heti ja ilmoituksessa lukee `Could not find file ... Content\...` tai `FileNotFoundException`. | Kuva- tai äänitiedosto ei ole `Content`-kansiossa, tai sen *Copy to Output Directory* -asetus ei ole *Copy if newer*, tai nimi on eri. | Ks. [Kuvat ja äänet mukaan projektiin](../aloittaminen/sisallon-tuonti.md). |
 | `NullReferenceException` | Attribuutille ei ole annettu arvoa, tai `Begin`-aliohjelmassa on luotu samanniminen paikallinen muuttuja. | Ks. [Mihin koodi kirjoitetaan](mihin-koodi-kirjoitetaan.md#paikallinen-muuttuja-vai-attribuutti). |
 | Näppäin ei tee mitään. | `Listen`-rivi puuttuu tai on toisessa aliohjelmassa, jota ei kutsuta, tai tilana on `Pressed` vaikka tarkoitus oli pitää pohjassa (`Down`). | Ks. [Ohjainten lisääminen](../ohjaimet/ohjainten-lisays.md). |
 | Törmäystä ei huomata. | Toinen olioista on `GameObject` eikä `PhysicsObject`, tai käsittelijä on lisätty ennen kuin olio on luotu, tai oliot ovat samassa `CollisionIgnoreGroup`-ryhmässä. | Ks. [Törmäysten käsittely](../tapahtumat/tormaykset.md). |
@@ -34,7 +34,8 @@ loppuun ennen kuin huolestut.
 
 ## Kun mikään ei auta
 
-- Aja peli debuggerilla (F5 Ctrl+F5:n sijaan). Rider pysähtyy virheen
-  kohdalle ja näyttää muuttujien arvot.
+- Aja peli debuggerilla klikkaamalla Run-kolmion vieressä olevaa vihreää
+  ötökkäkuvaketta (**Debug**). Rider pysähtyy virheen kohdalle ja näyttää
+  muuttujien arvot.
 - Ohjelmointi 1:n [usein kysytyt kysymykset](https://ohjelmointi1.it.jyu.fi/ukk/).
 - Jypelin [lähdekoodi ja issue-seuranta GitHubissa](https://github.com/Jypeli-JYU/Jypeli).

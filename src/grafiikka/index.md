@@ -10,4 +10,4 @@
 | [Äänet ja musiikki](../aanet/aanien-lisays.md) | Äänitehosteet ja taustamusiikki. |
 
 Kuvat ja äänet on ensin lisättävä projektiin, ks.
-[Kuvat ja äänet mukaan projektiin](../perusteet/sisallon-tuonti.md).
+[Kuvat ja äänet mukaan projektiin](../aloittaminen/sisallon-tuonti.md).

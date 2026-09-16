@@ -69,7 +69,7 @@ Aliohjelman kutsuminen tarkoittaa, että tietokonetta käsketään suorittamaan 
 
 Mistä voisimme kutsua tuota aliohjelmaa? Tietysti `Begin`-aliohjelmasta, jota olemme edellisissä vaiheissa tehneet. Tuo aliohjelmahan suoritetaan ensimmäisenä kun peli käynnistetään.
 
-**Siirrä** kentän luontiin liittyvät rivit `Begin`:ista aliohjelmaan `LuoKentta` alla olevan kuvan osoittamalla tavalla. Ctrl+X leikkaa valitun tekstin ja Ctrl+V liitää sen kursorin kohdalle. Katso tarvittaessa tarkemmat ohjeet tekstin editointiin Riderin omasta ohjeesta.
+**Siirrä** kentän luontiin liittyvät rivit `Begin`:ista aliohjelmaan `LuoKentta` alla olevan kuvan osoittamalla tavalla. Ctrl+X (Macilla Cmd+X) leikkaa valitun tekstin ja Ctrl+V (Cmd+V) liittää sen kursorin kohdalle. Katso tarvittaessa tarkemmat ohjeet tekstin editointiin Riderin omasta ohjeesta.
 
 **Huomaa, että omassa koodissasi rivit saattavat olla hieman eri järjestyksessä kuin kuvassa.**
 

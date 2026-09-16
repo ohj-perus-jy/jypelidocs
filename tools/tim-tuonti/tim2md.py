@@ -25,9 +25,11 @@ TIM = "https://tim.jyu.fi"
 PREFIX = "kurssit/jypeli/"
 
 RENAMES = {"wiki": "index", "mallit/alku": "mallit/index"}
+# TIMin ylätason hakemisto -> src:n hakemisto (out_rel).
+DIR_RENAMES = {"mallit": "tutoriaalit"}
 # Osiot etusivun "listamaisen" navigoinnin järjestyksessä: otsikko -> hakemisto.
 SECTION_DIRS = {
-    "Aloittaminen": "perusteet", "Olioiden käsittely": "oliot", "Kentät": "kentat",
+    "Aloittaminen": "aloittaminen", "Olioiden käsittely": "oliot", "Kentät": "kentat",
     "Pelin kulku": "pelin-kulku", "Tapahtumat": "tapahtumat", "Grafiikka": "grafiikka",
     "Äänet": "aanet", "Aseet": "aseet", "Fysiikka": "fysiikka",
     "Käyttöliittymä": "kayttoliittyma", "Laskurit": "laskurit",
@@ -64,7 +66,7 @@ HEADING_FIXES = {
 LINK_FIXES = {
     "ohjaimet/liikuttelu": [("#1wdXts95Twpe", "#push")],
     # "Takaisin pong-tutoriaaliin" osoitti mallipelien yhteiseen etusivuun.
-    "perusteet/projektin-luonti": [("../mallit/index.md#mallipelit", "../mallit/pong/index.md")],
+    "aloittaminen/projektin-luonti": [("../tutoriaalit/index.md#mallipelit", "../tutoriaalit/pong/index.md")],
 }
 HUB_INTRO = """# Jypeli-ohjeet
 
@@ -105,8 +107,14 @@ def count(key, n=1):
     stats[key] = stats.get(key, 0) + n
 
 
+def out_rel(tim_path: str) -> str:
+    """TIM-polku -> src:n suhteellinen polku ilman päätettä (DIR_RENAMES)."""
+    head, sep, tail = tim_path.partition("/")
+    return DIR_RENAMES.get(head, head) + sep + tail
+
+
 def md_rel(tim_path: str) -> str:
-    return RENAMES.get(tim_path, tim_path) + ".md"
+    return out_rel(RENAMES.get(tim_path, tim_path)) + ".md"
 
 
 def expand_macro(m: re.Match) -> str:
@@ -665,7 +673,7 @@ def model_games_summary(title: str, listed: set[str]) -> list[str]:
     """Mallipelit SUMMARY.md:hen: päätason osio, pelit alaosioina, vaiheet sivuina."""
     lines = [f" * [{title}](./{md_rel('mallit/alku')})"]
     for game, d, stages in MODEL_GAMES:
-        lines.append(f"   * [{game}](./{d}/index.md)")
+        lines.append(f"   * [{game}](./{out_rel(d)}/index.md)")
         for n in range(1, stages + 1):
             target = f"{d}/vaihe{n}"
             if target not in PAGES:
@@ -767,7 +775,7 @@ def write_hub(hub_text: str, sections, pages_text):
             (OUT / md_rel("mallit/alku")).write_text(index_text, encoding="utf-8")
             pages_text["mallit/alku"] = index_text
             for d, text in game_pages.items():
-                (OUT / d / "index.md").write_text(text, encoding="utf-8")
+                (OUT / out_rel(d) / "index.md").write_text(text, encoding="utf-8")
     summary += ["", "---", "", "[Jypelin päivityshistoria](./paivitysloki.md)"]
     listed.add("paivitysloki")
     missing = [p for p in PAGES if p not in listed and p != "wiki"]

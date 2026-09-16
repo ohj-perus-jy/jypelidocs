@@ -2,8 +2,8 @@
 
 Näissä oppaissa tehdään kokonainen peli alusta loppuun vaihe kerrallaan. Samalla
 opitaan Jypelin käyttöä ja ohjelmoinnin perusasioita. Ennen aloittamista
-[asenna työkalut](../perusteet/asentaminen.md) ja
-[luo uusi Fysiikkapeli-projekti](../perusteet/projektin-luonti.md).
+[asenna työkalut](../aloittaminen/asentaminen.md) ja
+[luo uusi Fysiikkapeli-projekti](../aloittaminen/projektin-luonti.md).
 
 | Opas | Mitä opitaan | Kenelle |
 | --- | --- | --- |
@@ -14,7 +14,7 @@ opitaan Jypelin käyttöä ja ohjelmoinnin perusasioita. Ennen aloittamista
 ## Oppaissa käytetyt merkinnät
 
 > [!KOKEILE]
-> Kokeile ajaa peliäsi. Riderissa paina Ctrl+F5. Peliä kannattaa ajaa usein, jotta näet miten tekemäsi muutokset vaikuttavat.
+> Kokeile ajaa peliäsi. Klikkaa Riderissa vihreää kolmiota (**Run**). Peliä kannattaa ajaa usein, jotta näet miten tekemäsi muutokset vaikuttavat.
 
 > [!EI TOIMI VIELÄ]
 > Pelisi ei toimi, eikä sen kuulukaan toimia vielä, jos olet seurannut ohjeita. Seuraa ohjetta eteenpäin, tilanne korjaantuu. Mieti kuitenkin, miksi peli ei vielä toimi.
