@@ -16,16 +16,11 @@ materiaali perustuu sen kurssin oppeihin.
 3. Tee kokonainen peli [Pong-oppaan](tutoriaalit/pong/index.md) mukaan vaihe
    kerrallaan.
 
-Sen jälkeen oma peli kasvaa aihe kerrallaan [ohjeiden](#ohjeet-kysymyksittain)
+Sen jälkeen oma peli kasvaa aihe kerrallaan [ohjeiden](#ohjeet-aiheittain)
 avulla. Kun etsit yhtä koodiriviä, katso [pikaohje](viite/pikaohje.md).
 Kun jokin ei toimi, katso [yleiset virheet](ohjelmointi/yleiset-virheet.md).
 
-> [!HUOMAUTUS]
-> Ohjeet ovat osittain vielä työn alla, ja osa sisällöstä saattaa olla
-> puutteellista. Ohjeet on tuotu [TIMin Jypeli-wikistä](https://tim.jyu.fi/view/kurssit/jypeli/wiki).
-> Jokaisen sivun alareunassa on "Ehdota muutosta" -linkki.
-
-## Ohjeet kysymyksittäin
+## Ohjeet aiheittain
 
 Sama sisältö kuin vasemman reunan valikossa, samassa järjestyksessä.
 
