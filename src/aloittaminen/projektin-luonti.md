@@ -10,8 +10,9 @@ projektinsa.
 
 ## Projektin luominen Riderissa
 
-Käynnistä Rider työpöydän pikakuvakkeesta tai Käynnistä-valikosta
-("JetBrains Rider"). Aukeavassa ikkunassa:
+Käynnistä Rider. Windowsissa se löytyy Käynnistä-valikosta tai työpöydän
+pikakuvakkeesta ("JetBrains Rider"), Macilla Launchpadista tai Spotlightilla
+(Cmd + välilyönti, kirjoita "Rider"). Aukeavassa ikkunassa:
 
 1. Klikkaa **New Solution**.
 2. Valitse vasemmalla olevasta listasta **Fysiikkapeli** (vieritä listaa
@@ -21,7 +22,8 @@ Käynnistä Rider työpöydän pikakuvakkeesta tai Käynnistä-valikosta
    nimessä vain englanninkielisiä kirjaimia ja numeroita, ei välilyöntejä
    eikä ääkkösiä.
 4. Valitse **Solution directory** -kohtaan kansio, johon peli tallennetaan,
-   esimerkiksi `C:\Users\Käyttäjänimi\Koodiprojektit`. **Yliopiston koneilla**
+   esimerkiksi `C:\Users\Käyttäjänimi\Koodiprojektit` (Macilla esimerkiksi
+   `/Users/käyttäjänimi/Koodiprojektit`). **Yliopiston koneilla**
    kansioksi on annettava `C:\Mytemp\Omanimi`, jossa `Omanimi` on vaikkapa
    oma etunimesi.
 5. Klikkaa **Create**.
