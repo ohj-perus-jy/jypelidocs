@@ -289,5 +289,6 @@ Mitä ohj1:n kopioon on muutettu tässä varastossa:
 - `mkdocs.yml`: `site_name`, `copyright`, `repo_url`.
 - `convert.py`: `NEST_UNDER` ja `DROP_SECTIONS` tyhjiksi (ohj1:n sivusiirrot ja
   etusivun navigointiosio), `PLANTUML_AGENT`; `puhe.py`: `User-Agent`.
-- `cache/svgbob/`: tyhjä, aineistossa ei ole bob-kaavioita.
+- `cache/svgbob/`: `aloittaminen/pelin-rakenne.md`:n kaksi bob-kaaviota
+  (svgbob_cli 0.7.6).
 - Koekirja (`tests/book`) ja testit ovat ohj1:n sellaisenaan.
