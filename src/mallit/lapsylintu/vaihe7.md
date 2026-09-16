@@ -1,4 +1,4 @@
-# Läpsylintu: Vaihe 7 - Vihollinen
+# Läpsylintu, vaihe 7: Vihollinen
 
 Peli alkaa olla jo melko pelattava. Lisätään peliä vaikeuttamaan vielä vihollislintuja, jotta tähtien keräämisestä tulee haastavampaa!
 
@@ -81,7 +81,7 @@ Add(vihollinen);
 
 Kokeile, miten peli toimii tässä vaiheessa.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Vihollislintu pysymään ilmassa
 
@@ -95,7 +95,7 @@ vihollinen.IgnoresGravity = true;
 
 Kokeile, että vihollinen jää nyt ilmaan.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Vihollislintu pysymään pyörimättömänä
 
@@ -119,7 +119,7 @@ vihollinen.IgnoresCollisionResponse = true;
 
 Nyt viholliseen törmääminen ei enää vaikuta vihollisen sijaintiin mitenkään.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Vihollislintu liikkumaan ylös ja alas
 
@@ -140,4 +140,4 @@ Tässä kutsutaan Oscillate-metodia, joka saa vihollisen värähtelemään. Vär
 
 Kokeile pelin toimivuutta! Voit lisäillä vihollisia enemmänkin vartioimaan tähtiä ja muuttaa vihollisen värähtelyasetuksia.
 
-![](images/try_to_run.png)
+> [!KOKEILE]

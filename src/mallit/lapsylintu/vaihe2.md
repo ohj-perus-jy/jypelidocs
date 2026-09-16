@@ -1,4 +1,4 @@
-# Läpsylintu: Vaihe 2
+# Läpsylintu, vaihe 2: Pelaaja liikkeelle
 
 Pelin aloittava `Begin()`-aliohjelma näyttää tällä hetkellä tältä:
 
@@ -66,4 +66,4 @@ ControllerOne.Listen(Button.DPadLeft, ButtonState.Down, Liikuta, "Pelaaja liikku
 ControllerOne.Listen(Button.DPadRight, ButtonState.Down, Liikuta, "Pelaaja liikkuu oikealle", pelaaja1, NOPEUS);
 ```
 
-![](images/try_to_run.png)
+> [!KOKEILE]

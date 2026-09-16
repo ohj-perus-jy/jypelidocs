@@ -1,4 +1,4 @@
-# Käyttöliittymäkomponentin tekeminen
+# Omat käyttöliittymäkomponentit
 
 Jos valmiista widgeteistä ei löydy sopivaa, täytyy tehdä uusi komponentti (eli widgetti). Se tapahtuu [perimällä uusi luokka](../oliot/oma-oliotyyppi.md) jostakin widgetistä (usein `Widget`-luokasta).
 

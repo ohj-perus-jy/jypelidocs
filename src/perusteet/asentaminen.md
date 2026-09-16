@@ -1,4 +1,4 @@
-# Asennusohjeet
+# Asennus
 
 Tarvittavien työkalujen asentamiseksi voit seurata Jyväskylän yliopiston Ohjelmointi 1 -kurssin työkalujen asennusohjetta: <https://ohjelmointi1.it.jyu.fi/tyokalut/>
 

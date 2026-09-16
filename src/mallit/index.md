@@ -1,49 +1,23 @@
-# Mallipelit
+# Valmiit pelit
 
-Tällä hetkellä on ohjeet kahden eri pelin tekoon, jotka opastavat Jypelin käyttöön sekä yleisesti ohjelmointiin.
+Näissä oppaissa tehdään kokonainen peli alusta loppuun vaihe kerrallaan. Samalla
+opitaan Jypelin käyttöä ja ohjelmoinnin perusasioita. Ennen aloittamista
+[asenna työkalut](../perusteet/asentaminen.md) ja
+[luo uusi Fysiikkapeli-projekti](../perusteet/projektin-luonti.md).
 
-- [Pong](pong/index.md)
-- [Läpsylintu](lapsylintu/index.md)
-
-## Yleiset ohjeet kaikkiin mallipeleihin
-
-### Alkuvalmistelut ja ohjelmien asennus
-
-Ihan ensiksi, [asenna koneellesi Rider ja Jypeli](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/rider).
-
-**Yliopiston koneilla** Rider on jo asennettu, mutta Jypeli pitää asentaa: Avaa Käynnistä-valikosta Command prompt -ohjelma, ja anna siihen tämä komento ja paina lopuksi Enter.
-
-```bash
-dotnet new install Jypeli.Templates
-```
-
-Voit sitten sulkea Command promptin.
-
-### Käynnistä Rider
-
-Käynnistä Rider tuplaklikkaamalla työpöydällä olevaa pikakuvaketta tai valitsemalla käynnistä-valikosta "JetBrains Rider 2022.3.1" (lopun numerot saattavat olla hieman erilaiset versiosta riippuen)
-
-Tämän jälkeen Rider käynnistyy hetken kuluttua.
-
-### Luo uusi projekti
-
-Luo peliäsi varten uusi fysiikkapeli-projekti. Projekti on ohjelmointiympäristön tapa käsitellään koodia ja peliin liittyviä grafiikka- ja musiikkitiedostoja yhtenä kokonaisuutena.
-
-Käynnistä Rider.
-
-- Klikkaa "New Solution".
-- Valitse vasemmalla olevasta listasta Fysiikkapeli (scrollaa alas). Jos Fysiikkapeliä ei näy, palaa asennusohjeiden kohtaan Jypeli.
-- Laita Solution Name-kohtaan pelin nimi, esimerkiksi "Pong", tai oman pelisi nimi.
-- Laita Solution directory-kohtaan kansio, johon haluat tehdä pelisi. Esimerkiksi: "C:\Users\Käyttäjänimi\Koodiprojektit". **Huom!** Yliopiston tietokoneilla kansioksi on annettava "C:\Mytemp\Omanimi". Laita Omanimi-sanan paikalle vaikkapa oma etunimesi.
-- Vahvista uuden projektin luominen klikkaamalla Create.
-
-Painamalla Ctrl-F5 peli käynnistyy. Mikäli aukeaa vaaleansininen ikkuna, on projekti luotu oikein.
-
-### Huomioita
-
-Oppaissa on käytetty seuraavanlaisia merkintöjä:
-
-|  |  |  |
+| Opas | Mitä opitaan | Kenelle |
 | --- | --- | --- |
-| ![](images/try_to_run.png) | ![](images/does_not_work_yet.png) | ![](images/question.png) |
-| Kokeile ajaa peliäsi. Riderissa paina ctrl-F5-näppäinyhdistelmää. Yleensäkin peliä kannattaa koittaa ajaa usein, jotta näet miten tekemäsi muutokset vaikuttavat. | Pelisi ei toimi, eikä sen kuulukaan toimia vielä, jos olet seurannut ohjeita. Seuraa ohjetta eteenpäin, tilanne korjaantuu. Tärkeää: Mieti, miksi peli ei vielä toimi. | Tällaisen merkinnän kohdalla esitetään kysymys, jota voit miettiä ja mielellään myös koittaa tehdä kysymyksessä ehdotettu muutos koodiin. Voit kuitenkin halutessasi hypätä kysymyksen yli. |
+| [Pong](pong/index.md) | Olion luonti, aliohjelma, näppäimistön kuuntelu, törmäykset, pistelasku. 7 vaihetta. | Ensimmäiseksi oppaaksi. |
+| [Läpsylintu](lapsylintu/index.md) | Kenttä tiedostosta, ajastin, animaatio, kuvat ja äänet, vihollinen, maali. 11 vaihetta. | Pongin jälkeen, sopii silti ensikertalaisellekin. |
+| [Kahden pelaajan tasohyppely](../ohjaimet/kaksi-pelaajaa.md) | Kaksi `PlatformCharacter`-hahmoa ja kummallekin omat näppäimet. Yksi valmis ohjelma, ei vaiheita. | Kun haluat tehdä tasohyppelyn. |
+
+## Oppaissa käytetyt merkinnät
+
+> [!KOKEILE]
+> Kokeile ajaa peliäsi. Riderissa paina Ctrl+F5. Peliä kannattaa ajaa usein, jotta näet miten tekemäsi muutokset vaikuttavat.
+
+> [!EI TOIMI VIELÄ]
+> Pelisi ei toimi, eikä sen kuulukaan toimia vielä, jos olet seurannut ohjeita. Seuraa ohjetta eteenpäin, tilanne korjaantuu. Mieti kuitenkin, miksi peli ei vielä toimi.
+
+> [!KYSYMYS]
+> Tällaisen merkinnän kohdalla esitetään kysymys, jota voit miettiä ja mielellään myös kokeilla ehdotettua muutosta koodiin. Kysymyksen yli voi halutessaan hypätä.

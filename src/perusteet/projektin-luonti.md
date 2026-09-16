@@ -1,29 +1,55 @@
 # Uuden projektin luominen
 
-Tässä ohjeessa kerrotaan, miten aloitat uuden projektin (eli pelin) Riderissa.
+Tässä ohjeessa kerrotaan, miten aloitat uuden projektin (eli pelin)
+Riderissa. Ennen tätä Rider ja Jypeli pitää olla asennettuina, ks.
+[Asennus](asentaminen.md).
 
-```text
+*Projekti* on työtila, jossa käsitellään pelin koodia ja siihen liittyviä
+kuva- ja äänitiedostoja yhtenä kokonaisuutena. Jokainen peli on oma
+projektinsa.
 
+## Yliopiston koneilla: Jypelin projektimallit
+
+Yliopiston koneilla Rider on jo asennettu, mutta Jypelin projektimallit
+pitää asentaa kerran. Avaa Käynnistä-valikosta *Command prompt*, anna komento
+ja paina Enter:
+
+```bash
+dotnet new install Jypeli.Templates
 ```
 
-Kun Rider on käynnistynyt, tehdään uusi *projekti*. Projekti on työtila, jossa käsitellään koodia ja peliin liittyviä grafiikka- ja musiikkitiedostoja. Seuraavaksi kerrotaan, miten luodaan uusi projekti peliä varten. Jatkossa pelejä varten teet projektin samaan tapaan, mutta nimeksi voit valita mitä tahansa (mielellään kuitenkin vain englanninkielisiä aakkosia sekä numeroita nimessä) ja voit käyttää muitakin malleja kuin FysiikkaPeli (malleista lisää tuonnempana).
+Sen jälkeen voit sulkea Command promptin. Omalla koneella tämä on tehty jo
+asennuksen yhteydessä.
 
 ## Projektin luominen Riderissa
 
-Käynnistä Rider.
+Käynnistä Rider työpöydän pikakuvakkeesta tai Käynnistä-valikosta
+("JetBrains Rider"). Aukeavassa ikkunassa:
 
-Aukeavassa ikkunassa tee seuraavat vaiheet:
+1. Klikkaa **New Solution**.
+2. Valitse vasemmalla olevasta listasta **Fysiikkapeli** (vieritä listaa
+   alaspäin). Jos Fysiikkapeliä ei näy, projektimalleja ei ole asennettu;
+   palaa edelliseen kohtaan tai [asennusohjeeseen](asentaminen.md).
+3. Kirjoita **Solution name** -kohtaan pelin nimi, esimerkiksi `Pong`. Käytä
+   nimessä vain englanninkielisiä kirjaimia ja numeroita, ei välilyöntejä
+   eikä ääkkösiä.
+4. Valitse **Solution directory** -kohtaan kansio, johon peli tallennetaan,
+   esimerkiksi `C:\Users\Käyttäjänimi\Koodiprojektit`. **Yliopiston koneilla**
+   kansioksi on annettava `C:\Mytemp\Omanimi`, jossa `Omanimi` on vaikkapa
+   oma etunimesi.
+5. Klikkaa **Create**.
 
-- Klikkaa "New Solution".
+## Kokeile, että peli käynnistyy
 
-- Valitse vasemmalla olevasta listasta Fysiikkapeli (scrollaa alas).
+Paina **Ctrl+F5**. Jos ruudulle aukeaa vaaleansininen ikkuna, projekti on
+luotu oikein. Ikkunan voi sulkea Esc-näppäimellä.
 
-- Laita Solution Name-kohtaan pelin nimi, esimerkiksi "Pong", tai oman pelisi nimi.
+Peli on nyt tyhjä. Mitä projektissa on ja mihin koodi kirjoitetaan, kerrotaan
+sivulla [Ensimmäinen peli](ensimmainen-peli.md).
 
-- Laita Solution directory-kohtaan kansio, johon haluat tehdä pelisi. Esimerkiksi: "C:"
+## Muut projektimallit
 
-- Vahvista uuden projektin luominen klikkaamalla Create.
-
-Painamalla ctrl-F5 peli käynnistyy. Mikäli aukeaa vaaleansininen ikkuna, on projekti luotu oikein.
-
-[Tästä takaisin pong-tutoriaaliin](../mallit/pong/index.md)
+Fysiikkapeli sopii useimpiin peleihin ja sitä käyttävät myös
+[oppaat](../mallit/index.md). Listassa on muitakin malleja, esimerkiksi
+tavallinen Peli ilman fysiikkamoottoria. Niistä kerrotaan sivulla
+[Millaisia pelejä voin tehdä?](erilaisia-peleja.md).

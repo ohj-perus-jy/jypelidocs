@@ -4,16 +4,16 @@ Tässä oppaassa luodaan vaiheittain monille tuttu Pong-peli, jossa kaksi pelaaj
 
 ![](../images/pong.gif)
 
-## Aloita Pong-tutoriaalin teko
+## Vaiheet
 
-Kun olet luonut uuden projektin, voit aloittaa tekemään Pong-peliä vaihe kerrallaan. Jos teet tutoriaalia ensimmäistä kertaa, aloita vaiheesta 1.
+Kun olet [luonut uuden Fysiikkapeli-projektin](../../perusteet/projektin-luonti.md), voit aloittaa Pong-pelin teon vaihe kerrallaan. Jos teet tutoriaalia ensimmäistä kertaa, aloita vaiheesta 1.
 
 **Lue kaikki ohjeet hyvin huolellisesti!**
 
-- [Vaihe 1](vaihe1.md) (jostakin se on aloitettava...)
-- [Vaihe 2](vaihe2.md) (pallo liikkeelle)
-- [Vaihe 3](vaihe3.md) (aliohjelma)
-- [Vaihe 4](vaihe4.md) (kaksi mailaa!)
-- [Vaihe 5](vaihe5.md) (mailoja voi liikuttaa!)
-- [Vaihe 6](vaihe6.md) (parantelua)
-- [Vaihe 7](vaihe7.md) (pistelasku)
+- [Vaihe 1: Pallo kentälle](vaihe1.md)
+- [Vaihe 2: Pallo liikkeelle](vaihe2.md)
+- [Vaihe 3: Aliohjelma](vaihe3.md)
+- [Vaihe 4: Kaksi mailaa](vaihe4.md)
+- [Vaihe 5: Mailojen liikuttaminen](vaihe5.md)
+- [Vaihe 6: Parantelua](vaihe6.md)
+- [Vaihe 7: Pistelasku](vaihe7.md)

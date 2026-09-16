@@ -1,4 +1,4 @@
-# Pong-peli, vaihe 4
+# Pong, vaihe 4: Kaksi mailaa
 
 Tässä oppaassa teemme toisenkin mailan.
 
@@ -102,7 +102,7 @@ void LuoMaila(double x, double y)
 
 Voit kokeilla ajaa pelin, mutta yhtään mailaa ei vielä näy. **Aliohjelmaa `LuoMaila` ei vielä kutsuta missään, eli sen koodirivejä ei koskaan suoriteta.**
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## 3. Mailoja luovan aliohjelman kutsuminen ja parametrien välittäminen
 
@@ -140,7 +140,7 @@ Huomaa, että parametri voi olla myös yhteen- tai vähennyslaskun tulos. Esimer
 
 Nyt pelissä pitäisi näkyä kaksi mailaa!
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## 4. Lopputulos
 

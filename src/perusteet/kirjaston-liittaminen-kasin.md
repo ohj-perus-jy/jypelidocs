@@ -1,8 +1,8 @@
-# Jypeli-kirjaston liittäminen projektiin käsin
+# Kirjaston liittäminen käsin
 
 Jypeli-kirjaston tuomia funktioita voidaan (joillain rajoituksilla) käyttää myös tavallisessa konsoliprojektissa.
 
-Klikkaa Visual Studion solution explorerissa *Dependencies*-kansiota hiiren oikealla näppäimellä ja valitse `Manage Nuget packages`.
+Klikkaa Riderin Explorer-näkymässä *Dependencies*-kansiota hiiren oikealla näppäimellä ja valitse `Manage Nuget packages`.
 
 ![](images/ManageNuget.png)
 
@@ -14,7 +14,7 @@ Aukeavasta näkymästä vaihda `Browse` näkymään ja kirjoita hakukenttään `
 
 Oikeaan reunaan aukevasta näkymästä kannattaa pitää versio asetus kohdassa `Latest stable...` ja klikkaa `Install`.
 
-Visual Studio saattaa kysyä jotain lisävahvistusta, vastaa kyllä.
+Rider saattaa kysyä lisävahvistusta, vastaa kyllä.
 
 Jos saat virheviestin, ks. alempaa ohjeet.
 

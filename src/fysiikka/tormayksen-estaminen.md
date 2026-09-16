@@ -1,4 +1,4 @@
-# Olioiden törmäysten estäminen
+# Törmäysten estäminen
 
 Joskus on toivottavaa, että jokin fysiikkaolio ei törmäile. Törmäysten estämiseen on joitakin konsteja, riippuen tilanteesta. Huomaa, että jos olion ei tarvitse koskaan liikkua tai törmäillä mihinkään, voi olla järkevämpää käyttää `GameObject`-oliota.
 

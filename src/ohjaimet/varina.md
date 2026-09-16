@@ -1,4 +1,4 @@
-# Miten ohjaimeen saa värinätehosteita?
+# Värinä
 
 Värinällä voi tehostaa pelikokemusta. Huomaa, että värinä toimii vain Xbox 360 -ohjaimella ja puhelimessa.
 

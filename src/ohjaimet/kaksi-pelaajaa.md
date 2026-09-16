@@ -1,4 +1,4 @@
-# Kaksi tai useampia pelaajia tasohyppelypelissä
+# Kahden pelaajan tasohyppely
 
 Tässä esimerkissä tehdään kahden pelaajan tasohyppely välttäen turhaa toistoa aliohjelmissa.
 

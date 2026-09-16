@@ -1,4 +1,4 @@
-# Delegaattien teko
+# Delegaatit
 
 Moni Jypelin ominaisuus perustuu *tapahtumiin* (event), joita käytetään antamalla uusi metodi tapahtumalle. Esimerkiksi uusi tapahtuma ajastimelle luodaan
 

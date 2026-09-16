@@ -1,4 +1,4 @@
-# Ruutukentän luominen
+# Ruutukenttä
 
 Jypelissä on mahdollista luoda kenttä merkkijonotauluukoon, kuvatiedostoon tai tekstitiedostoon "piirretyn" mallin mukaisesti.
 
@@ -603,9 +603,9 @@ Luo uusi tiedosto. Tekstitiedostoon voi nyt "piirtää" kirjoitusmerkeillä halu
 
 Kun olet piirtänyt kentän, klikkaa tallennuskuvaketta, tai mene File » Save (Ctrl + S) ja anna tiedostolle nimeksi esimerkiksi "kentta1.txt" (ilman lainausmerkkejä), jos teit ensimmäisen kentän.
 
-Kun kenttä on valmis, palaa Visual Studioon.
+Kun kenttä on valmis, palaa Rideriin.
 
-### 2. Kenttätiedoston lisääminen Visual Studioon
+### 2. Kenttätiedoston lisääminen projektiin
 
 Kentän lataamiseksi lisätään kenttätiedosto content-kansioon. Katso tarkemmat ohjeet: [Sisällön tuominen peliin](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin)
 
@@ -754,7 +754,7 @@ Poista vielä valkoinen tausta valitsemalla kaikki (**Ctrl+A**) ja painamalla **
 
 Tallenna kuva pelin Content-hakemistoon.
 
-Kuva pitää tallentaa png-muodossa, jotta läpinäkyvyys säilyy ja jotta kuvaan ei tule pakkausartifakteja. (Ks. myös [Miten teen kuvaan läpinäkyviä osia](../muut/kuvan-lapinakyvyys.md).)
+Kuva pitää tallentaa png-muodossa, jotta läpinäkyvyys säilyy ja jotta kuvaan ei tule pakkausartifakteja. (Ks. myös [Miten teen kuvaan läpinäkyviä osia](../grafiikka/kuvan-lapinakyvyys.md).)
 
 ![](images/paintsave.png)
 
@@ -764,11 +764,11 @@ Nyt voit aloittaa kentän piirtämisen. Valmis kenttä voi näyttää vaikkapa t
 
 Voit itse päättää, mitä oliota mikäkin väri vastaa. Esimerkiksi mustat pikselit voivat olla seiniä, vihreät pelaajia, keltaiset kerättäviä tähtiä ja punaiset vihollisia.
 
-### 2. Kenttätiedoston lisääminen Visual Studioon
+### 2. Kenttätiedoston lisääminen projektiin
 
 Kentän lataamiseksi kuvasta lisätään kenttätiedosto content-kansioon. Katso tarkemmat ohjeet TIMistä: [​https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin)
 
-### 3. Kentän luominen Visual Studioon lisätystä kuvatiedostosta
+### 3. Kentän luominen projektiin lisätystä kuvatiedostosta
 
 Kun kuva on liitetty Content-kansioon, voimme ottaa sen käyttöön koodissa.
 

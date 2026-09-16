@@ -1,14 +1,20 @@
-# Käyttöliittymä
+# Käyttöliittymä ja laskurit
+
+Kaikki, mikä näkyy ruudulla mutta ei ole osa pelimaailmaa: tekstit,
+pisteet, valikot ja ikkunat.
 
 | Ohje | Sisältö |
 | --- | --- |
-| [Valikko](valikko.md) | Alku/lopetusvalikon tekeminen |
-| [Teksti](teksti.md) | Tekstin tuominen ruudulle |
-| [Fontit](fontti.md) | Tekstin ulkoasun muokkaaminen |
-| [Tekstin kysyminen](tekstin-kysyminen.md) | Kysymyslaatikko |
-| [Sommittelu](sommittelu.md) | Käyttöliittymäkomponettien asettelu |
-| [Parhaiden pisteiden lista](parhaiden-pisteiden-lista.md) | "Top ten" |
-| [Omien käyttöliittymäkomponenttien teko](omat-kayttoliittymakomponentit.md) | Kun valmiit komponentit eivät riitä |
-| [Liukusäätimet](liukusaatimet.md) | Hiirellä helposti säädettävissä oleva numeroarvo. |
-| [Koostetun ikkunan teko](koostettu-ikkuna.md) | Ikkuna joka koostuu useasta käyttöliittymäkomponentista |
-| [Esimerkkeja](esimerkkeja.md) | Muutamia käyttöesimerkkejä eri käyttöliittymäkomponenteille |
+| [Teksti ruudulla](teksti.md) | Label ja MessageDisplay. |
+| [Fontit](fontti.md) | Tekstin koko ja kirjasin. |
+| [Pistelaskuri](../laskurit/pistelaskuri.md) | Pisteet, elämät ja muut laskurit ruudulle. |
+| [Aikalaskuri](../laskurit/aikalaskuri.md) | Kulunut tai jäljellä oleva aika. |
+| [Etenemispalkki](../laskurit/etenemispalkki.md) | Palkki, joka näyttää laskurin arvon. |
+| [Valikot](valikko.md) | Alkuvalikko, monivalintaikkuna. |
+| [Tekstin kysyminen pelaajalta](tekstin-kysyminen.md) | Kysymyslaatikko, esimerkiksi pelaajan nimi. |
+| [Parhaat pisteet](parhaiden-pisteiden-lista.md) | Top ten -lista, joka tallentuu. |
+| [Sommittelu](sommittelu.md) | Komponenttien asettelu riveihin ja sarakkeisiin. |
+| [Liukusäätimet](liukusaatimet.md) | Hiirellä säädettävä lukuarvo. |
+| [Koostetut ikkunat](koostettu-ikkuna.md) | Ikkuna, jossa on useita komponentteja. |
+| [Omat käyttöliittymäkomponentit](omat-kayttoliittymakomponentit.md) | Kun valmiit eivät riitä. |
+| [Käyttöliittymäesimerkkejä](esimerkkeja.md) | Valmiita esimerkkejä eri komponenteista. |

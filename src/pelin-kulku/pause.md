@@ -1,4 +1,4 @@
-# Miten pelin saa pauselle?
+# Pause
 
 Pelin saa pysäytettyä väliaikaisesti kahdella tavalla. Voit asettaa suoraan pelin ominaisuuden **IsPaused**
 

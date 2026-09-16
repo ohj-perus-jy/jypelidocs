@@ -1,4 +1,4 @@
-# Läpsylintu: Vaihe 9 - Maali
+# Läpsylintu, vaihe 9: Maali
 
 ## Kentän oikeaan laitaan maaliviiva
 
@@ -104,7 +104,7 @@ MessageDisplay.Add("Pääsit kentän läpi!");
 
 Kokeile, kuinka hyvin maaliviivaan eli kentän oikeaan laitaan törmääminen toimii! Vinkki: voit testausvaiheessa "huijata" ja siirtää linnun aloituspaikan `kentta1.txt`-tiedostossa lähemmäs oikeaa reunaa, jotta koko kenttää ei tarvitse pelata läpi.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Maaliviivan törmäyksen parantelut
 
@@ -122,4 +122,4 @@ StopAll(); // Pysäyttää kaikki oliot, mm. vihollisten liikkeen
 Keyboard.Disable(Key.Up); // Poistaa pelinäppäimen käytöstä
 ```
 
-![](images/try_to_run.png)
+> [!KOKEILE]

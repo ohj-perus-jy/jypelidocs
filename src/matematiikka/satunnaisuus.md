@@ -1,4 +1,4 @@
-# Miten saan peliini satunnaisuutta?
+# Satunnaisuus
 
 Jypelin satunnaislukugeneraattorilla (`RandomGen`) voi arpoa monentyyppisiä asioita. Satunnaisen arvon voi arpoa tyypillisesti metodilla, jonka alkuosa on **Next** ja loppuosa arvottavan tyypin nimi (esimerkiksi `Double`).
 

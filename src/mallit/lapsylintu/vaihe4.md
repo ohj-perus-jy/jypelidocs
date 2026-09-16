@@ -1,4 +1,4 @@
-# Läpsylintu: Vaihe 4
+# Läpsylintu, vaihe 4: Seinään törmääminen
 
 ## Seinään törmääminen
 
@@ -66,7 +66,7 @@ Keyboard.Disable(Key.Up);
 
 Kokeile, että pelisi toimii nyt. Törmäyksestä pitäisi tulla viesti ja näppäimistön ylös-näppäimen lakata toimimasta.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Useamman törmäämisen estäminen
 
@@ -112,4 +112,4 @@ peliKaynnissa = true;
 
 Peli siis käynnistyy siinä vaiheessa, kun `Begin`-lohko on saatu suoritetuksi. Peli on pois käynnistä sen jälkeen, kun ensimmäinen törmäys ja kuolema on tapahtunut. Kokeile toimiiko ohjelma.
 
-![](images/try_to_run.png)
+> [!KOKEILE]

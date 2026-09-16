@@ -1,4 +1,4 @@
-# Sivulle skrollaava kenttä
+# Sivulle vierivä kenttä
 
 Esim spaceshooter-tyyppisissä peleissä pelaaja on paikallaan ja muut oliot, esimerkiksi vihollisalukset, lähestyvät pelaajaa.
 

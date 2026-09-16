@@ -1,4 +1,4 @@
-# Miten pelikentän voi aloittaa alusta?
+# Pelin aloittaminen alusta
 
 (Jos haluat tehdä peliisi useita erilaisia kenttiä, [tsekkaa tämä ohje](../kentat/kentan-vaihtuminen.md).)
 

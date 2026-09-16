@@ -1,4 +1,4 @@
-# Läpsylintu: Vaihe 1
+# Läpsylintu, vaihe 1: Projekti ja kenttä
 
 Tässä ohjeessa neuvotaan Läpsylintu-nimisen pelin tekeminen. Pelissä ohjataan vasemmalta oikealle lentävää lintua, jonka siipiä voi räpyttää.
 
@@ -13,7 +13,7 @@ Tässä ohjeessa neuvotaan Läpsylintu-nimisen pelin tekeminen. Pelissä ohjataa
 
 Kokeile ajaa projektimallista luotu pelisi painamalla ctrl-F5 (joillakin laitteilla pitää painaa fn-näppäintä ctrl ja F5 kanssa), tai yläpalkista klikkaamalla <span class="green">▶</span>.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Kenttätiedoston muokkaaminen
 
@@ -52,10 +52,11 @@ hahmo.ForceJump(nopeus);
 
 ## Tutki!
 
-![](images/question.png) Osaatko etsiä koodista mitä mikäkin näppäin tekee?
+> [!KYSYMYS]
+> Osaatko etsiä koodista mitä mikäkin näppäin tekee?
 
 ## Kokeile!
 
 Kokeile, kuinka peli toimii! Siirry sen jälkeen ohjeessa eteenpäin.
 
-![](images/try_to_run.png)
+> [!KOKEILE]

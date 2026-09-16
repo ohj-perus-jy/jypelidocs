@@ -1,4 +1,4 @@
-# Miten voin käsitellä kuvaa (pikselitasolla)?
+# Kuvan käsittely pikselitasolla
 
 `Image`-luokan kuvia voidaan muokata ja ottaa kuvasta palanen ja siirtää se toiseen kohtaan. Kuvien yksittäisiä pikseleitä on myös mahdollista manipuloida.
 

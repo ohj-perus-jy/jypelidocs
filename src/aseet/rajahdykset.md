@@ -1,10 +1,10 @@
-# Miten peliin saa räjähdyksen?
+# Räjähdykset
 
 ![](images/Explosion.png)
 
 Tällä sivulla opastetaan yksinkertaisen räjähdyksen tekeminen. Tällä sivulla olevilla ohjeilla räjähdyksestä syntyy myös paineaalto, joka vaikuttaa pelissä oleviin fysiikkaolioihin.
 
-Jos haluat tehdä vähän monimutkaisemman ja näyttävämmän räjähdyksen, josta ei synny paineaaltoa (eli on pelkkä visuaalinen efekti) katso [Efektit/räjähdys](../grafiikka/efektit.md#räjähdys).
+Jos haluat tehdä vähän monimutkaisemman ja näyttävämmän räjähdyksen, josta ei synny paineaaltoa (eli on pelkkä visuaalinen efekti) katso [Efektit/räjähdys](../grafiikka/efektit.md#rajahdys).
 
 ## Räjähdyksen luominen
 

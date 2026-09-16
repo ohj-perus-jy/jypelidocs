@@ -1,4 +1,4 @@
-# Miten olio tuhotaan?
+# Olion tuhoaminen
 
 Olio tuhoutuu, kutsumalla sen metodia `Destroy`.
 

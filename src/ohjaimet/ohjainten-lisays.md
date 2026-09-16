@@ -1,4 +1,4 @@
-# Miten lisään ohjaimet peliin
+# Ohjainten lisääminen
 
 Peli voi ottaa vastaan näppäimistön ja hiiren ohjausta. Ohjainten liikettä “kuunnellaan” ja voidaankin määrittää erikseen mitä mistäkin tapahtuu. Ohjaimelle on tehty oma Listen-aliohjelma jolla kuuntelun asettaminen onnistuu.
 
@@ -19,7 +19,7 @@ Jokainen `Listen`-kutsu on muodoltaan samanlainen riippumatta siitä mitä ohjai
 - Näppäimistö: Key.Up <br>
 - Hiiri: MouseButton.Left
 
-Visual Studion kirjoitusapu auttaa löytämään mitä erilaisia näppäinvaihtoehtoja kullakin ohjaimella on.
+Riderin kirjoitusapu auttaa löytämään mitä erilaisia näppäinvaihtoehtoja kullakin ohjaimella on.
 
 **Toinen parametri** määrittää minkälaisia näppäinten tapahtumia halutaan kuunnella ja sillä on neljä mahdollista arvoa:
 
@@ -32,7 +32,7 @@ Visual Studion kirjoitusapu auttaa löytämään mitä erilaisia näppäinvaihto
 
 **Neljäs parametri** on ohjeteksti, joka voidaan näyttää pelaajalle pelin alussa. Tässä tarvitsee vain kertoa mitä tapahtuu kun näppäintä painetaan. Ohjetekstin tyyppi on string eli merkkijono. Jos ohjetta ei halua tai tarvitse laittaa, neljännen parametrin arvoksi voi antaa `null` jolloin se jää tyhjäksi.
 
-Parametrejä voi antaa enemmänkin sen mukaan mitä pelissä tarvitsee. Omat (eli valinnaiset) parametrit laitetaan edellä mainittujen pakollisten parametrien jälkeen ja ne viedään automaattisesti `Listen`-kutsussa annetulle käsittelijälle. ([Esimerkki valinnaisten parametrien käytöstä](https://trac.cc.jyu.fi/projects/npo/wiki/OhjaintenLisays/ValinnaisetParametrit).)
+Parametrejä voi antaa enemmänkin sen mukaan mitä pelissä tarvitsee. Omat (eli valinnaiset) parametrit laitetaan edellä mainittujen pakollisten parametrien jälkeen ja ne viedään automaattisesti `Listen`-kutsussa annetulle käsittelijälle. Esimerkki on alla kohdassa [Näppäimistö](#nappaimisto).
 
 ### Lopetuspainike ja näppäinohjepainike
 
@@ -49,7 +49,7 @@ Tässä näppäimistön Esc-painike lopettaa pelin ja F1-painike näyttää ohje
 
 ## Näppäimistö
 
-Tässä esimerkissä asetetaan näppäimistön nuolinäppäimet liikuttamaan pelaajaa. Viimeinen parametri (vektori) on ns. [valinnainen parametri](https://trac.cc.jyu.fi/projects/npo/wiki/OhjaintenLisays/ValinnaisetParametrit):
+Tässä esimerkissä asetetaan näppäimistön nuolinäppäimet liikuttamaan pelaajaa. Viimeinen parametri (vektori) on ns. valinnainen parametri:
 
 ```csharp,ignore
 public override void Begin()
@@ -101,6 +101,50 @@ void ActivateCheats()
     pelaaja1.IgnoresGravity = true;
 }
 ```
+
+### Tasainen nopeus nuolinäppäimillä
+
+Edellä `Push` kiihdyttää pelaajaa, kun näppäin on pohjassa. Jos pelaajan halutaan liikkuvan tasaisella nopeudella ja pysähtyvän heti, kun näppäin vapautetaan, kuunnellaan jokaiselle näppäimelle kahta tapahtumaa: `ButtonState.Down` asettaa nopeuden ja `ButtonState.Released` nollaa sen. Tämä sopii esimerkiksi ylhäältäpäin kuvattuun labyrinttipeliin.
+
+```csharp,feature-jypeli
+using System;
+using System.Collections.Generic;
+using Jypeli;
+using Jypeli.Assets;
+using Jypeli.Controls;
+using Jypeli.Effects;
+using Jypeli.Widgets;
+
+public class FysiikkaPeli1 : PhysicsGame
+{
+    private double liikkumisnopeus = 300;
+
+    public override void Begin()
+    {
+        PhysicsObject pelaaja = new PhysicsObject(100, 100, Shape.Circle);
+        Add(pelaaja);
+
+        Keyboard.Listen(Key.Left, ButtonState.Down, Liikuta, null, pelaaja, new Vector(-liikkumisnopeus, 0));
+        Keyboard.Listen(Key.Left, ButtonState.Released, Liikuta, null, pelaaja, Vector.Zero);
+        Keyboard.Listen(Key.Right, ButtonState.Down, Liikuta, null, pelaaja, new Vector(liikkumisnopeus, 0));
+        Keyboard.Listen(Key.Right, ButtonState.Released, Liikuta, null, pelaaja, Vector.Zero);
+        Keyboard.Listen(Key.Down, ButtonState.Down, Liikuta, null, pelaaja, new Vector(0, -liikkumisnopeus));
+        Keyboard.Listen(Key.Down, ButtonState.Released, Liikuta, null, pelaaja, Vector.Zero);
+        Keyboard.Listen(Key.Up, ButtonState.Down, Liikuta, null, pelaaja, new Vector(0, liikkumisnopeus));
+        Keyboard.Listen(Key.Up, ButtonState.Released, Liikuta, null, pelaaja, Vector.Zero);
+
+        PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
+        Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
+    }
+
+    void Liikuta(PhysicsObject pelaaja, Vector suunta)
+    {
+        pelaaja.Velocity = suunta;
+    }
+}
+```
+
+Tässä pelaaja annetaan käsittelijälle parametrina, jolloin sen ei tarvitse olla attribuutti. Eri tavat liikuttaa oliota (`Push`, `Hit`, `Velocity`, `Position`, `Walk` ja `Jump`) on koottu sivulle [Olioiden liikuttelu ja siirtely](../oliot/liikuttelu.md).
 
 ## Peliohjain
 
@@ -530,3 +574,10 @@ void Irroita(Touch kosketus)
     aktiivinenKosketus = null;
 }
 ```
+
+## Katso myös
+
+- [Olioiden liikuttelu ja siirtely](../oliot/liikuttelu.md): mitä käsittelijässä tehdään, jotta olio liikkuu.
+- [Ohjainten ryhmittely](ryhmittely.md): näppäimet toimivat vain tietyssä pelitilassa.
+- [Mihin koodi kirjoitetaan](../ohjelmointi/mihin-koodi-kirjoitetaan.md): olio käsittelijälle parametrina tai attribuuttina.
+- [Yleiset virheet](../ohjelmointi/yleiset-virheet.md): näppäin ei tee mitään.

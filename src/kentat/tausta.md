@@ -1,4 +1,4 @@
-# Miten voin vaihtaa kentän taustaa?
+# Tausta
 
 ## Taustavärin asetus {#taustavari}
 

@@ -1,6 +1,6 @@
-# Matematiikka
+# Satunnaisuus ja kulmat
 
 | Ohje | Sisältö |
 | --- | --- |
-| [Kulma](kulma.md) | Jypelin avustavat funktiot kulmien määrittämiseen |
-| [Satunnaisuus](satunnaisuus.md) | Satunnaiset luvut, värit, vektorit, kulmat... |
+| [Satunnaisuus](satunnaisuus.md) | Satunnaiset luvut, värit, vektorit ja kulmat `RandomGen`-luokalla. |
+| [Kulma](kulma.md) | `Angle`-tyyppi ja Jypelin apuvälineet kulmien laskemiseen. |

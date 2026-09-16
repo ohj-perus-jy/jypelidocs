@@ -1,16 +1,23 @@
-# Olioiden käsittely
+# Oliot
+
+Kaikki pelikentällä näkyvä on olioita. Tässä osiossa kerrotaan, miten olio
+luodaan, miltä se näyttää ja miten se poistetaan.
 
 | Ohje | Sisältö |
 | --- | --- |
-| [Olioiden luonti](luonti.md) | Kuinka kappale tuodaan pelikentälle |
-| [Erilaiset oliot](oliotyypit.md) | Mitä erityyppisiä olioita löytyy valmiiksi |
-| [Muodot](muodot.md) | Miten eri muotoja asetetaan |
-| [Ulkonäkö](ulkonako.md) | Tekstuuri, muoto, väri, koko, kulma |
-| [Animaatiot](animaatio.md) | Kuinka oliolle luodaan vaihtuva kuva eli animaatio. |
-| [Tuhoaminen](tuhoaminen.md) | Miten oliot poistetaan pelikentältä |
-| [Elinikä](elinika.md) | Kuinka olio saadaan tuhoutumaan itsestään tietyn ajan kuluttua |
-| [Aivot ja tekoäly](tekoaly.md) | Kuinka olio saadaan liikkumaan itsestään |
-| [Olioiden liittäminen yhteen](liitokset.md) | Miten olioita voidaan liittää liitoksilla yhteen |
-| [Näkyminen toisen päällä](kerrokset.md) | Kuinka olioiden päällekkäinen järjestys asetetaan (Kerrokset) |
-| [Olioiden erottaminen toisistaan](olioiden-erottaminen-toisistaan.md) | Tag-ominaisuus |
-| [Oman oliotyypin luonti](oma-oliotyyppi.md) | Kuinka voidaan tehdä omia oliotyyppejä |
+| [Olion luominen](luonti.md) | Olion tuominen kentälle, lapsioliot. |
+| [Oliotyypit](oliotyypit.md) | GameObject, PhysicsObject, PlatformCharacter, Automobile, Tank ja niiden tärkeimmät ominaisuudet. |
+| [Muodot](muodot.md) | Ympyrä, suorakulmio, kolmio, tähti, monikulmiot, kuvasta tehty muoto. |
+| [Ulkonäkö](ulkonako.md) | Väri, kuva, koko, kulma. |
+| [Animaatio](animaatio.md) | Vaihtuvista kuvista koostuva animaatio. |
+| [Kerrokset](kerrokset.md) | Mikä olio näkyy toisen päällä. |
+| [Olioiden liikuttelu ja siirtely](liikuttelu.md) | Sijainnin asettaminen, Push, Hit, nopeus, Walk ja Jump, pyörittäminen, värähtely. |
+| [Olion tuhoaminen](tuhoaminen.md) | Olion poistaminen kentältä. |
+| [Elinikä](elinika.md) | Olio tuhoutuu itsestään ajan kuluttua. |
+| [Aivot ja tekoäly](tekoaly.md) | Olio liikkuu itsestään: seuraa pelaajaa, vaeltaa, kulkee reittiä. |
+| [Olioiden Tag-ominaisuus](olioiden-erottaminen-toisistaan.md) | Erityyppisten olioiden erottaminen toisistaan törmäyksissä. |
+| [Oman oliotyypin luominen](oma-oliotyyppi.md) | Oma luokka, jolla on lisäominaisuuksia kuten elämät. |
+
+Katso myös [Liitokset](liitokset.md) (Fysiikka-osiossa) ja
+[Ohjainten lisääminen](../ohjaimet/ohjainten-lisays.md) (Ohjaus-osiossa), jos
+olion liikuttaminen halutaan kytkeä näppäimiin tai hiireen.

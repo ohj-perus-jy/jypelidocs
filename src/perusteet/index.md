@@ -1,10 +1,16 @@
 # Aloittaminen
 
-| Ohje | Sisältö |
+Tee nämä järjestyksessä. Kolmen ensimmäisen sivun jälkeen sinulla on toimiva
+peli ja tiedät, mihin koodi kirjoitetaan.
+
+| Vaihe | Sisältö |
 | --- | --- |
-| [Asennusohjeet](asentaminen.md) | Kuinka Jypeli asennetaan |
-| [Projektin luominen](projektin-luonti.md) | Kuinka projekti luodaan ja mitä eri vaihtoehdot tarkoittavat |
-| [Sisällön tuonti peliin](../muut/sisallon-tuonti.md) | Kuinka ulkoiset tiedostot, kuten kuvat ja äänet tuodaan mukaan projektiin. |
-| [Kirjaston liittäminen käsin](kirjaston-liittaminen-kasin.md) | Jos haluat esimerkiksi käyttää Jypelistä löytyviä funktioita tavallisessa konsoliprojektissa. |
-| [Esimerkkipelejä](erilaisia-peleja.md) | Eli millaisia pelejä aiempina vuosina on tehty. |
-| [Mallipelit](../mallit/index.md) | "Kädestä pitäen" ohjeet Pongin ja Läpsylinnun tekoon. |
+| 1. [Asennus](asentaminen.md) | .NET, Rider ja Jypelin projektimallit. |
+| 2. [Uuden projektin luominen](projektin-luonti.md) | Fysiikkapeli-projekti Riderissa ja sen käynnistys. |
+| 3. [Ensimmäinen peli](ensimmainen-peli.md) | Pallo, painovoima ja yksi näppäin. Kymmenen riviä koodia. |
+| 4. [Miten Jypeli-peli toimii](pelin-rakenne.md) | Begin, koordinaatisto, kenttä, kamera, yksiköt ja tapahtumat. |
+| 5. [Kuvat ja äänet mukaan projektiin](sisallon-tuonti.md) | Omien kuva-, ääni- ja tekstitiedostojen lisääminen. |
+| [Millaisia pelejä voin tehdä?](erilaisia-peleja.md) | Esimerkkejä ja projektimallit. |
+
+Seuraavaksi: [Valmiit pelit](../mallit/index.md), joissa tehdään kokonainen peli
+vaihe kerrallaan.

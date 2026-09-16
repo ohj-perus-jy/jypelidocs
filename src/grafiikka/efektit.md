@@ -1,4 +1,4 @@
-# Miten peliin saa efektejä?
+# Efektit
 
 Jotta saisit efektit käyttöön peliisi, tulee sinulla olla seuraava **using**-rivi kooditiedostosi alussa:
 
@@ -13,6 +13,9 @@ Jotta ymmärtäisit kuinka efektit toimivat ja kuinka niitä luodaan Jypelissä,
 - Jokainen efekti joka pelissä luodaan, kuuluu johonkin efektijärjestelmään Yksi efekti koostuu aina niin sanotuista partikkeleista.
 
 ## Räjähdys
+
+> [!HUOMAUTUS]
+> Tämä on pelkkä näkyvä efekti. Jos räjähdyksen halutaan myös heittävän olioita, käytä fysiikkaräjähdystä, ks. [Räjähdykset](../aseet/rajahdykset.md).
 
 Jokainen erilainen efekti käyttää sille tarkoitettua järjestelmää. Räjähdysefektillä tuon järjestelmän nimi on `ExplosionSystem`. Jotta voisit luoda räjähdyksiä, sinun täytyy kirjoittaa seuraavat rivit koodiin
 

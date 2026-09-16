@@ -1,4 +1,4 @@
-# Miten voin liittää törmäyksiin tapahtumia?
+# Törmäysten käsittely
 
 Kun kaksi fysiikkaoliota törmää toisiinsa, syntyy *törmäystapahtuma*. Näitä tapahtumia voidaan tarkkailla *tapahtumankäsittelijöillä*, joiden avulla reagoidaan törmäykseen esimerkiksi tuhoamalla toinen olioista tai kasvattamalla pistelaskurin arvoa.
 
@@ -232,3 +232,10 @@ Olion kokoa on mahdollista muuttaa törmäyksessä `IncreaseObjectSize` ja `Incr
 AddCollisionHandler(pelaaja, "nakki", CollisionHandler.IncreaseObjectSize(10, 10));
 AddCollisionHandler(kirves, CollisionHandler.IncreaseTargetSize(-5, 0));
 ```
+
+## Katso myös
+
+- [Törmäysten estäminen](../fysiikka/tormayksen-estaminen.md): olio, jonka läpi voi kulkea, ja törmäysryhmät.
+- [Olioiden Tag-ominaisuus](../oliot/olioiden-erottaminen-toisistaan.md): käsittelijä vain tietyntyyppisille olioille.
+- [Mihin koodi kirjoitetaan](../ohjelmointi/mihin-koodi-kirjoitetaan.md): käsittelijän parametrit ja attribuutit.
+- [Räjähdykset](../aseet/rajahdykset.md) ja [Pistelaskuri](../laskurit/pistelaskuri.md): tavallisimmat asiat, joita törmäyksessä tehdään.

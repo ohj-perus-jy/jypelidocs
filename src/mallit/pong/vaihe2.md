@@ -1,4 +1,4 @@
-# Pong-peli, vaihe 2
+# Pong, vaihe 2: Pallo liikkeelle
 
 Tämä on Pong-pelin tutoriaalin osa 2/7. Tämän vaiheen aikana
 
@@ -28,7 +28,7 @@ Peliolioiden `x`- ja `y`-koordinaatit voi asettaa muuttamalla fysiikkaobjektin `
 
 Lisää edelliset rivit koodiin pallon luonnin jälkeen. Kokeile erilaisilla `X`:n ja `Y`:n arvoilla mihin pallo sijoittuu ruudulla.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## 2. Vektoreista
 
@@ -51,11 +51,10 @@ pallo.Hit(impulssi * pallo.Mass);
 
 Mitä isompia arvoja annat vektorille, sitä kovempaa pallo lähtee. Kokeile tehdä vektori erilaisilla `x`- ja `y`-arvoilla ja katso mihin suuntaan pallo lähtee.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
-|  |  |
-| --- | --- |
-| ![](images/question.png) | Miten laittaisit pallon liikkumaan yläviistoon? |
+> [!KYSYMYS]
+> Miten laittaisit pallon liikkumaan yläviistoon?
 
 Tässä on vielä tärkeä huomata, että `Hit`-aliohjelmalle annettiin nyt vektori kerrottuna pallon massalla. Pallon massa on tässä yhteydessä vain jokin desimaaliluku, joka kertolaskun myötä kasvattaa vektorin pituutta, eli tässä yhteydessä annettua voimaa.
 
@@ -87,7 +86,7 @@ Level.CreateBorders();
 
 Kun nyt ajat peliä, pelikentässä pitäisi olla reunat, joihin pallo myös törmää.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 Miksi pallo törmää, vaikka emme ole törmäystä mitenkään ohjelmoineet? Siksi, että koska projektia luodessamme teimme fysiikkapelin. Fysiikkapelin (`PhysicsGame`) *fysiikkamoottori* laskee pallon liikkeitä meidän puolestamme.
 
@@ -127,7 +126,7 @@ Eli vapaasti sanottuna:
 
 "Tee näkymättömät reunat joiden kimmoisuus on yksi"
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## 6. Kentän taustavärin vaihtaminen
 
@@ -137,11 +136,10 @@ Eli vapaasti sanottuna:
 Level.Background.Color = Color.Black;
 ```
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
-|  |  |
-| --- | --- |
-| ![](images/question.png) | Miten asettaisit taustavärin vihreäksi? |
+> [!KYSYMYS]
+> Miten asettaisit taustavärin vihreäksi?
 
 Muista tallentaa työsi välillä.
 

@@ -1,4 +1,4 @@
-# Miten olion ulkonäköä voi muuttaa?
+# Ulkonäkö
 
 Luodaan ensin olio, jonka ulkonäköä esimerkeissä muutetaan:
 
@@ -30,7 +30,7 @@ Huomaa, että png-tunnistetta ei tarvitse laittaa kuvan nimen perään.
 
 - Kohta `kuvanNimi` on Content-kansioon siirretyn kuvan nimi.
   - Esimerkiksi, jos kuva on `kissa.png`, niin kuvan nimenä voi olla pelkkä `kissa`, tai `kissa.png`.
-- Miten kuvaan tehdään läpinäkyviä osia? [Lue ohje tästä](../muut/kuvan-lapinakyvyys.md).
+- Miten kuvaan tehdään läpinäkyviä osia? [Lue ohje tästä](../grafiikka/kuvan-lapinakyvyys.md).
 
 Tämän jälkeen kuvan voi asettaa oliolle seuraavalla tavalla:
 

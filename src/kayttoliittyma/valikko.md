@@ -1,4 +1,4 @@
-# Valikoiden luonti
+# Valikot
 
 ## MultiSelectWindow (monivalintaikkuna) {#multiselect}
 

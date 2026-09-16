@@ -1,8 +1,8 @@
-# Kuvien ja äänien tuominen peliin
+# Kuvat ja äänet mukaan projektiin
 
 Jos haluat käyttää pelissä omia kuvia, ääniä tai tekstitiedostoja, ne täytyy ensin liittää mukaan projektiin, jotta ohjelmointiympäristö tietää, että mistä kuva- ja äänitiedostot löytyvät.
 
-**Alla olevat ohjeet on tehty Visual Studiolle, mutta samat ohjeet pätevät muitakin editoreita käytettäessä, hieman soveltaen.**
+**Ohjeet on kirjoitettu Riderille. Muissa ohjelmointiympäristöissä vaiheet ovat samat, mutta valikoiden nimet voivat erota.**
 
 ## Tiedostojen tuominen
 

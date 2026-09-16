@@ -1,4 +1,4 @@
-# Miten peliin saa tekoälyn?
+# Aivot ja tekoäly
 
 Joskus olioita halutaan saada liikkumaan pelissä automaattisesti ilman ihmisen ohjaamista. Tätä varten Jypelissä on olemassa muutamia erilaisia yksinkertaisia tekoälyjä.
 
@@ -74,7 +74,7 @@ Useampien olioiden tapauksessa seurattavat oliot erotetaan pilkulla.
 FollowerBrain seuraajanAivot = new FollowerBrain(pelaaja1, pelaaja2);
 ```
 
-Voit antaa aivoille myös merkkijonon (lainausmerkeissä), jolloin aivojen omistaja seuraa kaikkia olioita, joilla on kyseinen [Tag](https://trac.cc.jyu.fi/projects/npo/wiki/TagProperty)-arvo.
+Voit antaa aivoille myös merkkijonon (lainausmerkeissä), jolloin aivojen omistaja seuraa kaikkia olioita, joilla on kyseinen [Tag](olioiden-erottaminen-toisistaan.md)-arvo.
 
 ```csharp,ignore
 FollowerBrain seuraajanAivot = new FollowerBrain("pelaaja");

@@ -1,4 +1,4 @@
-# Miten saan peliin pistelaskurin?
+# Pistelaskuri
 
 <!-- kuva puuttuu (trac ei vastaa): https://trac.cc.jyu.fi/projects/npo/raw-attachment/wiki/PistelaskurinTekeminen/pisteet.jpg --> Pistelaskurin saamiseksi tarvitaan kaksi osaa:
 
@@ -248,3 +248,10 @@ Kaikki triggerit saa pois `ClearTriggers`-aliohjelmalla
 ```csharp,ignore
 laskuri.ClearTriggers();
 ```
+
+## Katso myös
+
+- [Teksti ruudulla](../kayttoliittyma/teksti.md): näytön sijoittaminen ja ulkonäkö.
+- [Etenemispalkki](etenemispalkki.md): laskurin arvo palkkina.
+- [Törmäysten käsittely](../tapahtumat/tormaykset.md): pisteiden lisääminen törmäyksessä.
+- [Parhaat pisteet](../kayttoliittyma/parhaiden-pisteiden-lista.md): pisteiden tallentaminen listaan.

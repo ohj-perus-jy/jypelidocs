@@ -1,8 +1,29 @@
-TODO: Sivun sisältö ei suurelta osin suoraan liity ohjaimiin.
+# Olioiden liikuttelu ja siirtely
 
-# Miten fysiikkaolioita voi liikuttaa?
+Olion saa liikkumaan monella tavalla: sen voi siirtää suoraan uuteen paikkaan,
+sille voi antaa nopeuden tai sitä voi työntää voimalla, jolloin fysiikka
+hoitaa loput. Tällä sivulla käydään tavat läpi yksinkertaisimmasta alkaen.
+Se, miten näppäimet tai hiiri kytketään liikuttamiseen, kerrotaan sivulla
+[Ohjainten lisääminen](../ohjaimet/ohjainten-lisays.md).
 
-Fysiikkaolioiden liikuttamiseen on eri tapoja jotka käyvät eri tilanteisiin.
+## Siirtäminen: sijainnin asettaminen
+
+Yksinkertaisin tapa on asettaa oliolle uusi sijainti. Olio siirtyy heti annettuun paikkaan.
+
+```csharp,ignore
+pelaaja1.Position = new Vector(100, 50);
+```
+
+Sijaintia voi muuttaa myös yksi koordinaatti kerrallaan suhteessa nykyiseen paikkaan:
+
+```csharp,ignore
+pelaaja1.X = pelaaja1.X + 10;
+pelaaja1.Y = pelaaja1.Y - 10;
+```
+
+- Pelaaja1 siirtyy edellisestä sijainnista 10 yksikköä oikealle ja 10 yksikköä alaspäin.
+
+Tämä toimii kaikille olioille. Jos siirrät näin fysiikkaoliota, huomaa, että siirto ei ota fysiikkaa huomioon: olio voi esimerkiksi päätyä seinän sisään.
 
 ## Push
 
@@ -59,7 +80,7 @@ Vector pelaajanSuunta = Vector.FromLengthAndAngle(500.0, pelaaja1.Angle);
 pelaaja.Push(pelaajanSuunta);
 ```
 
-Muista myös ominaisuudet `LinearDamping`, `MaxVelocity` ja `Restitution` (kts. [kohta Push](#push)).
+Muista myös ominaisuudet `LinearDamping`, `MaxVelocity` ja `Restitution` (kts. [kohta Push](#push)). Olion pyörittäminen näppäimillä onnistuu [ApplyTorque](#applytorque)-metodilla tai asettamalla [kulmanopeus](#pyorittaminen).
 
 ## ApplyTorque
 
@@ -99,7 +120,7 @@ Olion massa vaikuttaa siihen kuinka paljon impulssi vaikuttaa siihen. Mitä suur
 
 ## Walk ja Jump (vain PlatformCharacter-oliolla)
 
-`PlatformCharacter`-olioilla on erityiset kävelemiseen ja hyppämiseen tarkoitetut aliohjelmat. Lue niistä lisää [täältä](https://trac.cc.jyu.fi/projects/npo/wiki/OliotJaSelitykset#a3.PlatformCharacter).
+`PlatformCharacter`-olioilla on erityiset kävelemiseen ja hyppämiseen tarkoitetut aliohjelmat. Lue niistä lisää [täältä](oliotyypit.md#platformcharacter).
 
 ## Move
 
@@ -142,56 +163,13 @@ Fysiikkaolioilla on olemassa ominaisuus nimeltä nopeus eli `Velocity`, joka ker
 maila.Velocity = new Vector(0, 200);
 ```
 
-Alla pidempi esimerkki, jossa pelaajaa voi ohjata kaikkiin neljään suuntaan tasaisella nopeudella. Tämä voi olla hyvä tapa liikutella pelaajaa, jos teet esimerkiksi ylhäältäpäin kuvattua labyrinttipeliä.
-
-```csharp,feature-jypeli
-using System;
-using System.Collections.Generic;
-using Jypeli;
-using Jypeli.Assets;
-using Jypeli.Controls;
-using Jypeli.Effects;
-using Jypeli.Widgets;
-
-public class FysiikkaPeli1 : PhysicsGame
-{
-    private double liikkumisnopeus = 300;
-
-    public override void Begin()
-    {
-        PhysicsObject pelaaja = new PhysicsObject(100, 100, Shape.Circle);
-        Add(pelaaja);
-
-        Keyboard.Listen(Key.Left, ButtonState.Down, Liikuta, null, pelaaja, new Vector(-liikkumisnopeus, 0));
-        Keyboard.Listen(Key.Left, ButtonState.Released, Liikuta, null, pelaaja, Vector.Zero);
-        Keyboard.Listen(Key.Right, ButtonState.Down, Liikuta, null, pelaaja, new Vector(liikkumisnopeus, 0));
-        Keyboard.Listen(Key.Right, ButtonState.Released, Liikuta, null, pelaaja, Vector.Zero);
-        Keyboard.Listen(Key.Down, ButtonState.Down, Liikuta, null, pelaaja, new Vector(0, -liikkumisnopeus));
-        Keyboard.Listen(Key.Down, ButtonState.Released, Liikuta, null, pelaaja, Vector.Zero);
-        Keyboard.Listen(Key.Up, ButtonState.Down, Liikuta, null, pelaaja, new Vector(0, liikkumisnopeus));
-        Keyboard.Listen(Key.Up, ButtonState.Released, Liikuta, null, pelaaja, Vector.Zero);
-
-        PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
-        Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
-    }
-
-    void Liikuta(PhysicsObject pelaaja, Vector suunta)
-    {
-        pelaaja.Velocity = suunta;
-    }
-}
-```
-
-## Sijainnin asettaminen
-
-Oliolle voi myös yksinkertaisesti asettaa uuden sijainnin. Silloin se siirtyy annettuihin X:n ja Y:n pisteisiin. Jos käsittelet fysiikkaolioita tällä metodilla, huomaa, että tämä ei ota huomioon fysiikan vaikutusta olioon.
+Nopeus pysyy samana, kunnes sitä muutetaan. Olion saa pysähtymään asettamalla nopeudeksi nollavektorin:
 
 ```csharp,ignore
-pelaaja1.X = pelaaja1.X + 10;
-pelaaja1.Y = pelaaja1.Y - 10;
+maila.Velocity = Vector.Zero;
 ```
 
-- Pelaaja1 liikkuu x-akselin suhteen edellisestä sijainnista 10 yksikköä oikealle ja 10 yksikköä alaspäin.
+Tämä on hyvä tapa liikutella pelaajaa tasaisella nopeudella esimerkiksi ylhäältäpäin kuvatussa labyrinttipelissä. Kokonainen esimerkki, jossa nopeus asetetaan nuolinäppäimillä ja nollataan näppäimen vapautuessa, on sivulla [Ohjainten lisääminen](../ohjaimet/ohjainten-lisays.md#tasainen-nopeus-nuolinappaimilla).
 
 ## Pyörittäminen
 
@@ -261,3 +239,10 @@ Kulmavärähtelylle voi asettaa aaltomuotoja samaan tapaan kuin tavallisellekin 
 ```csharp,ignore
 vihu.OscillateAngle<Waveform.Triangle>(1, Angle.FromDegrees(20), 2, 1);
 ```
+
+## Katso myös
+
+- [Ohjainten lisääminen](../ohjaimet/ohjainten-lisays.md): näppäimen tai hiiren kytkeminen liikuttamiseen.
+- [Aivot ja tekoäly](tekoaly.md): olio liikkuu itsestään.
+- [Fysiikan ilmiöt](../fysiikka/fysiikan-ilmiot.md): massa, kitka, kimmoisuus ja vaimennus.
+- [Oliotyypit](oliotyypit.md): PlatformCharacterin Walk ja Jump.

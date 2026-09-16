@@ -1,4 +1,4 @@
-# Miten painovoima lisätään?
+# Painovoima
 
 Fysiikkapeliin lisätään painovoima kirjoittamalla seuraava koodi:
 

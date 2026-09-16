@@ -1,4 +1,4 @@
-# Miten ruudulle saa näkymään tekstiä?
+# Teksti ruudulla
 
 - MessageDisplay on viestinäyttö, joka tulee oletuksena pelien mukana (ks. tarkemmat ohjeet alempana).
 - Label on olio, joka näyttää tekstiä kuten MessageDisplay tai erilaisten mittareiden arvoja, kuten IntMeter ja DoubleMeter. Ei tule oletuksena pelien mukana. Täytyy siis lisätä itse.

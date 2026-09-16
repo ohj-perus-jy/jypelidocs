@@ -1,4 +1,4 @@
-# Mitä muita fysiikan ilmiöitä voin hyödyntää?
+# Fysiikan ilmiöt
 
 ## Kimmoisuus
 
@@ -167,7 +167,7 @@ Oletusarvo molemmille on 1.0, jolloin hidastumista ei ole. Mitä pienempi arvo, 
 
 ## Pyöriminen päälle ja pois
 
-Fysiikkaoliot voivat pyöriä akselinsa ympäri. Pyörimisnopeuden voi asettaa olion AngularVelocity -ominaisuudesta [ohjeen mukaisesti.](https://trac.cc.jyu.fi/projects/npo/wiki/OlioidenLiikuttaminen#a6.Py%C3%B6ritt%C3%A4minen)
+Fysiikkaoliot voivat pyöriä akselinsa ympäri. Pyörimisnopeuden voi asettaa olion AngularVelocity -ominaisuudesta [ohjeen mukaisesti.](../oliot/liikuttelu.md#pyorittaminen)
 
 Joskus ei haluta että fysiikkaolio lähtee pyörimään törmäyksistä. Tämän voi estää seuraavalla tavalla:
 

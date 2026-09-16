@@ -1,4 +1,4 @@
-# Muita hyödyllisiä tapahtumia
+# Muita tapahtumia
 
 ## PhysicsObject.Destroyed
 

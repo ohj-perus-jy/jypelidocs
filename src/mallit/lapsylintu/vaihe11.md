@@ -1,4 +1,4 @@
-# Läpsylintu: Vaihe 11 - Pelin jatkokehittely
+# Läpsylintu, vaihe 11: Pelin jatkokehittely
 
 Tällä sivulla on lueteltu ideoita Läpsylintu-pelin jatkokehittelyä varten. Näitä ideoita varten joudut itse soveltamaan [Jypeli-kirjaston käyttöohjeita](../../index.md).
 

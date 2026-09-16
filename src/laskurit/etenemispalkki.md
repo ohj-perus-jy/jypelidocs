@@ -1,4 +1,4 @@
-# ProgressBar
+# Etenemispalkki
 
 ![](images/ProgressBar.png)
 

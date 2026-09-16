@@ -1,4 +1,4 @@
-# Läpsylintu: Vaihe 5
+# Läpsylintu, vaihe 5: Ajastimen pysäyttäminen
 
 Edellisessä vaiheessa lisättiin peliin kuoleminen, mutta lintu jatkaa silti matkaansa oikealle. Korjataan pelaajaa liikuttava ajastin pysähtymään.
 
@@ -67,7 +67,7 @@ public class Lapsylintu : PhysicsGame
 
 Testaa toimiiko ohjelma vielä.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Ajastimen pysäyttäminen
 
@@ -95,4 +95,4 @@ Nyt kun pelaaja törmää seinään, hän kuolee.
 
 Koska ajastin, joka kutsui päällä ollessaan pelaajaa oikeammaksi työntävää aliohjelmaa, pysäytetään, myös pelaajan liike loppuu. Testaa koodisi.
 
-![](images/try_to_run.png)
+> [!KOKEILE]

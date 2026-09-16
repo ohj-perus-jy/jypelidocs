@@ -1,4 +1,4 @@
-# Millaisia olioita on olemassa?
+# Oliotyypit
 
 Tässä on esitelty tarkemmin muutama tärkeä olio pelin tekemisen kannalta. Muitakin olioita on tietysti olemassa.
 

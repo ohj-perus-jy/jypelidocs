@@ -14,6 +14,8 @@ joka näyttää pelin ikkunan kuvana), piilorivit `//-`, korostukset
 `// HIGHLIGHT_GREEN_BEGIN` … `_END`, huomautukset `> [!HUOMAUTUS]`,
 navigaatio `src/SUMMARY.md`:ssä.
 
+Rakenteen kehitystyön tila ja suunnitelma: [TODO.md](TODO.md).
+
 ## Sivuston kehittäminen omalla koneella
 
 Sivusto rakennetaan **Zensicalilla** (`zensical/`, sama työkalu kuin ohj1:ssä
@@ -52,8 +54,6 @@ palauttavat kuvan suorituspalvelimelta. Käsin katsottavaa jäi:
   TIMissä. Tyhjät liitelinkit kuvien perässä on poistettu, mutta viisi kuvaa
   (`animaatio.md`, `pistelaskuri.md`, `ohjainten-lisays.md`) osoittaa yhä
   traciin eikä näy.
-- `ohjelmointi/apua.md`: linkki "Taulukot ja listat" osoittaa TIMissäkin
-  paikkamerkkiin (`Linkkiosoite`).
 - Ajonapit on annettu vain kokonaisille ohjelmille, jotka eivät lataa
   sisältötiedostoja (`LoadImage` ym.); csPlugin-esimerkkien kehyskoodi on
   piiloriveinä (`//-`). Pong-oppaan koodilohkoihin on lisätty piilotetut

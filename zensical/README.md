@@ -221,6 +221,12 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
     `icons/material/`). `PLANTUML_AGENT`. (`ALERT_KINDS`:iin lisätty
     `lisatieto` poistettu: ainoa esiintymä on nyt `<details>`-lohko,
     `src` e816bc7.)
+  - `ALERT_KINDS`: oppaiden merkinnät `> [!KOKEILE]`, `> [!EI TOIMI VIELÄ]`
+    ja `> [!KYSYMYS]` omiksi admonition-tyypeiksi (`kokeile`, `ei-toimi`,
+    `kysymys`; väri ja kuvake `assets/css/admonitions.css`). Korvaavat
+    TIM-wikin PNG-kuvat (play-nappi, rasti, kysymysmerkki), ja useimmiten
+    lohko on pelkkä tunnusrivi, jolloin `convert_alerts` ei kirjoita tyhjää
+    riviä otsikon perään. Tunnusrivin muunnos *yleiskäyttöinen*, tyypit eivät.
   - Uusi `NOT_PAGES` ja `is_page`: `exercises/*/starter/*.md` ei tule
     sivuksi. mdBook kääntää vain SUMMARY.md:n luvut, Zensical jokaisen
     `.md`:n, ja tehtävän aloituspohjan paikkamerkkilinkki (`#lisaa_osoite`)

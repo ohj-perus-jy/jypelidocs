@@ -1,4 +1,4 @@
-# Miten peliin saa aseita?
+# Aseet
 
 ![](images/aseet.png)
 

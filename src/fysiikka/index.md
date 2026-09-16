@@ -1,8 +1,13 @@
 # Fysiikka
 
+Fysiikkapelissä oliot putoavat, törmäävät ja pomppivat itsestään. Tässä
+osiossa säädetään, miten.
+
 | Ohje | Sisältö |
 | --- | --- |
-| [Fysiikan ilmiöt](fysiikan-ilmiot.md) | Voimien ja impulssien antaminen, voiman suuruuden laskeminen, kimmoisuus, kitka, massa. |
 | [Painovoima](painovoima.md) | Jatkuva vetovoima johonkin suuntaan. |
-| [Törmäyksen estäminen](tormayksen-estaminen.md) | Kappaleen tekeminen läpikuljettavaksi |
-| [Liitokset](../oliot/liitokset.md) | Miten liitettään fysiikkaolioita toisiinsa (AxelJoint, PhysicsStructure) |
+| [Fysiikan ilmiöt](fysiikan-ilmiot.md) | Voimat ja impulssit, kimmoisuus, kitka, massa, pyöriminen, törmäysryhmät. |
+| [Liitokset](../oliot/liitokset.md) | Olioiden liittäminen toisiinsa akselilla tai rakenteeksi. |
+
+Katso myös [Törmäysten käsittely](../tapahtumat/tormaykset.md) ja
+[Törmäysten estäminen](tormayksen-estaminen.md).

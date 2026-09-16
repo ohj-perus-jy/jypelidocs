@@ -1,4 +1,4 @@
-# Reunojen ja maaston tekeminen
+# Reunat ja maasto
 
 Tässä ohjeessa kerrotaan, miten peliin lisätään tasainen tai epätasainen reuna kentän yhdelle tai useammalle laidalle pintoja käyttämällä. Pintoja voi käyttää myös muualla kentässä.
 

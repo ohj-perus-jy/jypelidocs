@@ -1,4 +1,4 @@
-# Radan luominen autopeliin
+# Autorata
 
 Radan luominen:
 

@@ -1,4 +1,4 @@
-# Läpsylintu: Vaihe 8
+# Läpsylintu, vaihe 8: Viholliseen törmääminen
 
 Viholliset ovat vielä valkoisia laatikoita, eikä niihin törmäämisestä tapahdu mitään.
 
@@ -22,7 +22,7 @@ vihollinen.Image = vihollisenKuva;
 
 Nyt kuvan pitäisi olla käytössä. Kokeile.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Viholliseen törmääminen
 
@@ -61,7 +61,7 @@ AddCollisionHandler(pelaaja1, "vihu", TormaaTasoon);
 
 Nyt pelaajan törmätessä seinään tai viholliseen, pelaaja kuolee.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Refaktorointia
 

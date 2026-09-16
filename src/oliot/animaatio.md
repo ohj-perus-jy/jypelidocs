@@ -1,8 +1,8 @@
-# Animaation lisääminen oliolle
+# Animaatio
 
 Jypelissä pelin olioille voi lisätä animaatioita eli liikkuvaa kuvaa. Oikeastaan animaatio koostuu useasta yksittäisestä kuvasta, jotka näytetään peräkkäin.
 
-Aluksi täytyy siis piirtää animaatio [piirrostyökaluja](https://trac.cc.jyu.fi/projects/npo/wiki/Tyokalut) käyttäen, esimerkiksi näin.
+Aluksi täytyy siis piirtää animaatio piirto-ohjelmaa (esimerkiksi Paint.NET) käyttäen, esimerkiksi näin.
 
 !
 

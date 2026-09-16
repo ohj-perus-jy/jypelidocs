@@ -1,4 +1,4 @@
-# Miten määritän oliolle eliniän?
+# Elinikä
 
 Oliolle voi määrittää ajan, jonka se on kentällä ennen sen tuhoutumista käyttämällä sen ominaisuutta `LifetimeLeft`.
 

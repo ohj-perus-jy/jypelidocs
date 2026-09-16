@@ -1,4 +1,4 @@
-# Miten lisään olion?
+# Olion luominen
 
 Jos sinulla on käytössä Fysiikkapeli-projektimalli ja haluat kappaleen johon vaikuttaa fysiikka, tee `PhysicsObject`. Jos kappaleelle ei haluta mitään fysiikkaan liittyviä ominaisuuksia, kuten törmäyksiä, tällöin `GameObject` on parempi valinta.
 
@@ -36,37 +36,9 @@ Ominaisuuksia voi muuttaa vielä senkin jälkeen, kun olio on lisätty kenttää
 
 Muut oliot tehdään vastaavalla tavalla, `PhysicsObjectin` tilalla vaan on halutun olion tyyppi. Eri oliot voivat kuitenkin haluta enemmän (tai vähemmän) tietoja jo luotaessa.
 
-## Millaisia olioiden muotoja on olemassa?
+## Muodot
 
-![Kuva erilaisista muodoista](images/shapex.png)
-
-Oliolle voidaan asettaa muoto. Jypelissä olevia muotoja ovat ympyrä, suorakulmio, kolmio, sydän, tähti, jana sekä erilaiset monikulmiot. Lisäksi muodon voi tehdä kuvaan perustuvasti.
-
-Tehdään nyt uusi fysiikkaolio, jonka leveys on 100 ja korkeus on 50.
-
-PhysicsObject olio = new PhysicsObject( 100, 50 );
-
-Muista myös tarvittaessa lisätä olio kentälle: Add(olio);
-
-Voit muuttaa olion sijaintia käyttämällä `olio.X = 0` ja `olio.Y = 0` komentojen avulla Kokeillaan nyt asettaa olio-muuttujalle erilaisia muotoja.
-
-Kokeile erilaisia muotoja!
-
-```csharp,feature-jypeli
-//-using System;
-//-using Jypeli;
-//-using Jypeli.Controls;
-//-
-//-public class Cat : PhysicsGame
-//-{
-//-    public override void Begin()
-//-    {
-PhysicsObject sydan = new PhysicsObject(100, 100);
-sydan.Shape = Shape.Heart;
-Add(sydan);
-//-    }
-//-}
-```
+Oliolle voi antaa muodon `Shape`-ominaisuudella, esimerkiksi `kissa.Shape = Shape.Circle`. Kaikki muodot kuvineen ovat sivulla [Muodot](muodot.md).
 
 ## Olion lisääminen toisen lapsiolioksi
 
@@ -87,3 +59,10 @@ hattu.X += 0;                    // Siirretään hattua x-akselin suunnassa alku
 hattu.Y += 50;                   // Siirretään hattua y-akselin suunnassa  alkuperäisestä sijainnista
 pallo.Add(hattu);                // Huom! Hattu lisätään pallon lapsiolioksi
 ```
+
+## Katso myös
+
+- [Oliotyypit](oliotyypit.md): PhysicsObject, GameObject, PlatformCharacter ja muut.
+- [Ulkonäkö](ulkonako.md): väri, kuva, koko ja kulma.
+- [Olion tuhoaminen](tuhoaminen.md).
+- [Miten Jypeli-peli toimii](../perusteet/pelin-rakenne.md): koordinaatisto ja miksi olio ei näy.

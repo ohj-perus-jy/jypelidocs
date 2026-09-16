@@ -1,4 +1,4 @@
-# Läpsylintu: Vaihe 6
+# Läpsylintu, vaihe 6: Ikkunan koko ja kuolema
 
 ## Ikkunan koon vaihtaminen
 
@@ -53,4 +53,4 @@ pelaaja1.AnimJump = kuolemisanimaatio;
 
 Pelihahmon kuolemisanimaatio voisi olla myös useamman kuvan sisältävä, mutta tässä esimerkissä käytetään vain yksittäistä kuvaa, jossa linnun silmät ovat sarjakuvamaisesti ristissä.
 
-![](images/try_to_run.png)
+> [!KOKEILE]

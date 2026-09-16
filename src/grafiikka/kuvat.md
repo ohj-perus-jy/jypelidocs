@@ -1,4 +1,4 @@
-# Kuvat ja niiden käsittely
+# Kuvat
 
 Jypelissä kaikilla ruudulla näkyvillä olioilla (esimerkiksi GameObjectilla ja PhysicsObjectilla) on ominaisuus `Image`, joka kertoo, minkä näköinen olio on.
 

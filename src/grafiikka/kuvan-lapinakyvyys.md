@@ -1,4 +1,4 @@
-# Miten kuvaan saa tehtyä läpinäkyviä osia
+# Kuvan läpinäkyvyys
 
 Näin saat tehtyä [Paint.Net](https://www.getpaint.net/)-ohjelmalla kuvaasi läpinäkyviä osia ja tallennettua ne PNG-formaatissa.
 

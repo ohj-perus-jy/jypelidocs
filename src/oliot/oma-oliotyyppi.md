@@ -1,6 +1,6 @@
 # Oman oliotyypin luominen
 
-Peleissä käytetään yleensä `PhysicsObject`-olioita, jolla on jo paljon ominaisuuksia, kuten massa ja kimmoisuus. Omassa pelissä voi tarvita muitakin ominaisuuksia. Ne saadaan mukaan [perimällä](https://trac.cc.jyu.fi/projects/npo/wiki/Olioista#Periytyminen) oman oliotyypin:
+Peleissä käytetään yleensä `PhysicsObject`-olioita, jolla on jo paljon ominaisuuksia, kuten massa ja kimmoisuus. Omassa pelissä voi tarvita muitakin ominaisuuksia. Ne saadaan mukaan [perimällä](https://ohjelmointi1.it.jyu.fi/luennot/luento14/) oman oliotyypin:
 
 ```csharp,ignore
 class Vihu : PhysicsObject

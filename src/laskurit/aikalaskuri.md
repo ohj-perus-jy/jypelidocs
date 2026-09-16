@@ -1,4 +1,4 @@
-# Miten saan peliin aikalaskurin?
+# Aikalaskuri
 
 Aikalaskurin tekemiseen tarvitsee karkeasti ottaen kaksi osaa:
 
@@ -47,7 +47,7 @@ double aikaaKulunut = aikalaskuri.SecondCounter.Value;
 
 Aikalaskuri laskee aikaa aloittaen 0:sta ja päätyen (esimerkiksi) 30 sekuntiin.
 
-Muuten lähes samanlainen kuin ensimmäisessä esimerkissä, mutta nyt lisätään ajastimelle tapahtuma, joka suoritetaan kun haluttu aikaväli eli `Interval` on kulunut. Katso tarkemmin ajastimista ja tapahtumista [niitä koskevalta wikisivulta.](https://trac.cc.jyu.fi/projects/npo/wiki/AjastintenKaytto)
+Muuten lähes samanlainen kuin ensimmäisessä esimerkissä, mutta nyt lisätään ajastimelle tapahtuma, joka suoritetaan kun haluttu aikaväli eli `Interval` on kulunut. Katso tarkemmin ajastimista ja tapahtumista [ajastimien ohjeesta.](../tapahtumat/ajastimet.md)
 
 ```csharp,ignore
 void LuoAikalaskuri()
@@ -82,7 +82,7 @@ Koska ajastimen sekuntilaskuria ei saa laskemaan takaperin, joudumme toteuttamaa
 
 Ideana on käyttää desimaalilukuja laskevaa laskuria ja ajastinta. Laskuri alustetaan haluttuun sekuntimäärään ja ajastimen avulla vähennetään sen arvoa aina kuluneen ajan verran. Nyt aikanäyttöön sidotaan laskurin arvo, <u>ei</u> ajastimen sekuntilaskuria.
 
-Tehdään `DoubleMeter`-tyyppisestä laskuristamme attribuutti. Annetaan sille aloitusarvoksi 30. Aina kun ajastin laukeaa, vähennetään laskurin arvoa ja tarkastetaan onko arvo nolla tai pienempi. Katso tarkemmin ajastimista ja tapahtumista [niitä koskevalta wikisivulta.](https://trac.cc.jyu.fi/projects/npo/wiki/AjastintenKaytto)
+Tehdään `DoubleMeter`-tyyppisestä laskuristamme attribuutti. Annetaan sille aloitusarvoksi 30. Aina kun ajastin laukeaa, vähennetään laskurin arvoa ja tarkastetaan onko arvo nolla tai pienempi. Katso tarkemmin ajastimista ja tapahtumista [ajastimien ohjeesta.](../tapahtumat/ajastimet.md)
 
 **Tärkeää** on huomata, että laskurimme arvoa vähennetään aina sen verran, mitä on ajastimen `Interval`-arvo! Muuten se ei pysy ajassa.
 

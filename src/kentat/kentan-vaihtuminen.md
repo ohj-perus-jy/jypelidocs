@@ -1,4 +1,4 @@
-# Miten pelissä voi vaihtaa kenttää?
+# Kentän vaihtaminen
 
 Monissa peleissä on useita eri kenttiä. Tässä on yksi tapa tai periaate, miten saat omaan peliisi monta erilaista kenttää ja miten kenttiä voi vaihtaa.
 

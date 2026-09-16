@@ -1,4 +1,4 @@
-# Pong-peli, vaihe 3
+# Pong, vaihe 3: Aliohjelma
 
 Tämä on Pong-pelin tutoriaalin osa 3/7. Tämän vaiheen aikana
 
@@ -69,7 +69,7 @@ Aliohjelman kutsuminen tarkoittaa, että tietokonetta käsketään suorittamaan 
 
 Mistä voisimme kutsua tuota aliohjelmaa? Tietysti `Begin`-aliohjelmasta, jota olemme edellisissä vaiheissa tehneet. Tuo aliohjelmahan suoritetaan ensimmäisenä kun peli käynnistetään.
 
-**Siirrä** kentän luontiin liittyvät rivit `Begin`:ista aliohjelmaan `LuoKentta` alla olevan kuvan osoittamalla tavalla. Ctrl+X leikkaa valitun tekstin ja Ctrl+V liitää sen kursorin kohdalle. Katso tarvittaessa tarkemmat [ohjeet tekstin editointiin](https://trac.cc.jyu.fi/projects/npo/wiki/Editori#Tekstinkopiointijasiirt%C3%A4minen) <span class="red">TODO: TIMIIN</span>.
+**Siirrä** kentän luontiin liittyvät rivit `Begin`:ista aliohjelmaan `LuoKentta` alla olevan kuvan osoittamalla tavalla. Ctrl+X leikkaa valitun tekstin ja Ctrl+V liitää sen kursorin kohdalle. Katso tarvittaessa tarkemmat ohjeet tekstin editointiin Riderin omasta ohjeesta.
 
 **Huomaa, että omassa koodissasi rivit saattavat olla hieman eri järjestyksessä kuin kuvassa.**
 
@@ -89,7 +89,8 @@ Koska kirjoitimme aliohjelmakutsun ennen rivejä, joilla luodaan vektori nimelt�
 
 Pelissämme on vielä kuitenkin virhe.
 
-![](images/does_not_work_yet.png)(Älä turhaan yritä ajaa peliä.)
+> [!EI TOIMI VIELÄ]
+> Älä turhaan yritä ajaa peliä.
 
 ## 3. Pallo attribuutiksi
 
@@ -145,7 +146,7 @@ Nyt uusi fysiikkaolio sijoitetaan siihen palloon, jonka äsken lisäsimme koodin
 
 Näillä toimenpiteillä pallo-olioon päästään käsiksi kaikista aliohjelmista.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## 4. Mailan lisääminen kenttään
 
@@ -191,7 +192,7 @@ Olisimmeko voineet sijoittaa x-koordinaattiin yksinkertaisesti jonkun arvon, esi
 
 Laitamme myös mailalle `Restitution`-ominaisuuden arvoon `1.0`, koska törmäykseen vaikuttaa kummankin törmäävän kappaleen ominaisuudet.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 Kun nyt käynnistät pelin, siinä näkyy pallo sekä yksi maila.
 
@@ -233,7 +234,7 @@ public override void Begin()
 }
 ```
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 Huomaa, että koodin voi jakaa aliohjelmiin monin eri tavoin, tämä on vain yksi tapa.
 
@@ -243,9 +244,8 @@ Näiden muutosten jälkeen luokka `Pong` eli Pong-pelimme on tämän näköinen.
 
 Huomaa että pallo saattaa kimmota seinästä oudolla kulmalla tai hidastua osuessaan mailaan. Et ole tehnyt mitään väärin, vaan vika on Jypelin käyttämässä fysiikkamoottorissa jota ei ole tarkoitettu tämän tyylisille peleille.
 
-|  |  |
-| --- | --- |
-| ![](images/question.png) | Montako aliohjelmaa koodissa on nyt? Näet vastauksen sivun lopusta, mutta mieti hetki ennen kuin katsot. Muista, että jokaisessa aliohjelmassa on aloittava aaltosulku { sekä lopettava aaltosulku }. |
+> [!KYSYMYS]
+> Montako aliohjelmaa koodissa on nyt? Näet vastauksen sivun lopusta, mutta mieti hetki ennen kuin katsot. Muista, että jokaisessa aliohjelmassa on aloittava aaltosulku { sekä lopettava aaltosulku }.
 
 ```csharp,feature-jypeli
 using System;

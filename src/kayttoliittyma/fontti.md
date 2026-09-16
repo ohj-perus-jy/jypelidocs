@@ -1,4 +1,4 @@
-# Fontin muuttaminen
+# Fontit
 
 Fontti tarkoittaa kirjasinta, eli sitä miltä teksti näyttää. Jypeli sisältää valmiiksi [Roboto](https://fonts.google.com/specimen/Roboto)-fontin normaalilla kirjaisimella, sekä boldattuna.
 
@@ -6,7 +6,7 @@ Näihin pääsee käsiksi `Font.Default` tai `Font.DefaultBold` -kenttien kautta
 
 ## TrueType ja OpenType -fonttien käyttäminen
 
-TrueType (.ttf) ja OpenType (.otf) -fontit saa käyttöön lisäämällä fonttitiedoston projektin `Content`-kansioon ja lataamalla sen. esimerkiksi [Labelille](https://trac.cc.jyu.fi/projects/npo/wiki/Naytot#Label):
+TrueType (.ttf) ja OpenType (.otf) -fontit saa käyttöön lisäämällä fonttitiedoston projektin `Content`-kansioon ja lataamalla sen. esimerkiksi [Labelille](teksti.md):
 
 ```csharp,ignore
 Label label = new Label("Tämä tulee eri fontilla.");

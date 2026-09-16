@@ -1,11 +1,13 @@
-# Grafiikka
+# Grafiikka ja äänet
 
 | Ohje | Sisältö |
 | --- | --- |
-| [Kuvien lisääminen](kuvat.md) | Kuvien tuominen tiedostosta tai internetistä, sekä luominen itse. |
-| [Kameran käyttö](kameran-kaytto.md) | Kamera, eli mihin kohtaan ruutu on keskitetty |
-| [Efektit](efektit.md) | Efektijärjestelmän käyttö. Räjähdys, tuli, savu ja tuuli. |
-| [Peli-ikkunan asettelu](ikkunan-asettelu.md) | Ikkunan resoluutio, koko-ruutu sekä sijainti. |
-| [Kuvien muokkaaminen pikselitasolla](kuvankasittely.md) | Kuvan yksittäisten pikselien käsittely ja muokkaaminen. |
-| [Piirtäminen](piirtaminen.md) | Canvas-piirtoalustan käyttö |
-| [Kuvan läpinäkyvyys](../muut/kuvan-lapinakyvyys.md) | |
+| [Kuvat](kuvat.md) | Kuvan lataaminen tiedostosta tai internetistä, kuvien yhdistäminen, rajaus ja tallennus. |
+| [Kuvan läpinäkyvyys](kuvan-lapinakyvyys.md) | Läpinäkyvän taustan tekeminen kuvaan piirto-ohjelmassa. |
+| [Efektit](efektit.md) | Partikkeliefektit: räjähdys, liekki, savu ja tuuli. |
+| [Piirtäminen](piirtaminen.md) | Viivojen ja kuvioiden piirtäminen Canvas-piirtoalustalle. |
+| [Kuvan käsittely pikselitasolla](kuvankasittely.md) | Yksittäisten pikselien lukeminen ja muokkaaminen. |
+| [Äänet ja musiikki](../aanet/aanien-lisays.md) | Äänitehosteet ja taustamusiikki. |
+
+Kuvat ja äänet on ensin lisättävä projektiin, ks.
+[Kuvat ja äänet mukaan projektiin](../perusteet/sisallon-tuonti.md).

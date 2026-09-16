@@ -1,4 +1,4 @@
-# Millaisia olioiden muotoja on olemassa?
+# Muodot
 
 Oliolle voidaan asettaa muoto. Jypelissä olevia muotoja ovat **ympyrä**, **suorakulmio**, **kolmio**, **sydän**, **tähti**, **jana** sekä erilaiset **monikulmiot**. Lisäksi muodon voi tehdä **kuvaan perustuvasti**.
 

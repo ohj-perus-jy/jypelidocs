@@ -1,4 +1,4 @@
-# Miten kenttää voi zoomata (kameran käyttöohjeet)?
+# Kamera ja zoomaus
 
 Pelissä tulee oletuksena aina kamera, joka näyttää pelialueen olioineen. Kameraa voi esimerkiksi zoomata lähemmäs tai kauemmas kentästä. Kameran nimi on **Camera**.
 

@@ -1,4 +1,4 @@
-# Pong-peli, vaihe 7
+# Pong, vaihe 7: Pistelasku
 
 Tässä vaiheessa lisäämme peliin pistelaskun. Pong-pelissä pelaaja saa pisteen kun pallo ohittaa toisen pelaajan mailan.
 
@@ -141,7 +141,7 @@ Laskureiden x-koordinaatit on laskettu käyttäen hyväksi ruudun vasemman ja oi
 
 Y-koordinaatti lasketaan ruudun yläreunasta (`Screen.Top`) lukien.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 Kun nyt ajat ohjelman, pitäisi ruudun yläreunassa näkyä kaksi laskuria, jotka näyttävät arvoa 0.
 
@@ -162,7 +162,7 @@ Törmäyksiin reagoimista varten Jypeli-kirjastossa on aliohjelma nimeltä `AddC
 AddCollisionHandler(pallo, KasittelePallonTormays);
 ```
 
-![](images/does_not_work_yet.png)
+> [!EI TOIMI VIELÄ]
 
 Aliohjelman, jossa törmäys käsitellään, **täytyy olla** aina seuraavanlainen:
 
@@ -242,7 +242,7 @@ Toisen `if`-lauseen edessä sana `else` (suom. muuten) tarkoittaa sitä, että `
 
 Noista kahdesta `if`-lauseesta ei siis koskaan suoriteta molempia samalla kertaa. On myös hyvin mahdollista, että kumpaakaan niistä ei suoriteta, jos vaikkapa pallo osuu mailaan.
 
-![](images/does_not_work_yet.png)
+> [!EI TOIMI VIELÄ]
 
 Jotta oikeaan ja vasempaan reunaan päästään käsiksi `KasittelePallonTormays`-aliohjelmassa, ne täytyy taas lisätä attribuuttien joukkoon, josta ne näkyvät kaikille aliohjelmille.
 
@@ -306,7 +306,7 @@ public class Pong : PhysicsGame
     // ...
 ```
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Hienosäätöä
 

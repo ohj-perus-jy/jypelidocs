@@ -1,4 +1,4 @@
-# Miten peliin tehdään tähtäys?
+# Tähtäys
 
 Useimmissa peleissä, joissa on aseita, täytyy niillä myös tähdätä. Tässä ohjeessa neuvotaan kuinka teet tähtäämisen hiirellä, xbox360-ohjaimella sekä näppäimistöllä.
 

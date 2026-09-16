@@ -1,4 +1,4 @@
-# Liukusäätimen tekeminen
+# Liukusäätimet
 
 Esimerkki: liukusäädin kentän zoomausta varten.
 

@@ -1,4 +1,4 @@
-# Miten saan pelin koko ruutuun tai vaihdan pelin resoluutiota?
+# Peli-ikkuna ja resoluutio
 Oletuksena ikkunan resoluutio on 1024x768. Ikkunan todelliseen kokoon vaikuttaa kuitenkin järjestelmässä mahdollisesti käytössä oleva skaalauskerroin. Läppäreillä se on lähestulkoon aina oletuksena käytössä.
 
 Oletuksena peli näytetään ikkunassa. Tämä sen takia, että debuggaus tuottaa ongelmia, jos peli näytetään koko ruudulla.

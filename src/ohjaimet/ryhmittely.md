@@ -1,4 +1,4 @@
-# Miten voin ryhmitellä ohjaimia
+# Ohjainten ryhmittely
 
 Jos pelissä on esimerkiksi useita pelaajia tai pelitilanteita, voi olla järkevää jaotella ohjaimia omiin ryhmiinsä. Ryhmiteltyjä ohjaimia voidaan ottaa käyttöön ja poistaa käytöstä (tai kokonaan pelistä) yhdellä koodirivillä.
 

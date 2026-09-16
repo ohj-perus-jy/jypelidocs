@@ -1,4 +1,4 @@
-# Miten teen koostettuja ikkunoita?
+# Koostetut ikkunat
 
 Peliin on mahdollista koostaa erilaisia ruutuja tai ikkunoita, joihin voi lisätä *tekstiä*, *kuvia*, *nappeja*, *laskureiden arvoja* ja niin edelleen.
 
@@ -53,11 +53,11 @@ ruutu.BorderColor = Color.Black;
 ruutu.Image = LoadImage("kuvannimi");
 ```
 
-Kuvan lisäämistä varten muista ohje [sisällön tuomisesta projektiin.](../muut/sisallon-tuonti.md)
+Kuvan lisäämistä varten muista ohje [sisällön tuomisesta projektiin.](../perusteet/sisallon-tuonti.md)
 
 ## Lapsiolioiden lisääminen
 
-Widgetille voi lisätä lapsiolioita, esimerkiksi tekstikenttiä. Tällöin lapsiolion paikka ilmoitetaan suhteessa sen vanhempaan, eli siihen olioon, jolle lapsi lisättiin. Jos `Widget` käyttää [sommittelua](https://trac.cc.jyu.fi/projects/npo/wiki/Sommittelu), se järjestää oliot automaattisesti sen mukaisesti.
+Widgetille voi lisätä lapsiolioita, esimerkiksi tekstikenttiä. Tällöin lapsiolion paikka ilmoitetaan suhteessa sen vanhempaan, eli siihen olioon, jolle lapsi lisättiin. Jos `Widget` käyttää [sommittelua](sommittelu.md), se järjestää oliot automaattisesti sen mukaisesti.
 
 ```csharp,ignore
 Widget ruutu = new Widget(150.0, 100.0);

@@ -1,4 +1,4 @@
-# Läpsylintu: Vaihe 3
+# Läpsylintu, vaihe 3: Norsusta linnuksi
 
 ## Norsusta linnuksi
 
@@ -30,7 +30,7 @@ Voit poistaa Solution Explorerista koko kuvatiedoston `norsu.png`, koska sitä e
 
 Kokeile, että pelisi toimii uudella kuvalla!
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Läpsyanimaation lisääminen
 
@@ -123,4 +123,4 @@ kentta.SetTileMethod('L', LisaaPelaaja);
 
 Ilman tätä muutosta pelikentässäsi ei ole pelaajaa lainkaan.
 
-![](images/try_to_run.png)
+> [!KOKEILE]

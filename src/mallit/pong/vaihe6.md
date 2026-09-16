@@ -1,4 +1,4 @@
-# Pong-peli, vaihe 6
+# Pong, vaihe 6: Parantelua
 
 Tässä vaiheessa parantelemme mailojen liikuttelua ja tutustumme `if`-lauseeseen.
 
@@ -42,11 +42,12 @@ Ehdossa katsotaan, onko mailan yläreuna kentän yläreunan yläpuolella:
 - Jos on, niin pysäytetään maila ja return-lauseella tullaan pois aliohjelmasta.
 - Jos ei, niin if-lauseen perässä olevien aaltosulkujen välissä olevia koodirivejä ei suoriteta vaan asetetaan mailalle nopeus normaaliin tapaan.
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 Pysähtyykö maila yläreunaan? Taitaa kyllä pysähtyä, mutta...
 
-![](images/question.png) Miksi maila ei enää liiku kun se kerran saavuttaa yläreunan? Mieti hetki, ennen kuin jatkat eteenpäin.
+> [!KYSYMYS]
+> Miksi maila ei enää liiku kun se kerran saavuttaa yläreunan? Mieti hetki, ennen kuin jatkat eteenpäin.
 
 ### Toinen yritys
 
@@ -77,9 +78,9 @@ Tässä käytettiin `if`-lauseessa merkintää `(nopeus.Y > 0) && (maila.Top > L
 
 Ehdon voisi nyt lukea: "Nopeuden y-koordinaatti on suurempi kuin nolla **JA** mailan yläreunan y-koordinaatti on suurempi kuin kentän yläreunan y-koordinaatti".
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
-[Täältä lisätietoa ehtolauseisiin liittyen.](https://trac.cc.jyu.fi/projects/npo/wiki/Ehtolauseet) <span class="red">TODO: TIMIIN</span>
+[Täältä lisätietoa ehtolauseisiin liittyen.](https://ohjelmointi1.it.jyu.fi/luennot/luento6/)
 
 ## Alareunan tarkistus
 
@@ -107,7 +108,7 @@ void AsetaNopeus(PhysicsObject maila, Vector nopeus)
 }
 ```
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## 3. XBox-ohjainten lisääminen (valinnainen)
 
@@ -150,7 +151,7 @@ void AsetaOhjaimet()
 }
 ```
 
-![](images/try_to_run.png)
+> [!KOKEILE]
 
 ## Lopputulos
 
