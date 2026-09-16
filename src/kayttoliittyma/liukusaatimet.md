@@ -2,7 +2,13 @@
 
 Esimerkki: liukusäädin kentän zoomausta varten.
 
+![Liukusäädin ruudun vasemmassa yläkulmassa. Kun nuppia vedetään oikealle, kenttä zoomautuu lähemmäs.](images/liukusaadin.gif)
+
+Kun liukusäätimen nuppia vedetään vasemmalta oikealle, siihen sidotun mittarin
+arvo kasvaa nollasta yhteen ja kamera zoomaa kenttää lähemmäs.
+
 Luodaan liukusäätimelle ensin mittari, jonka lähtöarvo on 0, minimiarvo 0 ja maksimiarvo 1. Sidotaan mittari liukusäätimeen.
+`Slider` on nimiavaruudessa `Jypeli.Widgets`, joten tiedoston alkuun tarvitaan rivi `using Jypeli.Widgets;`.
 
 Esimerkki liukusäätimen käytöstä: [​http://www.youtube.com/watch?v=8_5lD57VIK0&feature=relmfu](http://www.youtube.com/watch?v=8_5lD57VIK0&feature=relmfu)
 

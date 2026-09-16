@@ -37,12 +37,13 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
       Aloittaminen · Valmiit pelit · aiheosiot (Oliot, Ohjaus, …) suoraan päävalikossa · Ohjelmointi · Viite.
 - [x] Yhdistä pienet osiot: Ohjaimet+liikuttelu → Ohjaus; Tapahtumat +
       törmäyksen estäminen; Kentät + kamera + ikkuna + pelin kulku;
-      Grafiikka + äänet; Käyttöliittymä + laskurit; Fysiikka + liitokset.
+      Grafiikka + äänet; Käyttöliittymä + laskurit; Fysiikka + liitokset + aseet; Grafiikka +
+      räjähdykset (Aseet ja räjähdykset -osio poistettu 16.9.2026).
       Tag-ominaisuus jäi Oliot-osioon (se on olion ominaisuus); Ohjelmointi
       linkittää siihen.
 - [x] Siirrä `ohjaimet/kaksi-pelaajaa.md` Oppaisiin (esimerkkipeli).
 - [x] Päivitä osioiden etusivujen taulukot vastaamaan uutta ryhmittelyä ja
-      poista tarpeettomat etusivut (`pelin-kulku/`, `aanet/`, `laskurit/`).
+      poista tarpeettomat etusivut (`pelin-kulku/`, `aanet/`, `laskurit/`, `aseet/`).
 - [x] Etusivu: "Aloita tästä" -polku (3 askelta) ja aihehakemisto samassa
       järjestyksessä kuin valikko.
 - [ ] Pudota valikon numerointi ohjeosioista ja säilytä se vain oppaiden

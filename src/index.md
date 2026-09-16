@@ -59,6 +59,8 @@ Sama sisältö kuin vasemman reunan valikossa, samassa järjestyksessä.
 - [Miten painovoima lisätään?](fysiikka/painovoima.md)
 - [Mitä muita fysiikan ilmiöitä voin hyödyntää?](fysiikka/fysiikan-ilmiot.md)
 - [Kuinka liitän fysiikkaolioita toisiinsa?](oliot/liitokset.md)
+- [Miten peliin saa aseita?](aseet/aseiden-lisaaminen.md)
+- [Miten pelaaja voi heittää esineen, esim. kranaatin?](aseet/aseiden-lisaaminen.md#heitettavat)
 
 ### Kentät ja kamera
 
@@ -79,32 +81,27 @@ Sama sisältö kuin vasemman reunan valikossa, samassa järjestyksessä.
 - [Miten lisään omia kuvia?](grafiikka/kuvat.md)
 - [Miten kuvaan tehdään läpinäkyviä osia?](grafiikka/kuvan-lapinakyvyys.md)
 - [Miten peliin saa efektejä (räjähdys, savu, liekki)?](grafiikka/efektit.md)
+- [Miten peliin saa räjähdyksen?](aseet/rajahdykset.md)
 - [Kuinka piirrän itse kuvioita?](grafiikka/piirtaminen.md)
 - [Miten voin käsitellä kuvaa pikselitasolla?](grafiikka/kuvankasittely.md)
 - [Miten peliin saa ääniä?](aanet/aanien-lisays.md#tehosteet)
 - [Miten saan peliin taustamusiikin?](aanet/aanien-lisays.md#taustamusiikki)
 
-### Aseet ja räjähdykset
-
-- [Miten peliin saa aseita?](aseet/aseiden-lisaaminen.md)
-- [Miten pelaaja voi heittää esineen, esim. kranaatin?](aseet/aseiden-lisaaminen.md#heitettavat)
-- [Miten peliin saa räjähdyksen?](aseet/rajahdykset.md)
-
 ### Käyttöliittymä ja laskurit
 
 - [Miten ruudulle saa näkymään tekstiä?](kayttoliittyma/teksti.md)
-- [Miten muutan tekstin kokoa tai fonttia?](kayttoliittyma/fontti.md)
+- [Miten kysyn pelaajalta tekstiä?](kayttoliittyma/tekstin-kysyminen.md)
 - [Miten teen pistelaskurin?](laskurit/pistelaskuri.md)
 - [Miten teen aikalaskurin?](laskurit/aikalaskuri.md)
 - [Miten teen palkin, joka näyttää laskurin arvon?](laskurit/etenemispalkki.md)
 - [Miten peliin tehdään alkuvalikko?](kayttoliittyma/valikko.md)
 - [Monivalintaikkuna](kayttoliittyma/valikko.md#multiselect)
-- [Miten kysyn pelaajalta tekstiä?](kayttoliittyma/tekstin-kysyminen.md)
 - [Parhaiden pisteiden lista](kayttoliittyma/parhaiden-pisteiden-lista.md)
 - [Sommittelu](kayttoliittyma/sommittelu.md)
 - [Liukusäätimen tekeminen](kayttoliittyma/liukusaatimet.md)
 - [Miten teen koostettuja ikkunoita?](kayttoliittyma/koostettu-ikkuna.md)
 - [Oman käyttöliittymäkomponentin tekeminen](kayttoliittyma/omat-kayttoliittymakomponentit.md)
+- [Miten muutan tekstin kokoa tai fonttia?](kayttoliittyma/fontti.md)
 - [Esimerkkejä](kayttoliittyma/esimerkkeja.md)
 
 ### Satunnaisuus ja kulmat
