@@ -1,0 +1,82 @@
+# Julkaisee GitHub Pagesiin kaksi Zensical-sivustoa samasta artefaktista:
+#
+#   /      `main`-haarasta (tuotanto)
+#   /dev/  `dev`-haarasta (esikatselu)
+#
+# Molemmat rakennetaan jokaisella pushilla kumpaan tahansa haaraan, koska
+# Pages-sivusto on yksi kokonaisuus: osittainen julkaisu pyyhkisi toisen.
+# Tämän tiedoston on oltava sama `main`issa ja `dev`:ssä; `main`-push ajaa
+# `main`in version. mdBook poistui 2026-09-15 (TODO.md, vaihe 5).
+name: Deploy site to Pages
+
+on:
+  push:
+    branches: ["main", "dev"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Yksi julkaisu kerrallaan; jonossa olevia ei peruta, jotta tuotantojulkaisu
+# valmistuu aina.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Sama rakennus kummallekin haaralle. convert.py tarvitsee vain
+  # standardikirjaston; kaaviot (cache/svgbob/) ovat versionhallinnassa,
+  # joten svgbobia ei tarvita.
+  zensical:
+    strategy:
+      matrix:
+        include:
+          - ref: main
+            artifact: site
+          - ref: dev
+            artifact: site-dev
+    name: zensical (${{ matrix.ref }})
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: zensical/requirements.txt
+      - name: Install Zensical
+        run: pip install -r zensical/requirements.txt
+      - name: Convert and build
+        working-directory: zensical
+        run: |
+          python3 convert.py
+          zensical build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}
+          path: zensical/site
+
+  deploy:
+    needs: zensical
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
+      - uses: actions/download-artifact@v4
+        with:
+          name: site-dev
+          path: _site/dev
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

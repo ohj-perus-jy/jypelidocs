@@ -1,0 +1,26 @@
+{
+	"name": "Jypeli-ohjeet",
+	"image": "mcr.microsoft.com/devcontainers/python:3.11-bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+		"ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+	},
+
+	"mounts": [
+		"source=claude-code-config,target=/home/vscode/.claude,type=volume"
+	],
+
+	// 8001 = zensical/run.sh
+	"forwardPorts": [8001],
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"yzhang.markdown-all-in-one"
+			]
+		}
+	},
+
+	"postCreateCommand": "sudo chown -R vscode:vscode /home/vscode/.claude && ln -sf /home/vscode/.claude/.claude.json /home/vscode/.claude.json && ./zensical/setup.sh"
+}
