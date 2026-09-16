@@ -10,6 +10,6 @@ Miten pelaaja ohjaa peliä näppäimistöllä, hiirellä, peliohjaimella tai kos
 | [Värinä](varina.md) | Peliohjaimen tai puhelimen värinä. |
 
 Katso myös [Olioiden liikuttelu ja siirtely](../oliot/liikuttelu.md) (Oliot-osiossa),
-opas [Kahden pelaajan tasohyppely](kaksi-pelaajaa.md) ja
+opas [Kahden pelaajan tasohyppely](../tutoriaalit/kaksi-pelaajaa.md) ja
 [Miten Jypeli-peli toimii](../aloittaminen/pelin-rakenne.md#paikallinen-muuttuja-vai-attribuutti), jos
 näppäimen käsittelijä tarvitsee oliota toisesta aliohjelmasta.

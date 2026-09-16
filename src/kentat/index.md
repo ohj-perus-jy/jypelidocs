@@ -14,4 +14,4 @@ peli-ikkuna, tauko ja pelin aloittaminen alusta.
 | [Kamera ja zoomaus](kameran-kaytto.md) | Kameran siirto, seuraaminen ja zoomaus. |
 | [Peli-ikkuna ja resoluutio](../grafiikka/ikkunan-asettelu.md) | Koko ruutu, ikkunan koko ja sijainti. |
 | [Pelin aloittaminen alusta](aloittaminen-alusta.md) | Kaiken nollaaminen. |
-| [Pause](../pelin-kulku/pause.md) | Pelin keskeyttäminen hetkeksi. |
+| [Pause](pause.md) | Pelin keskeyttäminen hetkeksi. |

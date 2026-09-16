@@ -166,4 +166,4 @@ Exit();
 ```
 
 [Pelin aloittaminen alusta](../kentat/aloittaminen-alusta.md) ·
-[Pause](../pelin-kulku/pause.md)
+[Pause](../kentat/pause.md)

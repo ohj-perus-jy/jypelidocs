@@ -30,11 +30,15 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
 - [x] Yhtenäistä valikkoteksti ja sivun H1 (valikossa substantiivi, H1 sama;
       kysymysmuoto jää etusivun hakemistoon).
 - [x] Siirrä "Kirjaston liittäminen käsin" pois aloituspolusta Viite-osioon.
+- [x] Kirjoita `ekstrat/kirjaston-liittaminen-kasin.md` uusiksi (16.9.2026):
+      Visual Studion kuvat (.NET 5, Jypeli.NET 10.0.6) poistettu; ohje
+      csproj-riville, Riderin NuGet-ikkunalle ja `dotnet add package`;
+      Jypeli.NET 11.x vaatii .NET 6+, projektimallit käyttävät net10.0.
 
 ## 2. Rakenne
 
 - [x] Ryhmittele `SUMMARY.md` ylätason osioihin:
-      Aloittaminen · Valmiit pelit · aiheosiot (Oliot, Ohjaus, …) suoraan päävalikossa · Ohjelmointi · Viite.
+      Aloittaminen · Kokonaiset pelitutoriaalit · aiheosiot (Oliot, Ohjaus, …) suoraan päävalikossa · Ohjelmointi · Viite.
 - [x] Yhdistä pienet osiot: Ohjaimet+liikuttelu → Ohjaus; Tapahtumat +
       törmäyksen estäminen; Kentät + kamera + ikkuna + pelin kulku;
       Grafiikka + äänet; Käyttöliittymä + laskurit; Fysiikka + liitokset + aseet; Grafiikka +
@@ -44,8 +48,8 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
 - [x] Siirrä `ohjaimet/kaksi-pelaajaa.md` Oppaisiin (esimerkkipeli).
 - [x] Päivitä osioiden etusivujen taulukot vastaamaan uutta ryhmittelyä ja
       poista tarpeettomat etusivut (`pelin-kulku/`, `aanet/`, `laskurit/`, `aseet/`).
-- [x] Etusivu: "Aloita tästä" -polku (3 askelta) ja aihehakemisto samassa
-      järjestyksessä kuin valikko.
+- [x] Etusivu: "Aloita tästä" -polku (3 askelta) ja lyhyt kuvaus valikon
+      osioista (pitkä aihehakemisto poistettu 16.9.2026).
 - [ ] Pudota valikon numerointi ohjeosioista ja säilytä se vain oppaiden
       vaiheissa. Vaatii muutoksen `zensical/convert.py`:n `build_nav`-
       funktioon (numerointi on nyt kaikilla luettelokohdilla); convert.py on
