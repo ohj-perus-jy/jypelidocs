@@ -16,7 +16,7 @@ Useimmiten kannettavissa on myös näytönskaalaus käytössä, jolloin ikkunan 
 
 Jotta peliä pelaavalle tulee varmasti selväksi, että pelihahmo on kuollut seinään osumisen jälkeen, vaihdetaan kuolleelle hahmolle erilainen kuva.
 
-Lataa oheinen kuva koneelle omalle tietokoneellesi kuten aiemmatkin kuvat. Älä käytä Agoran mikroluokissa Windowsin ehdottamaa Omat tiedostot -hakemistoa, sillä se täyttää käyttäjäprofiilin levytilan.
+Lataa oheinen kuva omalle tietokoneellesi kuten aiemmatkin kuvat. Yliopiston koneilla tallenna se `C:\MyTemp\Omanimi`-kansioon, ei Omat tiedostot -kansioon, sillä se täyttää käyttäjäprofiilin levytilan.
 
 ![](images/kuollut.png)
 

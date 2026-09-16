@@ -8,7 +8,7 @@ Koska lentävä norsu ei näytä hyvältä pelissämme, vaihdetaan kuva lintuun.
 
 Tallenna kuva nimellä `lintu.png`.
 
-Ota esille projektisi kansio ja sieltä projektisi niminen kansio, jonka sisältä löytyy *`Content`*-kansio. Raahaa `PNG`-kuvatiedosto **`Content`**-kansion päälle. Varmista, että osut nimenomaan `Content`-kansion kohdalle, että kuva menee sen sisälle! Tämän jälkeen valitse tämä `lintu.png` `Solution explorerista`, oikea-klikkaa sitä ja valitse avautuvasta valikosta **`Properties`**.
+Ota esille projektisi kansio ja sieltä projektisi niminen kansio, jonka sisältä löytyy *`Content`*-kansio. Raahaa `PNG`-kuvatiedosto **`Content`**-kansion päälle. Varmista, että osut nimenomaan `Content`-kansion kohdalle, että kuva menee sen sisälle! Tämän jälkeen valitse tämä `lintu.png` Riderin Explorer-näkymästä, klikkaa sitä hiiren oikealla painikkeella (Macilla Ctrl+klikkaus) ja valitse avautuvasta valikosta **`Properties`**.
 
 <img src="images/image.png" width="200" />
 
@@ -26,7 +26,7 @@ Ja korvaa siitä "norsu" uuden kuvasi nimellä:
 Image pelaajanKuva = LoadImage("lintu.png");
 ```
 
-Voit poistaa Solution Explorerista koko kuvatiedoston `norsu.png`, koska sitä ei enää käytetä.
+Voit poistaa Explorer-näkymästä koko kuvatiedoston `norsu.png`, koska sitä ei enää käytetä.
 
 Kokeile, että pelisi toimii uudella kuvalla!
 
@@ -42,7 +42,7 @@ Lataa linnusta läpsy-versio omaan hakemistoosi. Älä käytä tiedoston nimess�
 
 Tallenna kuva nimellä `lapsy.png`.
 
-Lisää `lapsy.png` Solution Explorerissa `Content`:iin (samoin kuin teit aiemmankin lintukuvan kanssa).
+Lisää `lapsy.png` Explorer-näkymässä `Content`-kansioon (samoin kuin teit aiemmankin lintukuvan kanssa).
 
 Etsi koodista kohta, jossa ladattiin pelaajan kuva:
 
@@ -75,7 +75,7 @@ Ensimmäinen näistä riveistä lisää hypylle läpsyanimaation ja toinen rivi 
 
 Kenttätiedostossa käytetään yhä merkkiä `N` kuvaamaan norsun aloitussijaintia, vaikka muutimme pelaajamme linnuksi. Vaihdetaan siis merkiksi hieman kuvaavampi `L`.
 
-Avaa Solution Explorer -ikkunassa tiedosto `kentta1.txt`. Se näyttää suunnilleen tältä:
+Avaa Explorer-näkymässä tiedosto `kentta1.txt`. Se näyttää suunnilleen tältä:
 
 ```text
 ##################################################

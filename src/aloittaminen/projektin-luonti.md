@@ -24,7 +24,7 @@ pikakuvakkeesta ("JetBrains Rider"), Macilla Launchpadista tai Spotlightilla
 4. Valitse **Solution directory** -kohtaan kansio, johon peli tallennetaan,
    esimerkiksi `C:\Users\Käyttäjänimi\Koodiprojektit` (Macilla esimerkiksi
    `/Users/käyttäjänimi/Koodiprojektit`). **Yliopiston koneilla**
-   kansioksi on annettava `C:\Mytemp\Omanimi`, jossa `Omanimi` on vaikkapa
+   kansioksi on annettava `C:\MyTemp\Omanimi`, jossa `Omanimi` on vaikkapa
    oma etunimesi.
 5. Klikkaa **Create**.
 
@@ -32,7 +32,8 @@ pikakuvakkeesta ("JetBrains Rider"), Macilla Launchpadista tai Spotlightilla
 
 Klikkaa Riderin ikkunan yläreunassa olevaa vihreää kolmiota (**Run**). Jos
 ruudulle aukeaa vaaleansininen ikkuna, projekti on luotu oikein. Ikkunan voi
-sulkea sen oikeassa yläkulmassa olevasta rastista.
+sulkea sulkemispainikkeesta (Windowsissa rasti oikeassa yläkulmassa, Macilla
+punainen pallo vasemmassa yläkulmassa) tai Esc-näppäimellä.
 
 Peli on nyt tyhjä. Mitä projektissa on ja mihin koodi kirjoitetaan, kerrotaan
 sivulla [Ensimmäinen peli](ensimmainen-peli.md).

@@ -41,4 +41,4 @@ Oleellista on myös huomata, että Y-akseli menee "väärään suuntaan".
 
 Useamman näytön tapauksissa on mahdollista että koordinaatit menevät myös negatiiviselle.
 
-Windowsilla päänäytön vasen yläkulma on koordinaateissa (0,0). Jos päänäytön vasemmalla puolella on toinen näyttö, on sen x-suuntaiset koordinaatit negatiivisella puolella.
+Päänäytön vasen yläkulma on koordinaateissa (0,0). Jos päänäytön vasemmalla puolella on toinen näyttö, on sen x-suuntaiset koordinaatit negatiivisella puolella.

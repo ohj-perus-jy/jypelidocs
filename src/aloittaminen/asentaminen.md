@@ -14,12 +14,12 @@ Jos teet Ohjelmointi 1 -kurssia, on suositeltavaa asentaa myös [Git-työkalut](
 ## Yliopiston koneilla: Jypelin projektimallit
 
 Yliopiston koneilla Rider on jo asennettu, mutta Jypelin projektimallit
-pitää asentaa kerran. Avaa Käynnistä-valikosta *Command prompt*, anna komento
-ja paina Enter:
+pitää asentaa kerran. Avaa komentorivi (Windowsissa Käynnistä-valikosta
+*Command prompt*, Macilla *Terminal*), anna komento ja paina Enter:
 
 ```bash
 dotnet new install Jypeli.Templates
 ```
 
-Sen jälkeen voit sulkea Command promptin. Omalla koneella tämä on tehty jo
+Sen jälkeen voit sulkea komentorivin. Omalla koneella tämä on tehty jo
 asennuksen yhteydessä.

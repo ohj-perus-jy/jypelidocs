@@ -85,11 +85,19 @@ DataStorage.TriggerOnComplete(
 
 Joskus voi tulla tarve ladata kuvia joita ei ole lisätty mukaan projektiin. Tähän soveltuu kutsu:
 
+Windowsissa:
+
 ```csharp,ignore
 Image kuva = Image.FromFile("C:\\Users\\Mikko\\Kuvat\\kissa.png");
 ```
 
-Huomaa kaksi `\\`-merkkiä tiedostopolussa. Kuva voi olla png-, jpeg- tai bmp- muotoinen.
+Macilla:
+
+```csharp,ignore
+Image kuva = Image.FromFile("/Users/mikko/Kuvat/kissa.png");
+```
+
+Huomaa, että Windows-polussa kansioiden välissä on kaksi `\\`-merkkiä, Macilla yksi `/`-merkki. Kuva voi olla png-, jpeg- tai bmp-muotoinen.
 
 Kannattaa kuitenkin huomioida että tämän käyttö vaikeuttaa pelin jakamista muille, sekä tulee pitää enemmän huolta polkujen oikeellisuuden suhteen. Tätä ei siis kannata käyttää, ellei ole aivan varma mitä on tekemässä.
 

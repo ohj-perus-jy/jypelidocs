@@ -8,7 +8,7 @@ Tässä ohjeessa neuvotaan Läpsylintu-nimisen pelin tekeminen. Pelissä ohjataa
 - Avaa Rider tai joku muu C#-kielellä toimiva ohjelmointiympäristö ja klikkaa New Solution.
 - Valitse pohjaksi **Tasohyppelypeli** klikkaamalla yhden kerran **Tasohyppelypeli**-pohjan nimeä.
 - Anna solutionille nimeksi esimerkiksi Lapsylintu. Älä vielä paina Createa. (Nimissä ei kannata käyttää välilyöntejä tai erikoismerkkejä!)
-- **Jos** teet peliä yliopiston mikroluokassa, muista tallentaa hakemistoon `C:\MyTemp\omanimi`, ei Windowsin Omat tiedostot -hakemistoon! Omalla tietokoneella voit tallentaa projektin mihin haluat.
+- Valitse **Solution directory** -kohtaan kansio, johon peli tallennetaan, esimerkiksi `C:\Users\Käyttäjänimi\Koodiprojektit` (Macilla esimerkiksi `/Users/käyttäjänimi/Koodiprojektit`). **Yliopiston koneilla** kansioksi on annettava `C:\MyTemp\Omanimi`, ei Omat tiedostot -kansiota.
 - Paina Create.
 
 Kokeile ajaa projektimallista luotu pelisi klikkaamalla yläpalkista vihreää kolmiota <span class="green">▶</span> (**Run**).
@@ -17,7 +17,7 @@ Kokeile ajaa projektimallista luotu pelisi klikkaamalla yläpalkista vihreää k
 
 ## Kenttätiedoston muokkaaminen
 
-Avaa näytön oikeassa reunassa näkyvästä `Solution Explorer:sta` löytyvästä `Content`-kansiosta tiedosto `kentta1.txt`. Korvaa sen sisältö kokonaan seuraavalla tekstillä:
+Avaa Riderin vasemman reunan Explorer-näkymästä löytyvästä `Content`-kansiosta tiedosto `kentta1.txt`. Korvaa sen sisältö kokonaan seuraavalla tekstillä:
 
 ```text
 ##################################################

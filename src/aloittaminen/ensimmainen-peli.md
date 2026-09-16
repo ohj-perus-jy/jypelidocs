@@ -57,8 +57,9 @@ Riveillä tapahtuu tämä:
 3. Lisätään pallo kentälle. **Ilman `Add`-riviä olio ei näy.**
 
 Aja peli klikkaamalla vihreää kolmiota (**Run**). Pallo on kentän keskellä,
-sillä kentän origo on ruudun keskipisteessä. Ikkunan voi sulkea sen oikeassa
-yläkulmassa olevasta rastista tai Esc-näppäimellä.
+sillä kentän origo on ruudun keskipisteessä. Ikkunan voi sulkea
+sulkemispainikkeesta (Windowsissa rasti oikeassa yläkulmassa, Macilla
+punainen pallo vasemmassa yläkulmassa) tai Esc-näppäimellä.
 
 ## Painovoima ja lattia
 
