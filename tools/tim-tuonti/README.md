@@ -14,5 +14,6 @@ Ajettu 16.9.2026. Skriptit olettavat välimuistihakemistot työhakemistossaan:
 `tim2md.py` tarvitsee pandocin (`pip install pypandoc_binary` ja polku
 `PANDOC`-vakioon). Sivuluettelo kerättiin wikin etusivulta seuraamalla
 kaikkia `kurssit/jypeli/`-linkkejä (myös suhteelliset) sekä etusivun
-timTable-taulukon linkkiä `paivitysloki`. Kun wiki muuttuu, helpoin tapa
+timTable-taulukon linkkiä `paivitysloki`, sekä Läpsylinnun vaiheet 2–11,
+joihin etusivu ei linkitä (`fetch_html.py`). Kun wiki muuttuu, helpoin tapa
 on ajaa tuonti uudelleen tyhjään hakemistoon ja verrata `src/`-diffiä.

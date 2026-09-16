@@ -102,7 +102,7 @@ void LuoMaila(double x, double y)
 
 Voit kokeilla ajaa pelin, mutta yhtään mailaa ei vielä näy. **Aliohjelmaa `LuoMaila` ei vielä kutsuta missään, eli sen koodirivejä ei koskaan suoriteta.**
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 ## 3. Mailoja luovan aliohjelman kutsuminen ja parametrien välittäminen
 
@@ -140,7 +140,7 @@ Huomaa, että parametri voi olla myös yhteen- tai vähennyslaskun tulos. Esimer
 
 Nyt pelissä pitäisi näkyä kaksi mailaa!
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 ## 4. Lopputulos
 

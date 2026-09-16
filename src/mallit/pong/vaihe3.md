@@ -89,7 +89,7 @@ Koska kirjoitimme aliohjelmakutsun ennen rivejä, joilla luodaan vektori nimelt�
 
 Pelissämme on vielä kuitenkin virhe.
 
-%%eitoimi%%(Älä turhaan yritä ajaa peliä.)
+![](images/does_not_work_yet.png)(Älä turhaan yritä ajaa peliä.)
 
 ## 3. Pallo attribuutiksi
 
@@ -145,7 +145,7 @@ Nyt uusi fysiikkaolio sijoitetaan siihen palloon, jonka äsken lisäsimme koodin
 
 Näillä toimenpiteillä pallo-olioon päästään käsiksi kaikista aliohjelmista.
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 ## 4. Mailan lisääminen kenttään
 
@@ -191,7 +191,7 @@ Olisimmeko voineet sijoittaa x-koordinaattiin yksinkertaisesti jonkun arvon, esi
 
 Laitamme myös mailalle `Restitution`-ominaisuuden arvoon `1.0`, koska törmäykseen vaikuttaa kummankin törmäävän kappaleen ominaisuudet.
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 Kun nyt käynnistät pelin, siinä näkyy pallo sekä yksi maila.
 
@@ -233,7 +233,7 @@ public override void Begin()
 }
 ```
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 Huomaa, että koodin voi jakaa aliohjelmiin monin eri tavoin, tämä on vain yksi tapa.
 

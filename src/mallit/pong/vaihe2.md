@@ -28,7 +28,7 @@ Peliolioiden `x`- ja `y`-koordinaatit voi asettaa muuttamalla fysiikkaobjektin `
 
 Lisää edelliset rivit koodiin pallon luonnin jälkeen. Kokeile erilaisilla `X`:n ja `Y`:n arvoilla mihin pallo sijoittuu ruudulla.
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 ## 2. Vektoreista
 
@@ -51,7 +51,7 @@ pallo.Hit(impulssi * pallo.Mass);
 
 Mitä isompia arvoja annat vektorille, sitä kovempaa pallo lähtee. Kokeile tehdä vektori erilaisilla `x`- ja `y`-arvoilla ja katso mihin suuntaan pallo lähtee.
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 |  |  |
 | --- | --- |
@@ -87,7 +87,7 @@ Level.CreateBorders();
 
 Kun nyt ajat peliä, pelikentässä pitäisi olla reunat, joihin pallo myös törmää.
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 Miksi pallo törmää, vaikka emme ole törmäystä mitenkään ohjelmoineet? Siksi, että koska projektia luodessamme teimme fysiikkapelin. Fysiikkapelin (`PhysicsGame`) *fysiikkamoottori* laskee pallon liikkeitä meidän puolestamme.
 
@@ -127,7 +127,7 @@ Eli vapaasti sanottuna:
 
 "Tee näkymättömät reunat joiden kimmoisuus on yksi"
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 ## 6. Kentän taustavärin vaihtaminen
 
@@ -137,7 +137,7 @@ Eli vapaasti sanottuna:
 Level.Background.Color = Color.Black;
 ```
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 |  |  |
 | --- | --- |

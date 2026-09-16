@@ -13,7 +13,7 @@ Tässä ohjeessa neuvotaan Läpsylintu-nimisen pelin tekeminen. Pelissä ohjataa
 
 Kokeile ajaa projektimallista luotu pelisi painamalla ctrl-F5 (joillakin laitteilla pitää painaa fn-näppäintä ctrl ja F5 kanssa), tai yläpalkista klikkaamalla <span class="green">▶</span>.
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 ## Kenttätiedoston muokkaaminen
 
@@ -52,10 +52,10 @@ hahmo.ForceJump(nopeus);
 
 ## Tutki!
 
-%%kysymys%% Osaatko etsiä koodista mitä mikäkin näppäin tekee?
+![](images/question.png) Osaatko etsiä koodista mitä mikäkin näppäin tekee?
 
 ## Kokeile!
 
 Kokeile, kuinka peli toimii! Siirry sen jälkeen ohjeessa eteenpäin.
 
-%%kokeile%%
+![](images/try_to_run.png)

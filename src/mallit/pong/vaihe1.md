@@ -1,8 +1,10 @@
+# Pong-peli, vaihe 1
+
 Tämän vaiheen lopuksi peli näyttää suunnilleen tältä:
 
 ![](images/pong1.png)
 
-# 1. Ohjelmoinnin aloittaminen
+## 1. Ohjelmoinnin aloittaminen
 
 Uudessa projektissa on paljon tiedostoja. Projektin tiedostot näkyvät listattuna Riderissa/Visual Studiossa. Tässä vaiheessa meitä kiinnostaa ainoastaan tiedosto nimeltä **Pong.cs**, johon tulee C#-ohjelmointikielellä kirjoitettavaa koodia. Tuplaklikkaa tuota tiedostoa, jolloin se aukeaa editoriin muokattavaksi, mikäli se ei ole valmiiksi auki.
 
@@ -84,7 +86,7 @@ public override void Begin()
 
 Kokeile toimiiko peli!
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 ## 4. Olio palloksi
 
@@ -115,7 +117,7 @@ Huomaa, että vaikka meillä oli muuttuja nimeltä pallo, se olikin aluksi pelis
 
 Nyt kun ajat ohjelman (Riderissa Ctrl+F5-näppäin), pitäisi keskellä ruutua näkyä pallo, kuten tämän sivun alussa olevassa kuvassa.
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 ## 5. Lopputulos
 

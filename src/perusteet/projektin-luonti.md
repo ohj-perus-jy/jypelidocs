@@ -26,4 +26,4 @@ Aukeavassa ikkunassa tee seuraavat vaiheet:
 
 Painamalla ctrl-F5 peli käynnistyy. Mikäli aukeaa vaaleansininen ikkuna, on projekti luotu oikein.
 
-[Tästä takaisin pong-tutoriaaliin](../mallit/index.md#mallipelit)
+[Tästä takaisin pong-tutoriaaliin](../mallit/pong/index.md)

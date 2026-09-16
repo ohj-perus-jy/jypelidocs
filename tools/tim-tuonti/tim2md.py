@@ -37,15 +37,34 @@ SECTION_DIRS = {
 EXTRA_PAGES = {
     "Grafiikka": [("grafiikka/kuvat", "Kuvan läpinäkyvyys", "muut/kuvan-lapinakyvyys")],
 }
-MODEL_GAMES = [("Pong, vaihe %d" % n, "mallit/pong/vaihe%d" % n) for n in range(1, 8)] + \
-              [("Läpsylintu, vaihe 1", "mallit/lapsylintu/vaihe1")]
+# Mallipelit: oma päätason osio Aloittamisen perään; pelit ovat alaosioita ja
+# vaiheet niiden sivuja (model_games_summary). Pelin esittely irrotetaan
+# mallit/alku-sivun "## <peli>"-osiosta omaksi etusivuksi (split_model_games).
+# (otsikko, hakemisto, vaiheiden määrä)
+MODEL_GAMES = [("Pong", "mallit/pong", 7), ("Läpsylintu", "mallit/lapsylintu", 11)]
+
+# TIMin makrot %%nimi%%. Ne on määritelty dokumenttien esiasetuksissa
+# (preamble), jotka tuonti ohittaa; laajennus on HTML-näkymän mukainen kuva.
+MACROS = {
+    "kokeile": "![](/images/337213/try_to_run.png)",
+    "eitoimi": "![](/images/337214/does_not_work_yet.png)",
+    "kysymys": "![](/images/337215/question.png)",
+}
+MACRO_RE = re.compile(r"%%(\w+)%%")
+
+# Sivut, joilla TIMissä ei ole otsikkoa: lisätään, jotta sivulla on yksi H1 ja
+# väliotsikot jäävät samalle tasolle kuin sisarsivuilla (demote_headings).
+MISSING_TITLES = {"mallit/pong/vaihe1": "Pong-peli, vaihe 1"}
 
 # Käsin korjattavat kohdat: TIMissäkin rikki olleet ankkurit.
 HEADING_FIXES = {
     "kentat/tausta": [("# 1. Kuvatiedostosta", "# 1. Kuvatiedostosta {#taustakuva}")],
 }
+# Tehdään fix_linksin jälkeen, joten muoto on valmis suhteellinen linkki.
 LINK_FIXES = {
     "ohjaimet/liikuttelu": [("#1wdXts95Twpe", "#push")],
+    # "Takaisin pong-tutoriaaliin" osoitti mallipelien yhteiseen etusivuun.
+    "perusteet/projektin-luonti": [("../mallit/index.md#mallipelit", "../mallit/pong/index.md")],
 }
 HUB_INTRO = """# Jypeli-ohjeet
 
@@ -88,6 +107,17 @@ def count(key, n=1):
 
 def md_rel(tim_path: str) -> str:
     return RENAMES.get(tim_path, tim_path) + ".md"
+
+
+def expand_macro(m: re.Match) -> str:
+    """%%nimi%% -> MACROS; tuntematon jää näkyviin ja varoittaa. Kirjainkoko
+    ei erota: pong/vaihe6:n %%Kokeile%% näkyy TIMissä kuvana."""
+    name = m.group(1).lower()
+    if name not in MACROS:
+        warn(f"{current_page}: tuntematon makro %%{name}%%")
+        return m.group(0)
+    count("makroja")
+    return MACROS[name]
 
 
 def pandoc(text: str, *args: str) -> str:
@@ -516,6 +546,7 @@ def convert_page(page: str):
         # TIMin kommentit {!!! ... !!!} eivät näy sivulla.
         text, n = re.subn(r"\{!!!.*?!!!\}", "", text, flags=re.S)
         count("TIM-kommentteja pois", n)
+        text = MACRO_RE.sub(expand_macro, text)
         lines = text.split("\n")
         if lines and lines[0].startswith("#-"):
             lines = lines[1:]
@@ -572,12 +603,18 @@ def convert_page(page: str):
     if title and text.index(title.group(0)) == text.find("# "):
         TITLE_IDS.setdefault(page, set()).add(title.group(2))
         text = text.replace(title.group(0), f"# {title.group(1)}", 1)
+    if page in MISSING_TITLES:
+        if text.startswith("# "):
+            warn(f"{page}: MISSING_TITLES, mutta sivulla on otsikko")
+        else:
+            text = f"# {MISSING_TITLES[page]}\n\n{text}"
+            count("otsikko lisätty")
     text = demote_headings(text)
+    text = fix_links(text, page)
     for old, new in LINK_FIXES.get(page, []):
         if old not in text:
             warn(f"{page}: korjattavaa linkkiä ei löydy: {old}")
         text = text.replace(old, new)
-    text = fix_links(text, page)
     # Vanhan trac-wikin tyhjät liitelinkit "[](https://trac.cc.jyu.fi/...)" kuvan
     # perässä: näkymättömiä, kohde ei vastaa. Pois.
     text, n = re.subn(r" ?\[\]\(https://trac\.cc\.jyu\.fi/[^)]*\)", "", text)
@@ -624,6 +661,71 @@ def check_anchors(pages_text: dict[str, str]):
                 warn(f"{page}: ankkuria #{anchor} ei ole sivulla {tpage}")
 
 
+def model_games_summary(title: str, listed: set[str]) -> list[str]:
+    """Mallipelit SUMMARY.md:hen: päätason osio, pelit alaosioina, vaiheet sivuina."""
+    lines = [f" * [{title}](./{md_rel('mallit/alku')})"]
+    for game, d, stages in MODEL_GAMES:
+        lines.append(f"   * [{game}](./{d}/index.md)")
+        for n in range(1, stages + 1):
+            target = f"{d}/vaihe{n}"
+            if target not in PAGES:
+                warn(f"mallipelit: sivua ei ole: {target}")
+                continue
+            lines.append(f"     * [Vaihe {n}](./{md_rel(target)})")
+            listed.add(target)
+    return lines
+
+
+def split_model_games(text: str, pages_text: dict[str, str]) -> tuple[str, dict[str, str]]:
+    """mallit/alku: pelien "## <peli>"-osiot omiksi etusivuiksi.
+    -> (mallit/index.md, {pelin hakemisto: sen index.md}).
+
+    Etusivulle jää osioiden tilalle linkkiluettelo ennen ensimmäistä
+    väliotsikkoa. Pelin sivulla otsikot nousevat tason, linkit ja kuvapolut
+    siirtyvät hakemiston mukaan, ja vaiheluettelo (otsikot sivujen H1:stä)
+    lisätään, jos osio ei linkitä jokaiseen vaiheeseen.
+    """
+    lines = text.split("\n")
+    headings = []
+    in_fence = False
+    for i, line in enumerate(lines):
+        if FENCE_RE.match(line):
+            in_fence = not in_fence
+        elif not in_fence and line.startswith("## "):
+            headings.append(i)
+    remove: set[int] = set()
+    game_pages: dict[str, str] = {}
+    for game, d, stages in MODEL_GAMES:
+        start = next((i for i in headings if lines[i][3:].strip() == game), None)
+        if start is None:
+            warn(f"mallit/alku: osiota '## {game}' ei ole")
+            continue
+        end = next((i for i in headings if i > start), len(lines))
+        remove.update(range(start, end))
+        sub = d.rsplit("/", 1)[-1]
+        body = []
+        for line in lines[start + 1:end]:
+            if re.match(r"^#{3,6} ", line):
+                line = line[1:]
+            body.append(line.replace(f"]({sub}/", "](").replace("](images/", "](../images/"))
+        page = f"# {game}\n\n" + "\n".join(body).strip("\n") + "\n"
+        if not all(f"(vaihe{n}.md)" in page for n in range(1, stages + 1)):
+            items = []
+            for n in range(1, stages + 1):
+                h1 = next((l[2:].strip() for l in pages_text.get(f"{d}/vaihe{n}", "").split("\n")
+                           if l.startswith("# ")), f"Vaihe {n}")
+                h1 = re.sub(rf"^{re.escape(game)}(-peli)?[:,]\s*", "", h1)
+                items.append(f"- [{h1}](vaihe{n}.md)")
+            page += "\n## Vaiheet\n\n" + "\n".join(items) + "\n"
+        game_pages[d] = page
+    kept = [l for i, l in enumerate(lines) if i not in remove]
+    first = next((i for i, l in enumerate(kept) if l.startswith("## ")), len(kept))
+    kept[first:first] = [f"- [{game}]({d.rsplit('/', 1)[-1]}/index.md)"
+                         for game, d, _ in MODEL_GAMES if d in game_pages] + [""]
+    index = re.sub(r"\n{3,}", "\n\n", "\n".join(kept)).strip("\n") + "\n"
+    return index, game_pages
+
+
 def write_hub(hub_text: str, sections, pages_text):
     """Etusivu, osioiden etusivut ja SUMMARY.md."""
     (OUT / "index.md").write_text(hub_text, encoding="utf-8")
@@ -653,12 +755,19 @@ def write_hub(hub_text: str, sections, pages_text):
         (OUT / index_rel).parent.mkdir(parents=True, exist_ok=True)
         (OUT / index_rel).write_text(f"# {name}\n\n" + "\n".join(table) + "\n", encoding="utf-8")
         summary.append(f" * [{name}](./{index_rel})")
+        games = None
         for title, target in children:
-            summary.append(f"   * [{title}](./{md_rel(target)})")
             if target == "mallit/alku":
-                for gtitle, gtarget in MODEL_GAMES:
-                    summary.append(f"     * [{gtitle}](./{md_rel(gtarget)})")
-                    listed.add(gtarget)
+                games = title  # oma päätason osio tämän osion perään
+                continue
+            summary.append(f"   * [{title}](./{md_rel(target)})")
+        if games:
+            summary += model_games_summary(games, listed)
+            index_text, game_pages = split_model_games(pages_text["mallit/alku"], pages_text)
+            (OUT / md_rel("mallit/alku")).write_text(index_text, encoding="utf-8")
+            pages_text["mallit/alku"] = index_text
+            for d, text in game_pages.items():
+                (OUT / d / "index.md").write_text(text, encoding="utf-8")
     summary += ["", "---", "", "[Jypelin päivityshistoria](./paivitysloki.md)"]
     listed.add("paivitysloki")
     missing = [p for p in PAGES if p not in listed and p != "wiki"]

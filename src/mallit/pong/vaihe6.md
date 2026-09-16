@@ -42,11 +42,11 @@ Ehdossa katsotaan, onko mailan yläreuna kentän yläreunan yläpuolella:
 - Jos on, niin pysäytetään maila ja return-lauseella tullaan pois aliohjelmasta.
 - Jos ei, niin if-lauseen perässä olevien aaltosulkujen välissä olevia koodirivejä ei suoriteta vaan asetetaan mailalle nopeus normaaliin tapaan.
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 Pysähtyykö maila yläreunaan? Taitaa kyllä pysähtyä, mutta...
 
-%%kysymys%% Miksi maila ei enää liiku kun se kerran saavuttaa yläreunan? Mieti hetki, ennen kuin jatkat eteenpäin.
+![](images/question.png) Miksi maila ei enää liiku kun se kerran saavuttaa yläreunan? Mieti hetki, ennen kuin jatkat eteenpäin.
 
 ### Toinen yritys
 
@@ -77,7 +77,7 @@ Tässä käytettiin `if`-lauseessa merkintää `(nopeus.Y > 0) && (maila.Top > L
 
 Ehdon voisi nyt lukea: "Nopeuden y-koordinaatti on suurempi kuin nolla **JA** mailan yläreunan y-koordinaatti on suurempi kuin kentän yläreunan y-koordinaatti".
 
-%%Kokeile%%
+![](images/try_to_run.png)
 
 [Täältä lisätietoa ehtolauseisiin liittyen.](https://trac.cc.jyu.fi/projects/npo/wiki/Ehtolauseet) <span class="red">TODO: TIMIIN</span>
 
@@ -107,7 +107,7 @@ void AsetaNopeus(PhysicsObject maila, Vector nopeus)
 }
 ```
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 ## 3. XBox-ohjainten lisääminen (valinnainen)
 
@@ -150,7 +150,7 @@ void AsetaOhjaimet()
 }
 ```
 
-%%kokeile%%
+![](images/try_to_run.png)
 
 ## Lopputulos
 
