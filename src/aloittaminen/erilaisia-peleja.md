@@ -18,7 +18,7 @@ tarvitse laskea itse. Tällaisia pelejä ovat esimerkiksi
 
 Fysiikkapeli tehdään **Fysiikkapeli**-projektimallilla, jolloin peli perii
 `PhysicsGame`-luokan ja oliot ovat `PhysicsObject`-tyyppisiä. Tämän oppaan
-ohjeet ja [valmiit pelit](../tutoriaalit/index.md) olettavat, että käytössä on
+ohjeet ja [pelitutoriaalit](../tutoriaalit/index.md) olettavat, että käytössä on
 Fysiikkapeli.
 
 ## Pelit ilman fysiikkaa

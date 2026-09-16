@@ -1,47 +1,90 @@
 # Kirjaston liittäminen käsin
 
-Jypeli-kirjaston tuomia funktioita voidaan (joillain rajoituksilla) käyttää myös tavallisessa konsoliprojektissa.
+Jypelin projektimallit (Fysiikkapeli, Peli, Tasohyppelypeli) liittävät
+Jypeli-kirjaston projektiin valmiiksi. Jos haluat käyttää Jypelin
+aliohjelmia tavallisessa konsoliprojektissa (esimerkiksi ConsoleMain-mallista
+luodussa), kirjasto pitää liittää käsin. Se tulee projektiin NuGet-pakettina
+nimeltä `Jypeli.NET`.
 
-Klikkaa Riderin Explorer-näkymässä *Dependencies*-kansiota hiiren oikealla painikkeella (Macilla Ctrl+klikkaus) ja valitse `Manage Nuget packages`.
+Konsoliprojektissa toimivat esimerkiksi satunnaisluvut (`RandomGen`),
+vektorit (`Vector`) ja kulmat (`Angle`). Peli-ikkunaa, olioita tai ohjaimia
+ei voi käyttää, koska niitä varten tarvitaan peli, ks.
+[Uuden projektin luominen](../aloittaminen/projektin-luonti.md).
 
-![](images/ManageNuget.png)
+## Tapa 1: projektitiedoston muokkaus
 
-Aukeavasta näkymästä vaihda `Browse` näkymään ja kirjoita hakukenttään `Jypeli.NET` ja valitse sen niminen paketti.
+Avaa Riderin Explorer-näkymässä projektin `.csproj`-tiedosto
+(kaksoisklikkaa projektin nimeä). Lisää siihen `PropertyGroup`-osan jälkeen
+`ItemGroup`-osa, jolloin tiedosto näyttää tältä:
 
-**HUOM:** Tällä hetkellä tuloksista tulee myös useita hyvin vanhoja paketteja, älä käytä niitä.
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-![](images/NugetJypeli.png)
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ExternalConsole>true</ExternalConsole>
+    </PropertyGroup>
 
-Oikeaan reunaan aukevasta näkymästä kannattaa pitää versio asetus kohdassa `Latest stable...` ja klikkaa `Install`.
+    <ItemGroup>
+        <PackageReference Include="Jypeli.NET" Version="11.*" />
+    </ItemGroup>
 
-Rider saattaa kysyä lisävahvistusta, vastaa kyllä.
-
-Jos saat virheviestin, ks. alempaa ohjeet.
-
-![](images/NugetInstall.png)
-
-Tämän jälkeen voit käyttää Jypelin funktioita konsolisovelluksessasi.
-
-Eli esimerkiksi:
-
-```csharp,ignore
-double[] lukuja = Jypeli.RandomGen.NextDoubleArray(0, 20, 50);
+</Project>
 ```
 
-## Package restore failed...
+Tallenna tiedosto. Rider lataa paketin automaattisesti; se voi kestää
+hetken ensimmäisellä kerralla.
 
-On mahdollista että lisäyksen jälkeen saat seuraavanlaisen virheviestin ja pakettia ei lisätty:
+## Tapa 2: Riderin NuGet-ikkuna
 
-![](images/Error.png)
+1. Klikkaa Explorer-näkymässä projektia hiiren oikealla painikkeella
+   (Macilla Ctrl+klikkaus) ja valitse **Manage NuGet Packages**. Ikkunan
+   alareunaan aukeaa NuGet-työkaluikkuna.
+2. Kirjoita hakukenttään `Jypeli.NET` ja valitse listasta juuri sen niminen
+   paketti. Haku löytää myös vanhoja paketteja (`Jypeli`, `Jypeli.Core`),
+   älä käytä niitä.
+3. Klikkaa oikeassa reunassa projektin nimen vieressä olevaa
+   plus-painiketta (**Install**). Jätä versioksi uusin.
 
-Tämä virhe johtuu siitä, että Jypelin paketti on käännetty uudemmalle .NET versiolle kuin mikä on sinun projektissa käytössä.
+## Tapa 3: komentorivi
 
-Tässä vaiheessa sinulla on kaksi vaihtoehtoa:
+Avaa komentorivi projektin kansiossa (siinä, jossa `.csproj`-tiedosto on)
+ja anna komento:
 
-1.  Joko päivitä projektisi uudempaan versioon
-    - Klikkaa projektiasi Explorer-näkymässä hiiren oikealla ja valitse `Properties`.
-    - valitse kohdasta `Target FrameWork uudempi versio`, tässä tapauksessa .NET 5.0. Katso virheviestistä mistä versiosta sinun tapauksessa on kyse. ![](images/TargetFrameWork.png)
-    - Tämän jälkeen lisää Jypeli uudestaan projektiin aiemmalla tavalla
-2.  Käytä vanhempaa Jypelin versiota.
-    - Paketti nimeltä `Jypeli.NET` on ainoastaan `.NET 5` tai uudemmille projekteille.
-    - `.NET Core` projekteille käytä pakettia nimeltä `Jypeli.Core`.
+```bash
+dotnet add package Jypeli.NET
+```
+
+## Käyttö
+
+Kun paketti on liitetty, Jypelin aliohjelmia voi käyttää `Jypeli.`-etuliitteellä
+tai lisäämällä tiedoston alkuun rivin `using Jypeli;`:
+
+```csharp,ignore
+using Jypeli;
+
+public class ConsoleMain
+{
+    public static void Main()
+    {
+        double[] lukuja = RandomGen.NextDoubleArray(0, 20, 50);
+        int noppa = RandomGen.NextInt(1, 7);
+    }
+}
+```
+
+## Virhe NU1202: "not compatible"
+
+Jos paketin lataus epäonnistuu ja virheilmoituksessa lukee
+`Package Jypeli.NET ... is not compatible with ...`, projekti käyttää liian
+vanhaa .NET-versiota. Jypeli.NET vaatii vähintään .NET 6:n. Avaa
+`.csproj`-tiedosto ja vaihda `TargetFramework`-riville `net10.0` (tai muu
+koneellesi asennettu versio, ks. [Asennus](../aloittaminen/asentaminen.md)).
+Tallenna, niin Rider lataa paketin uudelleen.
+
+## Katso myös
+
+- [Mitä konepellin alla tapahtuu](konepellin-alla.md): mistä paketeista Jypeli koostuu.
+- [Satunnaisuus](../matematiikka/satunnaisuus.md): `RandomGen`-luokan käyttö.
+- [Yleiset virheet](yleiset-virheet.md)

@@ -12,5 +12,5 @@ peli ja tiedät, mihin koodi kirjoitetaan.
 | 5. [Kuvat ja äänet mukaan projektiin](sisallon-tuonti.md) | Omien kuva-, ääni- ja tekstitiedostojen lisääminen. |
 | [Millaisia pelejä voin tehdä?](erilaisia-peleja.md) | Fysiikkapelit ja pelit ilman fysiikkaa. |
 
-Seuraavaksi: [Valmiit pelit](../tutoriaalit/index.md), joissa tehdään kokonainen peli
+Seuraavaksi: [Kokonaiset pelitutoriaalit](../tutoriaalit/index.md), joissa tehdään kokonainen peli
 vaihe kerrallaan.
