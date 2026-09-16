@@ -1,5 +1,7 @@
 {
     "dev.containers.reopenOnFolderWithDevcontainer": "always", 
     "rewrap.autoWrap.enabled": true,
-    "editor.rulers": [80]
+    "editor.rulers": [80],
+    "python-envs.terminal.autoActivationType": "off",
+    "python.terminal.activateEnvironment": false
 }
