@@ -4,7 +4,7 @@
 
 Tällä sivulla opastetaan yksinkertaisen räjähdyksen tekeminen. Tällä sivulla olevilla ohjeilla räjähdyksestä syntyy myös paineaalto, joka vaikuttaa pelissä oleviin fysiikkaolioihin.
 
-Jos haluat tehdä vähän monimutkaisemman ja näyttävämmän räjähdyksen, josta ei synny paineaaltoa (eli on pelkkä visuaalinen efekti) katso [Efektit/räjähdys](../grafiikka/efektit.md#rajahdys).
+Jos haluat tehdä vähän monimutkaisemman ja näyttävämmän räjähdyksen, josta ei synny paineaaltoa (eli on pelkkä visuaalinen efekti) katso [Efektit/räjähdys](efektit.md#rajahdys).
 
 ## Räjähdyksen luominen
 
@@ -47,7 +47,7 @@ rajahdys.Speed = 500.0;
 rajahdys.Force = 10000;
 ```
 
-Räjähdyksellä on valmiina oletustekstuuri ja -ääni. Voit myös halutessasi vaihtaa ne toisiksi (kts. sivut [tekstuurin lisääminen](../oliot/ulkonako.md#tekstuuri) ja [äänet peliin](../aanet/aanien-lisays.md)). Kuvan tai äänen saa pois räjähdykseltä asettamalla sen arvoksi `null`.
+Räjähdyksellä on valmiina oletustekstuuri ja -ääni. Voit myös halutessasi vaihtaa ne toisiksi (kts. sivut [tekstuurin lisääminen](../oliot/ulkonako.md#tekstuuri) ja [äänet peliin](aanien-lisays.md)). Kuvan tai äänen saa pois räjähdykseltä asettamalla sen arvoksi `null`.
 
 ```csharp,ignore
 rajahdys.Image = rajahdysKuva;

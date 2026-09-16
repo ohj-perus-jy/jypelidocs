@@ -92,7 +92,7 @@ tekstikentta.Text = "kissa";
 
 ### Laskurin arvon näyttäminen
 
-Katso ohjeita [pistelaskurin tekemisestä](../laskurit/pistelaskuri.md) tai [aikalaskurin tekemisestä](../laskurit/aikalaskuri.md).
+Katso ohjeita [pistelaskurin tekemisestä](pistelaskuri.md) tai [aikalaskurin tekemisestä](aikalaskuri.md).
 
 ### Ulkonäkö
 

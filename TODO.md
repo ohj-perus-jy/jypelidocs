@@ -59,12 +59,18 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
 - [x] `aloittaminen/ensimmainen-peli.md`: 10 rivin peli ajonapilla, ctrl-F5,
       mitä `Begin` tekee.
 - [x] `aloittaminen/pelin-rakenne.md`: PhysicsGame vs Game, `Begin`,
+      mihin koodi kirjoitetaan (paikallinen muuttuja vs attribuutti, oma
+      aliohjelma, tapahtumankäsittelijän parametrit; oli erillinen sivu
+      `ohjelmointi/mihin-koodi-kirjoitetaan.md`, yhdistetty 16.9.2026),
       koordinaatisto (origo keskellä, y ylös), yksiköt, Level/Camera/Screen.
-- [x] `ohjelmointi/mihin-koodi-kirjoitetaan.md`: paikallinen muuttuja vs
-      attribuutti, oma aliohjelma, tapahtumankäsittelijä.
 - [x] `ohjelmointi/yleiset-virheet.md`: punainen alleviivaus, nimeä ei
       löydy, kuva ei löydy (Content, Copy if newer), peli ei käynnisty.
 - [x] `viite/pikaohje.md`: yhden sivun cheat sheet yleisimmistä riveistä.
+- [x] `oma-oliotyyppi/`-osio (16.9.2026): periminen, ominaisuudet ja
+      metodit, käyttö pelissä, `IsUpdated`/`Update`, `AddedToGame`,
+      `Collided`, `Destroy`-korvaus ja omat tapahtumat. Korvaa vanhan
+      `oliot/oma-oliotyyppi.md`-sivun; ajonapilliset esimerkit testattu
+      suorituspalvelimella.
 - [ ] Tarkistuta uudet sivut Jypelin ylläpitäjällä (yksiköt, oletukset,
       projektimallien nimet). Erityisesti `aloittaminen/erilaisia-peleja.md`
       tarvitsee projektimallien taulukon; trac-linkki poistettu.

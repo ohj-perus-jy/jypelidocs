@@ -16,8 +16,9 @@ luodaan, miltä se näyttää ja miten se poistetaan.
 | [Elinikä](elinika.md) | Olio tuhoutuu itsestään ajan kuluttua. |
 | [Aivot ja tekoäly](tekoaly.md) | Olio liikkuu itsestään: seuraa pelaajaa, vaeltaa, kulkee reittiä. |
 | [Olioiden Tag-ominaisuus](olioiden-erottaminen-toisistaan.md) | Erityyppisten olioiden erottaminen toisistaan törmäyksissä. |
-| [Oman oliotyypin luominen](oma-oliotyyppi.md) | Oma luokka, jolla on lisäominaisuuksia kuten elämät. |
 
-Katso myös [Liitokset](liitokset.md) (Fysiikka-osiossa) ja
+Katso myös [Liitokset](../fysiikka/liitokset.md) (Fysiikka-osiossa) ja
 [Ohjainten lisääminen](../ohjaimet/ohjainten-lisays.md) (Ohjaus-osiossa), jos
-olion liikuttaminen halutaan kytkeä näppäimiin tai hiireen.
+olion liikuttaminen halutaan kytkeä näppäimiin tai hiireen. Kun oliolle
+tarvitaan omia ominaisuuksia, kuten elämät, katso osio
+[Oma oliotyyppi](../oma-oliotyyppi/index.md).

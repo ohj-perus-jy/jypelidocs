@@ -251,7 +251,7 @@ laskuri.ClearTriggers();
 
 ## Katso myös
 
-- [Teksti ruudulla](../kayttoliittyma/teksti.md): näytön sijoittaminen ja ulkonäkö.
+- [Teksti ruudulla](teksti.md): näytön sijoittaminen ja ulkonäkö.
 - [Etenemispalkki](etenemispalkki.md): laskurin arvo palkkina.
 - [Törmäysten käsittely](../tapahtumat/tormaykset.md): pisteiden lisääminen törmäyksessä.
-- [Parhaat pisteet](../kayttoliittyma/parhaiden-pisteiden-lista.md): pisteiden tallentaminen listaan.
+- [Parhaat pisteet](parhaiden-pisteiden-lista.md): pisteiden tallentaminen listaan.

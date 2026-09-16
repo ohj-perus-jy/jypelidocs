@@ -1,6 +1,6 @@
 # Ajastimet
 
-Ajastimilla voi saada peliin tapahtumia esimerkiksi, että uusia vihollisia ilmestyy aina 10 sekunnin välein. Jos sen sijaan haluat pelissäsi mitata aikaa, katso ohjetta [aikalaskurin tekemisestä](../laskurit/aikalaskuri.md).
+Ajastimilla voi saada peliin tapahtumia esimerkiksi, että uusia vihollisia ilmestyy aina 10 sekunnin välein. Jos sen sijaan haluat pelissäsi mitata aikaa, katso ohjetta [aikalaskurin tekemisestä](../kayttoliittyma/aikalaskuri.md).
 
 ## Ajastimen käyttö
 
@@ -157,7 +157,7 @@ olioidenSynnyttamisenNopeutin.Start();
 
 ## Katso myös
 
-- [Aikalaskuri](../laskurit/aikalaskuri.md): ajastin ja laskuri yhdessä.
+- [Aikalaskuri](../kayttoliittyma/aikalaskuri.md): ajastin ja laskuri yhdessä.
 - [Elinikä](../oliot/elinika.md): olio tuhoutuu itsestään ilman ajastinta.
 - [Delegaatit](../ohjelmointi/delegaatit.md): miksi `Timeout += Aliohjelma` toimii.
-- [Mihin koodi kirjoitetaan](../ohjelmointi/mihin-koodi-kirjoitetaan.md): ajastin attribuutiksi, jotta sen voi pysäyttää toisesta aliohjelmasta.
+- [Miten Jypeli-peli toimii](../aloittaminen/pelin-rakenne.md#paikallinen-muuttuja-vai-attribuutti): ajastin attribuutiksi, jotta sen voi pysäyttää toisesta aliohjelmasta.

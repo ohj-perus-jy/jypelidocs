@@ -22,7 +22,7 @@ Jos pistettä ei anneta erikseen, on se oletuksena kappaleiden välin keskipiste
 AxleJoint liitos = new AxleJoint(olio1, olio2);
 ```
 
-Jos lisäksi halutaan, että oliot eivät välitä toistensa törmäyksistä, voidaan ne asettaa [samaan törmäysryhmään](../fysiikka/tormayksen-estaminen.md):
+Jos lisäksi halutaan, että oliot eivät välitä toistensa törmäyksistä, voidaan ne asettaa [samaan törmäysryhmään](../tapahtumat/tormayksen-estaminen.md):
 
 ```csharp,ignore
 olio1.CollisionIgnoreGroup = 1;

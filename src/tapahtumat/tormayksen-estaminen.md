@@ -2,7 +2,7 @@
 
 Joskus on toivottavaa, että jokin fysiikkaolio ei törmäile. Törmäysten estämiseen on joitakin konsteja, riippuen tilanteesta. Huomaa, että jos olion ei tarvitse koskaan liikkua tai törmäillä mihinkään, voi olla järkevämpää käyttää `GameObject`-oliota.
 
-Katso myös [AddCollisionHandler](../tapahtumat/tormaykset.md), eli kuinka jotain saadaan tapahtumaan kun kappaleet törmäävät.
+Katso myös [AddCollisionHandler](tormaykset.md), eli kuinka jotain saadaan tapahtumaan kun kappaleet törmäävät.
 
 ## Jos olion ei pidä törmätä mihinkään
 
@@ -73,6 +73,6 @@ Huomaa että edellä olevassa esimerkissä ei tarvinnut ottaa kappaletta `C` mit
 
 ### Älä käytä CollisionIgnoreFuncia yleiseen törmäyksen käsittelyyn
 
-Tätä funktiota voi olla houkuttelevaa käyttää myös yleiseen törmäyksen käsittelyyn, aivan kuten [AddCollisionHandlerin](../tapahtumat/tormaykset.md) kautta laitettua funktiota. Niin ei kuitenkaan tule tehdä! Tähän `CollisionIgnoreFunc`iin annetun aliohjelman tulee vain ja ainoastaan vastata kysymykseen "Pitääkö näiden kappaleiden törmätä?", eikä tehdä mitään muuta.
+Tätä funktiota voi olla houkuttelevaa käyttää myös yleiseen törmäyksen käsittelyyn, aivan kuten [AddCollisionHandlerin](tormaykset.md) kautta laitettua funktiota. Niin ei kuitenkaan tule tehdä! Tähän `CollisionIgnoreFunc`iin annetun aliohjelman tulee vain ja ainoastaan vastata kysymykseen "Pitääkö näiden kappaleiden törmätä?", eikä tehdä mitään muuta.
 
 Jos lisäät sinne muuta toiminnallisuutta joka jotenkin vaikuttaa fysiikkaan, kuten vaikka tuhoat kappaleen, pelisi kaatuu!

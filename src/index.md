@@ -17,8 +17,10 @@ materiaali perustuu sen kurssin oppeihin.
    kerrallaan.
 
 Sen jälkeen oma peli kasvaa aihe kerrallaan [ohjeiden](#ohjeet-aiheittain)
-avulla. Kun etsit yhtä koodiriviä, katso [pikaohje](viite/pikaohje.md).
-Kun jokin ei toimi, katso [yleiset virheet](ohjelmointi/yleiset-virheet.md).
+avulla. Kun etsit yhtä koodiriviä, katso [pikaohje](ekstrat/pikaohje.md).
+Kun et tiedä, mihin kohtaan tiedostoa rivi kuuluu, katso
+[Miten Jypeli-peli toimii](aloittaminen/pelin-rakenne.md#mihin-koodi-kirjoitetaan).
+Kun jokin ei toimi, katso [yleiset virheet](ekstrat/yleiset-virheet.md).
 
 ## Ohjeet aiheittain
 
@@ -37,7 +39,6 @@ Sama sisältö kuin vasemman reunan valikossa, samassa järjestyksessä.
 - [Miten määritän oliolle eliniän?](oliot/elinika.md)
 - [Miten peliin saa aivot ja tekoälyn?](oliot/tekoaly.md)
 - [Miten erotan erityyppiset oliot toisistaan?](oliot/olioiden-erottaminen-toisistaan.md)
-- [Miten saan oliolle ominaisuuden, esimerkiksi elämät?](oliot/oma-oliotyyppi.md)
 
 ### Ohjaus
 
@@ -50,7 +51,7 @@ Sama sisältö kuin vasemman reunan valikossa, samassa järjestyksessä.
 
 - [Miten peliin voi ajastaa tapahtumia?](tapahtumat/ajastimet.md)
 - [Miten voin liittää törmäyksiin tapahtumia?](tapahtumat/tormaykset.md)
-- [Miten voin estää olioita törmäämästä toisiinsa?](fysiikka/tormayksen-estaminen.md)
+- [Miten voin estää olioita törmäämästä toisiinsa?](tapahtumat/tormayksen-estaminen.md)
 - [Mitä muita tapahtumia on?](tapahtumat/muita.md)
 - [Mitä delegaatit ovat?](ohjelmointi/delegaatit.md)
 
@@ -58,9 +59,9 @@ Sama sisältö kuin vasemman reunan valikossa, samassa järjestyksessä.
 
 - [Miten painovoima lisätään?](fysiikka/painovoima.md)
 - [Mitä muita fysiikan ilmiöitä voin hyödyntää?](fysiikka/fysiikan-ilmiot.md)
-- [Kuinka liitän fysiikkaolioita toisiinsa?](oliot/liitokset.md)
-- [Miten peliin saa aseita?](aseet/aseiden-lisaaminen.md)
-- [Miten pelaaja voi heittää esineen, esim. kranaatin?](aseet/aseiden-lisaaminen.md#heitettavat)
+- [Kuinka liitän fysiikkaolioita toisiinsa?](fysiikka/liitokset.md)
+- [Miten peliin saa aseita?](fysiikka/aseiden-lisaaminen.md)
+- [Miten pelaaja voi heittää esineen, esim. kranaatin?](fysiikka/aseiden-lisaaminen.md#heitettavat)
 
 ### Kentät ja kamera
 
@@ -71,9 +72,9 @@ Sama sisältö kuin vasemman reunan valikossa, samassa järjestyksessä.
 - [Miten pelissä voi olla monta kenttää?](kentat/kentan-vaihtuminen.md)
 - [Miten teen kentän, jossa oliot liikkuvat vasemmalle?](kentat/sivusuuntainen-skrollaus.md)
 - [Miten teen radan autopeliin?](kentat/autorata.md)
-- [Miten kenttää voi zoomata tai kamera seurata pelaajaa?](grafiikka/kameran-kaytto.md)
+- [Miten kenttää voi zoomata tai kamera seurata pelaajaa?](kentat/kameran-kaytto.md)
 - [Miten saan pelin koko ruutuun tai vaihdan resoluutiota?](grafiikka/ikkunan-asettelu.md)
-- [Miten pelin voi aloittaa alusta?](pelin-kulku/aloittaminen-alusta.md)
+- [Miten pelin voi aloittaa alusta?](kentat/aloittaminen-alusta.md)
 - [Miten pelin saa pauselle?](pelin-kulku/pause.md)
 
 ### Grafiikka ja äänet
@@ -81,19 +82,19 @@ Sama sisältö kuin vasemman reunan valikossa, samassa järjestyksessä.
 - [Miten lisään omia kuvia?](grafiikka/kuvat.md)
 - [Miten kuvaan tehdään läpinäkyviä osia?](grafiikka/kuvan-lapinakyvyys.md)
 - [Miten peliin saa efektejä (räjähdys, savu, liekki)?](grafiikka/efektit.md)
-- [Miten peliin saa räjähdyksen?](aseet/rajahdykset.md)
+- [Miten peliin saa räjähdyksen?](grafiikka/rajahdykset.md)
 - [Kuinka piirrän itse kuvioita?](grafiikka/piirtaminen.md)
 - [Miten voin käsitellä kuvaa pikselitasolla?](grafiikka/kuvankasittely.md)
-- [Miten peliin saa ääniä?](aanet/aanien-lisays.md#tehosteet)
-- [Miten saan peliin taustamusiikin?](aanet/aanien-lisays.md#taustamusiikki)
+- [Miten peliin saa ääniä?](grafiikka/aanien-lisays.md#tehosteet)
+- [Miten saan peliin taustamusiikin?](grafiikka/aanien-lisays.md#taustamusiikki)
 
 ### Käyttöliittymä ja laskurit
 
 - [Miten ruudulle saa näkymään tekstiä?](kayttoliittyma/teksti.md)
 - [Miten kysyn pelaajalta tekstiä?](kayttoliittyma/tekstin-kysyminen.md)
-- [Miten teen pistelaskurin?](laskurit/pistelaskuri.md)
-- [Miten teen aikalaskurin?](laskurit/aikalaskuri.md)
-- [Miten teen palkin, joka näyttää laskurin arvon?](laskurit/etenemispalkki.md)
+- [Miten teen pistelaskurin?](kayttoliittyma/pistelaskuri.md)
+- [Miten teen aikalaskurin?](kayttoliittyma/aikalaskuri.md)
+- [Miten teen palkin, joka näyttää laskurin arvon?](kayttoliittyma/etenemispalkki.md)
 - [Miten peliin tehdään alkuvalikko?](kayttoliittyma/valikko.md)
 - [Monivalintaikkuna](kayttoliittyma/valikko.md#multiselect)
 - [Parhaiden pisteiden lista](kayttoliittyma/parhaiden-pisteiden-lista.md)
@@ -109,15 +110,23 @@ Sama sisältö kuin vasemman reunan valikossa, samassa järjestyksessä.
 - [Miten saan peliini satunnaisuutta?](matematiikka/satunnaisuus.md)
 - [Kulma](matematiikka/kulma.md)
 
+### Oma oliotyyppi
+
+- [Miten teen oman oliotyypin?](oma-oliotyyppi/luokan-periminen.md)
+- [Miten saan oliolle ominaisuuden, esimerkiksi elämät?](oma-oliotyyppi/ominaisuudet.md)
+- [Miten käytän omaa tyyppiä pelissä ja törmäyksissä?](oma-oliotyyppi/kaytto.md)
+- [Miten olio tekee jotain joka päivityksellä?](oma-oliotyyppi/paivitys.md)
+- [Miten olio hoitaa itse ohjaimensa, törmäyksensä ja tuhoutumisensa?](oma-oliotyyppi/tapahtumat.md)
+
 ### Ohjelmointi
 
-- [Mihin koodi kirjoitetaan?](ohjelmointi/mihin-koodi-kirjoitetaan.md)
-- [Miksi peli ei käänny tai toimi?](ohjelmointi/yleiset-virheet.md)
+- [Miksi peli ei käänny tai toimi?](ekstrat/yleiset-virheet.md)
 
-### Viite
+### Ekstrat
 
 | | |
 | --- | --- |
-| [Pikaohje](viite/pikaohje.md) | Yleisimmät koodirivit yhdellä sivulla. |
+| [Pikaohje](ekstrat/pikaohje.md) | Yleisimmät koodirivit yhdellä sivulla. |
+| [Mitä konepellin alla tapahtuu](ekstrat/konepellin-alla.md) | Pelisilmukka, päivityksen vaiheet ja mistä Jypeli on tehty. |
 | [Jypelin API-dokumentaatio](https://kurssit.it.jyu.fi/npo/material/latest/documentation/html/index.html) | Lähdekoodista tuotettu luettelo kaikista luokista ja aliohjelmista. |
 | [Lähdekoodi](https://github.com/Jypeli-JYU/Jypeli) | Jypeli GitHubissa. |

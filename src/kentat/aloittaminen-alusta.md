@@ -1,6 +1,6 @@
 # Pelin aloittaminen alusta
 
-(Jos haluat tehdä peliisi useita erilaisia kenttiä, [tsekkaa tämä ohje](../kentat/kentan-vaihtuminen.md).)
+(Jos haluat tehdä peliisi useita erilaisia kenttiä, [tsekkaa tämä ohje](kentan-vaihtuminen.md).)
 
 Kenttää (Level) ei oikeastaan tarvi ohjelmakoodissa luoda uudestaan, vaikka pelissä kenttä näyttäisi vaihtuvan tai alkavan alusta. Vanha kenttä on helppo tyhjentää ja alustaa taas uudestaan.
 

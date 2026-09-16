@@ -579,5 +579,5 @@ void Irroita(Touch kosketus)
 
 - [Olioiden liikuttelu ja siirtely](../oliot/liikuttelu.md): mitä käsittelijässä tehdään, jotta olio liikkuu.
 - [Ohjainten ryhmittely](ryhmittely.md): näppäimet toimivat vain tietyssä pelitilassa.
-- [Mihin koodi kirjoitetaan](../ohjelmointi/mihin-koodi-kirjoitetaan.md): olio käsittelijälle parametrina tai attribuuttina.
-- [Yleiset virheet](../ohjelmointi/yleiset-virheet.md): näppäin ei tee mitään.
+- [Miten Jypeli-peli toimii](../aloittaminen/pelin-rakenne.md#paikallinen-muuttuja-vai-attribuutti): olio käsittelijälle parametrina tai attribuuttina.
+- [Yleiset virheet](../ekstrat/yleiset-virheet.md): näppäin ei tee mitään.

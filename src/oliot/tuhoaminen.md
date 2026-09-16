@@ -11,7 +11,7 @@ vihollinen.Destroy();
 Jos halutaan tietää onko olio tuhottu, se onnistuu näin:
 
 ```csharp,ignore
-if (vihollinen.IsDestroyed())
+if (vihollinen.IsDestroyed)
 {
     // ...
 }

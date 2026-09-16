@@ -46,7 +46,7 @@ päätyttyä, ks. [Elinikä](../oliot/elinika.md).
 ## Olion lisääminen peliin: AddedToGame
 
 `AddedToGame` laukeaa, kun olio on lisätty peliin `Add`-aliohjelmalla. Sitä
-tarvitaan lähinnä [omissa oliotyypeissä](../oliot/oma-oliotyyppi.md): olion
+tarvitaan lähinnä [omissa oliotyypeissä](../oma-oliotyyppi/tapahtumat.md): olion
 rakentajassa olio ei ole vielä pelissä, joten esimerkiksi ohjainten
 asettaminen tai muiden olioiden lisääminen peliin onnistuu vasta tässä
 tapahtumassa. Alla vihu lisää itselleen kilven, kun se on lisätty peliin.
@@ -69,7 +69,7 @@ public class Vihu : PhysicsObject
 }
 ```
 
-Laajempia esimerkkejä: auton pyörät sivulla [Liitokset](../oliot/liitokset.md)
+Laajempia esimerkkejä: auton pyörät sivulla [Liitokset](../fysiikka/liitokset.md)
 ja ohjainten asettaminen sivulla
 [Omat käyttöliittymäkomponentit](../kayttoliittyma/omat-kayttoliittymakomponentit.md).
 
@@ -101,7 +101,7 @@ void PisteetMuuttuivat(int vanhaArvo, int uusiArvo)
 Ylä- ja alarajan saavuttamiselle on omat tapahtumat `UpperLimit` ja
 `LowerLimit`, ja mille tahansa arvolle voi asettaa tapahtuman
 `AddTrigger`-metodilla. Ne on kuvattu sivulla
-[Pistelaskuri](../laskurit/pistelaskuri.md#laskurin-yla-ja-alarajat-seka-tapahtumat-niille).
+[Pistelaskuri](../kayttoliittyma/pistelaskuri.md#laskurin-yla-ja-alarajat-seka-tapahtumat-niille).
 Liukusäätimeen sidotun laskurin `Changed`-tapahtumaa käytetään sivulla
 [Liukusäätimet](../kayttoliittyma/liukusaatimet.md).
 
@@ -156,7 +156,7 @@ Kysymysikkunan `TextEntered`-tapahtuma on sivulla
 parhaiden pisteiden ikkunan `Closed`-tapahtuman käyttö sivulla
 [Parhaat pisteet](../kayttoliittyma/parhaiden-pisteiden-lista.md).
 Pelin aloittamisesta alusta kerrotaan sivulla
-[Pelin aloittaminen alusta](../pelin-kulku/aloittaminen-alusta.md).
+[Pelin aloittaminen alusta](../kentat/aloittaminen-alusta.md).
 
 ## Animaation loppuminen: Played
 

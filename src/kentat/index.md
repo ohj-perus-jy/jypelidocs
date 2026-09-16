@@ -11,7 +11,7 @@ peli-ikkuna, tauko ja pelin aloittaminen alusta.
 | [Kentän vaihtaminen](kentan-vaihtuminen.md) | Useampi kenttä samassa pelissä. |
 | [Sivulle vierivä kenttä](sivusuuntainen-skrollaus.md) | Viholliset lähestyvät sivusuunnasta. |
 | [Autorata](autorata.md) | Rata autopeliin. |
-| [Kamera ja zoomaus](../grafiikka/kameran-kaytto.md) | Kameran siirto, seuraaminen ja zoomaus. |
+| [Kamera ja zoomaus](kameran-kaytto.md) | Kameran siirto, seuraaminen ja zoomaus. |
 | [Peli-ikkuna ja resoluutio](../grafiikka/ikkunan-asettelu.md) | Koko ruutu, ikkunan koko ja sijainti. |
-| [Pelin aloittaminen alusta](../pelin-kulku/aloittaminen-alusta.md) | Kaiken nollaaminen. |
+| [Pelin aloittaminen alusta](aloittaminen-alusta.md) | Kaiken nollaaminen. |
 | [Pause](../pelin-kulku/pause.md) | Pelin keskeyttäminen hetkeksi. |

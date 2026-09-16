@@ -4,7 +4,7 @@ Useimmissa peleissä, joissa on aseita, täytyy niillä myös tähdätä. Täss�
 
 ## Hiirellä tähtääminen
 
-Kun olet luonut peliisi pelihahmon ja tälle aseen ([aseiden luonti](../aseet/aseiden-lisaaminen.md)), voit toteuttaa hiirellä tähtäämisen. Hiirellä tähtääminen toteutetaan kuuntelemalla hiiren liikettä ja vaihtamalla aseen kulmaa aina, kun hiiri liikkuu.
+Kun olet luonut peliisi pelihahmon ja tälle aseen ([aseiden luonti](../fysiikka/aseiden-lisaaminen.md)), voit toteuttaa hiirellä tähtäämisen. Hiirellä tähtääminen toteutetaan kuuntelemalla hiiren liikettä ja vaihtamalla aseen kulmaa aina, kun hiiri liikkuu.
 
 ### Kuuntelijan luonti
 

@@ -11,5 +11,5 @@ Miten pelaaja ohjaa peliä näppäimistöllä, hiirellä, peliohjaimella tai kos
 
 Katso myös [Olioiden liikuttelu ja siirtely](../oliot/liikuttelu.md) (Oliot-osiossa),
 opas [Kahden pelaajan tasohyppely](kaksi-pelaajaa.md) ja
-[Mihin koodi kirjoitetaan](../ohjelmointi/mihin-koodi-kirjoitetaan.md), jos
+[Miten Jypeli-peli toimii](../aloittaminen/pelin-rakenne.md#paikallinen-muuttuja-vai-attribuutti), jos
 näppäimen käsittelijä tarvitsee oliota toisesta aliohjelmasta.

@@ -2,7 +2,7 @@
 
 Kun kaksi fysiikkaoliota törmää toisiinsa, syntyy *törmäystapahtuma*. Näitä tapahtumia voidaan tarkkailla *tapahtumankäsittelijöillä*, joiden avulla reagoidaan törmäykseen esimerkiksi tuhoamalla toinen olioista tai kasvattamalla pistelaskurin arvoa.
 
-Katso myös kuinka törmäyksiä voidaan estää [täältä](../fysiikka/tormayksen-estaminen.md).
+Katso myös kuinka törmäyksiä voidaan estää [täältä](tormayksen-estaminen.md).
 
 ## Törmäyksenkäsittely yhdelle tunnetulle oliolle
 
@@ -198,14 +198,14 @@ AddCollisionHandler(salama, CollisionHandler.AddEffectOnTarget(paukkupatteri, 80
 
 ### Laskurin arvon muuttaminen
 
-[Laskurin](../laskurit/pistelaskuri.md) arvoa voidaan kasvattaa/vähentää käyttämällä `AddMeterValue`-törmäyksenkäsittelijää. Näin voidaan esimerkiksi antaa pelaajalle pisteitä kerättävistä esineistä tai vähentää terveyttä/elämiä viholliseen osumisesta.
+[Laskurin](../kayttoliittyma/pistelaskuri.md) arvoa voidaan kasvattaa/vähentää käyttämällä `AddMeterValue`-törmäyksenkäsittelijää. Näin voidaan esimerkiksi antaa pelaajalle pisteitä kerättävistä esineistä tai vähentää terveyttä/elämiä viholliseen osumisesta.
 
 ```csharp,ignore
 AddCollisionHandler(pelaaja, "bonus", CollisionHandler.AddMeterValue(pisteet, 10));
 AddCollisionHandler(pelaaja, "piikki", CollisionHandler.AddMeterValue(health, -1));
 ```
 
-Tätä tapaa ei voida käyttää mikäli, pisteiden laskemisella on jotakin muita ehtoja kuin pelkkä törmääminen. Tällöin pistelaskuri pitää käsitellä normaalissa törmäystapahtumassa ja kirjoittaa sinne ehto, jonka avulla laskurin arvoa muutetaan (ks. [laskurin arvon muuttaminen](../laskurit/pistelaskuri.md#laskurin-arvon-muuttaminen)).
+Tätä tapaa ei voida käyttää mikäli, pisteiden laskemisella on jotakin muita ehtoja kuin pelkkä törmääminen. Tällöin pistelaskuri pitää käsitellä normaalissa törmäystapahtumassa ja kirjoittaa sinne ehto, jonka avulla laskurin arvoa muutetaan (ks. [laskurin arvon muuttaminen](../kayttoliittyma/pistelaskuri.md#laskurin-arvon-muuttaminen)).
 
 ### Ääniefektin soittaminen
 
@@ -235,7 +235,7 @@ AddCollisionHandler(kirves, CollisionHandler.IncreaseTargetSize(-5, 0));
 
 ## Katso myös
 
-- [Törmäysten estäminen](../fysiikka/tormayksen-estaminen.md): olio, jonka läpi voi kulkea, ja törmäysryhmät.
+- [Törmäysten estäminen](tormayksen-estaminen.md): olio, jonka läpi voi kulkea, ja törmäysryhmät.
 - [Olioiden Tag-ominaisuus](../oliot/olioiden-erottaminen-toisistaan.md): käsittelijä vain tietyntyyppisille olioille.
-- [Mihin koodi kirjoitetaan](../ohjelmointi/mihin-koodi-kirjoitetaan.md): käsittelijän parametrit ja attribuutit.
-- [Räjähdykset](../aseet/rajahdykset.md) ja [Pistelaskuri](../laskurit/pistelaskuri.md): tavallisimmat asiat, joita törmäyksessä tehdään.
+- [Miten Jypeli-peli toimii](../aloittaminen/pelin-rakenne.md#aliohjelman-parametrit-tulevat-tapahtumasta): käsittelijän parametrit ja attribuutit.
+- [Räjähdykset](../grafiikka/rajahdykset.md) ja [Pistelaskuri](../kayttoliittyma/pistelaskuri.md): tavallisimmat asiat, joita törmäyksessä tehdään.

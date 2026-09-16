@@ -8,7 +8,7 @@ peli ja tiedät, mihin koodi kirjoitetaan.
 | 1. [Asennus](asentaminen.md) | .NET, Rider ja Jypelin projektimallit. |
 | 2. [Uuden projektin luominen](projektin-luonti.md) | Fysiikkapeli-projekti Riderissa ja sen käynnistys. |
 | 3. [Ensimmäinen peli](ensimmainen-peli.md) | Pallo, painovoima ja yksi näppäin. Kymmenen riviä koodia. |
-| 4. [Miten Jypeli-peli toimii](pelin-rakenne.md) | Begin, koordinaatisto, kenttä, kamera, yksiköt, tapahtumat ja pelisilmukka. |
+| 4. [Miten Jypeli-peli toimii](pelin-rakenne.md) | Begin, mihin koodi kirjoitetaan, koordinaatisto, kenttä, kamera, yksiköt ja tapahtumat. |
 | 5. [Kuvat ja äänet mukaan projektiin](sisallon-tuonti.md) | Omien kuva-, ääni- ja tekstitiedostojen lisääminen. |
 | [Millaisia pelejä voin tehdä?](erilaisia-peleja.md) | Fysiikkapelit ja pelit ilman fysiikkaa. |
 

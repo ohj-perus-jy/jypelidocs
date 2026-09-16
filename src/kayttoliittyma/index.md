@@ -7,9 +7,9 @@ pisteet, valikot ja ikkunat.
 | --- | --- |
 | [Teksti ruudulla](teksti.md) | Label ja MessageDisplay. |
 | [Tekstin kysyminen pelaajalta](tekstin-kysyminen.md) | Kysymyslaatikko, esimerkiksi pelaajan nimi. |
-| [Pistelaskuri](../laskurit/pistelaskuri.md) | Pisteet, elämät ja muut laskurit ruudulle. |
-| [Aikalaskuri](../laskurit/aikalaskuri.md) | Kulunut tai jäljellä oleva aika. |
-| [Etenemispalkki](../laskurit/etenemispalkki.md) | Palkki, joka näyttää laskurin arvon. |
+| [Pistelaskuri](pistelaskuri.md) | Pisteet, elämät ja muut laskurit ruudulle. |
+| [Aikalaskuri](aikalaskuri.md) | Kulunut tai jäljellä oleva aika. |
+| [Etenemispalkki](etenemispalkki.md) | Palkki, joka näyttää laskurin arvon. |
 | [Valikot](valikko.md) | Alkuvalikko, monivalintaikkuna. |
 | [Parhaat pisteet](parhaiden-pisteiden-lista.md) | Top ten -lista, joka tallentuu. |
 | [Sommittelu](sommittelu.md) | Komponenttien asettelu riveihin ja sarakkeisiin. |

@@ -136,8 +136,6 @@ public class Pong : PhysicsGame
 
 ## Mitä seuraavaksi
 
-- [Miten Jypeli-peli toimii](pelin-rakenne.md): koordinaatisto, kenttä,
-  kamera ja pelin osat.
+- [Miten Jypeli-peli toimii](pelin-rakenne.md): mihin koodi kirjoitetaan,
+  koordinaatisto, kenttä, kamera ja pelin osat.
 - [Pong-opas](../tutoriaalit/pong/index.md): kokonainen peli vaihe kerrallaan.
-- [Mihin koodi kirjoitetaan](../ohjelmointi/mihin-koodi-kirjoitetaan.md),
-  kun peli kasvaa yhtä aliohjelmaa suuremmaksi.

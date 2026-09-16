@@ -22,6 +22,36 @@ pallo.MakeStatic();                                // ei liiku, esim. seinä
 [Olion luominen](../oliot/luonti.md) · [Muodot](../oliot/muodot.md) ·
 [Ulkonäkö](../oliot/ulkonako.md) · [Oliotyypit](../oliot/oliotyypit.md)
 
+## Oma oliotyyppi
+
+```csharp,ignore
+class Vihu : PhysicsObject                  // Peli-luokan ulkopuolelle
+{
+    public int Elamat { get; set; }
+
+    public Vihu(double leveys, double korkeus)
+        : base(leveys, korkeus)
+    {
+        Elamat = 3;
+        IsUpdated = true;                   // jos Update on käytössä
+    }
+
+    public override void Update(Time time)  // 60 kertaa sekunnissa
+    {
+        // ...
+        base.Update(time);
+    }
+}
+```
+
+```csharp,ignore
+Vihu vihu = new Vihu(40, 40);
+Add(vihu);
+AddCollisionHandler<Vihu, PhysicsObject>(vihu, VihuTormasi);
+```
+
+[Oma oliotyyppi](../oma-oliotyyppi/index.md)
+
 ## Kenttä ja kamera
 
 ```csharp,ignore
@@ -73,7 +103,7 @@ AddCollisionHandler(pallo, "tahti", PalloOsuiTahteen); // tagilla
 Käsittelijä: `void PalloTormasi(PhysicsObject pallo, PhysicsObject kohde) { ... }`
 
 [Törmäysten käsittely](../tapahtumat/tormaykset.md) ·
-[Törmäysten estäminen](../fysiikka/tormayksen-estaminen.md)
+[Törmäysten estäminen](../tapahtumat/tormayksen-estaminen.md)
 
 ## Ajastimet
 
@@ -100,7 +130,7 @@ pisteet.Value += 1;
 MessageDisplay.Add("Osuma!");
 ```
 
-[Pistelaskuri](../laskurit/pistelaskuri.md) · [Teksti ruudulla](../kayttoliittyma/teksti.md) ·
+[Pistelaskuri](../kayttoliittyma/pistelaskuri.md) · [Teksti ruudulla](../kayttoliittyma/teksti.md) ·
 [Valikot](../kayttoliittyma/valikko.md)
 
 ## Äänet
@@ -112,7 +142,7 @@ MediaPlayer.Play("musiikki");
 MediaPlayer.IsRepeating = true;
 ```
 
-[Äänet ja musiikki](../aanet/aanien-lisays.md) ·
+[Äänet ja musiikki](../grafiikka/aanien-lisays.md) ·
 [Kuvat ja äänet mukaan projektiin](../aloittaminen/sisallon-tuonti.md)
 
 ## Satunnaisuus
@@ -135,5 +165,5 @@ ClearAll(); Begin(); // alusta
 Exit();
 ```
 
-[Pelin aloittaminen alusta](../pelin-kulku/aloittaminen-alusta.md) ·
+[Pelin aloittaminen alusta](../kentat/aloittaminen-alusta.md) ·
 [Pause](../pelin-kulku/pause.md)

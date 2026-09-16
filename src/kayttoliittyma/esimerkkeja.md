@@ -57,7 +57,7 @@ DoubleMeter pelaaja1Elama;
 DoubleMeter pelaaja2Elama;
 ```
 
-Katso myös [laskurien ohje](../laskurit/pistelaskuri.md).
+Katso myös [laskurien ohje](pistelaskuri.md).
 
 Sekä niiden alustukset, esimerkiksi `Begin()`-aliohjelmassa:
 
@@ -68,7 +68,7 @@ pelaaja2Elama = new DoubleMeter(100);
 pelaaja2Elama.MaxValue = 100;
 ```
 
-[Palkkien luominen](../laskurit/etenemispalkki.md) onnistuu sitten tähän tapaan:
+[Palkkien luominen](etenemispalkki.md) onnistuu sitten tähän tapaan:
 
 ```csharp,ignore
 BarGauge pelaaja1Elamapalkki = new BarGauge(20, Screen.Width / 3);
@@ -98,7 +98,7 @@ Inventory, eli esinevalikko: ![](images/inventory.png)
 
 Huomaa, että nykyisellään (versio 4.0.6) Jypeli tukee vain vaaka- sekä pystysuuntaisia sommitteluja. Näin ollen valikon, jossa esineet ovat monessa rivissä, tekeminen on hankalaa.
 
-Kannattaa periä oma luokka valikkoa varten (kts. myös [oman oliotyypin ohje](../oliot/oma-oliotyyppi.md)):
+Kannattaa periä oma luokka valikkoa varten (kts. myös [oman oliotyypin ohje](../oma-oliotyyppi/luokan-periminen.md)):
 
 ```csharp,ignore
 /// <summary>
