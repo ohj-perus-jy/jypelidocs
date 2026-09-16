@@ -3,6 +3,9 @@
 INHERIT: nav.yml
 
 site_name: Jypeli-ohjeet
+# Julkaisuosoite GitHub Pagesissa (pages.yml). Tarvitaan sitemapiin ja
+# canonical-linkkeihin; sivuston sisäiset linkit ovat suhteellisia ilmankin.
+site_url: https://ohj-perus-jy.github.io/jypelidocs/
 docs_dir: docs
 site_dir: site
 
