@@ -55,7 +55,7 @@
    * [Ajastimet](./tapahtumat/ajastimet.md)
    * [Törmäysten käsittely](./tapahtumat/tormaykset.md)
    * [Törmäysten estäminen](./fysiikka/tormayksen-estaminen.md)
-   * [Muita tapahtumia](./tapahtumat/muuttapahtumat.md)
+   * [Muita tapahtumia](./tapahtumat/muita.md)
    * [Delegaatit](./ohjelmointi/delegaatit.md)
  * [Fysiikka](./fysiikka/index.md)
    * [Painovoima](./fysiikka/painovoima.md)

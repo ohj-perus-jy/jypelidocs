@@ -8,5 +8,5 @@ jota se kutsuu, kun jotain tapahtuu.
 | [Ajastimet](ajastimet.md) | Jotain tapahtuu ajan kuluttua tai säännöllisin väliajoin. |
 | [Törmäysten käsittely](tormaykset.md) | Mitä tehdään, kun oliot törmäävät. Valmiit käsittelijät tuhoamiseen, räjähdyksiin ja laskureihin. |
 | [Törmäysten estäminen](../fysiikka/tormayksen-estaminen.md) | Olio, jonka läpi voi kulkea, ja törmäysryhmät. |
-| [Muita tapahtumia](muuttapahtumat.md) | Olion tuhoutuminen ja muut tapahtumat. |
+| [Muita tapahtumia](muita.md) | Olion tuhoutuminen, laskurin muuttuminen, napin painallus, ikkunan sulkeutuminen, animaation loppuminen ja pelin sulkeminen. |
 | [Delegaatit](../ohjelmointi/delegaatit.md) | Miksi aliohjelman nimi kelpaa parametriksi ja miten oman delegaatin tekee. |

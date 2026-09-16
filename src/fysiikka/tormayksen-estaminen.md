@@ -71,7 +71,7 @@ private bool Tormaako(IPhysicsObject eka, IPhysicsObject toka)
 
 Huomaa että edellä olevassa esimerkissä ei tarvinnut ottaa kappaletta `C` mitenkään huomioon. Tämä siksi, koska senhän tulee törmätä kaikkien kanssa, se siis on tässä yhteydessä aivan "normaali" kappale. Erityiskäsittelyä tarvittiin vain kappaleiden `A` ja `B` kohdalla.
 
-### HUOM!
+### Älä käytä CollisionIgnoreFuncia yleiseen törmäyksen käsittelyyn
 
 Tätä funktiota voi olla houkuttelevaa käyttää myös yleiseen törmäyksen käsittelyyn, aivan kuten [AddCollisionHandlerin](../tapahtumat/tormaykset.md) kautta laitettua funktiota. Niin ei kuitenkaan tule tehdä! Tähän `CollisionIgnoreFunc`iin annetun aliohjelman tulee vain ja ainoastaan vastata kysymykseen "Pitääkö näiden kappaleiden törmätä?", eikä tehdä mitään muuta.
 

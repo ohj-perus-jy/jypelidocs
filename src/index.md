@@ -51,7 +51,7 @@ Sama sisältö kuin vasemman reunan valikossa, samassa järjestyksessä.
 - [Miten peliin voi ajastaa tapahtumia?](tapahtumat/ajastimet.md)
 - [Miten voin liittää törmäyksiin tapahtumia?](tapahtumat/tormaykset.md)
 - [Miten voin estää olioita törmäämästä toisiinsa?](fysiikka/tormayksen-estaminen.md)
-- [Mitä muita tapahtumia on?](tapahtumat/muuttapahtumat.md)
+- [Mitä muita tapahtumia on?](tapahtumat/muita.md)
 - [Mitä delegaatit ovat?](ohjelmointi/delegaatit.md)
 
 ### Fysiikka
