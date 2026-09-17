@@ -72,6 +72,7 @@ IntMeter LuoPisteLaskuri(double x, double y)
     IntMeter laskuri = new IntMeter(0);
     laskuri.MaxValue = 10;
 
+// HIGHLIGHT_GREEN_BEGIN
     Label naytto = new Label();
     naytto.BindTo(laskuri);
     naytto.X = x;
@@ -80,6 +81,7 @@ IntMeter LuoPisteLaskuri(double x, double y)
     naytto.BorderColor = Level.Background.Color;
     naytto.Color = Level.Background.Color;
     Add(naytto);
+// HIGHLIGHT_GREEN_END
 
     return laskuri;
 }

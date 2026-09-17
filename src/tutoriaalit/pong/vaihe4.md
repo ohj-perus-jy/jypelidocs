@@ -83,14 +83,14 @@ Muutosten jälkeen `LuoMaila` näyttää tältä:
 ```csharp,ignore
 void LuoMaila(double x, double y)
 {
-// HIGHLIGHT_GREEN_BEGIN
     PhysicsObject maila = PhysicsObject.CreateStaticObject(20.0, 100.0);
     maila.Shape = Shape.Rectangle;
+// HIGHLIGHT_GREEN_BEGIN
     maila.X = x;
     maila.Y = y;
+// HIGHLIGHT_GREEN_END
     maila.Restitution = 1.0;
     Add(maila);
-// HIGHLIGHT_GREEN_END
 }
 ```
 
