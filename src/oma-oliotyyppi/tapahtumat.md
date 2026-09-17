@@ -16,9 +16,11 @@ asettaa ohjaimia tai kysyä kentän kokoa. Nämä tehdään
 `AddedToGame`-tapahtuman käsittelijässä, jonka Jypeli kutsuu heti
 `Add`-kutsun jälkeen.
 
-Luokan sisällä pelin aliohjelmiin päästään käsiksi `Game`-sanan kautta:
-`Game.Add(...)`, `Game.Level`, `Game.Keyboard`. Alla pelaaja asettaa itse
-omat näppäimensä.
+Luokan sisällä Jypelin valmiisiin pelin aliohjelmiin päästään käsiksi
+`Game`-sanan kautta: `Game.Add(...)`, `Game.Level`, `Game.Keyboard`
+(`Peli`-luokkaan itse kirjoitetut asiat: ks.
+[Kun olio tarvitsee jotain pelistä](paivitys.md#peli)). Alla pelaaja
+asettaa itse omat näppäimensä.
 
 ```csharp,feature-jypeli
 //-using System;

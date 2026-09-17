@@ -11,7 +11,7 @@ käytetään pelissä.
 | [Oman luokan periminen](luokan-periminen.md) | Luokan runko, rakentaja ja `base`, mistä luokasta peritään, mihin tiedostoon luokka kirjoitetaan. |
 | [Omat ominaisuudet ja metodit](ominaisuudet.md) | Elämät ja muut ominaisuudet, rakentajan parametrit, oletusarvot, laskuri ominaisuutena, olion omat aliohjelmat. |
 | [Olion käyttäminen pelissä](kaytto.md) | Luominen ja lisääminen, monta samanlaista oliota, törmäyskäsittelijä omalle tyypille, tyypin tunnistaminen. |
-| [Oma päivitysmetodi](paivitys.md) | `IsUpdated = true` ja `Update`, jota Jypeli kutsuu 60 kertaa sekunnissa. |
+| [Oma päivitysmetodi](paivitys.md) | `IsUpdated = true` ja `Update`, jota Jypeli kutsuu 60 kertaa sekunnissa; pelin laskurit ja muut tiedot olion sisällä. |
 | [Tapahtumat omassa luokassa](tapahtumat.md) | `AddedToGame`, törmäys luokan sisällä, `Destroy`-metodin korvaaminen ja omat tapahtumat. |
 
 Tarvitset ensin: [Olion luominen](../oliot/luonti.md) ja Ohjelmointi 1:n

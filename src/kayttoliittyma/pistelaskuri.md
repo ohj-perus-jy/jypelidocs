@@ -116,7 +116,7 @@ pistenaytto.IntFormatString = "Pisteitä: {0:D1}";
 
 Samoin jos `Label`ille annetaan taustaväri, voi esim. formaatilla `" Pisteitä: {0:D1} "` laittaa tyhjän molemmin puolin tekstiä. Muoto `D3` tulostaisi laskurin aina niin, että siinä on vähintään kolme numeroa, esim. 005.
 
-Vastaavasti jos halutaan `DoubleMeter`, niin käytetään `DoubleFormatString`, esim. `laskuri.DoubleFormatString = {0:N5}` näyttäisi viisi lukua desimaalipisteen oikealla puolen.
+Vastaavasti jos laskuri on `DoubleMeter`, käytetään `DoubleFormatString`-ominaisuutta, esim. `pistenaytto.DoubleFormatString = "{0:N5}";` näyttäisi viisi desimaalia.
 
 ## Laskurin arvon muuttaminen
 

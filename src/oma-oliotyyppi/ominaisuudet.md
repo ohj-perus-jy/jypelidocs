@@ -118,9 +118,10 @@ class Vihu : PhysicsObject
 ```
 
 Luokan sisällä kuva ladataan `Game.LoadImage`-kutsulla, koska `LoadImage`
-on `Peli`-luokan aliohjelma. Samoin muut pelin aliohjelmat ja ominaisuudet
-löytyvät `Game`-sanan takaa: `Game.Level`, `Game.Add(...)`,
-`Game.Keyboard`.
+kuuluu peliin eikä olioon. Samoin muut Jypelin valmiit pelin aliohjelmat ja
+ominaisuudet löytyvät `Game`-sanan takaa: `Game.Level`, `Game.Add(...)`,
+`Game.Keyboard`. `Peli`-luokkaan itse kirjoitetut attribuutit ja aliohjelmat
+eivät löydy, ks. [Kun olio tarvitsee jotain pelistä](paivitys.md#peli).
 
 ## Laskuri ominaisuutena
 
