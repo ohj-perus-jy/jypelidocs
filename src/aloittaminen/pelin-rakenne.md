@@ -131,8 +131,9 @@ Kaikki ruudulla näkyvä on olioita. `PhysicsObject` noudattaa fysiikkaa,
 
 Kentän **origo (0, 0) on ruudun keskellä**. X kasvaa oikealle ja **y kasvaa
 ylöspäin**, kuten matematiikassa (ei kuten useissa muissa
-grafiikkakirjastoissa, joissa y kasvaa alaspäin). Yksikkö on pikseli, kun
-kameraa ei ole zoomattu.
+grafiikkakirjastoissa, joissa y kasvaa alaspäin). Koordinaatit ovat Jypelin
+omia yksiköitä, eivät näytön pikseleitä. Kuinka suurena olio ruudulla
+näkyy, riippuu muun muassa kamerasta.
 
 ```text
                  y
@@ -157,7 +158,7 @@ oikealle ja kulma kasvaa vastapäivään.
 | --- | --- | --- |
 | **Level** (kenttä) | Pelimaailma, jossa oliot ovat. Voi olla ruutua suurempi. | `Level.Width`, `Level.Left`, `Level.Top`, `Level.CreateBorders()`, `Level.Background.Color = Color.Black` |
 | **Camera** (kamera) | Se osa kenttää, joka näytetään. Kameraa voi siirtää ja zoomata. | `Camera.ZoomToLevel()`, `Camera.Follow(pelaaja)`, `Camera.ZoomFactor = 2` |
-| **Screen** (ruutu) | Peli-ikkuna pikseleinä. Käyttöliittymän osat, kuten pistenäyttö, asetetaan ruudun eikä kentän mukaan. | `Screen.Width`, `Screen.Top` |
+| **Screen** (ruutu) | Peli-ikkuna. Käyttöliittymän osat, kuten pistenäyttö, asetetaan ruudun eikä kentän mukaan. | `Screen.Width`, `Screen.Top` |
 
 Aloittelijan tavallisin hämmennys: olio on luotu ja lisätty, mutta se ei
 näy. Syy on yleensä, että olio on kameran näkymän ulkopuolella. Kutsu
@@ -165,9 +166,10 @@ näy. Syy on yleensä, että olio on kameran näkymän ulkopuolella. Kutsu
 
 ## Fysiikan yksiköt
 
-Fysiikka-arvot ovat pikselipohjaisia. Painovoima annetaan pikseleinä
-sekunnissa toiseen, esimerkiksi `Gravity = new Vector(0, -981)` vastaa
-tulkintaa "yksi pikseli on senttimetri". Nopeus on pikseliä sekunnissa.
+Fysiikka-arvot käyttävät samoja yksiköitä kuin koordinaatisto. Painovoima
+annetaan yksikköinä sekunnissa toiseen, esimerkiksi `Gravity = new Vector(0,
+-981)` vastaa tulkintaa "yksi yksikkö on senttimetri". Nopeus on yksikköä
+sekunnissa.
 Sopivat arvot löytyvät kokeilemalla, ks. [Painovoima](../fysiikka/painovoima.md)
 ja [Fysiikan ilmiöt](../fysiikka/fysiikan-ilmiot.md).
 

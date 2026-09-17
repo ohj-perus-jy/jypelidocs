@@ -51,7 +51,7 @@ Add(pallo);
 
 Riveillä tapahtuu tämä:
 
-1. Luodaan fysiikkaolio, jonka leveys ja korkeus ovat 50 pikseliä, ja
+1. Luodaan fysiikkaolio, jonka leveys ja korkeus ovat 50 yksikköä, ja
    annetaan sille nimi `pallo`.
 2. Asetetaan muodoksi ympyrä ja väriksi punainen.
 3. Lisätään pallo kentälle. **Ilman `Add`-riviä olio ei näy.**

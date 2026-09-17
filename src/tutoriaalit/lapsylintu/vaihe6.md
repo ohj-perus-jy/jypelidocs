@@ -8,7 +8,7 @@ Jos haluat, voit vaihtaa peli-ikkunan kokoa, voit tehdä sen lisäämällä aiva
 SetWindowSize(1280, 720);
 ```
 
-Jossa numerot kertovat ikkunan leveyden ja korkeuden pikseleinä. Monesti nykytietokoneissa näytön resoluutio on 1920x1080 (FullHD), mutta kannettavissa resoluutio voi olla pienempikin. Kokeile millä luvuilla ikkuna on hyvän kokoinen, ei kuitenkaan kannata laittaa ikkunaa suuremmaksi kuin mitä sinun näyttö on :)
+Jossa numerot kertovat ikkunan leveyden ja korkeuden. Kokeile millä luvuilla ikkuna on hyvän kokoinen, ei kuitenkaan kannata laittaa ikkunaa suuremmaksi kuin mitä sinun näyttö on :)
 
 Useimmiten kannettavissa on myös näytönskaalaus käytössä, jolloin ikkunan resoluutio ei täysin vastaa näytön todellista resoluutiota. Kokeile ja muokkaa arvoja. Oman näyttösi resoluution koneesi näyttöasetuksista.
 

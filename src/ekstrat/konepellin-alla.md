@@ -75,7 +75,7 @@ kirjoittanut sellaisen. Ks. [Piirtäminen](../grafiikka/piirtaminen.md).
   tekeminen hoidetaan ajastimella, odottaminen `Timer.SingleShot`-kutsulla.
 - **Olio ei liiku heti.** Kun asetat `Velocity`-arvon tai kutsut `Push`,
   sijainti muuttuu vasta seuraavissa päivityksissä, 1/60 sekunti kerrallaan.
-  Nopeus 100 tarkoittaa 100 pikseliä sekunnissa.
+  Nopeus 100 tarkoittaa 100 yksikköä sekunnissa.
 - **Käsittelijässä saa luoda ja tuhota olioita.** Käsittelijät ajetaan
   päivityksen sisällä, eivät sen kanssa kilpaa, joten `Add` ja `Destroy`
   ovat turvallisia missä tahansa käsittelijässä.
