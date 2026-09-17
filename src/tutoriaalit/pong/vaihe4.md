@@ -38,23 +38,17 @@ Koska eri mailoille tarvitaan eri koordinaatit, täytyy tämä pystyä jotenkin 
 - Useammat parametrit erotetaan pilkulla toisistaan.
 - Kun aliohjelmaa kutsutaan, sille täytyy antaa juuri sellaiset parametrit, joita se haluaa.
 
-**Lisää** siis seuraavanlainen aliohjelma:
+**Lisää** siis seuraavanlainen, vielä tyhjä aliohjelma:
 
 ```csharp,ignore
 void LuoMaila(double x, double y)
 {
-    PhysicsObject maila = PhysicsObject.CreateStaticObject(20.0, 100.0);
-    maila.Shape = Shape.Rectangle;
-    maila.X = Level.Left + 20.0;
-    maila.Y = 0.0;
-    maila.Restitution = 1.0;
-    Add(maila);
 }
 ```
 
 `LuoMaila`-aliohjelman parametrit `x` ja `y` ovat tyyppiä `double`. Tyyppiä `double` käytetään desimaalilukujen esittämiseen.
 
-**Siirrä** punaisella merkityt mailan luomiseen liittyvät koodirivit `LuoMaila`-aliohjelmaan:
+**Siirrä** punaisella merkityt mailan luomiseen liittyvät koodirivit `LuoKentta`-aliohjelmasta `LuoMaila`-aliohjelman aaltosulkujen väliin:
 
 ```csharp,ignore
     void LuoKentta()
