@@ -217,25 +217,38 @@ selkeämpi. Ajastimen käyttö omassa luokassa on sivulla
 
 ## Kun olio tarvitsee jotain pelistä {#peli}
 
-Luokan sisällä `Game` tarkoittaa käynnissä olevaa peliä. Sen kautta löytyy
-kaikki, mikä Jypelin `Game`-luokassa on valmiina: `Game.Level`,
-`Game.Camera`, `Game.Add(...)`, `Game.Keyboard`, `Game.MessageDisplay` ja
-`Game.LoadImage(...)`.
+`Peli`-luokassa voi kirjoittaa suoraan `Level.Bottom`, `Add(olio)` tai
+`pisteet.Value++`, koska koodi on `Peli`-luokan sisällä. Oma oliotyyppi on
+eri luokka, joten siellä nämä nimet eivät toimi sellaisenaan. Ratkaisu
+riippuu siitä, onko tarvittava asia Jypelin valmis vai itse kirjoitettu.
 
-`Peli`-luokkaan itse kirjoitetut asiat, kuten pistelaskuri, pelaajaa
-tarkoittava attribuutti tai aliohjelma `PeliLoppui`, eivät sen sijaan näy
-`Game`-sanan kautta. `Game` on tyypiltään Jypelin `Game`, joten kääntäjä ei
-tiedä `Peli`-luokan sisällöstä mitään:
+Jypelin valmiit asiat saa käyttöön kirjoittamalla eteen `Game.`. Jokaisella
+pelioliolla on `Game`-ominaisuus, joka viittaa käynnissä olevaan peliin.
+
+| `Peli`-luokassa | Omassa luokassa |
+| --- | --- |
+| `Level.Bottom` | `Game.Level.Bottom` |
+| `Add(olio)` | `Game.Add(olio)` |
+| `Keyboard.Listen(...)` | `Game.Keyboard.Listen(...)` |
+| `MessageDisplay.Add("...")` | `Game.MessageDisplay.Add("...")` |
+| `LoadImage("kuva")` | `Game.LoadImage("kuva")` |
+
+`Peli`-luokkaan itse kirjoitetut asiat, kuten pistelaskuri `pisteet` tai
+aliohjelma `PeliLoppui`, eivät löydy samalla tavalla. Rivi
+`Game.pisteet.Value++` antaa käännösvirheen:
 
 ```text
 error CS1061: 'Game' does not contain a definition for 'pisteet'
 ```
 
-Samasta syystä `Game.Gravity` ja `Game.AddCollisionHandler` eivät käänny:
-ne kuuluvat `PhysicsGame`-luokkaan eivätkä `Game`-luokkaan.
+`Game`-ominaisuus lupaa vain, että kyseessä on jokin Jypeli-peli. Kääntäjä
+ei tiedä, että peli on juuri sinun `Peli`-luokkasi, joten se hyväksyy vain
+ne asiat, jotka ovat jokaisessa Jypeli-pelissä. Saman virheen antavat
+`Game.Gravity` ja `Game.AddCollisionHandler(...)`, koska painovoima ja
+törmäyskäsittelijät ovat vain fysiikkapeleissä (`PhysicsGame`).
 
-Pelin omiin asioihin pääsee käsiksi kolmella tavalla. Kaksi ensimmäistä
-sopivat useimpiin tilanteisiin.
+Itse kirjoitettuihin asioihin pääsee käsiksi kolmella tavalla. Kaksi
+ensimmäistä sopivat useimpiin tilanteisiin.
 
 ### 1. Anna tarvittava olio rakentajassa
 
@@ -244,7 +257,7 @@ rakentajan parametrina ja tallennetaan attribuuttiin. Näin sai myös ohjus
 yllä kohteensa. Alla pallot vähentävät pelin elämälaskuria, kun ne putoavat
 kentän alareunan alapuolelle.
 
-```csharp,feature-jypeli
+```csharp,ignore
 //-using System;
 //-using Jypeli;
 //-
