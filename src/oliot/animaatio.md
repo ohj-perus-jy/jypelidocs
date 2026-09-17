@@ -68,11 +68,11 @@ pelaaja.Animation.FPS = 10;
 
 ### Animaation peilaaminen pysty- tai vaakasuunnassa
 
-Animaatio voidaan **peilata** (Mirror) tai **kääntää ylösalaisin** (Flip) koodissa, jolloin saadaan sama animaatio eri suuntiin, esimerkiksi eri suuntiin liikkumista varten.
+Animaatio voidaan **peilata** (Mirror) tai **kääntää ylösalaisin** (Flip) koodissa, jolloin saadaan sama animaatio eri suuntiin, esimerkiksi eri suuntiin liikkumista varten. Esimerkiksi edellä ladatuista `ukkelinKavely`-kuvista saadaan peilattu ja ylösalaisin käännetty animaatio näin:
 
 ```csharp,ignore
-Animation ukkeliPeilattu = Animation.Mirror(ukkeli);
-Animation ukkeliYlosalaisin = Animation.Flip(ukkeli);
+Animation ukkeliPeilattu = Animation.Mirror(new Animation(ukkelinKavely));
+Animation ukkeliYlosalaisin = Animation.Flip(new Animation(ukkelinKavely));
 ```
 
 ## Animaatiot PlatformCharacter-tasohyppelyhahmolle

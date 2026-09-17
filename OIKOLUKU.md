@@ -4,7 +4,6 @@ Rivinumerot: commit `bb4c0a0`.
 
 ## Virheet
 
-- `src/oliot/animaatio.md` (peilaus): `ukkeli` on määrittelemätön.
 - `src/kayttoliittyma/pistelaskuri.md:121`: `laskuri.DoubleFormatString = {0:N5}` ei käänny.
 - `src/tutoriaalit/pong/vaihe2–7.md`: `Level.Background.Color` ja `Level.BackgroundColor` sekaisin.
 - `src/tutoriaalit/pong/vaihe4.md:43–57`: mailan luontirivit tulevat ohjetta seuraamalla kahdesti.
