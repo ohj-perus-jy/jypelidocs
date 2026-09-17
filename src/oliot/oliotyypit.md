@@ -149,18 +149,20 @@ PlatformCharacter2 on myös tasohyppelyhahmo, mutta se käyttäytyy hieman eri t
 |:----------------------|:-------------------------------------|
 | CanMoveOnAir          | Voiko liikkua ilmassa                |
 | FacingDirection       | Hahmon rintamasuunta                 |
-| LeftIdleAnimation     | Animaatio paikallaan ollessa vasemmalle |
-| LeftWalkingAnimation  | Vasemmalle kävelyn animaatio         |
-| RightIdleAnimation    | Animaatio paikallaan ollessa oikealle   |
-| RightWalkingAnimation | Oikealle kävelyn animaatio           |
+| AnimFall              | Animaatio tai kuva pudotessa (suunta oikealle) |
+| AnimIdle              | Animaatio tai kuva paikallaan ollessa (suunta oikealle) |
+| AnimJump              | Animaatio tai kuva hypätessä (suunta oikealle) |
+| AnimWalk              | Animaatio tai kuva kävellessä (suunta oikealle) |
 | Weapon                | Hahmon ase                           |
 
 ### Tärkeimmät metodit
 
 | Nimi | Parametrit | Metodin selitys |
 |:---|:---|:---|
-| Jump | **double** impulssi | Olio hyppää. Ottaa huomioon mm. sen, onko olio jo ilmassa, jolloin ei hypätä uudestaan. Parametrina otetaan desimaalilukuna vastaan voima, jolla olio hyppää. |
-| Walk | **Direction** suunta | Olio kävelee. Mahdollisimman luonnollisen näköinen kävelyyn tarkoitettu metodi. Parametrina suunta, joka voi olla `Direction.Left` tai `Direction.Right`. Jos suuntaa ei anneta, käytetään nykyistä rintamasuuntaa (FacingDirection). |
+| ForceJump | **double** nopeus | Hyppää, vaikka olio olisi jo ilmassa. |
+| Jump | **double** nopeus | Olio hyppää. Ottaa huomioon mm. sen, onko olio jo ilmassa, jolloin ei hypätä uudestaan. Parametrina otetaan desimaalilukuna vastaan nopeus, jolla olio hyppää. |
+| Walk | **Direction** suunta | Olio kävelee. Mahdollisimman luonnollisen näköinen kävelyyn tarkoitettu metodi. Parametrina suunta, joka voi olla `Direction.Left` tai `Direction.Right`. Jos suuntaa ei anneta, käytetään nykyistä rintamasuuntaa (FacingDirection). Nopeus määräytyy `Acceleration`- ja `MaxVelocity`-ominaisuuksista. |
+| StopWalking | | Lopettaa kävelyn. |
 
 ## Automobile
 

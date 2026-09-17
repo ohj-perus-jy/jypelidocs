@@ -179,7 +179,7 @@ AddCollisionHandler(salama, CollisionHandler.ExplodeTarget(150, false));
 AddCollisionHandler(salama, CollisionHandler.ExplodeBoth(200, true));
 ```
 
-Jos pelissä on käytössä `ExplosionSystem` (ks. [Efektit](../grafiikka/efektit.md)), voidaan käyttää `AddEffect`-käsittelijää. `AddEffect` ottaa parametrikseen räjähdysjärjestelmän ja käytettävien partikkelien määrän. `AddEffect` ei tuhoa olioita automaattisesti, mutta sekin onnistuu lisäämällä erillisen `DestroyObject`-käsittelijän:
+Jos pelissä on käytössä `ExplosionSystem` (ks. [Efektit](../grafiikka/efektit.md)), voidaan käyttää `AddEffectOnTarget`-käsittelijää, joka tekee efektin törmäyksen kohteen paikalle (`AddEffectOnObject` tekee sen törmääjän paikalle). Käsittelijä ottaa parametrikseen räjähdysjärjestelmän ja käytettävien partikkelien määrän. Se ei tuhoa olioita automaattisesti, mutta sekin onnistuu lisäämällä erillisen `DestroyObject`-käsittelijän:
 
 ```csharp,ignore
 AddCollisionHandler(pelaaja, vihollinen, CollisionHandler.AddEffectOnTarget(paukkupatteri, 40));

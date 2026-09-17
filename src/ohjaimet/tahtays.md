@@ -1,6 +1,6 @@
 # Tähtäys
 
-Useimmissa peleissä, joissa on aseita, täytyy niillä myös tähdätä. Tässä ohjeessa neuvotaan, kuinka teet tähtäämisen hiirellä, Xbox 360 -ohjaimella sekä näppäimistöllä.
+Useimmissa peleissä, joissa on aseita, täytyy niillä myös tähdätä. Tässä ohjeessa neuvotaan, kuinka teet tähtäämisen hiirellä, peliohjaimen tatilla sekä näppäimistöllä.
 
 ## Hiirellä tähtääminen
 
@@ -37,6 +37,28 @@ Aliohjelmassa määritellään uusi vektori `suunta`, johon lasketaan pelaajan a
 Tarkemmin, `Mouse.PositionOnWorld` antaa meille hiiren paikan pelimaailmassa ja `pelaaja1.Weapon.AbsolutePosition` antaa pelaajan aseen sijainnin. Lopuksi näiden kahden vektorin erotukselle tehdään normalisointi, eli vektori muutetaan yhden yksikön pituiseksi.
 
 Kun meillä on yhden yksikön mittainen vektori, saadaan siitä helposti kulma, `suunta.Angle`, joka asetetaan aseen kulmaksi. Näin ase saadaan osoittamaan haluttuun suuntaan.
+
+## Peliohjaimen tatilla tähtääminen
+
+Peliohjaimella tähdätään luontevimmin oikealla tatilla: ase osoittaa samaan suuntaan kuin tatti. Tatin kuuntelu on selitetty tarkemmin sivulla [Ohjainten lisääminen](ohjainten-lisays.md#tatti).
+
+```csharp,ignore
+ControllerOne.ListenAnalog(AnalogControl.RightStick, 0.1, TahtaaTatilla, "Tähtää aseella");
+```
+
+```csharp,ignore
+void TahtaaTatilla(AnalogState tatinTila)
+{
+    Vector suunta = tatinTila.StateVector;
+    if (suunta.Magnitude < 0.3)
+    {
+        return;
+    }
+    pelaaja1.Weapon.Angle = suunta.Angle;
+}
+```
+
+`StateVector` kertoo tatin asennon vektorina, ja sen kulma asetetaan suoraan aseen kulmaksi. Kun tatti on lähes keskellä, vektori on hyvin lyhyt ja sen kulma heittelehtii. Siksi aliohjelmasta poistutaan, jos vektorin pituus (`Magnitude`) on alle 0.3, jolloin ase jää osoittamaan viimeksi tähdättyyn suuntaan.
 
 ## Näppäimistöllä tähtääminen
 

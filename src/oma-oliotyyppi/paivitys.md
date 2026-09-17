@@ -56,10 +56,12 @@ päivityksestä kulunut aika (normaalisti 1/60 sekuntia) ja
 (`double`). Kun nopeus kerrotaan kuluneella ajalla, liike on yhtä nopea,
 vaikka päivitysväli vaihtelisi.
 
-Fysiikkaoliota ei yleensä käännetä tai siirretä suoraan `Angle`- ja
-`Position`-ominaisuuksilla, koska fysiikkamoottori liikuttaa sitä samaan
-aikaan. Fysiikkaoliolle asetetaan `Update`-metodissa mieluummin
-`Velocity` tai `AngularVelocity`, kuten alla.
+Fysiikkaoliota ei yleensä siirretä suoraan `Position`-ominaisuudella eikä
+pyöritetä kasvattamalla `Angle`-ominaisuutta, koska fysiikkamoottori
+liikuttaa sitä samaan aikaan. Fysiikkaoliolle asetetaan `Update`-metodissa
+mieluummin `Velocity` tai `AngularVelocity`. Olion saa silti suunnata
+menosuuntaansa asettamalla `Angle`-ominaisuuden, kuten alla oleva ohjus
+tekee.
 
 ## Esimerkki: ohjus seuraa pelaajaa
 
@@ -180,8 +182,8 @@ if (Y < Game.Level.Bottom - 100)
 ```
 
 ```csharp,ignore
-// Käänny menosuuntaan (Angle-ominaisuus sopii GameObject-oliolle,
-// fysiikkaoliolle katso CanRotate ja AngularVelocity)
+// Käänny menosuuntaan (jatkuvaan pyörittämiseen fysiikkaoliolla
+// katso CanRotate ja AngularVelocity)
 if (Velocity.Magnitude > 1)
 {
     Angle = Velocity.Angle;

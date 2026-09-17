@@ -306,16 +306,19 @@ def code_block(lang: str, lines: list[str], colors=None, hidden_prefix=0, hidden
     while lines and not lines[0].strip():
         lines.pop(0)
         hidden_prefix = max(0, hidden_prefix - 1)
+        if colors:
+            colors = {n - 1: c for n, c in colors.items() if n > 1}
     if lang != "csharp":
         count(f"aita:{lang}")
         return "```" + lang + "\n" + "\n".join(lines) + "\n```"
     full = "\n".join(lines)
     runnable = is_runnable(full)
-    body = list(lines)
+    # Korostusten rivinumerot viittaavat alkuperäiseen koodiin, joten ne
+    # merkitään ennen piilotettujen using-rivien lisäämistä.
+    body = with_highlights(list(lines), colors or {})
     if runnable and "using Jypeli" not in full:
         body = HIDDEN_USINGS + body
         hidden_prefix += len(HIDDEN_USINGS)
-    body = with_highlights(body, colors or {})
     marked = []
     seen = 0
     for line in body:

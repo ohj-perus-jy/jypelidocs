@@ -12,6 +12,20 @@ Olion kimmoisuuden arvo on välillä `0.0 - 1.0`. Arvolla `1.0` olio säilyttä�
 
 Törmäyksessä lasketaan törmänneiden kappaleiden kimmoisuuksien keskiarvo, eli esimerkiksi jos toisen kimmoisuus on `0` ja toisen `1`, on lopputulos sama kuin jos molempien kimmoisuus olisi ollut `0.5`.
 
+## Kitka
+
+Kitka vastustaa liikettä, kun kaksi oliota liukuu toisiaan vasten, esimerkiksi laatikko lattiaa pitkin. Liikekitkaa säädetään `KineticFriction`-ominaisuudella:
+
+```csharp,ignore
+laatikko.KineticFriction = 0.2;
+```
+
+Arvo on välillä `0.0 - 1.0`. Arvolla `0.0` kitkaa ei ole lainkaan, jolloin olio liukuu kuin jäällä. Mitä suurempi arvo, sitä nopeammin liukuva olio pysähtyy. Kitka vaikuttaa vain kosketuksessa toiseen olioon. Ilmassa lentävää oliota hidastetaan `LinearDamping`-ominaisuudella (ks. [alempana](#olion-liikkeen-tai-pyorimisliikkeen-hidastaminen)).
+
+Lepokitka `StaticFriction` on vastaava ominaisuus paikallaan olevalle oliolle: se vastustaa liikkeelle lähtemistä.
+
+Kitka kannattaa asettaa nollaksi esimerkiksi pallolle ja seinille, jos pallon halutaan kimpoilevan menettämättä vauhtiaan tai alkamatta pyöriä.
+
 ## Massa
 
 Kaikilla fysiikkakappaleilla on massa, joka riippuu kappaleen koosta.

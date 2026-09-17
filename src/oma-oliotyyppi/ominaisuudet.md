@@ -94,7 +94,7 @@ Vihu heikko = new Vihu(30, 30, 1);
 Vihu vahva = new Vihu(60, 60, 10);
 ```
 
-Vain `base`-kutsuun menevät parametrit ovat pakollisia; loput ovat vapaita.
+Kantaluokan rakentaja tarvitsee aina omat arvonsa `base`-kutsussa, mutta ne voi joko ottaa oman rakentajan parametreina, kuten tässä, tai kirjoittaa suoraan `base`-kutsuun (ks. [Oman luokan periminen](luokan-periminen.md)). Omia parametreja voi lisätä vapaasti.
 
 ## Oletusarvot rakentajassa
 

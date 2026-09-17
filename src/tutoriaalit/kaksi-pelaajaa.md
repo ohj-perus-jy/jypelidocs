@@ -76,7 +76,7 @@ Camera.FollowXMargin = 200;
 Camera.FollowYMargin = 100;
 ```
 
-`FollowXMargin` ja `FollowYMargin` kertovat, paljonko tyhjää tilaa jätetään hahmojen ja ruudun reunan väliin. Oletusarvo on suuri, joten pienemmillä arvoilla hahmot näkyvät isompina. `ZoomFactor`-rivi voidaan poistaa, koska kamera valitsee zoomauksen nyt itse. `StayInLevel` kannattaa jättää paikalleen, jotta kentän ulkopuolista tyhjää ei näytetä turhaan.
+`FollowXMargin` ja `FollowYMargin` kertovat, paljonko tyhjää tilaa jätetään hahmojen ja ruudun reunan väliin. Oletusarvo on suuri, joten pienemmillä arvoilla hahmot näkyvät isompina. `ZoomFactor`-rivi jäi pois, koska kamera valitsee zoomauksen nyt itse. `StayInLevel`-rivi jätetään paikalleen, jotta kentän ulkopuolista tyhjää ei näytetä turhaan.
 
 Lisää kameran käytöstä: [Kamera ja zoomaus](../kentat/kameran-kaytto.md).
 

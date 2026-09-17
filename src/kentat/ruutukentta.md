@@ -65,7 +65,7 @@ Piirtometodille tulee parametrina `tiles`-olion kirjaimelle laskema paikka ja ki
 
 Fysiikkamoottorin (Farseer) takia elementit pitää luoda hieman pienemmiksi kuin yhden ruudun koko, muuten elementit (oliot) työntävät toisiaan pois.
 
-Aja alla oleva ohjelma, niin näet tuloksen. Voit myös muutella kentän asettelua ja Alusta-linkistä palata alkuperäiseen.
+Aja alla oleva ohjelma, niin näet tuloksen. Kopioi koodi omaan projektiisi, jos haluat kokeilla kentän asettelun muuttamista.
 
 ```csharp,feature-jypeli
 //-using Jypeli;

@@ -292,14 +292,13 @@ ase.AttackSound = null;
 
 **Paikka:**
 
-Kun ase on lisätty jollekin oliolle, sen paikka määräytyy suhteessa aseen omistajaan.
-
-Esimerkiksi jos aseen X-koordinaatin arvoksi asetetaan 10, tämä tarkoittaa, että ase sijoittuu pelikentässä 10 yksikköä aseen omistajasta oikealle.
+Kun ase on lisätty jollekin oliolle, se liikkuu omistajansa mukana. Aseen paikka suhteessa omistajaan asetetaan `RelativePosition`-ominaisuudella. Esimerkiksi alla ase sijoittuu 10 yksikköä omistajasta oikealle ja 5 yksikköä alaspäin.
 
 ```csharp,ignore
-ase.X = 10.0;
-ase.Y = -5.0;
+ase.RelativePosition = new Vector(10.0, -5.0);
 ```
+
+Aseen `X`, `Y` ja `Position` ovat sen sijaan kentän koordinaatteja, kuten muillakin olioilla.
 
 ### Kranaatti ja muut heitettävät oliot {#heitettavat}
 

@@ -84,7 +84,7 @@ Level.CreateBorders();
 ```
 
 `Gravity` on painovoima: nolla sivusuunnassa ja 800 alaspäin.
-`Level.CreateBorders` tekee kentän reunoille näkymättömät seinät, joten pallo
+`Level.CreateBorders` tekee kentän reunoille seinät, joten pallo
 pysähtyy alareunaan eikä putoa ruudun ulkopuolelle.
 
 ## Näppäin, joka tönäisee palloa

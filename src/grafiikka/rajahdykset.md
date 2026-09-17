@@ -34,7 +34,7 @@ Esimerkki räjähdyksestä.
 
 Yllä olevassa esimerkissä:
 
-1.  Rivi: luodaan räjähdys, jonka halkaisija on 50.
+1.  Rivi: luodaan räjähdys, jonka säde on 50.
 2.  Rivi: määritetään räjähdyksen sijainti. Tässä räjähdyksen sijainti on asetettu samaksi kuin olion, joka esimerkiksi tuhoutuu.
 3.  Rivi: räjähdys lisätään kenttään, jolloin se näkyy ja vaikuttaa muihin olioihin pelikentällä.
 

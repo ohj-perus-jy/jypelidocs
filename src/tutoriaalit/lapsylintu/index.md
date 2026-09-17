@@ -2,7 +2,7 @@
 
 Tässä oppaassa luodaan vaiheittain Läpsylintu-peli, joka etäisesti muistuttaa monille tuttua Flappy Bird -peliä.
 
-Pelissä on tavoitteena liikuttaa pelihahmoa kentässä osumatta pahoihin vihuihin! Keräämällä tähtiä saa pisteitä.
+Pelissä on tavoitteena liikuttaa pelihahmoa kentässä osumatta seiniin tai pahoihin vihuihin! Matkalla kerätään tähtiä. Pistelaskurin lisääminen jää viimeisen vaiheen jatkokehittelyksi.
 
 Opas on jaettu pienempiin vaiheisiin.
 
@@ -15,7 +15,7 @@ Tässä tutoriaalissa opit ohjelmoinnin alkeita, eikä aikaisempaa kokemusta ohj
 - Aliohjelma
 - Ehtolause
 - Törmäyskäsittelijä
-- Äänen ja kuvan lisääminen omaan peliin
+- Kuvan ja animaation lisääminen omaan peliin
 
 Tämä on hieman Pongia haastavampi harjoitus, mutta soveltuu silti myös ensikertalaisille.
 

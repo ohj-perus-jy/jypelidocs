@@ -82,13 +82,13 @@ public class Liitos2 : PhysicsGame
 
 ### Liitoksen pehmeys
 
-Liitokselle voidaan asettaa myös pehmeys, eli kuinka paljon liitos joustaa kappaleiden liikkuessa.
+Liitos toimii jousen tavoin, ja sen jäykkyyttä säädetään `Softness`-ominaisuudella.
 
 ```csharp,ignore
 liitos.Softness = 0.5;
 ```
 
-Suurempi arvo tarkoittaa pienempää joustamista. Hyvin suuren arvon käyttö voi johtaa epäfysikaalisiin ilmiöihin.
+Nimestään huolimatta arvo on jousen värähtelytaajuus: mitä suurempi arvo, sitä jäykempi liitos, ja mitä pienempi arvo, sitä löysemmin liitos joustaa. Arvolla 0 jousto on kokonaan pois päältä eli liitos on täysin jäykkä. Oletusarvo on 2, kun liitokselle on annettu akselin paikka. Hyvin suuren arvon käyttö voi johtaa epäfysikaalisiin ilmiöihin.
 
 ### Liitoksen tuhoaminen
 
@@ -124,7 +124,7 @@ Liitoksen ominaisuuksia:
 |:---|:---|:---|
 | Axis | Vector | Akseli, jonka suhteen liitos joustaa. Oletuksena `Vector.One`, eli joustaa joka suuntaan. Esimerkiksi `Vector.UnitY` tarkoittaa, että liitos joustaa ainoastaan pystysuunnassa. |
 | DampingRatio | double | Liitoksen oskillaation vaimennuskerroin. |
-| Softness | double | Kuinka helposti liitos joustaa. |
+| Softness | double | Liitoksen jousen taajuus: suurempi arvo on jäykempi, 0 ei jousta lainkaan. Oletus 5. |
 
 Liitoksen moottorille on myös muutamia ominaisuuksia:
 
@@ -325,14 +325,6 @@ PhysicsObject p3 = new PhysicsObject(2 * 15.0, 2 * 15.0, Shape.Circle);
 p3.X = 0;
 p3.Y = p2.Y + 25 + 15;
 lumiukko.Add(p3);
-```
-
-### Rakenteen liitosten pehmeys
-
-Oletuksena rakenteen olioiden välisten liitosten pehmeys (`Softness`) on 0, jolloin oliot eivät pääse liikkumaan toistensa suhteen. Arvoa voi kuitenkin muuttaa, ja se vaikuttaa koko rakenteeseen. Yksittäisten liitosten pehmeyttä ei ole mahdollista säätää.
-
-```csharp,ignore
-lumiukko.Softness = 3;
 ```
 
 ### Rakenteet ja törmäysten käsittely

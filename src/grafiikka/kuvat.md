@@ -209,13 +209,13 @@ Kuva tallentuu pelihakemiston (projektihakemiston alla yleensä bin) alle Data-a
 Käytät mahdollisesti liian pientä kuvaa. Jypeli skaalaa kuvan olion kokoiseksi, mutta se ei osaa tehdä siitä tarkempaa kuin se jo on. Kuvan skaalauskäytökseen voit vaikuttaa asettamalla
 
 ```csharp,ignore
-kuva.Scaling = ImageScaling.Nearest
+kuva.Scaling = ImageScaling.Nearest;
 ```
 
 tai
 
 ```csharp,ignore
-kuva.Scaling = ImageScaling.Linear
+kuva.Scaling = ImageScaling.Linear;
 ```
 
 `Nearest`-asetus on sopiva, jos halutaan pikseligrafiikkaa, `Linear` taas, kun halutaan, että kuva mieluummin "sumenee". Kannattaa kokeilla, kumpi näyttää omassa pelissä paremmalta.
