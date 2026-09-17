@@ -89,7 +89,7 @@ IntMeter LuoPisteLaskuri(double x, double y)
 
 Tekstikenttä sidotaan näyttämään laskurin arvoa kutsulla `naytto.BindTo(laskuri)`. Näin ruudulle päivittyy automaattisesti laskurin arvo, vaikka sitä jossain kohtaa muutetaan.
 
-Näytön väri asetetaan valkoiseksi, jotta se erottuu taustasta (`naytto.TextColor = Color.White`).
+Näytön tekstin väri asetetaan valkoiseksi, jotta pisteet erottuvat mustasta taustasta (`naytto.TextColor = Color.White`). Näytön taustan ja reunan väriksi (`Color` ja `BorderColor`) asetetaan kentän taustaväri, jolloin näkyviin jää pelkkä teksti.
 
 ## Laskureiden lisääminen peliin
 

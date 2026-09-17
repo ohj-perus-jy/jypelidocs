@@ -4,7 +4,6 @@ Rivinumerot: commit `bb4c0a0`.
 
 ## Virheet
 
-- `src/tutoriaalit/pong/vaihe7.md:90`: "Näytön väri valkoiseksi", koodissa tekstin väri.
 - `src/tutoriaalit/pong/vaihe7.md:249–307`: "Tee vielä seuraavat muutokset" ei kerro mitä; uudet attribuutit merkitsemättä.
 - `src/tutoriaalit/kaksi-pelaajaa.md:71, 79`: korvattava rivi on jo poistettu.
 - `src/tutoriaalit/lapsylintu/index.md:5, 18`: lupaa pisteet ja äänet, joita ohjeessa ei tehdä.
