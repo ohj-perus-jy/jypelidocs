@@ -102,7 +102,7 @@ olio.Position = Level.GetRandomPosition();
 
 ## Satunnainen vaihtoehto
 
-RandomGen-luokan `SelectOne`-aliohjelmalla voidaan arpoa nopeasti yksi vaihtoehto useista annetuista. `SelectOne` ottaa ns. tyyppiparametrin (kulmasuluissa \<\>) joka kertoo, mitä tyyppiä arvottavat otukset ovat. Tyyppi voi olla esimerkiksi string (arvotaan merkkijonoja), double (lukuja) tai GameObject (ruudulla näkyviä peliolioita).
+RandomGen-luokan `SelectOne`-aliohjelmalla voidaan arpoa nopeasti yksi vaihtoehto useista annetuista. 
 
 Joitain esimerkkejä `SelectOne`n käytöstä:
 
@@ -118,7 +118,7 @@ Color vari = RandomGen.SelectOne(Color.Black, Color.Red, Color.Green, Color.Blue
 PhysicsObject pelaaja = RandomGen.SelectOne(pelaaja1, pelaaja2);
 ```
 
-Huom. jos saat tällaisen virheen
+Jos saat tällaisen virheen
 
 - The type arguments for method 'Jypeli.RandomGen.SelectOne<T>(params T\[\])' cannot be inferred from the usage. Try specifying the type arguments explicitly.
 
