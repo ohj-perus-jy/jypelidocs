@@ -56,7 +56,7 @@ Tämän vaiheen valmis koodi löytyy täältä:
 Ks. <https://gitlab.jyu.fi/tie/ohj1/jypeli-esimerkit/kaksi-pelaajaa/-/blob/main/KaksiPelaajaa.cs?ref_type=heads>
 
 > [!KOKEILE]
-> Aja peli ja kävele hahmot eri suuntiin. Pelaaja 2 katoaa pian ruudulta, koska kamera seuraa vain pelaajaa 1. Se korjataan seuraavaksi.
+> Aja peli ja kävele hahmoilla eri suuntiin. Pelaaja 2 katoaa pian ruudulta, koska kamera seuraa vain pelaajaa 1. Se korjataan seuraavaksi.
 
 ## Kameran seuranta
 
@@ -81,7 +81,7 @@ Camera.FollowYMargin = 100;
 Lisää kameran käytöstä: [Kamera ja zoomaus](../kentat/kameran-kaytto.md).
 
 > [!KOKEILE]
-> Kävele hahmot kauas toisistaan. Kamera zoomaa kauemmas, ja molemmat pysyvät kuvassa.
+> Kävele hahmoilla kauas toisistaan. Kamera zoomaa kauemmas, ja molemmat pysyvät kuvassa.
 
 ## Kilpailu: kumpi kerää enemmän tähtiä
 
