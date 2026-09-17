@@ -221,10 +221,3 @@ kuva.Scaling = ImageScaling.Linear;
 `Nearest`-asetus on sopiva, jos halutaan pikseligrafiikkaa, `Linear` taas, kun halutaan, että kuva mieluummin "sumenee". Kannattaa kokeilla, kumpi näyttää omassa pelissä paremmalta.
 
 <!-- TODO: Tähän voisi laittaa esimerkit molemmista. -->
-
-## Miten saan muokattua pelin kuvaketta (ikonia)?
-
-- Pelin hakemistossa on tiedosto Game.ico
-- Avaa tiedosto vaikka Paint.NETillä tai ihan Paintilla
-- Muokkaa ikoni mieleiseksi
-- Tallenna `Game.png`-tiedostoksi
