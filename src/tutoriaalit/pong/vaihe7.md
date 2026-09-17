@@ -385,7 +385,7 @@ public class Pong : PhysicsGame
         alaReuna.IsVisible = false;
         alaReuna.KineticFriction = 0.0;
 
-        Level.BackgroundColor = Color.Black;
+        Level.Background.Color = Color.Black;
 
         Camera.ZoomToLevel();
     }
@@ -418,8 +418,8 @@ public class Pong : PhysicsGame
         naytto.X = x;
         naytto.Y = y;
         naytto.TextColor = Color.White;
-        naytto.BorderColor = Level.BackgroundColor;
-        naytto.Color = Level.BackgroundColor;
+        naytto.BorderColor = Level.Background.Color;
+        naytto.Color = Level.Background.Color;
         Add(naytto);
 
         return laskuri;

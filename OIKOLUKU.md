@@ -4,7 +4,6 @@ Rivinumerot: commit `bb4c0a0`.
 
 ## Virheet
 
-- `src/tutoriaalit/pong/vaihe2–7.md`: `Level.Background.Color` ja `Level.BackgroundColor` sekaisin.
 - `src/tutoriaalit/pong/vaihe4.md:43–57`: mailan luontirivit tulevat ohjetta seuraamalla kahdesti.
 - `src/tutoriaalit/pong/vaihe4.md:92–99`, `vaihe7.md:65–86`: vihreä korostus ei vastaa muuttuneita rivejä.
 - `src/tutoriaalit/pong/vaihe7.md:90`: "Näytön väri valkoiseksi", koodissa tekstin väri.

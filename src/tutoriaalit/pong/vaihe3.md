@@ -287,7 +287,7 @@ public class Pong : PhysicsGame
         Add(maila);
 
         Level.CreateBorders(1.0, false);
-        Level.BackgroundColor = Color.Black;
+        Level.Background.Color = Color.Black;
 
         Camera.ZoomToLevel();
     }

@@ -182,7 +182,7 @@ public class Pong : PhysicsGame
         LuoMaila(Level.Right - 20.0, 0.0);
 
         Level.CreateBorders(1.0, false);
-        Level.BackgroundColor = Color.Black;
+        Level.Background.Color = Color.Black;
 
         Camera.ZoomToLevel();
     }
