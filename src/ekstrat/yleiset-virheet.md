@@ -18,7 +18,7 @@ Problems-välilehdellä.
 | `'X' is a type, which is not valid in the given context` | Luokan nimeä on käytetty kuin muuttujaa (esim. `PhysicsObject.Shape`). | Käytä muuttujan nimeä, esim. `pallo.Shape`. |
 
 Punainen alleviivaus näkyy usein jo kesken kirjoittamisen. Kirjoita rivi
-loppuun ennen kuin huolestut.
+loppuun, ennen kuin huolestut.
 
 ## Peli käynnistyy, mutta jotain puuttuu
 
@@ -27,8 +27,8 @@ loppuun ennen kuin huolestut.
 | Olio ei näy. | `Add(olio)` puuttuu, tai olio on kameran näkymän ulkopuolella, tai se on toisen olion takana. | Lisää `Add`. Kutsu `Camera.ZoomToLevel()`. Ks. [Kerrokset](../oliot/kerrokset.md). |
 | Peli kaatuu heti ja ilmoituksessa lukee `Could not find file ... Content\...` tai `FileNotFoundException`. | Kuva- tai äänitiedosto ei ole `Content`-kansiossa, tai sen *Copy to Output Directory* -asetus ei ole *Copy if newer*, tai nimi on eri. | Ks. [Kuvat ja äänet mukaan projektiin](../aloittaminen/sisallon-tuonti.md). |
 | `NullReferenceException` | Attribuutille ei ole annettu arvoa, tai `Begin`-aliohjelmassa on luotu samanniminen paikallinen muuttuja. | Ks. [Miten Jypeli-peli toimii](../aloittaminen/pelin-rakenne.md#paikallinen-muuttuja-vai-attribuutti). |
-| Näppäin ei tee mitään. | `Listen`-rivi puuttuu tai on toisessa aliohjelmassa, jota ei kutsuta, tai tilana on `Pressed` vaikka tarkoitus oli pitää pohjassa (`Down`). | Ks. [Ohjainten lisääminen](../ohjaimet/ohjainten-lisays.md). |
-| Törmäystä ei huomata. | Toinen olioista on `GameObject` eikä `PhysicsObject`, tai käsittelijä on lisätty ennen kuin olio on luotu, tai oliot ovat samassa `CollisionIgnoreGroup`-ryhmässä. | Ks. [Törmäysten käsittely](../tapahtumat/tormaykset.md). |
+| Näppäin ei tee mitään. | `Listen`-rivi puuttuu tai on toisessa aliohjelmassa, jota ei kutsuta, tai tilana on `Pressed`, vaikka tarkoitus oli pitää pohjassa (`Down`). | Ks. [Ohjainten lisääminen](../ohjaimet/ohjainten-lisays.md). |
+| Törmäystä ei huomata. | Toinen olioista on `GameObject` eikä `PhysicsObject`, tai käsittelijä on lisätty, ennen kuin olio on luotu, tai oliot ovat samassa `CollisionIgnoreGroup`-ryhmässä. | Ks. [Törmäysten käsittely](../tapahtumat/tormaykset.md). |
 | Oliot valuvat kentän ulkopuolelle. | Kentällä ei ole reunoja. | `Level.CreateBorders();` |
 | Ääni ei kuulu. | Tiedostomuoto ei kelpaa tai tiedosto ei ole `Content`-kansiossa. | Ks. [Äänet ja musiikki](../grafiikka/aanien-lisays.md). |
 

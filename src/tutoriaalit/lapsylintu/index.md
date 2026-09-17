@@ -1,6 +1,6 @@
 # Läpsylintu
 
-Tässä oppaassa luodaan vaiheittain Läpsylintu-peli, joka etäisesti muistuttaa monille tuttua Flappy Bird-peliä.
+Tässä oppaassa luodaan vaiheittain Läpsylintu-peli, joka etäisesti muistuttaa monille tuttua Flappy Bird -peliä.
 
 Pelissä on tavoitteena liikuttaa pelihahmoa kentässä osumatta pahoihin vihuihin! Keräämällä tähtiä saa pisteitä.
 

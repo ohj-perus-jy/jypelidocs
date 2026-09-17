@@ -45,7 +45,7 @@ Camera.ZoomToAllObjects();
 Tälle myös voidaan antaa marginaali, jos halutaan hieman suurempi/pienempi alue näkyviin.
 
 ```csharp,ignore
-Camera.ZoomToAllObject(50);
+Camera.ZoomToAllObjects(50);
 ```
 
 ## Peliolion seuraaminen
@@ -56,9 +56,9 @@ Kameran voi laittaa seuraamaan tiettyä pelioliota, kuten pelaajaa:
 Camera.Follow(pelaaja1);
 ```
 
-Jos halutaan seurata pelkästään vaaka- tai pystysuunnassa, voidaan Follow-aliohjelmakutsun sijasta kutsua `FollowX` tai `FollowY`.
+Jos halutaan seurata pelkästään vaaka- tai pystysuunnassa, voidaan `Follow`-aliohjelmakutsun sijasta kutsua `FollowX` tai `FollowY`.
 
-Kamera voi seurata myös useampaaa oliota samalla kertaa. Tällöin kamera zoomaa automaattisesti niin, että kaikki oliot mahtuvat kuvaan samaan aikaan. Reunoille jäävää tilaa voi myös muuttaa erikseen pysty- ja vaakasuuntaan.
+Kamera voi seurata myös useampaa oliota samalla kertaa. Tällöin kamera zoomaa automaattisesti niin, että kaikki oliot mahtuvat kuvaan samaan aikaan. Reunoille jäävää tilaa voi myös muuttaa erikseen pysty- ja vaakasuuntaan.
 
 ```csharp,ignore
 Camera.Follow(pelaaja1, pelaaja2);
@@ -72,7 +72,7 @@ Kameralta voi aina pyytää olion, jota se seuraa:
 GameObject seurattuOlio = Camera.FollowedObject;
 ```
 
-FollowedObject on null, jos kamera ei seuraa mitään oliota. Jos kamera seuraa useita olioita, FollowedObject on näkymätön olio seurattavien olioiden keskipisteessä.
+`FollowedObject` on `null`, jos kamera ei seuraa mitään oliota. Jos kamera seuraa useita olioita, `FollowedObject` on näkymätön olio seurattavien olioiden keskipisteessä.
 
 ## Seuraamisen lopettaminen
 
@@ -102,7 +102,7 @@ Camera.StayInLevel = true;
 
 ## Kameran koordinaattien asettaminen
 
-Kameralle voi myös suoraan kertoa koordinaatit, johon se halutaan keskittää. Tällöin kamera asettuu niin, että annettu piste on ruudun keskellä.
+Kameralle voi myös suoraan kertoa koordinaatit, joihin se halutaan keskittää. Tällöin kamera asettuu niin, että annettu piste on ruudun keskellä.
 
 ```csharp,ignore
 Camera.X = Level.Right - 100;
@@ -111,10 +111,10 @@ Camera.Y = Level.Top - 400;
 
 ## Nopeuden asettaminen kameralle
 
-Jos halutaan että kamera liikkuu itsekseen tietyllä nopeudella, voidaan sanoa (kuten peliolioille)
+Jos halutaan, että kamera liikkuu itsekseen tietyllä nopeudella, voidaan sanoa (kuten peliolioille)
 
 ```csharp,ignore
 Camera.Velocity = new Vector(200, -100);
 ```
 
-Ylläolevassa esimerkissä asetettiin kamera liikkumaan 200 yksikköä sekunnissa oikealle ja 100 alaspäin.
+Yllä olevassa esimerkissä asetettiin kamera liikkumaan 200 yksikköä sekunnissa oikealle ja 100 alaspäin.

@@ -10,7 +10,7 @@ Kaikilla järjestelmillä on samat ominaisuudet, joilla partikkelien elinaikaa, 
 
 Efektijärjestelmä lisätään peliin `Add`-metodilla kuten muutkin oliot. Räjähdyksen kaltainen kertaluonteinen efekti käynnistetään sen jälkeen erikseen `AddEffect`-metodilla. Liekki ja savu ovat sen sijaan jatkuvia efektejä, jotka alkavat näkyä heti, kun ne on lisätty peliin.
 
-Kaikki efektit ovat nimiavaruudessa `Jypeli.Effects`, joten lisää kooditiedostosi alkuun seuraava **using**-rivi:
+Kaikki efektit ovat nimiavaruudessa `Jypeli.Effects`, joten lisää kooditiedostosi alkuun seuraava `using`-rivi:
 
 ```csharp,ignore
 using Jypeli.Effects;
@@ -75,7 +75,7 @@ rajahdys.AddEffect(x, y, pMaara);
 
 Tämä rivi lisää halutun efektin peliin, tässä tapauksessa räjähdyksen. Parametreista:
 
-- x ja y-parametrit kertovat efektin x ja y-koordinaatit, eli paikan. pMaara-parametri kertoo kuinka monta partikkelia luotava efekti käyttää. Yhdellä järjestelmällä voidaan tehdä monta räjähdystä, ja kaikilla räjähdyksillä yhdessä on käytössä järjestelmän pMax kappaletta partikkeleita käytössään. Esim. jos tehdään ExplosionSystem rajahdys jonka partikkeleiden maksimi on 50, ja lisätään 3 räjähdystä, jossa kussakin 20 partikkelia, niin partikkelit "loppuvat kesken", ja silloin partikkeleita aletaan tuhoamaan vanhemmasta päästä. (Eli ensin luodut partikkelit tuhotaan ensin.)
+- `x`- ja `y`-parametrit kertovat efektin x- ja y-koordinaatit eli paikan. `pMaara`-parametri kertoo, kuinka monta partikkelia luotava efekti käyttää. Yhdellä järjestelmällä voidaan tehdä monta räjähdystä, ja kaikilla räjähdyksillä yhdessä on käytössä järjestelmän `pMaxMaara` kappaletta partikkeleita. Esim. jos tehdään `ExplosionSystem` `rajahdys`, jonka partikkeleiden maksimi on 50, ja lisätään 3 räjähdystä, joissa kussakin on 20 partikkelia, niin partikkelit "loppuvat kesken", ja silloin partikkeleita aletaan tuhota vanhemmasta päästä. (Eli ensin luodut partikkelit tuhotaan ensin.)
 
 ### Räjähdyksen mukauttaminen
 
@@ -97,7 +97,7 @@ Räjähdyksellä on paljon ominaisuuksia, joilla voi muokata räjähdyksen ulkon
 
 ## Liekki
 
-Liekkiefekti käyttää `Flame` nimistä efektijärjestelmää. Liekin voisi esimerkiksi luoda seuraavalla tavalla:
+Liekkiefekti käyttää `Flame`-nimistä efektijärjestelmää. Liekin voisi esimerkiksi luoda seuraavalla tavalla:
 
 ```csharp,ignore
 //-using System;
@@ -129,7 +129,7 @@ Liekkiefekti käyttää `Flame` nimistä efektijärjestelmää. Liekin voisi esi
 
 Liekillä on samat muokkausmahdollisuudet kuin räjähdykselläkin. Joitain hyödyllisiä ominaisuuksia voi olla mm.
 
-- `MaxAngleChange`, joka määrittää kuinka "leveälle" liekki leviää.
+- `MaxAngleChange`, joka määrittää, kuinka "leveälle" liekki leviää.
 - `MinLifetime` ja `MaxLifetime`, kuinka korkealle liekki nousee.
 - `MinVelocity` ja `MaxVelocity`, kuinka nopeasti liekin hiukkaset liikkuvat.
 

@@ -16,7 +16,7 @@ Add(olio);
 
 Kokeillaan nyt asettaa `olio`-muuttujalle erilaisia muotoja.
 
-Tässä voit kokeilla erilaisia muotoa. Vaihda esimerkin <code>Shape.Circle</code> tilalle muita muotoja.
+Tässä voit kokeilla erilaisia muotoja. Vaihda esimerkin `Shape.Circle` tilalle muita muotoja.
 
 ```csharp,feature-jypeli
 //-using Jypeli;
@@ -51,7 +51,7 @@ Tässä tapauksessa oliostamme tulee ympyrä, jonka halkaisija on 100 (eli menee
 
 ## 2. Suorakulmio
 
-Suorakulmiolla on leveys ja korkeus. Oliosta tulee suorakulmion muotoinen. Sen leveys ja korkeus ovat ne, mitkä olion luonnissa sille määriteltiin.
+Suorakulmiolla on leveys ja korkeus. Oliosta tulee suorakulmion muotoinen. Sen leveys ja korkeus ovat ne, jotka olion luonnissa sille määriteltiin.
 
 ```csharp,ignore
 olio.Shape = Shape.Rectangle;
@@ -63,7 +63,7 @@ Oletuksena oliot ovat juuri suorakulmion muotoisia, eli tätä muotoa ei eriksee
 
 ## 3. Kolmio
 
-Kolmio tekee oliostamme tasasivuisen kolmion. Kolmion kanta on asettamamme leveyden pituinen. Kolmion kärki on laskettu kannan keskikohdasta asettamamme korkeuden päähän. Tasasivuisuus tarkoittaa sitä, että kantaa lukuunottamatta kolmion kaksi muuta sivua ovat yhtä pitkät.
+Kolmio tekee oliostamme tasakylkisen kolmion. Kolmion kanta on asettamamme leveyden pituinen. Kolmion kärki on laskettu kannan keskikohdasta asettamamme korkeuden päähän. Tasakylkisyys tarkoittaa sitä, että kantaa lukuun ottamatta kolmion kaksi muuta sivua ovat yhtä pitkät.
 
 ```csharp,ignore
 olio.Shape = Shape.Triangle;
@@ -141,7 +141,7 @@ Kuvasta luettu muoto (sininen tausta on pelin "vakiotausta", eikä sinänsä lii
 
 ### 9.1. Tee kuvasta mahdollisimman pieni
 
-Mitä enemmän kuvassa on pikseleitä, sitä enemmän olion luominen ja käsittely rasittaa tietokonetta. Jos kuvaan perustuvia olioita luodaan pelin aikana paljon, on suositeltavaa, että **kuvan leveys on enintään 128 pikseliä ja korkeus 128 pikseliä** - mielellään vähemmän.
+Mitä enemmän kuvassa on pikseleitä, sitä enemmän olion luominen ja käsittely rasittaa tietokonetta. Jos kuvaan perustuvia olioita luodaan pelin aikana paljon, on suositeltavaa, että **kuvan leveys on enintään 128 pikseliä ja korkeus 128 pikseliä** – mielellään vähemmän.
 
 Mitä tapahtuu, kun kuvassa on "liikaa" pikseleitä? Katso video:
 

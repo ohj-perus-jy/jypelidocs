@@ -1,6 +1,6 @@
 # Tähtäys
 
-Useimmissa peleissä, joissa on aseita, täytyy niillä myös tähdätä. Tässä ohjeessa neuvotaan kuinka teet tähtäämisen hiirellä, xbox360-ohjaimella sekä näppäimistöllä.
+Useimmissa peleissä, joissa on aseita, täytyy niillä myös tähdätä. Tässä ohjeessa neuvotaan, kuinka teet tähtäämisen hiirellä, Xbox 360 -ohjaimella sekä näppäimistöllä.
 
 ## Hiirellä tähtääminen
 
@@ -14,15 +14,15 @@ Luodaan siis ensiksi kuuntelija hiiren liikkeelle.
 Mouse.ListenMovement(0.1, Tahtaa, "Tähtää aseella");
 ```
 
-Tässä parametreinä annettavat asiat ovat:
+Tässä parametreina annettavat asiat ovat:
 
 - `0.1` - Kuinka monta yksikköä hiiren täytyy liikkua, että kuuntelija aktivoituu
-- `Tahtaa` - Aliohjelma, joka suoritetaan kun kuuntelija aktivoituu
-- `"Tähtää aseella"` - Teksti, joka näytetään kun pelissä pyydetään näppäinohjeita
+- `Tahtaa` - Aliohjelma, joka suoritetaan, kun kuuntelija aktivoituu
+- `"Tähtää aseella"` - Teksti, joka näytetään, kun pelissä pyydetään näppäinohjeita
 
 ### Aliohjelman tekeminen
 
-Kun kuuntelija on tehty, luodaan aliohjelma, joka suoritetaan aina kun hiiri liikkuu.
+Kun kuuntelija on tehty, luodaan aliohjelma, joka suoritetaan aina, kun hiiri liikkuu.
 
 ```csharp,ignore
 void Tahtaa()
@@ -32,7 +32,7 @@ void Tahtaa()
 }
 ```
 
-Aliohjelmassa määritellää uusi vektori `suunta`, johon lasketaan pelaajan aseen ja hiiren välinen suunta.
+Aliohjelmassa määritellään uusi vektori `suunta`, johon lasketaan pelaajan aseen ja hiiren välinen suunta.
 
 Tarkemmin, `Mouse.PositionOnWorld` antaa meille hiiren paikan pelimaailmassa ja `pelaaja1.Weapon.AbsolutePosition` antaa pelaajan aseen sijainnin. Lopuksi näiden kahden vektorin erotukselle tehdään normalisointi, eli vektori muutetaan yhden yksikön pituiseksi.
 
@@ -40,7 +40,7 @@ Kun meillä on yhden yksikön mittainen vektori, saadaan siitä helposti kulma, 
 
 ## Näppäimistöllä tähtääminen
 
-Mikäli hiirellä tähtääminen ei ole sopiva vaihtoehto pelillesi (esim. useamman pelaajan peli) ja et halua käyttää peliohjaimia, voi tähtäämisen toteuttaa myös näppäimistöllä. Näppäimistöllä tähtäämisen toteuttaminen on järkevää esimerkiksi kahden pelaajan tankkipelissä, jossa tankin tykkiä täytyy liikutella vain ylös ja alas.
+Mikäli hiirellä tähtääminen ei ole sopiva vaihtoehto pelillesi (esim. useamman pelaajan peli) etkä halua käyttää peliohjaimia, voi tähtäämisen toteuttaa myös näppäimistöllä. Näppäimistöllä tähtäämisen toteuttaminen on järkevää esimerkiksi kahden pelaajan tankkipelissä, jossa tankin tykkiä täytyy liikutella vain ylös ja alas.
 
 Tässä ohjeessa toteutetaan yhdelle pelaajalle tankin tykin liikuttaminen.
 
@@ -51,7 +51,7 @@ Tehdään näppäinkuuntelijat nuolinäppäimille ylös ja alas. Ylös-näppäim
 ```csharp,ignore
 Keyboard.Listen(Key.Up, ButtonState.Down, KaannaTykkia, "Kääntää tankin tykkiä ylös",
                 pelaaja1Tykki, Angle.FromDegrees(1));
-Keyboard.Listen(Key.Down, ButtonState.Down, KaannaTykkia, "Kääntää tankin tykkiä ylös",
+Keyboard.Listen(Key.Down, ButtonState.Down, KaannaTykkia, "Kääntää tankin tykkiä alas",
                 pelaaja1Tykki, Angle.FromDegrees(-1));
 ```
 
@@ -59,10 +59,10 @@ Tehdään molemmille napeille lähes identtiset kuuntelijat. Ainoat parametrit, 
 
 Kuuntelijalle annettavat parametrit ovat siis:
 
-- `Key.Up/Key.Down`- Nappi, jota kuunnellaan
+- `Key.Up`/`Key.Down` - Nappi, jota kuunnellaan
 - `ButtonState.Down` - Napin tila. Tässä tapauksessa kuuntelija aktivoituu aina, kun nappi on alhaalla.
-- `KaannaTykkia` - Aliohjelma, joka suoritetaan kun kuuntelija aktivoituu
-- `"Kääntää tankin tykkiä ylös"` - Teksti, joka näytetään kun pelissä pyydetään näppäinohjeita
+- `KaannaTykkia` - Aliohjelma, joka suoritetaan, kun kuuntelija aktivoituu
+- `"Kääntää tankin tykkiä ylös"` - Teksti, joka näytetään, kun pelissä pyydetään näppäinohjeita
 - `pelaaja1Tykki` - Tykki, jota käännetään
 - `Angle.FromDegrees(1/-1)` - Kulma, jolla tykkiä käännetään
 
@@ -97,7 +97,7 @@ Suunnasta voidaan laskea kulma, jolla `pahis` osoittaa vihollista kohti:
 pahis.Angle = suunta.Angle;
 ```
 
-Suuntaa voidaan käyttää hyväksi esim kappaleiden heittämiseksi kohteen suuntaan:
+Suuntaa voidaan käyttää hyväksi esim. kappaleiden heittämiseksi kohteen suuntaan:
 
 ```csharp,ignore
 kranaatti.Hit(suunta * 1000);

@@ -1,12 +1,12 @@
 # Fontit
 
-Fontti tarkoittaa kirjasinta, eli sitä miltä teksti näyttää. Jypeli sisältää valmiiksi [Roboto](https://fonts.google.com/specimen/Roboto)-fontin normaalilla kirjaisimella, sekä boldattuna.
+Fontti tarkoittaa kirjasinta, eli sitä, miltä teksti näyttää. Jypeli sisältää valmiiksi [Roboto](https://fonts.google.com/specimen/Roboto)-fontin normaalilla kirjasimella sekä boldattuna.
 
-Näihin pääsee käsiksi `Font.Default` tai `Font.DefaultBold` -kenttien kautta.
+Näihin pääsee käsiksi `Font.Default`- tai `Font.DefaultBold`-kenttien kautta.
 
-## TrueType ja OpenType -fonttien käyttäminen
+## TrueType- ja OpenType-fonttien käyttäminen
 
-TrueType (.ttf) ja OpenType (.otf) -fontit saa käyttöön lisäämällä fonttitiedoston projektin `Content`-kansioon ja lataamalla sen. esimerkiksi [Labelille](teksti.md):
+TrueType (.ttf) ja OpenType (.otf) -fontit saa käyttöön lisäämällä fonttitiedoston projektin `Content`-kansioon ja lataamalla sen, esimerkiksi [Labelille](teksti.md):
 
 ```csharp,ignore
 Label label = new Label("Tämä tulee eri fontilla.");
@@ -14,7 +14,7 @@ label.Font = LoadFont("fontti.ttf");
 Add(label);
 ```
 
-Hyvä paikka fonttitiedostojen etsintään on esimerkiksi [Google fonts](https://fonts.google.com/).
+Hyvä paikka fonttitiedostojen etsintään on esimerkiksi [Google Fonts](https://fonts.google.com/).
 
 On kuitenkin suositeltavaa, että fonttia ei ladata jokaiselle `Label`ille erikseen, vaan että se ladataan ohjelman attribuuteissa, esimerkiksi:
 
@@ -32,9 +32,9 @@ public override void Begin()
 
 ## Fontin koon muuttaminen
 
-Olemassaolevan fontin kokoa voi muuttaa `omaFontti.Size = 50;` Fonttien oletuskoko on 25.
+Olemassa olevan fontin kokoa voi muuttaa `omaFontti.Size = 50;` Fonttien oletuskoko on 25.
 
-**Huom!** jos muutat Jypelin valmiiden `Font.Default` tai `Font.DefaultBold` -fonttien kokoa, vaikuttaa se joka ikiseen käyttöliittymäkomponenttiin oletuksena.
+**Huom!** Jos muutat Jypelin valmiiden `Font.Default`- tai `Font.DefaultBold`-fonttien kokoa, vaikuttaa se joka ikiseen käyttöliittymäkomponenttiin oletuksena.
 
 Voit tehdä oletusfontista kopion:
 
@@ -46,7 +46,7 @@ Font kopioBold = new Font(25, true);
 
 ## Fonttien tyylittely
 
-Voit antaa fontille reunuksen sanomalla `omaFontti.StrokeAmount = 1;`, tai sumentaa fonttia `omaFontti.BlurAmount = 1;`.
+Voit antaa fontille reunuksen sanomalla `omaFontti.StrokeAmount = 1;` tai sumentaa fonttia `omaFontti.BlurAmount = 1;`.
 
 ![Tekstin eri sumennustasot.](images/Screenshot_2020-11-26_at_10.38.44.png)
 
@@ -61,15 +61,15 @@ Voit lisätä fonttiin myös toisen fonttitiedoston tuoman merkistön, esimerkik
 Mikäli fonttitiedostot sisältävät päällekkäin menevää merkistöä, ensimmäisenä lisätty pysyy käytössä.
 
 ```csharp,ignore
-// Luodaan ensin oma fontti-olio
+// Luodaan ensin oma fonttiolio
 Font omaFontti = new Font(50);
 
-// Sitten yhdistetään siihen Japanin ja Korean merkistöt
+// Sitten yhdistetään siihen japanin ja korean merkistöt
 // Fonttitiedostot lisätty Content-kansioon.
 omaFontti.AddFont("NotoSansJP-Regular.otf");
 omaFontti.AddFont("NotoSansKR-Regular.otf");
 
-Label l = new Label("Kissa on Japaniksi ネコ\nKun taas Koreaksi se on 고양이");
+Label l = new Label("Kissa on japaniksi ネコ\nKun taas koreaksi se on 고양이");
 l.TextColor = Color.Black;
 l.Font = omaFontti;
 Add(l);
@@ -93,5 +93,5 @@ Add(label);
 
 Huomioita:
 
-- Taulukossa tulee olla tekstin jokaiselle merkille väri, eli väritaulukon tulee olla vähintään yhtä pitkä kuin itse tekstin.
+- Taulukossa tulee olla tekstin jokaiselle merkille väri, eli väritaulukon tulee olla vähintään yhtä pitkä kuin itse teksti.
 - Tämän kentän arvon asettaminen ylittää `label.TextColor`-kentän arvon.

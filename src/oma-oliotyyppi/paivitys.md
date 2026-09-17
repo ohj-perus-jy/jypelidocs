@@ -145,7 +145,7 @@ Kantaluokan `Update` hoitaa aivot, eliniän, lapsioliot, värähtelyn ja
 fysiikkaolion nopeusrajat. Jos `base.Update(time)` jää pois, ne lakkaavat
 toimimasta. Kutsu sitä aina, yleensä metodin lopussa.
 
-## Milloin Update kutsutaan
+## Milloin Updatea kutsutaan
 
 - Vasta kun olio on lisätty peliin `Add`-kutsulla. Rakentajassa olio ei
   vielä ole pelissä, ks.

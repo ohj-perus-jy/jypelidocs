@@ -15,7 +15,7 @@ Add(kissa);
 ```
 
 - Esimerkissä luotiin olio nimeltä kissa, jonka leveys on 40 ja korkeus 20.
-- Asetetaan kissan muodoksi suorakulmio. Muoto voisi tietenkin olla myös muu kuin suorakulmio.
+- Asetettiin kissan muodoksi suorakulmio. Muoto voisi tietenkin olla myös muu kuin suorakulmio.
 - Lopuksi kissa lisättiin kenttään.
 
 ### Tärkeimmät ominaisuudet
@@ -42,14 +42,14 @@ Add(kissa);
 |  |  |
 |:---|----|
 | Move(liikevektori) | Siirtää oliota eteenpäin annetun vektorin verran. |
-| MoveTo(paikkavektori, nopeus) | Aloittaa olion siirtämisen haluttuun paikkaan tietyllä nopeudella. Jos välissä on esimerkiksi seinä tai hitaampaa maastoa, olion nopeus voi olla vähemmän kuin sille annettu nopeus. |
+| MoveTo(paikkavektori, nopeus) | Aloittaa olion siirtämisen haluttuun paikkaan tietyllä nopeudella. Jos välissä on esimerkiksi seinä tai hitaampaa maastoa, olion nopeus voi olla pienempi kuin sille annettu nopeus. |
 | Destroy() | Tuhoaa olion. |
 
 ## PhysicsObject
 
-PhysicsObject on GameObjectin perillinen, joka noudattaa fysiikan lakeja, kuten painovoimaa ja törmäilee muihin fysiikkaa noudattaviin olioihin.
+PhysicsObject on GameObjectin perillinen, joka noudattaa fysiikan lakeja, kuten painovoimaa, ja törmäilee muihin fysiikkaa noudattaviin olioihin.
 
-Huom!! PhysicsObjectilla on **lisäksi samat ominaisuudet, metodit ja tapahtumat kuin GameObjectilla** .
+Huom! PhysicsObjectilla on **lisäksi samat ominaisuudet, metodit ja tapahtumat kuin GameObjectilla**.
 
 Esimerkki fysiikkaolion lisäämisestä:
 
@@ -62,7 +62,7 @@ Add(koira);
 
 - Esimerkissä luotiin aluksi koira, jonka leveys on 200 ja korkeus 40.
 - Asetettiin koiran muoto suorakulmioksi.
-- Annettiin koiralle massaksi 15. Katso [Fysiikan ilmiöt, Massa.](../fysiikka/fysiikan-ilmiot.md#massa)
+- Annettiin koiralle massaksi 15. Katso [Fysiikan ilmiöt, Massa](../fysiikka/fysiikan-ilmiot.md#massa).
 - Lopuksi koira lisättiin kenttään.
 
 ### Tärkeimmät ominaisuudet
@@ -75,13 +75,13 @@ Add(koira);
 | IgnoresPhysicsLogics | Vaikuttaako fysiikka |
 | IgnoresCollisionResponse | Voiko kappale törmätä |
 | IgnoresExplosions | Vaikuttaako räjähdysten paineaalto |
-| KineticFriction | Liikekitka. Liikettä vastustava voima joka ilmenee kun kaksi oliota liikkuu toisiaan vasten (esim. laatikko liukuu maata pitkin). Arvot välillä 0.0 (ei kitkaa) ja 1.0 (täysi kitka). |
+| KineticFriction | Liikekitka. Liikettä vastustava voima, joka ilmenee, kun kaksi oliota liikkuu toisiaan vasten (esim. laatikko liukuu maata pitkin). Arvot välillä 0.0 (ei kitkaa) ja 1.0 (täysi kitka). |
 | LinearDamping | Liikkeen hidastuminen. Hidastaa olion vauhtia, vaikka se ei osuisi mihinkään. Vähän kuin väliaineen (esim. ilman tai veden) vastus. Oletusarvo on 1.0, jolloin hidastumista ei ole. Mitä pienempi arvo, sitä enemmän kappale hidastuu. Yleensä kannattaa käyttää arvoja, jotka ovat lähellä ykköstä, esim. 0.95. |
 | Mass | Olion massa. Kuinka painava olio on. |
 | MaxVelocity | Suurin nopeus, jonka olio voi saavuttaa. |
 | MomentOfInertia | Olion hitausmomentti. Mitä suurempi hitausmomentti, sitä enemmän vääntöä tarvitaan olion pyörittämiseksi. Jos haluat, että olio ei pyöri lainkaan, muokkaa `CanRotate`-kentän arvoa. |
 | Restitution | Olion kimmoisuus. |
-| StaticFriction | Lepokitka. Liikkeen alkamista vastustava voima, joka ilmenee kun olio yrittää lähteä liikkeelle toisen olion pinnalta (esim. laatikkoa yritetään työntää eteenpäin). |
+| StaticFriction | Lepokitka. Liikkeen alkamista vastustava voima, joka ilmenee, kun olio yrittää lähteä liikkeelle toisen olion pinnalta (esim. laatikkoa yritetään työntää eteenpäin). |
 | Velocity | Olion nopeus. |
 
 ### Tärkeimmät metodit
@@ -129,7 +129,7 @@ Animaatioita tai kuvia asetettaessa riittää asettaa oikealle osoittava kuva ta
 | Nimi | Parametrit | Metodin selitys |
 |:---|:---|:---|
 | ForceJump | **double** nopeus | Hyppää, vaikka olio olisi jo ilmassa. |
-| Jump | **double** nopeus | Olio hyppää. Ottaa huomioon mm. onko olio jo ilmassa, jolloin ei hypätä uudestaan. Parametrina otetaan desimaalilukuna vastaan nopeus, jolla olio hyppää. |
+| Jump | **double** nopeus | Olio hyppää. Ottaa huomioon mm. sen, onko olio jo ilmassa, jolloin ei hypätä uudestaan. Parametrina otetaan desimaalilukuna vastaan nopeus, jolla olio hyppää. |
 | Walk | **double** vaakanopeus | Olio kävelee. Mahdollisimman luonnollisen näköinen kävelyyn tarkoitettu metodi. Parametrina desimaaliluku, jolla ilmaistaan kävelyn nopeus vaakasuunnassa. Plusmerkkinen luku tarkoittaa oikealle päin kävelyä, miinusmerkkinen vasemmalle. |
 
 ## PlatformCharacter2
@@ -149,9 +149,9 @@ PlatformCharacter2 on myös tasohyppelyhahmo, mutta se käyttäytyy hieman eri t
 |:----------------------|:-------------------------------------|
 | CanMoveOnAir          | Voiko liikkua ilmassa                |
 | FacingDirection       | Hahmon rintamasuunta                 |
-| LeftIdleAnimation     | Animaatio paikallaollessa vasemmalle |
+| LeftIdleAnimation     | Animaatio paikallaan ollessa vasemmalle |
 | LeftWalkingAnimation  | Vasemmalle kävelyn animaatio         |
-| RightIdleAnimation    | Animaatio paikallaollessa oikealle   |
+| RightIdleAnimation    | Animaatio paikallaan ollessa oikealle   |
 | RightWalkingAnimation | Oikealle kävelyn animaatio           |
 | Weapon                | Hahmon ase                           |
 
@@ -159,14 +159,14 @@ PlatformCharacter2 on myös tasohyppelyhahmo, mutta se käyttäytyy hieman eri t
 
 | Nimi | Parametrit | Metodin selitys |
 |:---|:---|:---|
-| Jump | **double** impulssi | Olio hyppää. Ottaa huomioon mm. onko olio jo ilmassa, jolloin ei hypätä uudestaan. Parametrina otetaan desimaalilukuna vastaan voima, jolla olio hyppää. |
-| Walk | **double** suunta | Olio kävelee. Mahdollisimman luonnollisen näköinen kävelyyn tarkoitettu metodi. Parametrina suunta, joka voi olla `Direction.Left` tai `Direction.Right`. Jos suuntaa ei anneta, käytetään nykyistä rintamasuuntaa (FacingDirection). |
+| Jump | **double** impulssi | Olio hyppää. Ottaa huomioon mm. sen, onko olio jo ilmassa, jolloin ei hypätä uudestaan. Parametrina otetaan desimaalilukuna vastaan voima, jolla olio hyppää. |
+| Walk | **Direction** suunta | Olio kävelee. Mahdollisimman luonnollisen näköinen kävelyyn tarkoitettu metodi. Parametrina suunta, joka voi olla `Direction.Left` tai `Direction.Right`. Jos suuntaa ei anneta, käytetään nykyistä rintamasuuntaa (FacingDirection). |
 
 ## Automobile
 
 Auto-olio eli Automobile-tyypin olio on PhysicsObjectin perillinen, joka voi esimerkiksi kiihdyttää, jarruttaa ja käyttäytyä kuin auto.
 
-Automobilella on siis **lisäksi samat ominaisuudet, metodit ja tapahtumat kuin GameObjectilla ja PhysicsObjectilla**
+Automobilella on siis **lisäksi samat ominaisuudet, metodit ja tapahtumat kuin GameObjectilla ja PhysicsObjectilla**.
 
 ### Tärkeimmät ominaisuudet
 
@@ -174,8 +174,8 @@ Automobilella on siis **lisäksi samat ominaisuudet, metodit ja tapahtumat kuin 
 |:------------------|:---------------------|
 | Acceleration      | Auton kiihtyvyys     |
 | BrakeDeceleration | Jarrujen tehokkuus   |
-| Maneuverability   | Autojen ohjattavuus  |
-| TopSpeed          | Autojen huippunopeus |
+| Maneuverability   | Auton ohjattavuus    |
+| TopSpeed          | Auton huippunopeus   |
 
 ### Tärkeimmät metodit
 
@@ -187,7 +187,7 @@ Automobilella on siis **lisäksi samat ominaisuudet, metodit ja tapahtumat kuin 
 
 ## Tank
 
-Tank eli tankkiolio on sivusta kuvattu tankki, joka on PhysicsObjectin perillinen, ja jolla on lisäksi tankille kuuluvia ominaisuuksia kuten esimerkiksi osumapisteet ja tykki.
+Tank eli tankkiolio on sivusta kuvattu tankki, joka on PhysicsObjectin perillinen ja jolla on lisäksi tankille kuuluvia ominaisuuksia, kuten osumapisteet ja tykki.
 
 Tankilla on siis **lisäksi samat ominaisuudet, metodit ja tapahtumat kuin GameObjectilla ja PhysicsObjectilla**.
 
@@ -221,12 +221,11 @@ PhysicsStructure rakenne = new PhysicsStructure(o1, o2);
 Add(rakenne);
 ```
 
-Rakenteeseen kuuluvia olioita ei tarvitse erikseen lisätä peliin Add-metodilla, riittää kun rakenteen itsessään lisää. Rakenteella on paljon samoja ominaisuuksia ja metodeita kuin PhysicsObjectilla, ja niiden käyttäminen vaikuttaa kaikkiin rakenteen osiin.
+Rakenteeseen kuuluvia olioita ei tarvitse erikseen lisätä peliin Add-metodilla, riittää, kun rakenteen itsessään lisää. Rakenteella on paljon samoja ominaisuuksia ja metodeita kuin PhysicsObjectilla, ja niiden käyttäminen vaikuttaa kaikkiin rakenteen osiin.
 
 ### Tärkeimmät metodit
 
-|        |                        |                                 |
-|:-------|:-----------------------|:--------------------------------|
 | Nimi   | Parametrit             | Metodin selitys                 |
+|:-------|:-----------------------|:--------------------------------|
 | Add    | **PhysicsObject** olio | Lisää uuden olion rakenteeseen. |
 | Remove | **PhysicsObject** olio | Poistaa olion rakenteesta.      |

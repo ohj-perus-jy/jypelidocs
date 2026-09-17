@@ -27,7 +27,7 @@ liikutusajastin.Timeout += SiirraPelaajaaOikeammalle;
 liikutusajastin.Start();
 ```
 
-Huomaat että `SiirraPelaajaaOikeammalle` alleviivaantuu punaisella, ja näytön alareunassa näkyy virheviesti. Koska meillä ei vielä ole `SiirraPelaajaaOikeammalle`-nimistä aliohjelmaa, meidän täytyy luoda sellainen. Tee uusi aliohjelma `Begin`-lohkon jälkeen (eli `}`-merkin alapuolelle):
+Huomaat, että `SiirraPelaajaaOikeammalle` alleviivautuu punaisella, ja näytön alareunassa näkyy virheviesti. Koska meillä ei vielä ole `SiirraPelaajaaOikeammalle`-nimistä aliohjelmaa, meidän täytyy luoda sellainen. Tee uusi aliohjelma `Begin`-lohkon jälkeen (eli `}`-merkin alapuolelle):
 
 ```csharp,ignore
 void SiirraPelaajaaOikeammalle()
@@ -44,19 +44,19 @@ Aliohjelma ei kuitenkaan tee vielä mitään, joten lisätään sen sisälle riv
 pelaaja1.Push(new Vector(NOPEUS, 0.0) * pelaaja1.Mass);
 ```
 
-Aivan ohjelman alussa on määriteltu `private const double NOPEUS = 200;`. Huomaa, että `NOPEUS` on kirjoitettu isoilla kirjaimilla, mikä tarkoittaa, että kyseessä on vakio (muuttumaton arvo). Aseta NOPEUS-vakion arvoksi 10000:
+Aivan ohjelman alussa on määriteltu `private const double NOPEUS = 200;`. Huomaa, että `NOPEUS` on kirjoitettu isoilla kirjaimilla, mikä tarkoittaa, että kyseessä on vakio (muuttumaton arvo). Aseta `NOPEUS`-vakion arvoksi 10000:
 
 ```csharp,ignore
 private const double NOPEUS = 10000;
 ```
 
-Emme halua, että pelaaja voi liikkua enää itse sivuille nuolinäppäimillä, varsinkaan, kun nopeutena on 10000. Muuten pelihahmo sinkoutuisi oikealle ja vasemmalle todella nopeasti.
+Emme halua, että pelaaja voi liikkua enää itse sivuille nuolinäppäimillä, varsinkaan kun nopeutena on 10000. Muuten pelihahmo sinkoutuisi oikealle ja vasemmalle todella nopeasti.
 
-Etsi siis aliohjelma LisaaNappaimet ja poista siitä rivit:
+Etsi siis aliohjelma `LisaaNappaimet` ja poista siitä rivit:
 
 ```csharp,ignore
 Keyboard.Listen(Key.Left, ButtonState.Down, Liikuta, "Liikkuu vasemmalle", pelaaja1, -NOPEUS);
-Keyboard.Listen(Key.Right, ButtonState.Down, Liikuta, "Liikkuu vasemmalle", pelaaja1, NOPEUS);
+Keyboard.Listen(Key.Right, ButtonState.Down, Liikuta, "Liikkuu oikealle", pelaaja1, NOPEUS);
 ```
 
 sekä rivit:

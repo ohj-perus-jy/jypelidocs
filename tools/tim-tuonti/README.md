@@ -3,17 +3,17 @@
 Kertaluontoinen tuonti TIMin Jypeli-wikistä (`kurssit/jypeli/*`) `src/`-puuksi.
 Ajettu 16.9.2026. Skriptit olettavat välimuistihakemistot työhakemistossaan:
 
-| Skripti          | Tekee                                                              |
-| ---------------- | ------------------------------------------------------------------ |
-| `fetch_html.py`  | sivujen HTML-näkymät → `timhtml/` (sivulista `tim/`-viennistä)     |
+| Skripti          | Tekee                                                                 |
+| ---------------- | --------------------------------------------------------------------- |
+| `fetch_html.py`  | sivujen HTML-näkymät → `timhtml/` (sivulista `tim/`-viennistä)        |
 | `fetch_pars.py`  | kappaleiden raaka Markdown TIMin `getBlock`-rajapinnasta → `timpars/` |
-| `fetch_files.py` | kuvat ja videot → `timfiles/`                                      |
-| `tim2md.py`      | kokoaa sivut, kääntää pandocilla GFM:ksi ja kirjoittaa `src/`      |
-| `timlib.py`      | HTML:n kappalelistan jäsennys ja `getBlock`-välimuisti             |
+| `fetch_files.py` | kuvat ja videot → `timfiles/`                                         |
+| `tim2md.py`      | kokoaa sivut, kääntää pandocilla GFM:ksi ja kirjoittaa `src/`         |
+| `timlib.py`      | HTML:n kappalelistan jäsennys ja `getBlock`-välimuisti                |
 
 `tim2md.py` tarvitsee pandocin (`pip install pypandoc_binary` ja polku
 `PANDOC`-vakioon). Sivuluettelo kerättiin wikin etusivulta seuraamalla
-kaikkia `kurssit/jypeli/`-linkkejä (myös suhteelliset) sekä etusivun
-timTable-taulukon linkkiä `paivitysloki`, sekä Läpsylinnun vaiheet 2–11,
+kaikkia `kurssit/jypeli/`-linkkejä (myös suhteellisia) sekä etusivun
+timTable-taulukon linkkiä `paivitysloki`. Lisäksi mukaan otettiin Läpsylinnun vaiheet 2–11,
 joihin etusivu ei linkitä (`fetch_html.py`). Kun wiki muuttuu, helpoin tapa
 on ajaa tuonti uudelleen tyhjään hakemistoon ja verrata `src/`-diffiä.

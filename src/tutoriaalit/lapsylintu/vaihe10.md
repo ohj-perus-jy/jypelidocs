@@ -25,7 +25,7 @@ Kamera seuraa tällä hetkellä pelaajaa siten, että pelihahmo on koko ajan ruu
 
 ![](images/kameraoffset.png)
 
-Kohdistuksen voi tehdä `Begin`-aliohjelmassa määrittämällä kameralle ns. *follow offsettiä* seuraavasti:
+Kohdistuksen voi tehdä `Begin`-aliohjelmassa määrittämällä kameralle ns. *follow offsetia* seuraavasti:
 
 ```csharp,ignore
 Camera.FollowOffset = new Vector(Screen.Width / 2.5 - RUUDUN_KOKO, 0.0);

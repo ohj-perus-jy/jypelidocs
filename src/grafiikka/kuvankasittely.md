@@ -12,7 +12,7 @@ kuva[36, 50] = Color.Red;
 kuva[36, 70] = Color.Red;
 ```
 
-asettaisi nämä kaksi pikseliä punaiseksi. Huomaa että koordinaatit menevät järjestyksessä \[y,x\] vasemmasta yläkulmasta katsottuna.
+asettaisi nämä kaksi pikseliä punaiseksi. Huomaa, että koordinaatit menevät järjestyksessä `[y, x]` vasemmasta yläkulmasta katsottuna.
 
 ## Harmaasävykuva
 
@@ -64,7 +64,7 @@ public override void Begin()
 
 Harmaasävykuvan esimerkki toimii pienille kuville. Suora kuvan käsittely Imagessa voi olla hidasta ja siksi suurempia kuvan käsittelyjä varten kuva kannattaa ottaa Color-taulukkoon, jossa sitä käsitellään.
 
-Esimerkkinä vaikka Harmaasävykuvan tekeminen tehokkaammin:
+Esimerkkinä vaikka harmaasävykuvan tekeminen tehokkaammin:
 
 ```csharp,ignore
 public static void HarmaasavyTaulukolla(Image kuva)
@@ -89,7 +89,10 @@ public static void HarmaasavyTaulukolla(Image kuva)
 
 Joskus on vielä tehokkaampaa käsitellä kuvaa kokonaislukutaulukossa. Tällöin voidaan kuvan värielementit pakata yhteen positiiviseen kokonaislukutaulukkoon niin, että
 
-- värin alpha-arvo (läpinäkyvyyden osuus, 255=ei läpinäkyvä) vie yhden tavun värin punainen osuus (r, red) vie yhden tavun (arvo 0-255) värin vihreän osuus (g, green) vie yhden tavun (arvo 0-255) värin sinisen osuus (b, blue) vie yhden tavun (arvo 0-255)
+- värin alpha-arvo (läpinäkyvyyden osuus, 255=ei läpinäkyvä) vie yhden tavun
+- värin punaisen osuus (r, red) vie yhden tavun (arvo 0-255)
+- värin vihreän osuus (g, green) vie yhden tavun (arvo 0-255)
+- värin sinisen osuus (b, blue) vie yhden tavun (arvo 0-255)
 
 Seuraavalla aliohjelmalla kuva voidaan muuttaa täysin punaiseksi "unohtamalla" kuvasta muut värit:
 
@@ -112,9 +115,9 @@ public static void Punaiseksi(Image kuva)
 }
 ```
 
-Taulukko voidaan ottaa myös uint\[\]\[\] muodossa, joka on vielä hieman tehokkaampaa käsittelyn kannalta C#-kielessä.
+Taulukko voidaan ottaa myös `uint[][]`-muodossa, mikä on vielä hieman tehokkaampaa käsittelyn kannalta C#-kielessä.
 
-## Kuvan palan siirtäminen toiseen kohti
+## Kuvan palan siirtäminen toiseen kohtaan
 
 Käyttäen edellistä ideaa, voidaan kuvasta ottaa esimerkiksi palanen ja siirtää se saman tai toisen kuvan johonkin kohtaan, esimerkiksi:
 
@@ -123,7 +126,7 @@ uint[,] pala = kuva.GetDataUInt(200, 100,100,50);
 kuva.SetData(pala,200,150);
 ```
 
-Tätä ideaa käyttäen voitaisiin esimerkiksi animaatio piirtää yhteen ainoaan kuvaan niin, että siinä olisi vaikka 100-pikselin leveydeltä aina kutakin hahmon asentoa. Sitten kuva voitaisiin pilkkoa useaksi pienemmäksi kuvaksi:
+Tätä ideaa käyttäen voitaisiin esimerkiksi animaatio piirtää yhteen ainoaan kuvaan niin, että siinä olisi vaikka 100 pikselin leveydeltä aina kutakin hahmon asentoa. Sitten kuva voitaisiin pilkkoa useaksi pienemmäksi kuvaksi:
 
 ```csharp,ignore
 Image kuva = LoadImage(kuvannimi);

@@ -60,8 +60,8 @@ public class Peli : PhysicsGame
 ```
 
 - Yksittäiset rivit, kuten `Gravity = new Vector(0, -800);` tai
-  `Add(olio);`, kirjoitetaan **aliohjelman sisään**, useimmiten `Begin`-
-  aliohjelmaan.
+  `Add(olio);`, kirjoitetaan **aliohjelman sisään**, useimmiten
+  `Begin`-aliohjelmaan.
 - Kokonaiset aliohjelmat, jotka alkavat esimerkiksi `void LuoKentta()`,
   kirjoitetaan **luokan sisään mutta toisten aliohjelmien ulkopuolelle**.
   Aliohjelmaa ei voi kirjoittaa toisen aliohjelman sisään.
@@ -124,7 +124,7 @@ pelaaja, pistelaskuri, ajastin. Ks. myös Ohjelmointi 1:n
 
 Kaikki ruudulla näkyvä on olioita. `PhysicsObject` noudattaa fysiikkaa,
 `GameObject` ei. Olio tulee näkyviin vasta, kun se on lisätty peliin
-`Add`-aliohjelmalla, ja katoaa, kun sille kutsutaan `Destroy`. Tarkemmin:
+`Add`-aliohjelmalla, ja katoaa, kun sille kutsutaan `Destroy`-metodia. Tarkemmin:
 [Olion luominen](../oliot/luonti.md) ja [Oliotyypit](../oliot/oliotyypit.md).
 
 ## Koordinaatisto
@@ -188,7 +188,7 @@ Käsittelijä on tavallinen aliohjelma, jonka parametrit riippuvat tapahtumasta.
 Ks. [Ohjainten lisääminen](../ohjaimet/ohjainten-lisays.md),
 [Törmäysten käsittely](../tapahtumat/tormaykset.md) ja
 [Ajastimet](../tapahtumat/ajastimet.md). Se, miksi aliohjelman nimi
-kelpaa parametriksi, selitetään sivulla [Delegaatit](../ohjelmointi/delegaatit.md).
+kelpaa parametriksi, selitetään sivulla [Delegaatit](../tapahtumat/delegaatit.md).
 
 ## Aliohjelman parametrit tulevat tapahtumasta
 

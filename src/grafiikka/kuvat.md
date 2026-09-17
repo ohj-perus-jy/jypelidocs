@@ -4,7 +4,7 @@ Jypelissä kaikilla ruudulla näkyvillä olioilla (esimerkiksi GameObjectilla ja
 
 ## Kuvan lataaminen tiedostosta ja asettaminen oliolle
 
-Yksinkertaisimmillaan kuva voidaan ladata sellaisenaan pelin `LoadImage`-aliohjelmalla kun se on ensin [lisätty](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin) projektiin.
+Yksinkertaisimmillaan kuva voidaan ladata sellaisenaan pelin `LoadImage`-aliohjelmalla, kun se on ensin [lisätty](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin) projektiin.
 
 ```csharp,ignore
 public class Peli : PhysicsGame
@@ -28,9 +28,9 @@ Peli voi ladata kuvansa myös internetistä. Yksinkertaisimmillaan kuva voidaan 
 DataStorage.DoWithURL("http://bit.ly/nl9BOr", olio.SetImage);
 ```
 
-`olio.SetImage` on aliohjelma, jonka viite annetaan tässä toiselle aliohjelmalle `DataStorage.DoWithURL`. SetImage toimii tapahtumankäsittelijänä, joka suoritetaan kun kuva on ladattu. Toisin sanoen kuva ei ole ladattuna vielä tämän rivin (tai aliohjelman) suorituksen jälkeen, vaan Jypeli hoitaa sen taustalla samalla kun muuta pelin koodia suoritetaan.
+`olio.SetImage` on aliohjelma, jonka viite annetaan tässä toiselle aliohjelmalle `DataStorage.DoWithURL`. `SetImage` toimii tapahtumankäsittelijänä, joka suoritetaan, kun kuva on ladattu. Toisin sanoen kuva ei ole ladattuna vielä tämän rivin (tai aliohjelman) suorituksen jälkeen, vaan Jypeli hoitaa sen taustalla, samalla kun muuta pelin koodia suoritetaan.
 
-Pidemmässä muodossa (ilman valmista SetImage-aliohjelmaa) kirjoitettuna sama olisi
+Pidemmässä muodossa (ilman valmista `SetImage`-aliohjelmaa) kirjoitettuna sama olisi
 
 ```csharp,ignore
 DataStorage.DoWithURL("http://bit.ly/nl9BOr", AsetaKuva);
@@ -51,7 +51,7 @@ Jypeli antaa oletuksena kuvalle 15 sekuntia aikaa ladata. Joissain tapauksissa t
 DataStorage.DoWithURL("http://bit.ly/nl9BOr", TimeSpan.FromSeconds(5), AsetaKuva);
 ```
 
-Jos halutaan ladata useita kuvia netistä ja tehdä jotain vasta sen jälkeen kun kaikki kuvat on ladattu, se on mahdollista tehdä `TriggerOnComplete`-aliohjelmaa käyttäen.
+Jos halutaan ladata useita kuvia netistä ja tehdä jotain vasta sen jälkeen, kun kaikki kuvat on ladattu, se on mahdollista tehdä `TriggerOnComplete`-aliohjelmaa käyttäen.
 
 ```csharp,ignore
 DataStorage.TriggerOnComplete(
@@ -83,7 +83,7 @@ DataStorage.TriggerOnComplete(
 
 ## Projektiin liittämättömän kuvan lataaminen
 
-Joskus voi tulla tarve ladata kuvia joita ei ole lisätty mukaan projektiin. Tähän soveltuu kutsu:
+Joskus voi tulla tarve ladata kuvia, joita ei ole lisätty mukaan projektiin. Tähän soveltuu kutsu:
 
 Windowsissa:
 
@@ -99,7 +99,7 @@ Image kuva = Image.FromFile("/Users/mikko/Kuvat/kissa.png");
 
 Huomaa, että Windows-polussa kansioiden välissä on kaksi `\\`-merkkiä, Macilla yksi `/`-merkki. Kuva voi olla png-, jpeg- tai bmp-muotoinen.
 
-Kannattaa kuitenkin huomioida että tämän käyttö vaikeuttaa pelin jakamista muille, sekä tulee pitää enemmän huolta polkujen oikeellisuuden suhteen. Tätä ei siis kannata käyttää, ellei ole aivan varma mitä on tekemässä.
+Kannattaa kuitenkin huomioida, että tämän käyttö vaikeuttaa pelin jakamista muille ja että polkujen oikeellisuudesta tulee pitää enemmän huolta. Tätä ei siis kannata käyttää, ellei ole aivan varma, mitä on tekemässä.
 
 ## Yksivärisen kuvan luominen
 
@@ -119,9 +119,9 @@ Image punainen = new Image(80, 27, Color.Red);
 Image puolanLippu = Image.TileVertical(valkoinen, punainen);
 ```
 
-Huomaa, että vaakasuunnassa liitettäessä kuvien korkeuden ja pystysuunnassa kuvien korkeuden on oltava samat.
+Huomaa, että vaakasuunnassa liitettäessä kuvien korkeuden ja pystysuunnassa kuvien leveyden on oltava samat.
 
-Kuvia on myös mahdollista liittää peräkkäin useampia kuin yksi, mutta se vaatii useamman aliohjelmakutsun.
+Kuvia on myös mahdollista liittää peräkkäin useampia kuin kaksi, mutta se vaatii useamman aliohjelmakutsun.
 
 ```csharp,ignore
 Image sininen = new Image(80, 18, Color.Blue);
@@ -148,7 +148,7 @@ Pikselin värin voi asettaa seuraavanlaisella sijoituksella
 kuva[rivi, sarake] = Color.Fuchsia;
 ```
 
-tai mikä tahansa väri mikä halutaan pikselille antaa.
+tai mikä tahansa väri, joka halutaan pikselille antaa.
 
 Lisää pikselitason kuvankäsittelystä löytyy [Kuvankäsittely-sivulta](kuvankasittely.md).
 
@@ -160,7 +160,7 @@ Kuvasta voidaan rajata pienempi osa toiseen (tai samaan) muuttujaan käyttämäl
 Image kuvanOsa = kuva.Area(10, 10, 20, 20);
 ```
 
-Parametrit ovat järjestyksessä vasen reuna, yläreuna, oikea reuna ja alareuna. On huomattava, että **alkuperäisen kuvan sisältö muuttuu jos rajattua kuvaa muutetaan!** Jos tätä ei haluta, voidaan rajatusta kuvasta ottaa kopio
+Parametrit ovat järjestyksessä vasen reuna, yläreuna, oikea reuna ja alareuna. On huomattava, että **alkuperäisen kuvan sisältö muuttuu, jos rajattua kuvaa muutetaan!** Jos tätä ei haluta, voidaan rajatusta kuvasta ottaa kopio
 
 ```csharp,ignore
 Image kuvanOsa = kuva.Area(10, 10, 20, 20).Clone();
@@ -218,13 +218,13 @@ tai
 kuva.Scaling = ImageScaling.Linear
 ```
 
-`Nearest` asetus on sopiva jos halutaan pikseligrafiikkaa, `Linear` taas kun halutaan että kuva mielummin "sumenee". Kannattaa kokeilla kumpi näyttää omassa pelissä paremmalta.
+`Nearest`-asetus on sopiva, jos halutaan pikseligrafiikkaa, `Linear` taas, kun halutaan, että kuva mieluummin "sumenee". Kannattaa kokeilla, kumpi näyttää omassa pelissä paremmalta.
 
-TODO: Tähän voisi laittaa esimerkit molemmista.
+<!-- TODO: Tähän voisi laittaa esimerkit molemmista. -->
 
 ## Miten saan muokattua pelin kuvaketta (ikonia)?
 
 - Pelin hakemistossa on tiedosto Game.ico
-- Avaa tiedosto vaikka Paint.Net:illä tai ihan Paintilla
+- Avaa tiedosto vaikka Paint.NETillä tai ihan Paintilla
 - Muokkaa ikoni mieleiseksi
-- Tallenna Game.png tiedostoksi
+- Tallenna `Game.png`-tiedostoksi

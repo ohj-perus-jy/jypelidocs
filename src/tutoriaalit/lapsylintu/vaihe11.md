@@ -4,7 +4,7 @@ Tällä sivulla on lueteltu ideoita Läpsylintu-pelin jatkokehittelyä varten. N
 
 ## Kenttään erilaisia esteitä
 
-Lisää kenttään eri näköisiä kiinteitä esteitä.
+Lisää kenttään erinäköisiä kiinteitä esteitä.
 
 Vinkki: Tee yksi LisaaEste-niminen aliohjelma, jonka esittelyrivi on:
 
@@ -12,7 +12,7 @@ Vinkki: Tee yksi LisaaEste-niminen aliohjelma, jonka esittelyrivi on:
 void LisaaEste(Vector paikka, double leveys, double korkeus, Image kuva)
 ```
 
-Kutsu tätä yhtä aliohjelmaa jokaisesta eri tyyppisen esteen lisäävästä aliohjelmasta.
+Kutsu tätä yhtä aliohjelmaa jokaisesta erityyppisen esteen lisäävästä aliohjelmasta.
 
 ## Kentän aloittaminen alusta
 
@@ -26,9 +26,9 @@ Tee peliin myös toinen kenttä `kentta2.txt`. Lisää kentän vaihtuminen, kun 
 
 Lisää peliin pistelaskuri, joka laskee kerättyjä tähtiä.
 
-### Tarkistuskohta, jotka ohittaessa saa pisteitä
+### Tarkistuskohta, jonka ohittamalla saa pisteitä
 
-Lisää mahdollisuus lisätä kenttätiedostoon koko pystyrivin mittainen tarkistuskohta, eräänlainen "checkbox"-olio, jonka keräämällä pelaaja saa lisäpisteitä.
+Lisää mahdollisuus lisätä kenttätiedostoon koko pystyrivin mittainen tarkistuskohta, eräänlainen "checkpoint"-olio, jonka keräämällä pelaaja saa lisäpisteitä.
 
 ## Tietyn ajan kestävä kuolemattomuus
 

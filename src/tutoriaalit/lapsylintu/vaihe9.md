@@ -2,7 +2,7 @@
 
 ## Kentän oikeaan laitaan maaliviiva
 
-Toteutetaan kentän oikeaan reunaan maaliviiva, johon koskettaessaan pelaaja pääsee kentän läpi.
+Toteutetaan kentän oikeaan reunaan maaliviiva, jota koskettamalla pelaaja pääsee kentän läpi.
 
 Etsi aliohjelma `LuoKentta`. Se näyttää tässä vaiheessa seuraavalta:
 
@@ -26,11 +26,12 @@ Aliohjelmassa oleva rivi `Level.CreateBorders();` luo kentän jokaiselle reunall
 // Level.CreateBorders();
 ```
 
-Lisää sitten edellisen rivin alapuolelle seuraavat koodirivit, joilla ylä- ja alarivi luodaan yhdessä ja sivut luodaan erikseen.
+Lisää sitten edellisen rivin alapuolelle seuraavat koodirivit, joilla kentän jokainen reuna luodaan erikseen.
 
 ```csharp,ignore
 Level.CreateLeftBorder();
-Level.CreateVerticalBorders();
+Level.CreateTopBorder();
+Level.CreateBottomBorder();
 Level.CreateRightBorder();
 ```
 
@@ -48,7 +49,7 @@ PhysicsObject oikeaReuna = Level.CreateRightBorder();
 
 Alkuun lisättiin siis fysiikkaolio-tyyppisen muuttujan esittely, ja luodun oikean reunan viite sijoitettiin siihen talteen.
 
-Nyt voimme lisätä oikean reunan oliolle tägin, jota voimme hyödyntää hetken kuluttua törmäystarkistuksessa:
+Nyt voimme lisätä oikean reunan oliolle tagin, jota voimme hyödyntää hetken kuluttua törmäystarkistuksessa:
 
 ```csharp,ignore
 oikeaReuna.Tag = "oikea";
@@ -108,7 +109,7 @@ Kokeile, kuinka hyvin maaliviivaan eli kentän oikeaan laitaan törmääminen to
 
 ## Maaliviivan törmäyksen parantelut
 
-Voit parannella maaliviivaan törmäämistä vielä lisäämällä seuraavia rivejä aliohjelman TormaaOikeaanReunaan sisälle:
+Voit parannella maaliviivaan törmäämistä vielä lisäämällä seuraavia rivejä aliohjelman `TormaaOikeaanReunaan` sisälle:
 
 ```csharp,ignore
 Gravity = Vector.Zero; // Pelaaja ei enää putoa alas

@@ -1,6 +1,6 @@
 # Ohjainten lisääminen
 
-Peli voi ottaa vastaan näppäimistön ja hiiren ohjausta. Ohjainten liikettä “kuunnellaan” ja voidaankin määrittää erikseen mitä mistäkin tapahtuu. Ohjaimelle on tehty oma Listen-aliohjelma jolla kuuntelun asettaminen onnistuu.
+Peli voi ottaa vastaan näppäimistön ja hiiren ohjausta. Ohjainten liikettä ”kuunnellaan” ja voidaankin määrittää erikseen, mitä mistäkin tapahtuu. Ohjaimelle on tehty oma `Listen`-aliohjelma, jolla kuuntelun asettaminen onnistuu.
 
 Esimerkki näppäimistön kuuntelusta:
 
@@ -8,31 +8,31 @@ Esimerkki näppäimistön kuuntelusta:
 Keyboard.Listen(Key.Left, ButtonState.Down, LiikutaPelaajaaVasemmalle, "Pelaaja liikkuu vasemmalle");
 ```
 
-- Kun vasen (Key.Left) näppäin on painettuna alhaalla (ButtonState.Down), niin liikutetaan pelaajaa suorittamalla metodi LiikutaPelaajaaVasemmalle. Viimeisenä parametrina on ohjeteksti.
+- Kun vasen (`Key.Left`) näppäin on painettuna alhaalla (`ButtonState.Down`), niin liikutetaan pelaajaa suorittamalla metodi `LiikutaPelaajaaVasemmalle`. Viimeisenä parametrina on ohjeteksti.
 
 ## Yleisesti
 
-Jokainen `Listen`-kutsu on muodoltaan samanlainen riippumatta siitä mitä ohjainta kuunnellaan.
+Jokainen `Listen`-kutsu on muodoltaan samanlainen riippumatta siitä, mitä ohjainta kuunnellaan.
 
-**Ensimmäinen parametri** kertoo mitä näppäintä kuunnellaan, esimerkiksi:
+**Ensimmäinen parametri** kertoo, mitä näppäintä kuunnellaan, esimerkiksi:
 
-- Näppäimistö: Key.Up <br>
-- Hiiri: MouseButton.Left
+- Näppäimistö: `Key.Up`
+- Hiiri: `MouseButton.Left`
 
-Riderin kirjoitusapu auttaa löytämään mitä erilaisia näppäinvaihtoehtoja kullakin ohjaimella on.
+Riderin kirjoitusapu auttaa löytämään, mitä erilaisia näppäinvaihtoehtoja kullakin ohjaimella on.
 
-**Toinen parametri** määrittää minkälaisia näppäinten tapahtumia halutaan kuunnella ja sillä on neljä mahdollista arvoa:
+**Toinen parametri** määrittää, minkälaisia näppäinten tapahtumia halutaan kuunnella, ja sillä on neljä mahdollista arvoa:
 
-- ButtonState.Released: Näppäin on juuri vapautettu <br>
-- ButtonState.Pressed: Näppäin on juuri painettu alas <br>
-- ButtonState.Up: Näppäin on ylhäällä (vapautettuna) <br>
-- ButtonState.Down: Näppäin on alaspainettuna
+- `ButtonState.Released`: Näppäin on juuri vapautettu
+- `ButtonState.Pressed`: Näppäin on juuri painettu alas
+- `ButtonState.Up`: Näppäin on ylhäällä (vapautettuna)
+- `ButtonState.Down`: Näppäin on alaspainettuna
 
-**Kolmas parametri** kertoo mitä tehdään, kun näppäin sitten on painettuna. Tähän tulee *tapahtuman käsittelijä*, eli sen aliohjelman nimi, jonka suoritukseen haluamme siirtyä näppäimen tapahtuman sattuessa.
+**Kolmas parametri** kertoo, mitä tehdään, kun näppäin sitten on painettuna. Tähän tulee *tapahtumankäsittelijä*, eli sen aliohjelman nimi, jonka suoritukseen haluamme siirtyä näppäimen tapahtuman sattuessa.
 
-**Neljäs parametri** on ohjeteksti, joka voidaan näyttää pelaajalle pelin alussa. Tässä tarvitsee vain kertoa mitä tapahtuu kun näppäintä painetaan. Ohjetekstin tyyppi on string eli merkkijono. Jos ohjetta ei halua tai tarvitse laittaa, neljännen parametrin arvoksi voi antaa `null` jolloin se jää tyhjäksi.
+**Neljäs parametri** on ohjeteksti, joka voidaan näyttää pelaajalle pelin alussa. Tässä tarvitsee vain kertoa, mitä tapahtuu, kun näppäintä painetaan. Ohjetekstin tyyppi on string eli merkkijono. Jos ohjetta ei halua tai tarvitse laittaa, neljännen parametrin arvoksi voi antaa `null`, jolloin se jää tyhjäksi.
 
-Parametrejä voi antaa enemmänkin sen mukaan mitä pelissä tarvitsee. Omat (eli valinnaiset) parametrit laitetaan edellä mainittujen pakollisten parametrien jälkeen ja ne viedään automaattisesti `Listen`-kutsussa annetulle käsittelijälle. Esimerkki on alla kohdassa [Näppäimistö](#nappaimisto).
+Parametreja voi antaa enemmänkin sen mukaan, mitä pelissä tarvitsee. Omat (eli valinnaiset) parametrit laitetaan edellä mainittujen pakollisten parametrien jälkeen ja ne viedään automaattisesti `Listen`-kutsussa annetulle käsittelijälle. Esimerkki on alla kohdassa [Näppäimistö](#nappaimisto).
 
 ### Lopetuspainike ja näppäinohjepainike
 
@@ -73,7 +73,7 @@ void LiikutaPelaajaa(Vector vektori)
 
 Ohjetekstin arvo on `null` eli tyhjä.
 
-Jatketaan vielä edellistä esimerkkiä asettamalla kuuntelija näppäinyhdistelmälle, näppäimet voidaan antaa esim. taulukossa tai listassa ja kuuntelijaan voi myös antaa valinnaisia parametreja, kuten yhden näppäimen kuuntelijassa:
+Jatketaan vielä edellistä esimerkkiä asettamalla kuuntelija näppäinyhdistelmälle. Näppäimet voidaan antaa esim. taulukossa tai listassa ja kuuntelijaan voi myös antaa valinnaisia parametreja, kuten yhden näppäimen kuuntelijassa:
 
 ```csharp,ignore
 public override void Begin()
@@ -186,7 +186,7 @@ void LiikutaPelaajaa(Vector vektori, PhysicsObject pelaaja)
 }
 ```
 
-Tässä esimerkissä käsittelijälle `LiikutaPelaajaa` annettiin parametrina vielä se pejaaja, jota liikutetaan.
+Tässä esimerkissä käsittelijälle `LiikutaPelaajaa` annettiin parametrina vielä se pelaaja, jota liikutetaan.
 
 ### Tatti
 
@@ -217,7 +217,7 @@ void LiikutaPelaajaa(AnalogState tatinTila)
 }
 ```
 
-`StateVector` antaa siis vektorin, joka kertoo mihin suuntaan tatti osoittaa. Vektorin X ja Y -koordinaattien arvot ovat molemmat väliltä miinus yhdestä yhteen (-1 - 1) tatin suunnasta riippuen. Tämän vektorin avulla voidaan esimerkiksi kertoa pelaajalle mihin suuntaan sen kuuluu liikkua.
+`StateVector` antaa siis vektorin, joka kertoo, mihin suuntaan tatti osoittaa. Vektorin X- ja Y-koordinaattien arvot ovat molemmat väliltä miinus yhdestä yhteen (−1…1) tatin suunnasta riippuen. Tämän vektorin avulla voidaan esimerkiksi kertoa pelaajalle, mihin suuntaan sen kuuluu liikkua.
 
 <!-- kuva puuttuu (trac ei vastaa): https://trac.cc.jyu.fi/projects/npo/raw-attachment/wiki/OhjaintenLisays/yksikkoympyra.png -->
 
@@ -227,7 +227,7 @@ Tatin asennon tietyllä hetkellä saa selville myös ilman jatkuvaa tatin kuunte
 Vector tatinAsento = ControllerOne.LeftThumbDirection;
 ```
 
-Tämä palauttaa samoin vektorin tatin sen hetkisestä asennosta (X ja Y väliltä -1, 1).
+Tämä palauttaa samoin vektorin tatin senhetkisestä asennosta (X ja Y väliltä −1…1).
 
 ### Liipasin
 
@@ -252,13 +252,13 @@ void KaasutaAutolla(AnalogState liipasimenTila)
 Aliohjelman täytyy ottaa vastaan `AnalogState`-tyyppinen parametri. Parametrista saadaan selville liipasimen asento:
 
 ```csharp,ignore
-void LiikutaPelaajaa(AnalogState liipasimenTila)
+void KaasutaAutolla(AnalogState liipasimenTila)
 {
     double liipasimenAsento = liipasimenTila.State;
 }
 ```
 
-`State` antaa desimaaliluvun väliltä 0 - 1. 0 tarkoittaa, että liipasinta ei paineta yhtään. Vastaavasti 1 tarkoittaa, että liipasin on painettu aivan pohjaan saakka.
+`State` antaa desimaaliluvun väliltä 0–1. Arvo 0 tarkoittaa, että liipasinta ei paineta yhtään. Vastaavasti 1 tarkoittaa, että liipasin on painettu aivan pohjaan saakka.
 
 Liipasimen tila tietyllä hetkellä saadaan tarvittaessa selville myös ilman jatkuvaa liipasimen kuuntelua kirjoittamalla:
 
@@ -266,11 +266,11 @@ Liipasimen tila tietyllä hetkellä saadaan tarvittaessa selville myös ilman ja
 double vasemmanLiipasimenTila = ControllerOne.LeftTriggerState;
 ```
 
-Tässä esimerkissä otetaan ykkösohjaimen vasemman liipasimen tila tietyltä hetkeltä. Arvot ovat jälleen väliltä 0 - 1.
+Tässä esimerkissä otetaan ykkösohjaimen vasemman liipasimen tila tietyltä hetkeltä. Arvot ovat jälleen väliltä 0–1.
 
 ### Useampi ohjainvaihtoehto
 
-Jos pelissä pelaajalla voi olla ohjain lisättynä ja samaan aikaan näppäimistö käytössä ja näppäimistö kuuntelee näppäinten ylhäällä oloa, kannattaa asettaa vain joko näppäimelle tai ohjaimelle kuuntelijat.
+Jos pelissä pelaajalla voi olla ohjain lisättynä ja samaan aikaan näppäimistö käytössä ja näppäimistö kuuntelee näppäinten ylhäällä oloa, kannattaa asettaa vain joko näppäimistölle tai ohjaimelle kuuntelijat.
 
 ```csharp,ignore
 if (ControllerOne.IsConnected)
@@ -306,7 +306,7 @@ void Ammu()
 
 ### Hiiren liike
 
-Hiirellä ohjauksessa on kuitenkin usein oleellista tietää jotain kursorin sijainnista. Hiiren kursori ei ole oletuksenä näkyvä peliruudulla, mutta sen saa halutessaan helposti näkyviin, kun kirjoittaa koodiin seuraavan rivin vaikkapa kentän luomisen yhteydessä:
+Hiirellä ohjauksessa on kuitenkin usein oleellista tietää jotain kursorin sijainnista. Hiiren kursori ei ole oletuksena näkyvä peliruudulla, mutta sen saa halutessaan helposti näkyviin, kun kirjoittaa koodiin seuraavan rivin vaikkapa kentän luomisen yhteydessä:
 
 ```csharp,ignore
 Mouse.IsCursorVisible = true;
@@ -351,11 +351,11 @@ void KuunteleLiiketta()
 }
 ```
 
-Tässä esimerkissä luomamme fysiikkaolio nimeltä pallo seuraa hiiren kursoria. Käsittelijää kutsutaan aina kun hiirtä liikuttaa.
+Tässä esimerkissä luomamme fysiikkaolio nimeltä `pallo` seuraa hiiren kursoria. Käsittelijää kutsutaan aina, kun hiirtä liikuttaa.
 
 `ListenMovement`:in parametreissa herkkyys tarkoittaa sitä, miten pieni hiiren liike aiheuttaa tapahtuman.
 
-Hiiren liikkeestä saa tietoa `Mouse`-luokan metodeilla. Esimerkiksi `MovementOnWorld` ja `MovementOnScreen` antavat hiiren liikevektorin, joka kertoo mihin suuntaan ja miten voimakkaasti kursori on liikkunut (hiiren ollessa paikoillaan se on nollavektori!).
+Hiiren liikkeestä saa tietoa `Mouse`-luokan metodeilla. Esimerkiksi `MovementOnWorld` ja `MovementOnScreen` antavat hiiren liikevektorin, joka kertoo, mihin suuntaan ja miten voimakkaasti kursori on liikkunut (hiiren ollessa paikoillaan se on nollavektori!).
 
 ### Hiiren kuunteleminen vain tietyille peliolioille
 
@@ -402,16 +402,17 @@ void TeeJotain()
 }
 ```
 
-On olemassa myös versio johon ei tarvitse antaa parametrinä herkkyyttä, tällöin käytetään oletusherkkyyttä.
+On olemassa myös versio, johon ei tarvitse antaa parametrina herkkyyttä. Tällöin käytetään oletusherkkyyttä.
 
 ```csharp,ignore
 Accelerometer.Listen(AccelerometerDirection.Any, TeeJotain, "Tekee jotain");
 Accelerometer.ListenAnalog(TeeJotainMuuta, "Tekee jotain muuta");
 ```
 
-Oletusherkkyyden vakioarvot ovat
+Oletusherkkyyden vakioarvot ovat:
 
-- DefaultSensitivity = 0.2 (High) DefaultAnalogSensitivity = 0.01 (Realtime)
+- `DefaultSensitivity = 0.2` (High)
+- `DefaultAnalogSensitivity = 0.01` (Realtime)
 
 Oletusherkkyyden arvoa voi muuttaa seuraavasti:
 
@@ -436,14 +437,15 @@ Kiihtyvyysanturilla voi myös kuunnella puhelimella tehtäviä eleitä. Sillä v
 Accelerometer.Listen(AccelerometerDirection.Shake, Ravistettu, "");
 Accelerometer.Listen(AccelerometerDirection.Tap, Täräytetty, "");
 
-// Jos haluaa antaa parametrinä herkkyyden
+// Jos haluaa antaa parametrina herkkyyden
 Accelerometer.Listen(AccelerometerDirection.Shake, 0.4, Ravistettu, "");
 Accelerometer.Listen(AccelerometerDirection.Tap, 0.5, Täräytetty, "");
 ```
 
-Eleiden välillä on minimiaika millisekunteina jonka pitää kulua ennenkuin uusi ele tunnistetaan. Oletusarvot ovat:
+Eleiden välillä on minimiaika millisekunteina, jonka pitää kulua, ennen kuin uusi ele tunnistetaan. Oletusarvot ovat:
 
-- TimeBetweenTaps = 300; TimeBetweenShakes = 500;
+- `TimeBetweenTaps = 300`
+- `TimeBetweenShakes = 500`
 
 Aikaa voi muuttaa seuraavasti:
 
@@ -454,16 +456,16 @@ Accelerometer.TimeBetweenShakes = 700;
 
 ### Kalibrointi
 
-Erilaisissa peleissä puhelinta pidetään erilailla kädessä. Tämän takia kiihtyvyysanturin nollakohtaa (eli se kohta kun puhelinta ei ole kallistettu mihinkään päin) voi joutua muuttamaan. Tämä onnistuu seuraavasti:
+Erilaisissa peleissä puhelinta pidetään eri lailla kädessä. Tämän takia kiihtyvyysanturin nollakohtaa (eli sitä kohtaa, jossa puhelinta ei ole kallistettu mihinkään päin) voi joutua muuttamaan. Tämä onnistuu seuraavasti:
 
 ```csharp,ignore
 // Nollakohta = puhelin makaa tasaisella, näyttö ylöspäin
 Accelerometer.Calibration = AccelerometerCalibration.ZeroAngle;
 
-// Nollakohta = puhelin on 90'-kulmassa
+// Nollakohta = puhelin on 90 asteen kulmassa
 Accelerometer.Calibration = AccelerometerCalibration.RightAngle;
 
-// Nollakohta = puhelin on 45'-kulmassa
+// Nollakohta = puhelin on 45 asteen kulmassa
 Accelerometer.Calibration = AccelerometerCalibration.HalfRightAngle;
 ```
 
@@ -481,7 +483,7 @@ Vector3 tilaVektori = Accelerometer.State;
 
 ### Muuta
 
-Kiihtyvyysanturin voi pysäyttää hetkeksi seuraavasti (parametri tarkoittaa montako sekuntia kiihtyvyysanturi on pois päältä):
+Kiihtyvyysanturin voi pysäyttää hetkeksi seuraavasti (parametri tarkoittaa, montako sekuntia kiihtyvyysanturi on pois päältä):
 
 ```csharp,ignore
 Accelerometer.PauseForDuration(1);
@@ -519,7 +521,7 @@ void MeneValikkoon()
 
 ## Puhelimen kosketusnäyttö
 
-Puhelimen kosketusnäyttöä voidaan kuunnella aliohjelmalla `TouchPanel.Listen`. Parametrit ovat muuten samat kuin muillakin kuuntelijoilla, mutta koska kosketuksen voi tehdä vain yhdellä tavalla, kuuntelija ei tarvitse parametria, joka määrittäisi mitä näppäintä halutaan kuunnella.
+Puhelimen kosketusnäyttöä voidaan kuunnella aliohjelmalla `TouchPanel.Listen`. Parametrit ovat muuten samat kuin muillakin kuuntelijoilla, mutta koska kosketuksen voi tehdä vain yhdellä tavalla, kuuntelija ei tarvitse parametria, joka määrittäisi, mitä näppäintä halutaan kuunnella.
 
 Esimerkki pelaajan liikuttamisesta kosketusnäytöllä:
 
@@ -527,9 +529,12 @@ Esimerkki pelaajan liikuttamisesta kosketusnäytöllä:
 TouchPanel.Listen(ButtonState.Down, LiikutaPelaajaa, "Liikuttaa pelaajaa", pelaaja);
 ```
 
-Tapahtumankäsittelijä ottaa annettujen parametrien lisäksi `Touch`-tyyppisen parametrin, joka kertoo tarkemmat tiedot kosketuksesta. Näitä tietoja ovat
+Tapahtumankäsittelijä ottaa annettujen parametrien lisäksi `Touch`-tyyppisen parametrin, joka kertoo tarkemmat tiedot kosketuksesta. Näitä tietoja ovat:
 
-- PositionOnScreen - kosketuksen paikka näyttökoordinaateissa (mittareille ym. widgeteille) PositionOnWorld - kosketuksen paikka maailmankoordinaateissa (tavallisille peliolioille) MovementOnScreen - kosketuksen paikan muutos näyttökoordinaateissa MovementOnWorld - kosketuksen paikan muutos maailmankoordinaateissa
+- PositionOnScreen - kosketuksen paikka näyttökoordinaateissa (mittareille ym. widgeteille)
+- PositionOnWorld - kosketuksen paikka maailmankoordinaateissa (tavallisille peliolioille)
+- MovementOnScreen - kosketuksen paikan muutos näyttökoordinaateissa
+- MovementOnWorld - kosketuksen paikan muutos maailmankoordinaateissa
 
 ```csharp,ignore
 void LiikutaPelaajaa(Touch kosketus, PhysicsObject pelaaja)

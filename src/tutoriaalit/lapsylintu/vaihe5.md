@@ -41,7 +41,7 @@ Lisää ennen `Begin`-aliohjelman esittelyriviä rivi:
 private Timer liikutusajastin;
 ```
 
-Tässä vaiheessa kooditiedoston yläosa näyttää jotakuinkin tältä. Kaikki `attribuutit` eivät välttämättä ole sinulla samassa järjestyksessä, mutta se ei tässä tapauksessa haittaa.
+Tässä vaiheessa kooditiedoston yläosa näyttää jotakuinkin tältä. Kaikki attribuutit eivät välttämättä ole sinulla samassa järjestyksessä, mutta se ei tässä tapauksessa haittaa.
 
 ```csharp,ignore
 public class Lapsylintu : PhysicsGame
@@ -65,7 +65,7 @@ public class Lapsylintu : PhysicsGame
     {
 ```
 
-Testaa toimiiko ohjelma vielä.
+Testaa, toimiiko ohjelma vielä.
 
 > [!KOKEILE]
 
@@ -93,6 +93,6 @@ liikutusajastin.Stop();
 
 Nyt kun pelaaja törmää seinään, hän kuolee.
 
-Koska ajastin, joka kutsui päällä ollessaan pelaajaa oikeammaksi työntävää aliohjelmaa, pysäytetään, myös pelaajan liike loppuu. Testaa koodisi.
+Koska ajastin, joka kutsui päällä ollessaan pelaajaa oikeammalle työntävää aliohjelmaa, pysäytetään, myös pelaajan liike loppuu. Testaa koodisi.
 
 > [!KOKEILE]

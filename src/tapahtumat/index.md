@@ -9,4 +9,4 @@ jota se kutsuu, kun jotain tapahtuu.
 | [Törmäysten käsittely](tormaykset.md) | Mitä tehdään, kun oliot törmäävät. Valmiit käsittelijät tuhoamiseen, räjähdyksiin ja laskureihin. |
 | [Törmäysten estäminen](tormayksen-estaminen.md) | Olio, jonka läpi voi kulkea, ja törmäysryhmät. |
 | [Muita tapahtumia](muita.md) | Olion tuhoutuminen, laskurin muuttuminen, napin painallus, ikkunan sulkeutuminen, animaation loppuminen ja pelin sulkeminen. |
-| [Delegaatit](../ohjelmointi/delegaatit.md) | Miksi aliohjelman nimi kelpaa parametriksi ja miten oman delegaatin tekee. |
+| [Delegaatit](delegaatit.md) | Miksi aliohjelman nimi kelpaa parametriksi ja miten oman delegaatin tekee. |

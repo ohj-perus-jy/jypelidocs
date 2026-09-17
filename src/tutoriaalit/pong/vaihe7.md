@@ -1,12 +1,12 @@
 # Pong, vaihe 7: Pistelasku
 
-Tässä vaiheessa lisäämme peliin pistelaskun. Pong-pelissä pelaaja saa pisteen kun pallo ohittaa toisen pelaajan mailan.
+Tässä vaiheessa lisäämme peliin pistelaskun. Pong-pelissä pelaaja saa pisteen, kun pallo ohittaa toisen pelaajan mailan.
 
 ![](images/pong-animaatio2.gif)
 
 ## Aliohjelmakutsu laskureita varten
 
-Pisteiden laskemiseksi tarvitsemme jonkinlaisen laskurin, jossa pitää yllä pelaajan pisteitä. Laskureiden luominen olisi yksi kokonaisuus pelin alustamisessa, joten tehdään siitä oma aliohjelma.
+Pisteiden laskemiseksi tarvitsemme jonkinlaisen laskurin, joka pitää yllä pelaajan pisteitä. Laskureiden luominen olisi yksi kokonaisuus pelin alustamisessa, joten tehdään siitä oma aliohjelma.
 
 **Lisää** aliohjelman `LisaaLaskurit` kutsu `Begin`iin:
 
@@ -46,13 +46,13 @@ IntMeter LuoPisteLaskuri()
 }
 ```
 
-Aliohjelman paluuarvon tyyppi on `IntMeter`, mikä tarkoittaa laskuria joka laskee kokonaisluvuilla (kokonaisluvun tyyppi on `int`).
+Aliohjelman paluuarvon tyyppi on `IntMeter`, mikä tarkoittaa laskuria, joka laskee kokonaisluvuilla (kokonaisluvun tyyppi on `int`).
 
-Laskurin konstruktorille (`new IntMeter...`) annetaan parametrina laskurin oletusarvo, mikä pistelaskun ollessa kyseessä on luonnollisesti nolla.
+Laskurin konstruktorille (`new IntMeter...`) annetaan parametrina laskurin oletusarvo, joka pistelaskun ollessa kyseessä on luonnollisesti nolla.
 
 Laskurille voi asettaa maksimiarvon (`MaxValue`), jonka jälkeen laskuri lopettaa pisteiden laskemisen. Se voi olla vaikkapa kymmenen.
 
-Pisteiden laskemiseen riittäisi toki pelkkä kokonaisluku, mutta `IntMeter`-tyyppiä käyttämällä päästään helpommalla kun pisteitä halutaan esittää ruudulla, kuten kohta nähdään.
+Pisteiden laskemiseen riittäisi toki pelkkä kokonaisluku, mutta `IntMeter`-tyyppiä käyttämällä päästään helpommalla, kun pisteitä halutaan esittää ruudulla, kuten kohta nähdään.
 
 ## Pisteiden esittäminen
 
@@ -87,7 +87,7 @@ IntMeter LuoPisteLaskuri(double x, double y)
 
 Tekstikenttä sidotaan näyttämään laskurin arvoa kutsulla `naytto.BindTo(laskuri)`. Näin ruudulle päivittyy automaattisesti laskurin arvo, vaikka sitä jossain kohtaa muutetaan.
 
-Näytön väri asetetaan valkoiseksi, että se erottuu taustasta (`naytto.TextColor = Color.White`).
+Näytön väri asetetaan valkoiseksi, jotta se erottuu taustasta (`naytto.TextColor = Color.White`).
 
 ## Laskureiden lisääminen peliin
 
@@ -147,14 +147,14 @@ Kun nyt ajat ohjelman, pitäisi ruudun yläreunassa näkyä kaksi laskuria, jotk
 
 ## Törmäyksen käsittely
 
-Jotta voisimme kasvattaa pisteitä, täytyisi tietää milloin pallo ohittaa jommankumman mailan. Tämä onnistuu siten, että tarkkaillaan sitä kun pallo osuu kentän vasempaan tai oikeaan reunaan.
+Jotta voisimme kasvattaa pisteitä, täytyisi tietää, milloin pallo ohittaa jommankumman mailan. Tämä onnistuu siten, että tarkkaillaan sitä, kun pallo osuu kentän vasempaan tai oikeaan reunaan.
 
 Törmäyksiin reagoimista varten Jypeli-kirjastossa on aliohjelma nimeltä `AddCollisionHandler`.
 
 `AddCollisionHandler` ottaa kaksi parametria:
 
 - fysiikkaolio, jonka törmäyksiä kuunnellaan
-- aliohjelma, jota kutsutaan kun olio törmää johonkin
+- aliohjelma, jota kutsutaan, kun olio törmää johonkin
 
 **Lisää** seuraavanlainen kutsu `LuoKentta`-aliohjelmaan, sen jälkeen kun pallo on luotu ja lisätty tasoon:
 
@@ -166,10 +166,10 @@ AddCollisionHandler(pallo, KasittelePallonTormays);
 
 Aliohjelman, jossa törmäys käsitellään, **täytyy olla** aina seuraavanlainen:
 
-- Paluuarvo on void (eli ei palauteta mitään).
-- Parametreina on kaksi PhysicsObject-luokan oliota.
-  - Ensimmäinen parametri on se olio jonka törmäyksiä kuunnellaan, eli törmääjä (meillä se on siis pallo).
-  - Toinen parametri on törmäyksen kohde, jota ei vielä tunneta.
+- Paluuarvo on `void` (eli ei palauteta mitään).
+- Parametreina on kaksi `PhysicsObject`-luokan oliota.
+    - Ensimmäinen parametri on se olio, jonka törmäyksiä kuunnellaan, eli törmääjä (meillä se on siis pallo).
+    - Toinen parametri on törmäyksen kohde, jota ei vielä tunneta.
 
 Aliohjelman voi toki nimetä vapaasti, kunhan sama nimi annetaan parametrina `AddCollisionHandler`-kutsussa.
 
@@ -182,11 +182,11 @@ void KasittelePallonTormays(PhysicsObject pallo, PhysicsObject kohde)
 }
 ```
 
-Kun törmäyksen käsittelevään aliohjelmaan tullaan, tiedetään vasta että pallo on törmännyt **johonkin**.
+Kun törmäyksen käsittelevään aliohjelmaan tullaan, tiedetään vasta, että pallo on törmännyt **johonkin**.
 
-Jotta selviää mihin se on törmännyt täytyy tehdä hiukan vertailua.
+Jotta selviää, mihin se on törmännyt, täytyy tehdä hiukan vertailua.
 
-Törmäys vasempaan reunaan selviää tarkastamalla onko törmäyksen kohde ja vasen reuna yksi ja sama olio. Miten tämä onnistuisi?
+Törmäys vasempaan reunaan selviää tarkastamalla, onko törmäyksen kohde ja vasen reuna yksi ja sama olio. Miten tämä onnistuisi?
 
 Jotta vertailu olisi helppo suorittaa, meidän olisi hyvä saada kentän vasen reuna johonkin muuttujaan.
 
@@ -210,15 +210,15 @@ Reunan ominaisuudet täytyy nyt muuttaa halutuiksi jälkikäteen.
 
 **Tee** vasemman reunan luonnin perään **samalla tavalla**
 
-- oikea reuna (CreateRightBorder),
-- alareuna (CreateBottomBorder) ja
-- yläreuna (CreateTopBorder).
+- oikea reuna (`CreateRightBorder`),
+- alareuna (`CreateBottomBorder`) ja
+- yläreuna (`CreateTopBorder`).
 
-`KasittelePallonTormays`-aliohjelmassa voimme nyt tutkia onko törmäyksen kohde sama olio kuin muuttuja `vasenReuna` tai `oikeaReuna`.
+`KasittelePallonTormays`-aliohjelmassa voimme nyt tutkia, onko törmäyksen kohde sama olio kuin muuttuja `vasenReuna` tai `oikeaReuna`.
 
 Kun vertaillaan onko kaksi asiaa samaa, käytetään `==`-merkintää.
 
-Jos pallo osuu oikeaan reunaan, kasvatetaan pelaajan 1 pistelaskurin arvoa (`pelaajan1Pisteet.Value`). Laskureiden arvo on niiden `Value`-ominaisuudessa. Vastaavasti vasen reuna.
+Jos pallo osuu oikeaan reunaan, kasvatetaan pelaajan 1 pistelaskurin arvoa (`pelaajan1Pisteet.Value`). Laskureiden arvo on niiden `Value`-ominaisuudessa. Vastaavasti jos pallo osuu vasempaan reunaan, kasvatetaan pelaajan 2 pistelaskurin arvoa.
 
 **Lisää** tarkistukset `KasittelePallonTormays`-aliohjelmaan:
 
@@ -236,7 +236,7 @@ void KasittelePallonTormays(PhysicsObject pallo, PhysicsObject kohde)
 }
 ```
 
-Merkintä `+=` tarkoittaa, että merkinnän vasemmalla puolella olevaan arvoon lisätään se mitä on merkinnän oikealla puolella.
+Merkintä `+=` tarkoittaa, että merkinnän vasemmalla puolella olevaan arvoon lisätään se, mitä on merkinnän oikealla puolella.
 
 Toisen `if`-lauseen edessä sana `else` (suom. muuten) tarkoittaa sitä, että `else`-sanan jälkeen tuleva `if`-lause suoritetaan vain, jos sitä edeltävän `if`-lauseen ehto oli epätosi.
 
@@ -310,7 +310,7 @@ public class Pong : PhysicsGame
 
 ## Hienosäätöä
 
-Pallo ei ehkä nyt käyttäydy aivan toivomallamme tavalla. Voit yrittää hienosäätää pelin pelattavuutta esimerkiksi pallon ominaisuuksia muuttamalla. Tutki mitä tekevät sen `KineticFriction` ja `CanRotate` ominaisuudet ja kokeile muuttaa niitä. Vaikuttaako pelikokemukseen? Jos pallo tuntuu joskus jäävän jumiin, kokeile esimerkiksi luoda resetointinäppäin jota painamalla pallon sijainti asetetaan pelialueen keskelle, jonka jälkeen pallolle annetaan jokin nopeus.
+Pallo ei ehkä nyt käyttäydy aivan toivomallamme tavalla. Voit yrittää hienosäätää pelin pelattavuutta esimerkiksi pallon ominaisuuksia muuttamalla. Tutki, mitä tekevät sen `KineticFriction`- ja `CanRotate`-ominaisuudet ja kokeile muuttaa niitä. Vaikuttavatko ne pelikokemukseen? Jos pallo tuntuu joskus jäävän jumiin, kokeile esimerkiksi luoda resetointinäppäin, jota painamalla pallon sijainti asetetaan pelialueen keskelle, jonka jälkeen pallolle annetaan jokin nopeus.
 
 ## Lopputulos
 

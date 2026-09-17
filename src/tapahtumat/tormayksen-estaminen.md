@@ -2,11 +2,11 @@
 
 Joskus on toivottavaa, että jokin fysiikkaolio ei törmäile. Törmäysten estämiseen on joitakin konsteja, riippuen tilanteesta. Huomaa, että jos olion ei tarvitse koskaan liikkua tai törmäillä mihinkään, voi olla järkevämpää käyttää `GameObject`-oliota.
 
-Katso myös [AddCollisionHandler](tormaykset.md), eli kuinka jotain saadaan tapahtumaan kun kappaleet törmäävät.
+Katso myös [AddCollisionHandler](tormaykset.md), eli kuinka jotain saadaan tapahtumaan, kun kappaleet törmäävät.
 
 ## Jos olion ei pidä törmätä mihinkään
 
-Yksittäisen olion törmäykset kaikkiin muihin olioihin on estettävissä. Huomaa kuitenkin, että tällöin olio menee myös lattiasta läpi! Törmäyksiä voidaan kuitenkin kuunnella (`AddCollisionHandler`-kutsulla) normaalisti. Koodissa menee näin:
+Yksittäisen olion törmäykset kaikkiin muihin olioihin ovat estettävissä. Huomaa kuitenkin, että tällöin olio menee myös lattiasta läpi! Törmäyksiä voidaan kuitenkin kuunnella (`AddCollisionHandler`-kutsulla) normaalisti. Koodissa menee näin:
 
 ```csharp,ignore
 haamu.IgnoresCollisionResponse = true;
@@ -48,7 +48,7 @@ hahmo2.CollisionIgnoreGroup = 0;
 
 ## Oman monimutkaisemman törmäyksenvälttelylogiikan luominen
 
-Joskus voi tulla tilanteita, että perinteiset törmäysryhmät eivät riitä. Jos meillä on esimerkiksi kolme kappaletta, `A`, `B` ja `C` ja haluaisimme että `A` ja `C` sekä `B` ja `C` voivat törmätä, mutta `A` ja `B` eivät, täytyy meidän luoda oma törmäyksenvälttelyfunktio.
+Joskus voi tulla tilanteita, että perinteiset törmäysryhmät eivät riitä. Jos meillä on esimerkiksi kolme kappaletta, `A`, `B` ja `C`, ja haluaisimme, että `A` ja `C` sekä `B` ja `C` voivat törmätä, mutta `A` ja `B` eivät, täytyy meidän luoda oma törmäyksenvälttelyfunktio.
 
 ```csharp,ignore
 a.Tag = "a";
@@ -67,12 +67,12 @@ private bool Tormaako(IPhysicsObject eka, IPhysicsObject toka)
 }
 ```
 
-`Tormaako`-aliohjelma ottaa parametrina törmäävät kappaleet (Huom: tyyppinä `IPhysicsObject`) ja palauttaa true jos kappaleiden pitää törmätä, false jos ei eli ne menevät toistensa läpi.
+`Tormaako`-aliohjelma ottaa parametrina törmäävät kappaleet (huom. tyyppinä `IPhysicsObject`) ja palauttaa `true`, jos kappaleiden pitää törmätä, ja `false`, jos ei, eli ne menevät toistensa läpi.
 
-Huomaa että edellä olevassa esimerkissä ei tarvinnut ottaa kappaletta `C` mitenkään huomioon. Tämä siksi, koska senhän tulee törmätä kaikkien kanssa, se siis on tässä yhteydessä aivan "normaali" kappale. Erityiskäsittelyä tarvittiin vain kappaleiden `A` ja `B` kohdalla.
+Huomaa, että edellä olevassa esimerkissä ei tarvinnut ottaa kappaletta `C` mitenkään huomioon. Tämä siksi, että senhän tulee törmätä kaikkien kanssa, se siis on tässä yhteydessä aivan "normaali" kappale. Erityiskäsittelyä tarvittiin vain kappaleiden `A` ja `B` kohdalla.
 
 ### Älä käytä CollisionIgnoreFuncia yleiseen törmäyksen käsittelyyn
 
 Tätä funktiota voi olla houkuttelevaa käyttää myös yleiseen törmäyksen käsittelyyn, aivan kuten [AddCollisionHandlerin](tormaykset.md) kautta laitettua funktiota. Niin ei kuitenkaan tule tehdä! Tähän `CollisionIgnoreFunc`iin annetun aliohjelman tulee vain ja ainoastaan vastata kysymykseen "Pitääkö näiden kappaleiden törmätä?", eikä tehdä mitään muuta.
 
-Jos lisäät sinne muuta toiminnallisuutta joka jotenkin vaikuttaa fysiikkaan, kuten vaikka tuhoat kappaleen, pelisi kaatuu!
+Jos lisäät sinne muuta toiminnallisuutta, joka jotenkin vaikuttaa fysiikkaan, kuten vaikka tuhoat kappaleen, pelisi kaatuu!

@@ -1,7 +1,7 @@
 # Mitä konepellin alla tapahtuu
 
 Tämä sivu selittää, mitä Jypeli tekee sinun koodisi ympärillä, ja auttaa
-ymmärtämään, miksi peli reagoi juuri silloin kuin reagoi. Perusasiat ovat
+ymmärtämään, miksi peli reagoi juuri silloin, kun reagoi. Perusasiat ovat
 sivulla [Miten Jypeli-peli toimii](../aloittaminen/pelin-rakenne.md).
 
 ## Käynnistys, silmukka ja lopetus
@@ -51,7 +51,7 @@ kerran `Begin`-aliohjelmassa ja sen jälkeen tapahtumankäsittelijöissä.
 ## Mitä yksi päivitys tekee
 
 Päivityksessä Jypeli käy läpi pelin osat aina samassa järjestyksessä.
-Tapahtumankäsittelijäsi kutsutaan sen osan kohdalla, johon ne kuuluvat.
+Tapahtumankäsittelijöitäsi kutsutaan sen osan kohdalla, johon ne kuuluvat.
 
 | Vaihe | Mitä Jypeli tekee | Mitä omaa koodiasi kutsutaan |
 | --- | --- | --- |
@@ -74,13 +74,13 @@ kirjoittanut sellaisen. Ks. [Piirtäminen](../grafiikka/piirtaminen.md).
   `Thread.Sleep`-kutsun, ikkuna ei piirry eikä reagoi mihinkään. Toistuva
   tekeminen hoidetaan ajastimella, odottaminen `Timer.SingleShot`-kutsulla.
 - **Olio ei liiku heti.** Kun asetat `Velocity`-arvon tai kutsut `Push`,
-  sijainti muuttuu vasta seuraavissa päivityksissä, 1/60 sekunti kerrallaan.
+  sijainti muuttuu vasta seuraavissa päivityksissä, 1/60 sekuntia kerrallaan.
   Nopeus 100 tarkoittaa 100 yksikköä sekunnissa.
 - **Käsittelijässä saa luoda ja tuhota olioita.** Käsittelijät ajetaan
   päivityksen sisällä, eivät sen kanssa kilpaa, joten `Add` ja `Destroy`
   ovat turvallisia missä tahansa käsittelijässä.
 - **Hidas kone hidastaa peliä.** Jos päivitys ja piirto eivät ehdi valmiiksi
-  1/60 sekunnissa, Jypeli ei hyppää päivityksiä yli vaan peli kulkee
+  1/60 sekunnissa, Jypeli ei hyppää päivityksiä yli, vaan peli kulkee
   hitaammin. Yleisin syy on suuri määrä olioita tai raskas käsittelijä.
 - **Tauko pysäyttää vain pelin.** `Pause()` pysäyttää fysiikan, oliot ja
   ajastimet, mutta ohjaimet ja käyttöliittymän osat toimivat yhä, joten

@@ -2,9 +2,9 @@
 
 ![](images/Explosion.png)
 
-Tällä sivulla opastetaan yksinkertaisen räjähdyksen tekeminen. Tällä sivulla olevilla ohjeilla räjähdyksestä syntyy myös paineaalto, joka vaikuttaa pelissä oleviin fysiikkaolioihin.
+Tällä sivulla opastetaan yksinkertaisen räjähdyksen tekemiseen. Tällä sivulla olevilla ohjeilla räjähdyksestä syntyy myös paineaalto, joka vaikuttaa pelissä oleviin fysiikkaolioihin.
 
-Jos haluat tehdä vähän monimutkaisemman ja näyttävämmän räjähdyksen, josta ei synny paineaaltoa (eli on pelkkä visuaalinen efekti) katso [Efektit/räjähdys](efektit.md#rajahdys).
+Jos haluat tehdä vähän monimutkaisemman ja näyttävämmän räjähdyksen, josta ei synny paineaaltoa (eli on pelkkä visuaalinen efekti), katso [Efektit/räjähdys](efektit.md#rajahdys).
 
 ## Räjähdyksen luominen
 
@@ -32,10 +32,10 @@ Esimerkki räjähdyksestä.
 //-}
 ```
 
-- Esimerkiksi yläpuolella
+Yllä olevassa esimerkissä:
 
 1.  Rivi: luodaan räjähdys, jonka halkaisija on 50.
-2.  Rivi: määritetään räjähdyksen sijainti. Yläpuolella olevassa esimerkissä räjähdys on asetettu samaksi kuin olion, joka esimerkiksi tuhoutuu.
+2.  Rivi: määritetään räjähdyksen sijainti. Tässä räjähdyksen sijainti on asetettu samaksi kuin olion, joka esimerkiksi tuhoutuu.
 3.  Rivi: räjähdys lisätään kenttään, jolloin se näkyy ja vaikuttaa muihin olioihin pelikentällä.
 
 ## Ominaisuudet ja ulkonäkö
@@ -47,7 +47,7 @@ rajahdys.Speed = 500.0;
 rajahdys.Force = 10000;
 ```
 
-Räjähdyksellä on valmiina oletustekstuuri ja -ääni. Voit myös halutessasi vaihtaa ne toisiksi (kts. sivut [tekstuurin lisääminen](../oliot/ulkonako.md#tekstuuri) ja [äänet peliin](aanien-lisays.md)). Kuvan tai äänen saa pois räjähdykseltä asettamalla sen arvoksi `null`.
+Räjähdyksellä on valmiina oletustekstuuri ja -ääni. Voit myös halutessasi vaihtaa ne toisiksi (ks. sivut [tekstuurin lisääminen](../oliot/ulkonako.md#tekstuuri) ja [äänet peliin](aanien-lisays.md)). Kuvan tai äänen saa pois räjähdykseltä asettamalla sen arvoksi `null`.
 
 ```csharp,ignore
 rajahdys.Image = rajahdysKuva;
@@ -95,7 +95,7 @@ Esimerkki räjähdyksen muokkaamisesta.
 
 ## Paineaallon tapahtuma
 
-Räjähdykselle saa myös kutsumaan omaa aliohjelmaa, kun paineaalto osuu johonkin olioon.
+Räjähdyksen saa myös kutsumaan omaa aliohjelmaa, kun paineaalto osuu johonkin olioon.
 
 ```csharp,ignore
 rajahdys.ShockwaveReachesObject += PaineaaltoOsuu;

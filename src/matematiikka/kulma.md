@@ -2,7 +2,7 @@
 
 Etäisyyksien lisäksi monesti on oleellista tietää kulma. Vektoreiden käyttäminen vähentää kulmien käyttöä, mutta ei poista sitä kokonaan. Esimerkiksi tankkipelissä on tärkeää tietää, missä kulmassa tykin piippu on, ennen kuin sillä ammutaan.
 
-Kulmia varten on Jypelissä erillinen luokka Angle, joka on riippumaton käytettävästä asteikosta. Sitä käyttämällä ei tarvitse huolehtia, onko kulma asteina, radiaaneina vai jonakin erikoisempana mittayksikkönä kuten tykistössä käytettävinä 6000-jakoisina piiruina.
+Kulmia varten on Jypelissä erillinen luokka Angle, joka on riippumaton käytettävästä asteikosta. Sitä käyttämällä ei tarvitse huolehtia, onko kulma asteina, radiaaneina vai jonakin erikoisempana mittayksikkönä, kuten tykistössä käytettävinä 6000-jakoisina piiruina.
 
 ## Kulman luominen
 
@@ -16,7 +16,7 @@ Kulman voi luoda myös tunnetusta aste- tai radiaaniluvusta. Seuraavassa esimerk
 
 ```csharp,ignore
 Angle suora1 = Angle.FromDegrees(90);
-Angle suora2 = Angle.FromRadians(Math.PI);
+Angle suora2 = Angle.FromRadians(Math.PI / 2);
 ```
 
 ## Kulman arvo
@@ -51,7 +51,7 @@ Vektorityypillä **Vector** on myös kulma. Vektorin `v` kulma on `v.Angle`.
 
 ## Olioiden kulmat
 
-Myös olioilla, kuten GameObjecteilla ja PhysicsObjecteilla on kulma. Olioiden kulman saa selville niiden `Angle`-ominaisuudesta:
+Myös olioilla, kuten `GameObject`- ja `PhysicsObject`-olioilla, on kulma. Olioiden kulman saa selville niiden `Angle`-ominaisuudesta:
 
 ```csharp,ignore
 Angle olionKulma = olio.Angle;

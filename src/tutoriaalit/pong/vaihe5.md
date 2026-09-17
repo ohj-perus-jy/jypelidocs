@@ -2,7 +2,7 @@
 
 Tämä on Pong-pelin tutoriaalin osa 5/7. Tämän vaiheen aikana
 
-- Lisäämme peliin näppäimet
+- Lisätään peliin näppäimet
 - Laitetaan mailat liikkumaan pelaajien ohjaamina
 
 Näin ohjelmaamme voi jo kutsua peliksi :).
@@ -33,20 +33,20 @@ Muita näppäimiä saa asetettua vastaavalla tavalla. Omien näppäinten asettam
 
 Aliohjelmaa `Keyboard.Listen` kutsumalla saadaan peli kuuntelemaan näppäimistön painalluksia. `Listen`-aliohjelmalle annetaan seuraavat parametrit:
 
-**Ensimmäinen** parametri kertoo mitä näppäintä kuunnellaan. Lopetusnapissa se on `Key.Escape` eli Esc-näppäin.
+**Ensimmäinen** parametri kertoo, mitä näppäintä kuunnellaan. Lopetusnapissa se on `Key.Escape` eli Esc-näppäin.
 
-**Toinen** parametri määrittää minkälaisia näppäinten tapahtumia halutaan kuunnella ja sillä on neljä mahdollista arvoa:
+**Toinen** parametri määrittää, minkälaisia näppäinten tapahtumia halutaan kuunnella, ja sillä on neljä mahdollista arvoa:
 
-- ButtonState.Released: Näppäin on juuri vapautettu
-- ButtonState.Pressed: Näppäin on juuri painettu alas
-- ButtonState.Up: Näppäin on ylhäällä (vapautettuna)
-- ButtonState.Down: Näppäin on alaspainettuna
+- `ButtonState.Released`: Näppäin on juuri vapautettu
+- `ButtonState.Pressed`: Näppäin on juuri painettu alas
+- `ButtonState.Up`: Näppäin on ylhäällä (vapautettuna)
+- `ButtonState.Down`: Näppäin on alaspainettuna
 
-**Kolmas** parametri on sen aliohjelman nimi, jota kutsutaan kun näppäin on siinä tilassa, mitä kuunnellaan. `ConfirmExit` on valmis aliohjelma, jota kutsumalla peli kysyy halutaanko se lopettaa. Kolmas parametri voi olla myös itse kirjoitettu aliohjelma.
+**Kolmas** parametri on sen aliohjelman nimi, jota kutsutaan, kun näppäin on siinä tilassa, jota kuunnellaan. `ConfirmExit` on valmis aliohjelma, jota kutsumalla peli kysyy, halutaanko se lopettaa. Kolmas parametri voi olla myös itse kirjoitettu aliohjelma.
 
-**Neljäs** parametri on ohjeteksti, joka voidaan näyttää pelaajalle pelin alussa. Tässä tarvitsee vain kertoa mitä tapahtuu kun näppäintä painetaan. Ohjetekstin tyyppi on `string` eli merkkijono eli tekstiä. Teksti kirjoitetaan lainausmerkeissä `"`. Tämän parametrin arvo voi olla myös `null` eli tyhjä.
+**Neljäs** parametri on ohjeteksti, joka voidaan näyttää pelaajalle pelin alussa. Tässä tarvitsee vain kertoa, mitä tapahtuu, kun näppäintä painetaan. Ohjetekstin tyyppi on `string` eli merkkijono eli tekstiä. Teksti kirjoitetaan lainausmerkeissä `"`. Tämän parametrin arvo voi olla myös `null` eli tyhjä.
 
-Lopuksi `Listen`-aliohjelmalle voi antaa lisääkin parametreja sen mukaan mitä pelissä tarvitaan. Nämä ylimääräiset parametrit välitetään näppäintä kuuntelevalle aliohjelmalle.
+Lopuksi `Listen`-aliohjelmalle voi antaa lisääkin parametreja sen mukaan, mitä pelissä tarvitaan. Nämä ylimääräiset parametrit välitetään näppäintä kuuntelevalle aliohjelmalle.
 
 ## 2. Ohjainten asettaminen
 
@@ -63,7 +63,7 @@ void AsetaOhjaimet()
 
 **Lisää** `AsetaOhjaimet`-aliohjelman kutsu `Begin`iin.
 
-Ohjaimet on loogista asettaa ennen kuin peli aloitetaan, joten kirjoita `AsetaOhjaimet`-aliohjelman kutsu `LuoKentta` ja `AloitaPeli` -aliohjelmien kutsujen väliin.
+Ohjaimet on loogista asettaa ennen kuin peli aloitetaan, joten kirjoita `AsetaOhjaimet`-aliohjelman kutsu `LuoKentta`- ja `AloitaPeli`-aliohjelmien kutsujen väliin.
 
 `Begin` näyttää muutosten jälkeen tältä:
 
@@ -76,9 +76,9 @@ public override void Begin()
 }
 ```
 
-Pong-pelissä mailan ohjaamisen ideana on, että mailaa liikkuu ylös, kun jokin näppäin on pohjassa. Kun näppäin päästetään pohjasta, maila pysähtyy.
+Pong-pelissä mailan ohjaamisen ideana on, että maila liikkuu ylös, kun jokin näppäin on pohjassa. Kun näppäin päästetään pohjasta, maila pysähtyy.
 
-Vaikka emme vielä tarkalleen tiedä miten saamme mailat liikkumaan, tehdään näppäimen kuuntelut toisen mailan liikuttamiseksi ylöspäin. **Toivomme** että toinen maila liikkuisi ylöspäin näppäimellä `A`.
+Vaikka emme vielä tarkalleen tiedä, miten saamme mailat liikkumaan, tehdään näppäimen kuuntelut toisen mailan liikuttamiseksi ylöspäin. **Toivomme**, että toinen maila liikkuisi ylöspäin näppäimellä `A`.
 
 **Kirjoita** kaksi `Listen`-aliohjelman kutsua lisää `AsetaOhjaimet`-aliohjelmaan mailan liikuttamista varten:
 
@@ -94,9 +94,9 @@ void AsetaOhjaimet()
 
 Kuunnellaan näppäintä `Key.A` eli A-näppäintä.
 
-Ensimmäisessä kutsussa kerrotaan aliohjelma (`LiikutaMaila1Ylos`), johon tullaan kun näppäin on pohjassa (`ButtonState.Down`).
+Ensimmäisessä kutsussa kerrotaan aliohjelma (`LiikutaMaila1Ylos`), johon tullaan, kun näppäin on pohjassa (`ButtonState.Down`).
 
-Toisessa kutsussa kerrotaan mitä tehdään (`PysaytaMaila1`), kun näppäin vapautetaan (`ButtonState.Released`).
+Toisessa kutsussa kerrotaan, mitä tehdään (`PysaytaMaila1`), kun näppäin vapautetaan (`ButtonState.Released`).
 
 **Emme ole vielä toteuttaneet tällaisia aliohjelmia**, mutta mietitään sitä vasta seuraavaksi.
 
@@ -118,7 +118,7 @@ Tarvitsemme kolme eri nopeusvektoria:
 
 Koska lisäksi mailoja on kaksi, voisimme toteuttaa mailojen liikuttamisen kuudella eri aliohjelmalla: `LiikutaMaila1Ylos`, `LiikutaMaila2Ylos`, `LiikutaMaila1Alas`, `LiikutaMaila2Alas`, `PysaytaMaila1` ja `PysaytaMaila2`.
 
-Tarkemmin ajateltuna kaikki aliohjelmat tekevät kuitenkin samaa asiaa: asettavat mailalle nopeuden. Erilaista on vain maila jolle nopeus asetetaan ja nopeuden suunta.
+Tarkemmin ajateltuna kaikki aliohjelmat tekevät kuitenkin samaa asiaa: asettavat mailalle nopeuden. Erilaista on vain maila, jolle nopeus asetetaan, ja nopeuden suunta.
 
 Viemällä liikutettavan mailan parametrina selviämme mailojen liikuttamisesta vain kolmella aliohjelmalla: `LiikutaMailaaYlos`, `LiikutaMailaaAlas` ja `PysaytaMaila`.
 
@@ -126,13 +126,13 @@ Viemällä liikutettavan mailan parametrina selviämme mailojen liikuttamisesta 
 
 ![](images/AsetaNopeus1.png)
 
-Kun jälleen tarkastellaan kolmea aliohjelmaamme, huomataan että jokaisessa edelleen toistuu vektorin luominen ja sen asettaminen mailalle nopeudeksi. Erilaista on vain millainen vektori nopeudeksi asetetaan.
+Kun jälleen tarkastellaan kolmea aliohjelmaamme, huomataan, että jokaisessa edelleen toistuu vektorin luominen ja sen asettaminen mailalle nopeudeksi. Erilaista on vain se, millainen vektori nopeudeksi asetetaan.
 
 Jos myös nopeus vietäisiin parametrina, selviäisimme mailojen liikuttamisesta yhdellä ainoalla aliohjelmalla!
 
 ![](images/AsetaNopeus2.png)
 
-Mailojen liikuttamisen voimme siis hoitaa kuuden aliohjelman sijaan yhdellä aliohjelmalla `AsetaNopeus`, jolle annetaan parametrina maila jota liikutetaan, ja mailan nopeuden vektori.
+Mailojen liikuttamisen voimme siis hoitaa kuuden aliohjelman sijaan yhdellä aliohjelmalla `AsetaNopeus`, jolle annetaan parametrina maila, jota liikutetaan, ja mailan nopeuden vektori.
 
 **Kirjoita** siis aliohjelma `AsetaNopeus` ja sille alla oleva koodi:
 
@@ -145,15 +145,15 @@ void AsetaNopeus(PhysicsObject maila, Vector nopeus)
 
 > [!EI TOIMI VIELÄ]
 
-### Mailat ja vektorit attribuuteiksi
+### 3.1. Mailat ja vektorit attribuuteiksi
 
-`Listen`-aliohjelmalle voi antaa mitä tahansa omia parametrejä pakollisten parametrien jälkeen. Nämä parametrit toimitetaan näppäintä kuuntelevalle aliohjelmalle.
+`Listen`-aliohjelmalle voi antaa mitä tahansa omia parametreja pakollisten parametrien jälkeen. Nämä parametrit toimitetaan näppäintä kuuntelevalle aliohjelmalle.
 
 Tehdään mailoille ja vektoreille muuttujat, jotka voimme antaa parametreina mailan liikuttamisesta vastaavalle aliohjelmalle.
 
 Jotta muuttujat näkyisivät `AsetaOhjaimet`-aliohjelmalle, tehdään niistäkin **attribuutteja**.
 
-**Esittele** luokan alussa uudet attribuutit, `maila1` ja `maila2` sekä **luo** uudet vektorit `nopeusYlos` ja `nopeusAlas`:
+**Esittele** luokan alussa uudet attribuutit, `maila1` ja `maila2`, sekä **luo** uudet vektorit `nopeusYlos` ja `nopeusAlas`:
 
 ```csharp,ignore
 public class Pong : PhysicsGame
@@ -180,7 +180,7 @@ public class Pong : PhysicsGame
 
 > [!EI TOIMI VIELÄ]
 
-### Mailojen sijoitus attribuutteihin
+### 3.2. Mailojen sijoitus attribuutteihin
 
 Jotta luomamme mailat menevät attribuutteihin `maila1` ja `maila2`, täytyy ne sijoittaa niihin.
 
@@ -252,7 +252,7 @@ void AsetaOhjaimet()
 ```
 
 > [!KOKEILE]
-> Ellei pelisi toimi, yritä selvittää mistä vika johtuu, tai pyydä ohjaajaa auttamaan.
+> Ellei pelisi toimi, yritä selvittää, mistä vika johtuu, tai pyydä ohjaajaa auttamaan.
 
 ## 4. Molempien mailojen liikuttaminen
 
@@ -286,7 +286,7 @@ void AsetaOhjaimet()
 
 Kuten nyt nähdään, mailan ja nopeuden vieminen parametrina `Keyboard.Listen`-aliohjelmalle oli todella hyödyllistä, sillä voimme nyt helposti lisätä ohjauksen useammalle kuin yhdelle mailalle emmekä tarvitse ohjaamiseen kuin yhden aliohjelman.
 
-Kokeile miten pelisi toimii!
+Kokeile, miten pelisi toimii!
 
 > [!KOKEILE]
 

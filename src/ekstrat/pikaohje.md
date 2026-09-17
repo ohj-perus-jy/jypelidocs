@@ -74,7 +74,7 @@ Keyboard.Listen(Key.Space, ButtonState.Pressed, Hyppaa, "Hyppää", pelaaja);
 Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta");
 Keyboard.Listen(Key.F1, ButtonState.Pressed, ShowControlHelp, "Näytä ohjeet");
 Mouse.Listen(MouseButton.Left, ButtonState.Pressed, Ammu, "Ammu");
-ControllerOne.Listen(Button.A, ButtonState.Pressed, Hyppaa, "Hyppää");
+ControllerOne.Listen(Button.A, ButtonState.Pressed, Hyppaa, "Hyppää", pelaaja);
 ```
 
 Käsittelijä: `void Hyppaa(PhysicsObject olio) { olio.Hit(new Vector(0, 500)); }`

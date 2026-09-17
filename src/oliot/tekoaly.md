@@ -32,7 +32,7 @@ randomOlio.Brain = satunnaisaivot;
 
 ## Erilaiset aivot
 
-Tarkastellaan lähemmin mitä eri aivotyypeillä voi tehdä.
+Tarkastellaan lähemmin, mitä eri aivotyypeillä voi tehdä.
 
 ### Yleisiä ominaisuuksia kaikille aivoille
 
@@ -54,7 +54,7 @@ Aivot pois päältä:
 aivot.Active = false;
 ```
 
-**TurnWhileMoving** käskee aivoja kääntää pelaajaa menosuuntaan.
+**TurnWhileMoving** käskee aivoja kääntämään oliota menosuuntaan.
 
 ```csharp,ignore
 aivot.TurnWhileMoving = true;
@@ -80,9 +80,19 @@ Voit antaa aivoille myös merkkijonon (lainausmerkeissä), jolloin aivojen omist
 FollowerBrain seuraajanAivot = new FollowerBrain("pelaaja");
 ```
 
-Seuraajaolion aivoilla on muita aivoja enemmän muuttujia jotka vaikuttavat sen toimintaan.
+Seuraajaolion aivoilla on muita aivoja enemmän muuttujia, jotka vaikuttavat sen toimintaan.
 
 ```csharp,ignore
+PhysicsObject seuraaja;  // Attribuutti, jotta olioon päästään käsiksi myös tapahtumankäsittelijässä
+
+...
+
+seuraaja = new PhysicsObject(30.0, 30.0);
+Add(seuraaja);
+
+RandomMoverBrain satunnaisaivot = new RandomMoverBrain(200);
+FollowerBrain seuraajanAivot = new FollowerBrain("pelaaja");
+
 seuraajanAivot.Speed = 300;                 // Millä nopeudella kohdetta seurataan
 seuraajanAivot.DistanceFar = 600;           // Etäisyys jolla aletaan seurata kohdetta
 seuraajanAivot.DistanceClose = 200;         // Etäisyys jolloin ollaan lähellä kohdetta
@@ -91,18 +101,23 @@ seuraajanAivot.FarBrain = satunnaisaivot;   // Käytetään satunnaisaivoja kun 
 
 // Tapahtuma, joka tapahtuu kun ollaan lähellä kohdetta
 seuraajanAivot.TargetClose += MitaTapahtuuKunOllaanLahella;
+
+seuraaja.Brain = seuraajanAivot;
 ...
 
 // Aliohjelma joka ajetaan kun olio on tarpeeksi lähellä kohdetta.
 void MitaTapahtuuKunOllaanLahella()
 {
-    pallo.Color = Color.Red;
+    seuraaja.Color = Color.Red;
 }
 ```
 
-FollowerBrainilta voi kysyä myös, mitä oliota se seuraa (`seuraajanAivot.CurrentTarget`), ja miten kaukana seurattava olio tällä hetkellä on (`seuraajanAivot.TargetDistance`). Jälkimmäinen on mittari (`DoubleMeter`), joten sille voi esimerkiksi lisätä tapahtuman kun on päästy tietyn matkan päähän kohteesta.
+FollowerBrainilta voi kysyä myös, mitä oliota se seuraa (`seuraajanAivot.CurrentTarget`), ja miten kaukana seurattava olio tällä hetkellä on (`seuraajanAivot.DistanceToTarget`). Jälkimmäinen on mittari (`DoubleMeter`), joten sille voi esimerkiksi lisätä tapahtuman, kun on päästy tietyn matkan päähän kohteesta.
 
 ```csharp,ignore
+PhysicsObject zombi = new PhysicsObject(30.0, 30.0);
+Add(zombi);
+
 FollowerBrain seuraajanAivot = new FollowerBrain("pelaaja");
 seuraajanAivot.DistanceToTarget.AddTrigger(30, TriggerDirection.Down, Huuda);
 zombi.Brain = seuraajanAivot;
@@ -117,7 +132,7 @@ void Huuda()
 
 ### RandomMoverBrain
 
-Satunnaisesti liikkuvan olion aivot laittavat olion liikkumaan satunnaisesti (leijuen) kentässä. Satunnaisaivoille voi kertoa sekunneissa miten usein se vaihtaa liikesuuntaa:
+Satunnaisesti liikkuvan olion aivot laittavat olion liikkumaan satunnaisesti (leijuen) kentässä. Satunnaisaivoille voi kertoa sekunneissa, miten usein ne vaihtavat liikesuuntaa:
 
 ```csharp,ignore
 satunnaisaivot.ChangeMovementSeconds = 3;
@@ -137,15 +152,15 @@ satunnaisaivot.WanderPosition = new Vector(200, 300);
 
 ### PathFollowerBrain
 
-Polkua seuraavat aivot kulkevat pitkin sille annettua reittiä tasaisella nopeudella.
+Polkua seuraavat aivot kulkevat pitkin niille annettua reittiä tasaisella nopeudella.
 
-Polku, jota aivot seuraavat annetaan vektorilistana. Listan käyttöä varten ohjelmakoodin alkuun tulee lisätä seuraava using-lause jos se sieltä puuttuu. Näin saadaan käyttöömme `List`-tyyppi.
+Polku, jota aivot seuraavat, annetaan vektorilistana. Listan käyttöä varten ohjelmakoodin alkuun tulee lisätä seuraava using-lause, jos se sieltä puuttuu. Näin saadaan käyttöömme `List`-tyyppi.
 
 ```csharp,ignore
 using System.Collections.Generic;
 ```
 
-Tehdään uusi lista joka pitää sisällään vektoreita ja lisätään siihen ne vektorit, joiden kautta haluamme polun kulkevan.
+Tehdään uusi lista, joka pitää sisällään vektoreita, ja lisätään siihen ne vektorit, joiden kautta haluamme polun kulkevan.
 
 ```csharp,ignore
 List<Vector> polku = new List<Vector>();
@@ -154,9 +169,10 @@ polku.Add(new Vector(-100, 50));
 polku.Add(new Vector(-250, -200));
 ```
 
-Sen jälkeen polku täytyy lisätä aivoille:
+Sen jälkeen luodaan aivot ja annetaan polku niille:
 
 ```csharp,ignore
+PathFollowerBrain polkuaivot = new PathFollowerBrain();
 polkuaivot.Path = polku;
 ```
 
@@ -172,9 +188,18 @@ Aivoille täytyy määrittää nopeus, jolla liikutaan:
 polkuaivot.Speed = 100;
 ```
 
+Lopuksi aivot annetaan oliolle:
+
+```csharp,ignore
+PhysicsObject vartija = new PhysicsObject(30.0, 30.0);
+Add(vartija);
+
+vartija.Brain = polkuaivot;
+```
+
 ### PlatformWandererBrain
 
-Tasoa pitkin kulkevat aivot voi lisätä ainoastaan PlatformCharacter -tyyppisille olioille.
+Tasoa pitkin kulkevat aivot voi lisätä ainoastaan PlatformCharacter-tyyppisille olioille.
 
 Esimerkki:
 
@@ -201,13 +226,13 @@ tasoaivot.JumpSpeed = 700;
 tasoaivot.TriesToJump = true;
 ```
 
-Hyppimisen laatua voi parantaa yrittämällä muuttamalla kävelynopeutta ja hyppynopeutta sopivassa suhteeseen keskenään.
+Hyppimisen laatua voi parantaa muuttamalla kävelynopeutta ja hyppynopeutta sopivaan suhteeseen keskenään.
 
 ### LabyrinthWandererBrain
 
 Labyrintissä vaeltelevat aivot voi lisätä PhysicsObject-tyyppisille olioille.
 
-Aivot käyttävät liikkumisessa hyväkseen tietoa labyrintin/kentän yhden "ruudun" koosta, joten ruudun koko on annettava uusia aivoja luotaessa. Aivoille on mahdollista antaa seinien tagin, jolloin aivot väistelevät ainoastaan seiniä. Jos tagia ei anneta, aivot väistelevät kaikkia muitakin olioita.
+Aivot käyttävät liikkumisessa hyväkseen tietoa labyrintin/kentän yhden "ruudun" koosta, joten ruudun koko on annettava uusia aivoja luotaessa. Aivoille on mahdollista antaa seinien tagi, jolloin aivot väistelevät ainoastaan seiniä. Jos tagia ei anneta, aivot väistelevät kaikkia muitakin olioita.
 
 Esimerkki:
 

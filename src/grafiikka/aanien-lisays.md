@@ -28,7 +28,7 @@ MediaPlayer.IsRepeating = true;
 
 ## Äänitehosteet {#tehosteet}
 
-Ihan ensimmäisenä pitää olla äänitiedosto, jota voidaan pelissä soittaa. Niiden tekemiseen on monia työkaluja tai voi hakea internetistä.
+Ihan ensimmäisenä pitää olla äänitiedosto, jota voidaan pelissä soittaa. Äänitiedostojen tekemiseen on monia työkaluja, tai niitä voi hakea internetistä.
 
 Kun äänitiedosto on olemassa, se pitää vielä liittää projektiin. Katso sitä varten ohjeet [sisällön tuomisesta](../aloittaminen/sisallon-tuonti.md). **Äänen täytyy olla .wav-tiedosto.** Kun äänitiedosto on liitetty projektiin, ääni on valmis soitettavaksi seuraavilla tavoilla:
 
@@ -44,9 +44,9 @@ Kun ääni on kerran ladattu, sitä voidaan käyttää seuraavasti:
 hyppyAani.Play();
 ```
 
-`SoundEffectin` `Play`-metodista on myös parametreja vastaanottava versio, joka ottaa vastaan desimaalilukuna mm. äänen voimakkuuden ja korkeuden.
+`SoundEffect`-luokan `Play`-metodista on myös parametreja vastaanottava versio, joka ottaa vastaan desimaalilukuna mm. äänen voimakkuuden ja korkeuden.
 
-Jos ääniefektin korkeutta haluaa vaihdella, voi kuitenkin olla kätevämpää tehdä siitä ääniä. Yhdestä ääniefektistä voi luoda `CreateSound`-metodilla monta ääntä (`Sound`), jotka voivat soida yhtäaikaa. `Sound` on ääni, jonka voimakkuutta ja korkeutta voidaan muuttaa. Se voidaan myös keskeyttää ja jatkaa. Uusia ääniä voi käyttää esimerkiksi näin:
+Jos ääniefektin korkeutta haluaa vaihdella, voi kuitenkin olla kätevämpää tehdä siitä ääniä. Yhdestä ääniefektistä voi luoda `CreateSound`-metodilla monta ääntä (`Sound`), jotka voivat soida yhtä aikaa. `Sound` on ääni, jonka voimakkuutta ja korkeutta voidaan muuttaa. Se voidaan myös keskeyttää ja jatkaa. Uusia ääniä voi käyttää esimerkiksi näin:
 
 ```csharp,ignore
 Sound pelaaja1HyppyAani = hyppyAani.CreateSound();

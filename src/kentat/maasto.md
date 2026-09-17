@@ -8,7 +8,7 @@ Tässä ohjeessa kerrotaan, miten peliin lisätään tasainen tai epätasainen r
 
 ### Tasainen reuna
 
-Tasaisen reunan kentän alalaitaan saa luotua kun kirjoittaa
+Tasaisen reunan kentän alalaitaan saa luotua, kun kirjoittaa
 
 ```csharp,ignore
 Surface alareuna = Surface.CreateBottom(Level);
@@ -30,7 +30,7 @@ Yllä oleva koodi voisi antaa esimerkiksi seuraavanlaisen reunan
 
 ![](images/surface_alareuna_epatasainen.png)
 
-Jos ei haluta reunasta piikikästä, annettaan luomisen yhteydessä vielä yksi parametri, joka määrää kahden pisteen välisen suurimman etäisyyden.
+Jos ei haluta reunasta piikikästä, annetaan luomisen yhteydessä vielä yksi parametri, joka määrää kahden pisteen välisen suurimman etäisyyden.
 
 ```csharp,ignore
 Surface alareuna = Surface.CreateBottom(Level, 30, 100, 40, 10);
@@ -39,11 +39,11 @@ Add(alareuna);
 
 ![](images/surface_alareuna_smooth.png)
 
-**Tärkeää''' Huomaa, että varsinkin monimutkaisten epätasaisten pintojen arpominen on sen verran hidasta, ettei niitä kannata ylikäyttää.**
+**Tärkeää!** Huomaa, että varsinkin monimutkaisten epätasaisten pintojen arpominen on sen verran hidasta, ettei niitä kannata ylikäyttää.
 
 ### Reunan luomisen yhteydessä käytettävät parametrit
 
-Alla olevassa kuvassa on luotu reuna kuvan mukaisella koodilla. Kuvan alla on selitetty mitä parametreja on annettu ja mitä ne tekevät.
+Alla olevassa kuvassa on luotu reuna kuvan mukaisella koodilla. Kuvan alla on selitetty, mitä parametreja on annettu ja mitä ne tekevät.
 
 ![](images/surface_parameter_example.png)
 
@@ -57,15 +57,15 @@ Alla olevassa kuvassa on luotu reuna kuvan mukaisella koodilla. Kuvan alla on se
 
 ### Muiden reunojen luonti
 
-Muiden reunojen luonti onnistuu muuttamalla **Surface.CreateBottom(Level)**-kohdan tilalle jonkin seuraavista
+Muiden reunojen luonti onnistuu vaihtamalla `Surface.CreateBottom(Level)`-kohdan tilalle jonkin seuraavista
 
-- **Surface.CreateLeft(Level)** : Luo kentän vasemman reunan
-- **Surface.CreateRight(Level)** : Luo kentän oikean reunan
-- **Surface.CreateTop(Level)** : Luo kentän yläreunan
+- `Surface.CreateLeft(Level)`: Luo kentän vasemman reunan
+- `Surface.CreateRight(Level)`: Luo kentän oikean reunan
+- `Surface.CreateTop(Level)`: Luo kentän yläreunan
 
 ## Irrallinen taso/maasto
 
-Surfacella on mahdollista luoda myös aivan tavallisia fysiikkaolioita, jotka kuitenkin muotoillaan maaston muotoiseksi. Alla muutamia esimerkkejä minkälaisia maastoja/tasoja voidaan luoda.
+Surfacella on mahdollista luoda myös aivan tavallisia fysiikkaolioita, jotka kuitenkin muotoillaan maaston muotoisiksi. Alla muutamia esimerkkejä siitä, minkälaisia maastoja/tasoja voidaan luoda.
 
 ### Tasainen taso
 
@@ -80,7 +80,7 @@ Add(taso);
 
 ```csharp,ignore
 Surface maasto = new Surface(200, 30, 50, 60);
-Add(taso);
+Add(maasto);
 ```
 
 ![](images/surface_maasto.png)
@@ -96,10 +96,10 @@ Add(maasto);
 
 ### Edistyneempi maasto
 
-Jos haluat määrätä itse, miten maasto käyttäytyy, voit antaa parametrina desimaalilukutaulukon ja skaalausvakion jolla jokainen taulukon luku kerrotaan. Maaston kunkin pisteen korkeus luetaan annetusta taulukosta.
+Jos haluat määrätä itse, miten maasto käyttäytyy, voit antaa parametrina desimaalilukutaulukon ja skaalausvakion, jolla jokainen taulukon luku kerrotaan. Maaston kunkin pisteen korkeus luetaan annetusta taulukosta.
 
 ```csharp,ignore
-double[] korkeudet = new double[] { 10, 12, 15, 20, 20, 17, 10 }
+double[] korkeudet = new double[] { 10, 12, 15, 20, 20, 17, 10 };
 Surface maasto = new Surface(korkeudet, 1.0);
 Add(maasto);
 ```
@@ -110,17 +110,17 @@ Koska kentän reunoja tarvitaan useissa peleissä, on kahdeksan riviä ohjelmako
 
 |  |  |
 |:---|:---|
-| `CreateBorders(minkorkeus, maxkorkeus, pisteet, kimmoisuus, kuva)` | Luo tasaiset reunat kaikille sivuille. |
+| `CreateBorders()` | Luo tasaiset reunat kaikille sivuille. |
 | `CreateBorders(false)` | Luo näkymättömät tasaiset reunat kaikille sivuille. |
-| `CreateBorders(kimmoisuus, näkyvyys)` | Luo tasaiset reunat kaikille sivuille halutulla kimmoisuudella (0-1) ja näkyvyydellä (true/false). |
+| `CreateBorders(kimmoisuus, näkyvyys)` | Luo tasaiset reunat kaikille sivuille halutulla kimmoisuudella (0–1) ja näkyvyydellä (true/false). |
 | `CreateBorders(kimmoisuus, näkyvyys, väri)` | Luo tasaiset reunat kaikille sivuille halutulla kimmoisuudella, näkyvyydellä ja värillä. |
 | `CreateBorders(kimmoisuus, näkyvyys, kuva)` | Luo tasaiset reunat kaikille sivuille halutulla kimmoisuudella, näkyvyydellä ja tekstuurilla (kuvalla). |
 | `CreateBorders(minkorkeus, maxkorkeus, pisteet)` | Luo epätasaiset reunat kaikille sivuille. |
-| `CreateBorders(minkorkeus, maxkorkeus, pisteet, kimmoisuus)` | Luo epätasaiset reunat kaikille sivuille halutulla kimmoisuudella (0-1). |
+| `CreateBorders(minkorkeus, maxkorkeus, pisteet, kimmoisuus)` | Luo epätasaiset reunat kaikille sivuille halutulla kimmoisuudella (0–1). |
 | `CreateBorders(minkorkeus, maxkorkeus, pisteet, kimmoisuus, väri)` | Luo epätasaiset reunat kaikille sivuille halutulla kimmoisuudella ja värillä. |
 | `CreateBorders(minkorkeus, maxkorkeus, pisteet, kimmoisuus, kuva)` | Luo epätasaiset reunat kaikille sivuille halutulla kimmoisuudella ja tekstuurilla (kuvalla). |
 
-Kaikille näille aliohjelmille on olemassa myös vastaavat aliohjelmat `CreateHorizontalBorders` ja `CreateVerticalBorders` jotka luovat pelkästään vaaka- tai pystysuuntaiset reunat kentälle. Aliohjelmat palauttavat `Surfaces`-tyyppisen olion, jonka kautta reunojen ominaisuuksia voi muuttaa tai lisätä esimerkiksi törmäyskäsittelijöitä:
+Kaikille näille aliohjelmille on olemassa myös vastaavat aliohjelmat `CreateHorizontalBorders` ja `CreateVerticalBorders`, jotka luovat pelkästään vaaka- tai pystysuuntaiset reunat kentälle. Aliohjelmat palauttavat `Surfaces`-tyyppisen olion, jonka kautta reunojen ominaisuuksia voi muuttaa tai lisätä esimerkiksi törmäyskäsittelijöitä:
 
 ```csharp,ignore
 Surfaces reunat = Level.CreateBorders();
@@ -149,5 +149,3 @@ foreach (var reuna in reunat.get(Direction.Left, Direction.Right))
     reuna.Color = Color.Red;
 }
 ```
-
-Surface alareuna = Surface.CreateBottom(Level, 30, 100, 40, 10); Add(alareuna);

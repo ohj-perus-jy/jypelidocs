@@ -4,7 +4,7 @@
 
 Jypeli sisältää valmiita aseita peleissä käytettäväksi.
 
-Aseet on toimivat fysiikkapeleissä ja tasohyppelypeleissä. Yleensä ase on jollakin pelihahmolla.
+Aseet toimivat fysiikkapeleissä ja tasohyppelypeleissä. Yleensä ase on jollakin pelihahmolla.
 
 Aseen voi lisätä mille tahansa fysiikkaoliolle (PhysicsObject) tai pelioliolle (GameObject).
 
@@ -29,7 +29,7 @@ public class Peli : PhysicsGame
 
 ### Aseen luominen
 
-Aseen luominen kannattaa tehdä samassa paikassa missä luodaan asetta kantava olio. Tässä esimerkissä `pelaaja1` voi olla vaikkapa **fysiikkaolio**.
+Aseen luominen kannattaa tehdä samassa paikassa, missä luodaan asetta kantava olio. Tässä esimerkissä `pelaaja1` voi olla vaikkapa **fysiikkaolio**.
 
 ```csharp,ignore
 pelaajan1Ase = new AssaultRifle(30, 10);
@@ -38,10 +38,10 @@ pelaajan1Ase = new AssaultRifle(30, 10);
 // niin älä lisää seuraavaa riviä ollenkaan:
 pelaajan1Ase.Ammo.Value = 1000; // Ammusten määrä aluksi
 
-// Kuinka monta laukasuta sekunnissa ase voi ampua
+// Kuinka monta laukausta sekunnissa ase voi ampua
 pelaajan1Ase.FireRate = 5;
 
-// Mitä tapahtuu kun ammus osuu johonkin?
+// Mitä tapahtuu, kun ammus osuu johonkin?
 pelaajan1Ase.ProjectileCollision = AmmusOsui;
 
 // Laitetaan ase samaan sijaintiin kuin pelaaja, eli se on silloin pelaajan keskellä.
@@ -56,7 +56,7 @@ Ase lisätään fysiikkaolio `pelaaja1`:n lapsiolioksi. Tämä tarkoittaa sitä,
 pelaajan1Ase.Position = pelaaja1.Position + new Vector(pelaaja1.Width / 2, 0);
 ```
 
-Jolloin ase sijaitsee pelaajan oikeassa reunassa.
+Tällöin ase sijaitsee pelaajan oikeassa reunassa.
 
 Vaihtoehtoisesti sijainti voidaan asettaa myös `RelativePosition`in avulla:
 
@@ -111,7 +111,7 @@ Aseen lisääminen tasohyppelyhahmolle menee muuten samalla tavalla, mutta aseen
 
 ### Aseen luominen
 
-Aseen luominen kannattaa tehdä samassa paikassa missä luodaan asetta kantava tasohyppelyhahmo.
+Aseen luominen kannattaa tehdä samassa paikassa, missä luodaan asetta kantava tasohyppelyhahmo.
 
 Uuden aseen voi sijoittaa suoraan **tasohyppelyhahmon** Weapon-ominaisuuden arvoksi. Tämän jälkeen aseeseen voi viitata Weapon-ominaisuuden avulla.
 
@@ -122,7 +122,7 @@ pelaaja1.Weapon = new AssaultRifle(30, 10);
 // Ammusten määrä aluksi:
 pelaaja1.Weapon.Ammo.Value = 1000;
 
-// Mitä tapahtuu kun ammus osuu johonkin?
+// Mitä tapahtuu, kun ammus osuu johonkin?
 pelaaja1.Weapon.ProjectileCollision = AmmusOsui;
 ```
 
@@ -173,7 +173,7 @@ Lyhyesti sanottuna asetta voi käännellä ja sillä voi tähdätä aseen kulmaa
 pyssy.Angle += Angle.FromDegrees(1);
 ```
 
-Tarkempia ohjeita tähtäämiseen löytyy kuitenkin [tähtäämissivulta.](../ohjaimet/tahtays.md)
+Tarkempia ohjeita tähtäämiseen löytyy kuitenkin [tähtäämissivulta](../ohjaimet/tahtays.md).
 
 ## Valmiit ampuma-aseet
 
@@ -205,7 +205,7 @@ PlasmaCannon plasmaTykki = new PlasmaCannon(20, 5);
 
 <img src="images/LaserRifle.png" style="width:15em" /> ![](images/LaserBeam.png)
 
-Laserase on (toistaiseksi) samannäköinen kuin plasmatykki. Ammus ja ääni on erilainen.
+Laserase on (toistaiseksi) samannäköinen kuin plasmatykki. Ammus ja ääni ovat erilaiset.
 
 ```csharp,ignore
 LaserGun laserAse = new LaserGun(20, 5);
@@ -294,7 +294,7 @@ ase.AttackSound = null;
 
 Kun ase on lisätty jollekin oliolle, sen paikka määräytyy suhteessa aseen omistajaan.
 
-Esimerkiksi jos aseen X-koordinaatin arvoksi asetetaan 10, tämä tarkoittaa että ase sijoittuu pelikentässä 10 yksikköä aseen omistajasta oikealle.
+Esimerkiksi jos aseen X-koordinaatin arvoksi asetetaan 10, tämä tarkoittaa, että ase sijoittuu pelikentässä 10 yksikköä aseen omistajasta oikealle.
 
 ```csharp,ignore
 ase.X = 10.0;
@@ -311,7 +311,7 @@ Kranaatti luodaan antamalla sille parametrina säde:
 Grenade kranaatti = new Grenade(4.0);
 ```
 
-Kranaatti voidaan heittää valmiilla Throw-aliohjelmalla automaattisesti oikeaan suuntaan:
+Kranaatti voidaan heittää valmiilla `Throw`-aliohjelmalla automaattisesti oikeaan suuntaan:
 
 ```csharp,ignore
 void HeitaKranaatti(PlatformCharacter pelaaja)
@@ -321,17 +321,17 @@ void HeitaKranaatti(PlatformCharacter pelaaja)
 }
 ```
 
-Throw-aliohjelmaa voi käyttää myös minkä tahansa muun olion heittämiseen poispäin toisesta oliosta. Se toimii kuten **Hit**, paitsi että se lisää olion kentälle ja hoitaa heittovektorin laskemisen puolestasi.
+`Throw`-aliohjelmaa voi käyttää myös minkä tahansa muun olion heittämiseen poispäin toisesta oliosta. Se toimii kuten `Hit`, paitsi että se lisää olion kentälle ja hoitaa heittovektorin laskemisen puolestasi.
 
-Mitä tapahtuu kun räjähdys osuu johonkin? Se voidaan määrittää näin:
+Mitä tapahtuu, kun räjähdys osuu johonkin? Se voidaan määrittää näin:
 
-Suoritetaan aliohjelma KranaattiOsui jos räjähdys yltää johonkin, mihin tahansa olioon:
+Suoritetaan aliohjelma `KranaattiOsui`, jos räjähdys yltää johonkin, mihin tahansa olioon:
 
 ```csharp,ignore
 kranu.Explosion.ShockwaveReachesObject += KranaattiOsui;
 ```
 
-Suoritetaan aliohjelma KranaattiOsui jos räjähdys yltää sellaiseen olioon, jolla on `Tag`-ominaisuutena "vihollinen":
+Suoritetaan aliohjelma `KranaattiOsui`, jos räjähdys yltää sellaiseen olioon, jolla on `Tag`-ominaisuutena "vihollinen":
 
 ```csharp,ignore
 kranu.Explosion.AddShockwaveHandler("vihollinen", KranaattiOsui);
@@ -350,7 +350,7 @@ void KranaattiOsui(IPhysicsObject rajahdyksenKohde, Vector v)
 
 Rypälekranaattia käytetään samaan tapaan kuin tavallista kranaattia. Erikoisuutena on se, että se hajoaa räjähtäessään useaksi pienemmäksi kranaatiksi. Nämä kranaatit voivat edelleen hajota useampaan osaan!
 
-Rypälekranaatin luomisessa ensimmäinen parametri on säde ja toinen on luku, joka kertoo kuinka monta kertaa kranaatti hajoaa osiin. Tähän ei yleensä kannata laittaa kolmosta isompaa lukua, sillä pommien määrä voi kasvaa järkyttävän suureksi hyvin nopeasti!
+Rypälekranaatin luomisessa ensimmäinen parametri on säde ja toinen on luku, joka kertoo, kuinka monta kertaa kranaatti hajoaa osiin. Tähän ei yleensä kannata laittaa kolmosta isompaa lukua, sillä pommien määrä voi kasvaa järkyttävän suureksi hyvin nopeasti!
 
 ```csharp,ignore
 ClusterGrenade kranaatti = new ClusterGrenade(4.0, 2);

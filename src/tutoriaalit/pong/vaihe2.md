@@ -13,7 +13,7 @@ Tämä on Pong-pelin tutoriaalin osa 2/7. Tämän vaiheen aikana
 
 Pelikentällä kulkee koordinaatisto, jonka avulla olioita voi sijoitella eri puolille kenttää. Koordinaatiston keskipiste on pelikentän keskipisteessä.
 
-Edellisessä vaiheessa emme asettaneet pallolle koordinaatteja, joten sen paikaksi tuli oletuksena kentän keskipiste (origo eli piste jonka sekä `x`- että `y`-koordinaatti on nolla).
+Edellisessä vaiheessa emme asettaneet pallolle koordinaatteja, joten sen paikaksi tuli oletuksena kentän keskipiste (origo eli piste, jonka sekä `x`- että `y`-koordinaatti on nolla).
 
 Seuraava kuva esittää pallon `x`-koordinaatin idean. Kun `x`-koordinaatti on nolla, pallo on leveyssuunnassa keskellä pelikenttää. Jos taas `x`:n arvo on -200, pallon sijainti on leveyssuunnassa vasemmalle päin origosta. `y`-koordinaatin idea on sama, se vain kertoo paikan korkeussuunnassa.
 
@@ -26,7 +26,7 @@ Peliolioiden `x`- ja `y`-koordinaatit voi asettaa muuttamalla fysiikkaobjektin `
         pallo.Y = 50.0;
 ```
 
-Lisää edelliset rivit koodiin pallon luonnin jälkeen. Kokeile erilaisilla `X`:n ja `Y`:n arvoilla mihin pallo sijoittuu ruudulla.
+Lisää edelliset rivit koodiin pallon luonnin jälkeen. Kokeile erilaisilla `X`:n ja `Y`:n arvoilla, mihin pallo sijoittuu ruudulla.
 
 > [!KOKEILE]
 
@@ -40,7 +40,7 @@ Seuraavassa kuvassa on havainnollistettu edellä kuvattua vektoria. Vektoreita k
 
 ## 3. Pallon laittaminen liikkeelle
 
-Laitetaan seuraavaksi pallo liikkumaan. Koska käytössämme on fysiikkamoottori, se käy helposti. Fysiikkaobjektin voi tökätä liikkeelle kutsumalla sen `Hit`-aliohjelmaa. Sille annetaan parametrina vektori, joka kertoo *mihin suuntaan ja kuinka kovaa pallo lähtee*.
+Laitetaan seuraavaksi pallo liikkumaan. Koska käytössämme on fysiikkamoottori, se käy helposti. Fysiikkaobjektin voi tökätä liikkeelle kutsumalla sen `Hit`-aliohjelmaa. Sille annetaan parametrina vektori, joka kertoo, *mihin suuntaan ja kuinka kovaa pallo lähtee*.
 
 Lisää seuraavat rivit koodiin **sen jälkeen**, kun pallo on lisätty peliin (eli `Add`-kutsun jälkeen):
 
@@ -49,7 +49,7 @@ Vector impulssi = new Vector(500.0, 0.0);
 pallo.Hit(impulssi * pallo.Mass);
 ```
 
-Mitä isompia arvoja annat vektorille, sitä kovempaa pallo lähtee. Kokeile tehdä vektori erilaisilla `x`- ja `y`-arvoilla ja katso mihin suuntaan pallo lähtee.
+Mitä isompia arvoja annat vektorille, sitä kovempaa pallo lähtee. Kokeile tehdä vektori erilaisilla `x`- ja `y`-arvoilla ja katso, mihin suuntaan pallo lähtee.
 
 > [!KOKEILE]
 
@@ -72,13 +72,13 @@ Vector impulssi = new Vector(500.0, 0.0);
 pallo.Hit(impulssi * pallo.Mass);
 ```
 
-Vektorin kertominen jollain luvulla siis vain kertoo sen `x` ja `y` -komponentit.
+Vektorin kertominen jollain luvulla siis vain kertoo sen `x`- ja `y`-komponentit.
 
-Nyt meidän täytyy kasvattaa annettavaa voimaa pallon massan suhteen. Mitä suurempi massa, sitä suurempi voima tarvitaan. Meidän ei kuitenkaan tarvitse itse suoraan tietää mitä pallon massa on, vaan voimme suoraan ottaa sen pallon `Mass`-kentästä ja ottaa sen käyttöön. Jos pallon massaa muutettaisiin jossain vaiheessa, toimisi tämä kohta koodia silti tismalleen samalla tavalla.
+Nyt meidän täytyy kasvattaa annettavaa voimaa pallon massan suhteen. Mitä suurempi massa, sitä suurempi voima tarvitaan. Meidän ei kuitenkaan tarvitse itse suoraan tietää, mitä pallon massa on, vaan voimme suoraan ottaa sen pallon `Mass`-kentästä ja ottaa sen käyttöön. Jos pallon massaa muutettaisiin jossain vaiheessa, toimisi tämä kohta koodia silti tismalleen samalla tavalla.
 
 ## 4. Reunan lisääminen
 
-Kun pallo on saatu liikkeelle, karkaa se ennen pitkää ruudusta ulos. Lisätään pelialueeseen reunat nähdäksemme miten pallo pomppii. Lisää seuraava aliohjelmakutsu (aliohjelmista kerrotaan tarkemmin seuraavassa vaiheessa) koodiin sen jälkeen, kun pallo on luotu ja lisätty peliin.
+Kun pallo on saatu liikkeelle, karkaa se ennen pitkää ruudusta ulos. Lisätään pelialueeseen reunat nähdäksemme, miten pallo pomppii. Lisää seuraava aliohjelmakutsu (aliohjelmista kerrotaan tarkemmin seuraavassa vaiheessa) koodiin sen jälkeen, kun pallo on luotu ja lisätty peliin.
 
 ```csharp,ignore
 Level.CreateBorders();
@@ -88,15 +88,15 @@ Kun nyt ajat peliä, pelikentässä pitäisi olla reunat, joihin pallo myös tö
 
 > [!KOKEILE]
 
-Miksi pallo törmää, vaikka emme ole törmäystä mitenkään ohjelmoineet? Siksi, että koska projektia luodessamme teimme fysiikkapelin. Fysiikkapelin (`PhysicsGame`) *fysiikkamoottori* laskee pallon liikkeitä meidän puolestamme.
+Miksi pallo törmää, vaikka emme ole törmäystä mitenkään ohjelmoineet? Siksi, että projektia luodessamme teimme fysiikkapelin. Fysiikkapelin (`PhysicsGame`) *fysiikkamoottori* laskee pallon liikkeitä meidän puolestamme.
 
 ## 5. Vauhdin säilyttäminen törmäyksissä
 
-Pelissämme on pieni puute: pallon vauhti hidastuu aina kun se törmää seinään. Fysiikkaoliolla on onneksi `x`- ja `y`-koordinaattien lisäksi monia muita ominaisuuksia. Yksi niistä on `Restitution`, vapaasti suomennettuna kimmoisuus.
+Pelissämme on pieni puute: pallon vauhti hidastuu aina, kun se törmää seinään. Fysiikkaoliolla on onneksi `x`- ja `y`-koordinaattien lisäksi monia muita ominaisuuksia. Yksi niistä on `Restitution`, vapaasti suomennettuna kimmoisuus.
 
 Kimmoisuudelle voi antaa lukuarvoja väliltä `0.0` - `1.0`. Mitä lähempänä ykköstä arvo on, sitä enemmän olion vauhdista säilyy törmäyksessä.
 
-Esimerkiksi superpallon kimmoisuusarvo olisi lähellä ykköstä, kun taas kokoon rutistetun paperin kimmoisuus olisi lähempänä nollaa, sehän ei pomppaa korkealle vaikka sellaisen paiskaisi miten kovaa lattialle.
+Esimerkiksi superpallon kimmoisuusarvo olisi lähellä ykköstä, kun taas kokoon rutistetun paperin kimmoisuus olisi lähempänä nollaa, sehän ei pomppaa korkealle, vaikka sellaisen paiskaisi kuinka kovaa tahansa lattialle.
 
 Asetetaan pallon `Restitution`-ominaisuuden arvoksi `1.0`. Kirjoita tämä rivi uudelle riville esimerkiksi pallon koordinaattien asettamisen jälkeen:
 
@@ -104,9 +104,10 @@ Asetetaan pallon `Restitution`-ominaisuuden arvoksi `1.0`. Kirjoita tämä rivi 
 pallo.Restitution = 1.0;
 ```
 
-Koska törmäyksessä on aina kaksi osapuolta, täytyy myös törmäyksen kohteen kimmoisuus asettaa vastaavasti. Pelikentän reunoille tämä tehdään käyttämällä `CreateBorders`-aliohjelmasta versiota, joka ottaa vastaan parametreja. Ensimmäinen parametri on kimmoisuus, mikä pallollekin asetettiin, ja toinen parametri kertoo, tehdäänkö reunoista näkyvät vai ei. Sen tyyppi on totuusarvo `bool`, joten sillä on kaksi mahdollista arvoa:
+Koska törmäyksessä on aina kaksi osapuolta, täytyy myös törmäyksen kohteen kimmoisuus asettaa vastaavasti. Pelikentän reunoille tämä tehdään käyttämällä `CreateBorders`-aliohjelmasta versiota, joka ottaa vastaan parametreja. Ensimmäinen parametri on kimmoisuus, joka pallollekin asetettiin, ja toinen parametri kertoo, tehdäänkö reunoista näkyvät vai ei. Sen tyyppi on totuusarvo `bool`, joten sillä on kaksi mahdollista arvoa:
 
-- true eli tosi (eli "kyllä") false eli epätosi (eli "ei")
+- true eli tosi (eli "kyllä")
+- false eli epätosi (eli "ei")
 
 Koska reunat jäävät myöhemmin ruudun ulkopuolelle, toisen parametrin arvolla ei ole tässä niin väliä. Olkoon sen arvo vaikkapa `false`.
 
@@ -124,13 +125,13 @@ Level.CreateBorders(1.0, false);
 
 Eli vapaasti sanottuna:
 
-"Tee näkymättömät reunat joiden kimmoisuus on yksi"
+"Tee näkymättömät reunat, joiden kimmoisuus on yksi"
 
 > [!KOKEILE]
 
 ## 6. Kentän taustavärin vaihtaminen
 
-[​Alkuperäisen Pong-pelin](http://en.wikipedia.org/wiki/Pong) taustaväri oli musta eikä vaaleansininen. Korjataan puute lisäämällä **edellisen rivin jälkeen** seuraava rivi, joka asettaa kentälle uuden taustavärin.
+[Alkuperäisen Pong-pelin](http://en.wikipedia.org/wiki/Pong) taustaväri oli musta eikä vaaleansininen. Korjataan puute lisäämällä **edellisen rivin jälkeen** seuraava rivi, joka asettaa kentälle uuden taustavärin.
 
 ```csharp,ignore
 Level.Background.Color = Color.Black;
@@ -163,7 +164,7 @@ namespace Pong;
 /// @author vesal
 /// @version 20.09.2024
 /// <summary>
-/// Peli jossa kaksi palaajaa yrittää saada pallon toisen päätyyn.
+/// Peli, jossa kaksi pelaajaa yrittää saada pallon toisen päätyyn.
 /// </summary>
 public class Pong : PhysicsGame
 {
@@ -190,8 +191,8 @@ public class Pong : PhysicsGame
 }
 ```
 
-Huomaa, että C#-kieli ei ole kovin tarkka "tyhjien" merkkien, kuten välilyöntien tai tyhjien rivien, suhteen. Ohjelman toiminnan kannalta ei siis ole väliä, vaikka koodissasi on tyhjiä rivejä, tai tuleeko sulkumerkin jälkeen välilyönti. Voit kirjoittaa tyhjiä rivejä koodiin, jos se helpottaa sinulla koodin lukemista.
+Huomaa, että C#-kieli ei ole kovin tarkka "tyhjien" merkkien, kuten välilyöntien tai tyhjien rivien, suhteen. Ohjelman toiminnan kannalta ei siis ole väliä, onko koodissasi tyhjiä rivejä tai tuleeko sulkumerkin jälkeen välilyönti. Voit kirjoittaa tyhjiä rivejä koodiin, jos se helpottaa sinua koodin lukemisessa.
 
-Myöskään joidenkin lauseiden (eli koodirivien) järjestys ei ole kovin oleellinen. Ei esimerkiksi ole väliä asetatko pallolle ensin koordinaatit vai kimmoisuuden. Toisaalta taas pallo *täytyy* luoda ennen kimmoisuuden asettamista, sillä kimmoisuuden asettamiseen tarvitaan fysiikkaolio.
+Myöskään joidenkin lauseiden (eli koodirivien) järjestys ei ole kovin oleellinen. Ei esimerkiksi ole väliä, asetatko pallolle ensin koordinaatit vai kimmoisuuden. Toisaalta taas pallo *täytyy* luoda ennen kimmoisuuden asettamista, sillä kimmoisuuden asettamiseen tarvitaan fysiikkaolio.
 
 Huomaa myös, että valmiissa koodissa voi olla joitakin `using`-alkuisia rivejä, joita koodissasi ei ole tai päinvastoin. Tämäkään ei välttämättä haittaa. Jos koodistasi puuttuu jokin `using`-lause, siitä tulee selkeä virhe.

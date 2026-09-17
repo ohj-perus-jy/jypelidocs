@@ -3,9 +3,9 @@
 Radan luominen:
 
 - Luettele reittipisteet taulukossa
-- Luo uusi RoadMap-olio (tässä nimellä tie)
-- Aseta radalle leveys (tie.DefaultWidth = 50.0;)
-- Kutsu lopuksi tie.Insert();
+- Luo uusi `RoadMap`-olio (tässä nimellä `tie`)
+- Aseta radalle leveys (`tie.DefaultWidth = 50.0;`)
+- Kutsu lopuksi `tie.Insert();`
 
 Reittipisteistä muodostuu rata seuraavasti:
 
@@ -51,7 +51,7 @@ Esimerkkikoodi:
 
 ## Radan segmenttien luominen itse
 
-`RoadMap`-luokalla tehty rata koostuu itse asiassa pienistä segmenteistä, jotka asetetaan toistensa perään. Joskus on kätevää, että segmentti-oliot voi luoda itsekin. Esimerkiksi jos halutaakin tehdä kaide, johon voi törmätä, pitäisi luotavien olioiden olla fysiikkaolioita. Tällainen onnistuu määrittämällä oma aliohjelma, jolla segmentit luodaan:
+`RoadMap`-luokalla tehty rata koostuu itse asiassa pienistä segmenteistä, jotka asetetaan toistensa perään. Joskus on kätevää, että segmenttioliot voi luoda itsekin. Esimerkiksi jos halutaankin tehdä kaide, johon voi törmätä, pitäisi luotavien olioiden olla fysiikkaolioita. Tällainen onnistuu määrittämällä oma aliohjelma, jolla segmentit luodaan:
 
 ```csharp,feature-jypeli
 //-using System;

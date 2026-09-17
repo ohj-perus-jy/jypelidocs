@@ -65,7 +65,7 @@ public class Peli : PhysicsGame
 }
 ```
 
-Toinen tyypillinen käyttö on lisätä oliolle osia, kuten kilpi tai pyörät:
+Toinen tyypillinen käyttö on lisätä oliolle osia, kuten kilpeä tai pyöriä:
 ks. esimerkit sivuilla [Muita tapahtumia](../tapahtumat/muita.md#olion-lisaaminen-peliin-addedtogame)
 ja [Liitokset](../fysiikka/liitokset.md).
 
@@ -130,7 +130,7 @@ soittaa äänen, jättää jälkeensä räjähdyksen. Lopuksi kutsutaan
 `base.Destroy()`, joka poistaa olion pelistä.
 
 Alla vihu ampuu ajastimella kahden sekunnin välein. Ajastin on pysäytettävä
-tuhoutuessa; muuten se jatkaa ampumista, vaikka vihua ei enää ole.
+vihun tuhoutuessa; muuten se jatkaa ampumista, vaikka vihua ei enää ole.
 
 ```csharp,feature-jypeli
 //-using System;
@@ -196,7 +196,7 @@ public class Peli : PhysicsGame
 ```
 
 Räjähdys (`Explosion`) tarvitsee tiedoston alkuun rivin
-`using Jypeli.Assets;`. `Destroy` voidaan kutsua useamman kerran, esimerkiksi omasta koodista ja
+`using Jypeli.Assets;`. `Destroy`-metodia voidaan kutsua useamman kerran, esimerkiksi omasta koodista ja
 `ClearAll`-kutsusta. Tarkistus `if (IsDestroyed) return;` estää siivouksen
 toistumisen.
 
@@ -296,6 +296,6 @@ void VihuKuoli(Vihu vihu)
 ## Katso myös
 
 - [Muita tapahtumia](../tapahtumat/muita.md): `Destroyed`, `AddedToGame`, `Removed` ja laskurin tapahtumat.
-- [Delegaatit](../ohjelmointi/delegaatit.md): parametrien vieminen käsittelijälle.
+- [Delegaatit](../tapahtumat/delegaatit.md): parametrien vieminen käsittelijälle.
 - [Ajastimet](../tapahtumat/ajastimet.md).
 - [Omat käyttöliittymäkomponentit](../kayttoliittyma/omat-kayttoliittymakomponentit.md): ohjaimet `AddedToGame`-tapahtumassa ja `ListenOn`.

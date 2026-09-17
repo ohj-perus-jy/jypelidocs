@@ -6,7 +6,7 @@
 
 Monivalintaikkuna luodaan antamalla sille ikkunan yläosaan tuleva teksti ja vaihtoehdot, joista pelaaja voi valita.
 
-Kaikki `String`-oliot ensimmäisen jälkeen sijoitetaan taulukkoon, josta niitä voi helposti kutsua tapahtumankäsittelijässä kyseiseisen String-olion indeksillä.
+Kaikki `String`-oliot ensimmäisen jälkeen sijoitetaan taulukkoon, josta niitä voi helposti kutsua tapahtumankäsittelijässä kyseisen `String`-olion indeksillä.
 
 ```csharp,ignore
 MultiSelectWindow alkuvalikko = new MultiSelectWindow("Pelin alkuvalikko", "Aloita peli", "Parhaat pisteet", "Lopeta");
@@ -26,7 +26,7 @@ Alla oleva kuva selventää hieman, kuinka annetut merkkijonot sijoittuvat moniv
 
 ### Tapahtumankäsittelijä
 
-Painikkeille voi asettaa tapahtumia `AddItemHandler`-metodilla. Parametriksi tulee napin indeksi (kuinka mones, alkaa nollasta) ja aliohjelma, joka suoritetaan kun nappia painetaan.
+Painikkeille voi asettaa tapahtumia `AddItemHandler`-metodilla. Parametriksi tulee napin indeksi (kuinka mones, alkaa nollasta) ja aliohjelma, joka suoritetaan, kun nappia painetaan.
 
 ```csharp,ignore
 alkuvalikko.AddItemHandler(0, AloitaPeli);
@@ -34,7 +34,7 @@ alkuvalikko.AddItemHandler(1, ParhaatPisteet);
 alkuvalikko.AddItemHandler(2, Exit);
 ```
 
-Valikon eri vaihtoehtoja voi myös selata nuolinäppäimillä, ja vahvistaa valinta Enterillä.
+Valikon eri vaihtoehtoja voi myös selata nuolinäppäimillä ja vahvistaa valinnan Enterillä.
 
 Valikosta valitun vaihtoehdon väri on oletuksena hieman muita vaaleampi.
 
@@ -43,10 +43,10 @@ Valikosta valitun vaihtoehdon väri on oletuksena hieman muita vaaleampi.
 Ikkunasta pääsee oletuksena pois esc-näppäimellä, puhelimen takaisin-painikkeella ja peliohjaimen B-näppäimellä, jolloin valitaan automaattisesti ensimmäinen ("nollas") vaihtoehto. Vaihtoehdon voi vaihtaa `DefaultCancel`-ominaisuutta muuttamalla.
 
 ```csharp,ignore
-alkuvalikko.DefaultCancel = 3;
+alkuvalikko.DefaultCancel = 2;
 ```
 
-Ylläoleva valitsee siis neljännen (0 = ensimmäinen) vaihtoehdon peruutusnäppäimestä. Jos peruutusnäppäin halutaan pois käytöstä, `DefaultCancel`ille voidaan antaa arvo rajojen ulkopuolelta, esimerkiksi -1.
+Yllä oleva valitsee siis kolmannen (0 = ensimmäinen) vaihtoehdon peruutusnäppäimestä. Jos peruutusnäppäin halutaan pois käytöstä, `DefaultCancel`ille voidaan antaa arvo rajojen ulkopuolelta, esimerkiksi -1.
 
 ```csharp,ignore
 alkuvalikko.DefaultCancel = -1;
@@ -144,7 +144,7 @@ Katso myös [fonttien käsittely](fontti.md)
 
 Loput kohdat valikkoon lisätään ensimmäisen kohdan tavoin. Lisää siis koodiisi seuraavat rivit.
 
-Sijoita ne rivien `valikonKohdat.Add(kohta1)` ja `foreach` `(Label valikonKohta in valikonKohdat)` **väliin**.
+Sijoita ne rivien `valikonKohdat.Add(kohta1)` ja `foreach (Label valikonKohta in valikonKohdat)` **väliin**.
 
 ```csharp,ignore
 Label kohta2 = new Label("Parhaat pisteet");
@@ -158,7 +158,7 @@ valikonKohdat.Add(kohta3);
 
 ### Hiiren kuuntelijat
 
-Tehdään seuraavaksi hiirelle kuuntelijat kuhunkin valikkoon liittyen, sekä yleinen kuuntelija, jotta valikon kohdat saadaan korostumaan. Lisää seuraavat rivit `foreach`-silmukan jälkeen
+Tehdään seuraavaksi hiirelle kuuntelijat kuhunkin valikon kohtaan liittyen sekä yleinen kuuntelija, jotta valikon kohdat saadaan korostumaan. Lisää seuraavat rivit `foreach`-silmukan jälkeen:
 
 #### Klikkauskuuntelijat
 
@@ -176,13 +176,13 @@ Esimerkiksi rivi
 Mouse.ListenOn(kohta1, MouseButton.Left, ButtonState.Pressed, AloitaPeli, null);
 ```
 
-kuuntelee hiiren vasenta nappia silloin, kun se on `kohta1`:n päällä, eli tässä tapauksessa "Aloita uusi peli"-kohdan päällä.
+kuuntelee hiiren vasenta nappia silloin, kun se on `kohta1`:n päällä, eli tässä tapauksessa "Aloita uusi peli" -kohdan päällä.
 
 Kun hiiren vasenta nappia klikkaa, suoritetaan annettu aliohjelma, tässä tapauksessa `AloitaPeli`.
 
 #### Valikossa liikkuminen
 
-Mikäli valikon kohta halutaan värjätä erilaiseksi jos hiiri on sen päällä. Se onnistuu seuraavanlaisella koodilla:
+Mikäli valikon kohta halutaan värjätä erilaiseksi, kun hiiri on sen päällä, se onnistuu seuraavanlaisella koodilla:
 
 ```csharp,ignore
 Mouse.ListenOn(kohta1, HoverState.Enter, MouseButton.None, ButtonState.Irrelevant, ValikossaLiikkuminen, null, kohta1, true);
@@ -205,15 +205,15 @@ void ValikossaLiikkuminen(Label kohta, bool paalla)
 }
 ```
 
-Tässä lisättiin kuuntelija 1. valikon kohdalle, joka kutsuu `ValikossaLiikkuminen` -aliohjelmaa aina kun hiiri tulee kohdan päälle, tai poistuu sen päältä ja antaa tälle aliohjelmalle kyseisen valikonkohdan, sekä totuusarvon tuliko hiiri sen päälle, vai poistuiko se.
+Tässä lisättiin kuuntelija 1. valikon kohdalle, joka kutsuu `ValikossaLiikkuminen`-aliohjelmaa aina, kun hiiri tulee kohdan päälle tai poistuu sen päältä, ja antaa tälle aliohjelmalle kyseisen valikon kohdan sekä totuusarvon siitä, tuliko hiiri sen päälle vai poistuiko se.
 
 Vastaavanlaiset kuuntelijat voidaan lisätä muillekin elementeille.
 
-Toistaiseksi `ListenOn` kuuntelijalle on pakko antaa jokin hiiren nappi, vaikka mitään nappulanpainallusta ei kuunneltaisikaan. Tällöin on hyvä antaa `MouseButton.None`, sekä `ButtonState.Irrelevant` jolloin hiiren minkään napin tilalla ei ole merkitystä.
+Toistaiseksi `ListenOn`-kuuntelijalle on pakko antaa jokin hiiren nappi, vaikka mitään nappulanpainallusta ei kuunneltaisikaan. Tällöin on hyvä antaa `MouseButton.None` sekä `ButtonState.Irrelevant`, jolloin hiiren minkään napin tilalla ei ole merkitystä.
 
 ### Kutsuttavat aliohjelmat
 
-Hiiren klikkauksen kuuntelijoita tehdessä määriteltiin muutamia aliohjelmia, jotka täytyy tehdä vielä. Luo siis seuraavat aliohjelmat peliisi ja lisää niihin haluamasi toteutus.
+Hiiren klikkauksen kuuntelijoita tehtäessä määriteltiin muutamia aliohjelmia, jotka täytyy tehdä vielä. Luo siis seuraavat aliohjelmat peliisi ja lisää niihin haluamasi toteutus.
 
 ```csharp,ignore
 void AloitaPeli()

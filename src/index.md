@@ -37,5 +37,4 @@ Kun jokin ei toimi, katso [yleiset virheet](ekstrat/yleiset-virheet.md).
 | [Käyttöliittymä ja laskurit](kayttoliittyma/index.md) | Tekstit, pisteet, valikot ja ikkunat ruudulla. |
 | [Satunnaisuus ja kulmat](matematiikka/index.md) | Satunnaisluvut ja kulmien laskeminen. |
 | [Oma oliotyyppi](oma-oliotyyppi/index.md) | Oma luokka pelihahmolle, jolla on elämät tai omaa käyttäytymistä. |
-| [Ohjelmointi](ohjelmointi/index.md) | Ohjelmoinnin asioita, joihin törmää, kun peli kasvaa yhtä aliohjelmaa suuremmaksi. |
 | [Ekstrat](ekstrat/index.md) | Pikaohje, yleiset virheet, mitä konepellin alla tapahtuu, API-dokumentaatio ja lähdekoodi. |

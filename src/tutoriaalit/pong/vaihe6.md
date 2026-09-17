@@ -6,7 +6,7 @@ Tässä vaiheessa parantelemme mailojen liikuttelua ja tutustumme `if`-lauseesee
 
 ## Rajojen tarkistus
 
-Edellisessä oppaassa laitoimme mailat liikkumaan, mutta pieni puute mailojen liikuttamiseen jäi. Nimittäin mailaa voi liikutella ylös- ja alaspäin rajattomasti! Ei ole varmaankaan hyödyllistä eikä toivottavaa, että mailat voivat mennä pelikentän ulkopuolelle. Tämän korjaamiseksi mailaa pitäisi voida liikuttaa ylöspäin vain silloin, kun se ei ole mennyt kentän yläreunan yli. Vastaavasti alaspäin liikuttaminen pitäisi olla mahdollista vain, kun maila ei ole mennyt alarajan ali.
+Edellisessä oppaassa laitoimme mailat liikkumaan, mutta pieni puute mailojen liikuttamiseen jäi. Nimittäin mailaa voi liikutella ylös- ja alaspäin rajattomasti! Ei ole varmaankaan hyödyllistä eikä toivottavaa, että mailat voivat mennä pelikentän ulkopuolelle. Tämän korjaamiseksi mailaa pitäisi voida liikuttaa ylöspäin vain silloin, kun se ei ole mennyt kentän yläreunan yli. Vastaavasti alaspäin liikuttamisen pitäisi olla mahdollista vain, kun maila ei ole mennyt alarajan ali.
 
 ### Yläreunan tarkistus
 
@@ -18,9 +18,9 @@ Pitäisi lisätä ohjelmakoodiin ehto, jonka mukaan:
 - niin pysäytetään maila.
 - Muuten liikutetaan mailaa normaalisti.
 
-Tällainen tietyllä ehdolla suoritettava koodi voidaan toteuttaa ohjelmoinnissa ***if*-lauseella**. If-lause muodostuu **ehdosta**, ja koodiriveistä jotka suoritetaan **vain jos ehto on totta**. If-lauseen perässä olevien aaltosulkujen väliin kirjoitetaan ne koodirivit, jotka halutaan suorittaa vain jos annettu ehto toteutuu.
+Tällainen tietyllä ehdolla suoritettava koodi voidaan toteuttaa ohjelmoinnissa **`if`-lauseella**. `if`-lause muodostuu **ehdosta** ja koodiriveistä, jotka suoritetaan **vain, jos ehto on totta**. `if`-lauseen perässä olevien aaltosulkujen väliin kirjoitetaan ne koodirivit, jotka halutaan suorittaa vain, jos annettu ehto toteutuu.
 
-**Muokkaa** `AsetaNopeus`-aliohjelmaasi olemaan seuraavanlainen:
+**Muokkaa** `AsetaNopeus`-aliohjelmaasi seuraavanlaiseksi:
 
 ```csharp,ignore
 void AsetaNopeus(PhysicsObject maila, Vector nopeus)
@@ -40,18 +40,18 @@ Mailan ja kentän yläreunojen y-koordinaatit saadaan niiden `Top`-ominaisuudest
 Ehdossa katsotaan, onko mailan yläreuna kentän yläreunan yläpuolella:
 
 - Jos on, niin pysäytetään maila ja return-lauseella tullaan pois aliohjelmasta.
-- Jos ei, niin if-lauseen perässä olevien aaltosulkujen välissä olevia koodirivejä ei suoriteta vaan asetetaan mailalle nopeus normaaliin tapaan.
+- Jos ei, niin `if`-lauseen perässä olevien aaltosulkujen välissä olevia koodirivejä ei suoriteta, vaan asetetaan mailalle nopeus normaaliin tapaan.
 
 > [!KOKEILE]
 
 Pysähtyykö maila yläreunaan? Taitaa kyllä pysähtyä, mutta...
 
 > [!KYSYMYS]
-> Miksi maila ei enää liiku kun se kerran saavuttaa yläreunan? Mieti hetki, ennen kuin jatkat eteenpäin.
+> Miksi maila ei enää liiku, kun se kerran saavuttaa yläreunan? Mieti hetki, ennen kuin jatkat eteenpäin.
 
 ### Toinen yritys
 
-Mailat lopettivat liikkumisen, kun ne saavuttivat kentän yläreunan. Vaikka yritämme yläreunan saavuttamisen jälkeen liikuttaa mailaa alaspäin, *mailan yläreuna on yhä kentän yläreunan yläpuolella*. If-lauseemme ehto siis toteutuu yhä ja maila pysäytetään.
+Mailat lopettivat liikkumisen, kun ne saavuttivat kentän yläreunan. Vaikka yritämme yläreunan saavuttamisen jälkeen liikuttaa mailaa alaspäin, *mailan yläreuna on yhä kentän yläreunan yläpuolella*. `if`-lauseemme ehto siis toteutuu yhä ja maila pysäytetään.
 
 Täytyy siis lisätä vielä yksi ehto edelliseen algoritmiimme:
 
@@ -59,7 +59,7 @@ Täytyy siis lisätä vielä yksi ehto edelliseen algoritmiimme:
 - niin pysäytetään maila.
 - Muuten liikutetaan mailaa normaalisti.
 
-Lisätään toinen ehto samaan if-lauseeseen `AsetaNopeus`-aliohjelmaan:
+Lisätään toinen ehto samaan `if`-lauseeseen `AsetaNopeus`-aliohjelmaan:
 
 ```csharp,ignore
 void AsetaNopeus(PhysicsObject maila, Vector nopeus)
@@ -82,7 +82,7 @@ Ehdon voisi nyt lukea: "Nopeuden y-koordinaatti on suurempi kuin nolla **JA** ma
 
 [Täältä lisätietoa ehtolauseisiin liittyen.](https://ohjelmointi1.it.jyu.fi/luennot/luento6/)
 
-## Alareunan tarkistus
+### Alareunan tarkistus
 
 Nyt kun mailan liikuttelu ylöspäin on kunnossa, tee sama alaspäin liikuttamiselle.
 
@@ -110,15 +110,15 @@ void AsetaNopeus(PhysicsObject maila, Vector nopeus)
 
 > [!KOKEILE]
 
-## 3. XBox-ohjainten lisääminen (valinnainen)
+## 3. Xbox-ohjainten lisääminen (valinnainen)
 
-**Jos haluat**, voit lisätä ohjauksen XBox-360-ohjaimille seuraavasti. Muuten voit hypätä tutoriaalin [seuraavaan vaiheeseen](vaihe7.md).
+**Jos haluat**, voit lisätä ohjauksen Xbox 360 -ohjaimille seuraavasti. Muuten voit hypätä tutoriaalin [seuraavaan vaiheeseen](vaihe7.md).
 
-XBox-ohjainten napit voidaan asettaa helposti käyttämällä samantapaista `Listen`-aliohjelmaa kuin näppäimistön nappien asettamisessa. Ainoa ero on, että tällä kertaa ei kutsuta `Keyboard.Listen`-aliohjelmaa vaan `ControllerX.Listen`-aliohjelmaa. (X:n paikalle ohjaimen numero: `One`, `Two`, `Three` tai `Four`), esimerkiksi `ControllerOne.Listen` kutsuu ohjainta, joka on asetettu ykkösohjaimeksi. `ControllerOne.Listen` ottaa ensimmäisenä parametrina XBox-ohjaimen napin, jota halutaan kuunnella, esimerkiksi `Button.X` tarkoittaa ohjaimen X-nappia.
+Xbox-ohjainten napit voidaan asettaa helposti käyttämällä samantapaista `Listen`-aliohjelmaa kuin näppäimistön nappien asettamisessa. Ainoa ero on, että tällä kertaa ei kutsuta `Keyboard.Listen`-aliohjelmaa vaan `ControllerX.Listen`-aliohjelmaa (X:n paikalle ohjaimen numero: `One`, `Two`, `Three` tai `Four`). Esimerkiksi `ControllerOne.Listen` kutsuu ohjainta, joka on asetettu ykkösohjaimeksi. `ControllerOne.Listen` ottaa ensimmäisenä parametrina Xbox-ohjaimen napin, jota halutaan kuunnella, esimerkiksi `Button.X` tarkoittaa ohjaimen X-nappia.
 
-Tässä tapauksessa voidaan käyttää samaa `AsetaNopeus`-aliohjelmaa myös XBox-ohjaimille.
+Tässä tapauksessa voidaan käyttää samaa `AsetaNopeus`-aliohjelmaa myös Xbox-ohjaimille.
 
-Lisää XBox-ohjainten asetus samaan `AsetaOhjaimet`-aliohjelmaan:
+Lisää Xbox-ohjainten asetus samaan `AsetaOhjaimet`-aliohjelmaan:
 
 ```csharp,ignore
 void AsetaOhjaimet()

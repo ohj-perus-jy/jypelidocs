@@ -8,11 +8,11 @@ Koska lentävä norsu ei näytä hyvältä pelissämme, vaihdetaan kuva lintuun.
 
 Tallenna kuva nimellä `lintu.png`.
 
-Ota esille projektisi kansio ja sieltä projektisi niminen kansio, jonka sisältä löytyy *`Content`*-kansio. Raahaa `PNG`-kuvatiedosto **`Content`**-kansion päälle. Varmista, että osut nimenomaan `Content`-kansion kohdalle, että kuva menee sen sisälle! Tämän jälkeen valitse tämä `lintu.png` Riderin Explorer-näkymästä, klikkaa sitä hiiren oikealla painikkeella (Macilla Ctrl+klikkaus) ja valitse avautuvasta valikosta **`Properties`**.
+Ota esille projektisi kansio ja sieltä projektisi niminen kansio, jonka sisältä löytyy `Content`-kansio. Raahaa `PNG`-kuvatiedosto `Content`-kansion päälle. Varmista, että osut nimenomaan `Content`-kansion kohdalle, että kuva menee sen sisälle! Tämän jälkeen valitse tämä `lintu.png` Riderin Explorer-näkymästä, klikkaa sitä hiiren oikealla painikkeella (Macilla Ctrl+klikkaus) ja valitse avautuvasta valikosta **`Properties`**.
 
 <img src="images/image.png" width="200" />
 
-Etsi kohta jossa lukee **`Copy to Output Directory`** ja vaihda sen sisältö `Copy if newer`.
+Etsi kohta, jossa lukee **`Copy to Output Directory`**, ja vaihda sen arvoksi `Copy if newer`.
 
 Seuraavaksi etsi koodista rivi:
 
@@ -69,7 +69,7 @@ pelaaja1.AnimJump = new Animation(pelaajanHyppykuvat);
 pelaaja1.AnimFall = new Animation(pelaajanKuva);
 ```
 
-Ensimmäinen näistä riveistä lisää hypylle läpsyanimaation ja toinen rivi määrittelee, miltä pelaaja näyttää pudotessaan alas. Tässä esimerkissä käytämme alas putoamisessa normaalia lintu-kuvaa, mutta sitä varten voisi halutessaan piirtää erillisenkin kuvan tai kuvasarjan. Animaatiot menevät automaattisesti päälle, eli niitä ei täydy erikseen koodata toimimaan, kun AnimJump- ja AnimFall-ominaisuudet on asetettu.
+Ensimmäinen näistä riveistä lisää hypylle läpsyanimaation ja toinen rivi määrittelee, miltä pelaaja näyttää pudotessaan alas. Tässä esimerkissä käytämme alas putoamisessa normaalia lintukuvaa, mutta sitä varten voisi halutessaan piirtää erillisenkin kuvan tai kuvasarjan. Animaatiot menevät automaattisesti päälle, eli niitä ei tarvitse erikseen koodata toimimaan, kun AnimJump- ja AnimFall-ominaisuudet on asetettu.
 
 ## Kenttätiedoston merkki `N` merkiksi `L`
 
@@ -92,7 +92,7 @@ N...........................*.....................
 ##################################################
 ```
 
-Muuta merkki 'N' muotoon 'L'. Muutoksen jälkeen tiedoston sisällön pitäisi olla:
+Muuta merkki `N` muotoon `L`. Muutoksen jälkeen tiedoston sisällön pitäisi olla:
 
 ```text
 ##################################################

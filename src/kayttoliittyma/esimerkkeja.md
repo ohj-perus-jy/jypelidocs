@@ -16,7 +16,7 @@ Add(teksti);
 
 ![](images/vihreaa_tekstia_oikeassa_ylakulmassa.png)
 
-## Monta tekstiä päällekäin
+## Monta tekstiä päällekkäin
 
 ```csharp,ignore
 VerticalLayout asettelu = new VerticalLayout();
@@ -41,8 +41,7 @@ laatikko.Add(teksti2);
 ## Ikkuna, jossa on tekstiä
 
 ```csharp,ignore
-MessageWindow ikkuna = new MessageWindow("Eeppinen tarina siitä miten alienit ovat vallanneet
-maan ja pelaajan täytyy piestä ne...");
+MessageWindow ikkuna = new MessageWindow("Eeppinen tarina siitä miten alienit ovat vallanneet maan ja pelaajan täytyy piestä ne...");
 Add(ikkuna);
 ```
 
@@ -59,7 +58,7 @@ DoubleMeter pelaaja2Elama;
 
 Katso myös [laskurien ohje](pistelaskuri.md).
 
-Sekä niiden alustukset, esimerkiksi `Begin()`-aliohjelmassa:
+Lisäksi tarvitaan niiden alustukset, esimerkiksi `Begin()`-aliohjelmassa:
 
 ```csharp,ignore
 pelaaja1Elama = new DoubleMeter(100);
@@ -98,7 +97,7 @@ Inventory, eli esinevalikko: ![](images/inventory.png)
 
 Huomaa, että nykyisellään (versio 4.0.6) Jypeli tukee vain vaaka- sekä pystysuuntaisia sommitteluja. Näin ollen valikon, jossa esineet ovat monessa rivissä, tekeminen on hankalaa.
 
-Kannattaa periä oma luokka valikkoa varten (kts. myös [oman oliotyypin ohje](../oma-oliotyyppi/luokan-periminen.md)):
+Kannattaa periä oma luokka valikkoa varten (ks. myös [oman oliotyypin ohje](../oma-oliotyyppi/luokan-periminen.md)):
 
 ```csharp,ignore
 /// <summary>
@@ -148,7 +147,7 @@ Inventory inventory = new Inventory();
 Add(inventory);
 ```
 
-Esineen lisääminen inventoryyn. tässä `miekka` on `PhysicsObject`-tyyppinen olio:
+Esineen lisääminen inventoryyn. Tässä `miekka` on `PhysicsObject`-tyyppinen olio:
 
 ```csharp,ignore
 inventory.AddItem(miekka, miekanKuva);
@@ -212,7 +211,7 @@ class Tutkanaytto : Widget
 
 void LuoHavittajalentokoneenOhjaamo()
 {
-    Widget ohjaamo = new Widget(Screen.Width, Screen.Height / 2) { Color = Color.Black, SizeByLayout = false };
+    Widget ohjaamo = new Widget(Screen.Width, Screen.Height / 2) { Color = Color.Black, SizingByLayout = false };
     ohjaamo.Layout = new VerticalLayout();
     ohjaamo.Add(new HorizontalSpacer());
     ohjaamo.Add(TeeYlaosa());

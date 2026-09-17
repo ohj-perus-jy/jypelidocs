@@ -1,12 +1,12 @@
 # Sivulle vierivä kenttä
 
-Esim spaceshooter-tyyppisissä peleissä pelaaja on paikallaan ja muut oliot, esimerkiksi vihollisalukset, lähestyvät pelaajaa.
+Esim. spaceshooter-tyyppisissä peleissä pelaaja on paikallaan ja muut oliot, esimerkiksi vihollisalukset, lähestyvät pelaajaa.
 
-Alla on ohje jolla voidaan liikuttaa "muita olioita" pelaajan pysyessä paikallaan.
+Alla on ohje, jolla voidaan liikuttaa "muita olioita" pelaajan pysyessä paikallaan.
 
 Huomaa, että tämä ei ole välttämättä hyvä tapa tehdä ns. sidescroller-pelejä. Sellaisissa peleissä (esim. Geometry Dash) on mielekkäämpää liikuttaa pelaajaa ja kameraa ja pitää muu maailma paikallaan.
 
-Alla olevat rivit kuuluu laittaa luokan yläreunaan, ennen Begin-aliohjelmaan. Suunnalla voi säädellä olioiden liikesuuntaa ja tuhoamisX määrittää, minkä koordinaatin ylittäessään oliot tuhotaan.
+Alla olevat rivit kuuluu laittaa luokan yläreunaan, ennen Begin-aliohjelmaa. Suunnalla voi säädellä olioiden liikesuuntaa ja tuhoamisX määrittää, minkä koordinaatin ylittäessään oliot tuhotaan.
 
 ```csharp,ignore
     private List<GameObject> liikutettavat = new List<GameObject>();
@@ -14,7 +14,7 @@ Alla olevat rivit kuuluu laittaa luokan yläreunaan, ennen Begin-aliohjelmaan. S
     private double tuhoamisX;
 ```
 
-Begin:iin lisätään tuhoamisX:n sijainnin määritys. Samoin luodaan uusi ajastin, jonka avulla saadaan liikutettua olioita vasemmalle. Oliot, jotka halutaan liikkuvan vasemmalle, pitää lisätä liikutettavat-listaan.
+Begin:iin lisätään tuhoamisX:n sijainnin määritys. Samoin luodaan uusi ajastin, jonka avulla saadaan liikutettua olioita vasemmalle. Oliot, joiden halutaan liikkuvan vasemmalle, pitää lisätä liikutettavat-listaan.
 
 ```csharp,ignore
     public override void Begin()

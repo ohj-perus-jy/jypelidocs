@@ -28,7 +28,7 @@ Pause-näppäimeen voi toki liittää myös esimerkiksi valikon esiintulon:
     pausevalikko = new MultiSelectWindow("Pause", "Aloita alusta", "Lopeta");
 
     // Tämän oikeanlainen toiminta vaatii hieman kikkailua, sillä
-    // Näppäimenkuuntelijat lakkaavat toimimasta kun peli on pausella.
+    // näppäimenkuuntelijat lakkaavat toimimasta kun peli on pausella.
     pausevalikko.Closed += (handler) => Pauseta();
     //pausevalikko.AddItemHandler(...);
 

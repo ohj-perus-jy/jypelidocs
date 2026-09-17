@@ -25,7 +25,7 @@ public override void Begin()
 }
 ```
 
-Resoluutiota muutetaan `SetWindowSize`-kutsulla. Parametreiksi ensin leveys, sitten korkeus, ja viimeiseksi `true` tai `false` kokoruututilan tai ikkunan merkiksi (eli int leveys, int korkeus, bool kokoruutu).
+Resoluutiota muutetaan `SetWindowSize`-kutsulla. Parametreiksi ensin leveys, sitten korkeus ja viimeiseksi `true` tai `false` kokoruututilan tai ikkunan merkiksi (eli int leveys, int korkeus, bool kokoruutu).
 
 ## Ikkunan sijainnin muuttaminen
 
@@ -35,10 +35,10 @@ Peli-ikkunan sijaintia on myös mahdollista muuttaa.
 SetWindowPosition(100, 100);
 ```
 
-Tämä komento asettaa ikkunan vasemman yläkulman annettuihin ruutukoordinaatteihin. Ruutukoordinaatit lasketaan näytön vasemmasta yläkulmasta, eli edellä oleva kutsu asettaa ikkunan näytön vasempaan yläkulmaan.
+Tämä komento asettaa ikkunan vasemman yläkulman annettuihin ruutukoordinaatteihin. Ruutukoordinaatit lasketaan näytön vasemmasta yläkulmasta, eli edellä oleva kutsu asettaa ikkunan 100 oikealle ja 100 alaspäin näytön vasemmasta yläkulmasta.
 
 Oleellista on myös huomata, että Y-akseli menee "väärään suuntaan".
 
-Useamman näytön tapauksissa on mahdollista että koordinaatit menevät myös negatiiviselle.
+Useamman näytön tapauksissa on mahdollista, että koordinaatit menevät myös negatiiviselle.
 
-Päänäytön vasen yläkulma on koordinaateissa (0,0). Jos päänäytön vasemmalla puolella on toinen näyttö, on sen x-suuntaiset koordinaatit negatiivisella puolella.
+Päänäytön vasen yläkulma on koordinaateissa (0,0). Jos päänäytön vasemmalla puolella on toinen näyttö, ovat sen x-suuntaiset koordinaatit negatiivisella puolella.

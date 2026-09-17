@@ -10,7 +10,7 @@ arvo kasvaa nollasta yhteen ja kamera zoomaa kenttää lähemmäs.
 Luodaan liukusäätimelle ensin mittari, jonka lähtöarvo on 0, minimiarvo 0 ja maksimiarvo 1. Sidotaan mittari liukusäätimeen.
 `Slider` on nimiavaruudessa `Jypeli.Widgets`, joten tiedoston alkuun tarvitaan rivi `using Jypeli.Widgets;`.
 
-Esimerkki liukusäätimen käytöstä: [​http://www.youtube.com/watch?v=8_5lD57VIK0&feature=relmfu](http://www.youtube.com/watch?v=8_5lD57VIK0&feature=relmfu)
+Esimerkki liukusäätimen käytöstä: [http://www.youtube.com/watch?v=8_5lD57VIK0&feature=relmfu](http://www.youtube.com/watch?v=8_5lD57VIK0&feature=relmfu)
 
 ```csharp,ignore
 void LuoSlider()

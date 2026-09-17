@@ -4,17 +4,17 @@
 
 Joskus peleissä halutaan näyttää ruudulla asioita graafisesti eikä pelkästään numeroarvoilla mitattuna.
 
-Esimerkiksi pelihahmon osumapisteitä voisi kuvata palkilla, joka vähenee kun hahmoon osuu ammus tai palloon kohdistettavaa voimaa voisi kuvata palkilla, joka kasvaa sen mukaan kun kohdistettava voima kasvaa.
+Esimerkiksi pelihahmon osumapisteitä voisi kuvata palkilla, joka vähenee, kun hahmoon osuu ammus, tai palloon kohdistettavaa voimaa voisi kuvata palkilla, joka kasvaa sen mukaan kun kohdistettava voima kasvaa.
 
-Jypelissä palkkinäyttöjä voi tehdä ProgressBar-olion avulla. Se on tavallaan pelkästään näyttö, jonka voi sitoa jonkin laskurin arvoon. Palkki sitten kasvaa tai pienenee laskurin arvon mukaisesti.
+Jypelissä palkkinäyttöjä voi tehdä `ProgressBar`-olion avulla. Se on tavallaan pelkästään näyttö, jonka voi sitoa jonkin laskurin arvoon. Palkki sitten kasvaa tai pienenee laskurin arvon mukaisesti.
 
 ## Vähenevän palkin tekeminen
 
-Tässä esimerkissä luodaan peliin vähenevä elämämittari. Vähenevä mittari voi tietysti pelissä muutakin kuin elämien määrää.
+Tässä esimerkissä luodaan peliin vähenevä elämämittari. Vähenevä mittari voi tietysti kuvata pelissä muutakin kuin elämien määrää.
 
 ### Elämäpalkin luominen
 
-Uutta elämäpalkkia varten tarvitsemme laskurin, joka laskee jäljellä olevien elämien määrää sekä palkin, joka osaa näyttää laskurin arvoa.
+Uutta elämäpalkkia varten tarvitsemme laskurin, joka laskee jäljellä olevien elämien määrää, sekä palkin, joka osaa näyttää laskurin arvoa.
 
 - Tehdään elämälaskurista ensin uusi attribuutti, että pääsemme siihen käsiksi kaikista aliohjelmista:
 
@@ -29,11 +29,11 @@ public class Peli : PhysicsGame
     }
 ```
 
-- Luodaan uusi laskuri jonka alkuarvo on 10. Laskurille pitää erikseen kertoa sen maksimiarvo, jotta palkki tietää milloin laskuri on täynnä.
+- Luodaan uusi laskuri, jonka alkuarvo on 10. Laskurille pitää erikseen kertoa sen maksimiarvo, jotta palkki tietää, milloin laskuri on täynnä.
 
-- Voimme lisätä laskurille tapahtuman, mitä tehdään (eli mikä aliohjelma suoritetaan) sitten kun laskurin arvo menee nollaan (LowerLimit).
+- Voimme lisätä laskurille tapahtuman, mitä tehdään (eli mikä aliohjelma suoritetaan) sitten kun laskurin arvo menee nollaan (`LowerLimit`).
 
-- Tämän jälkeen luodaan uusi ProgressBar, sidotaan se näyttämään laskurin arvoa (BindTo). Palkin luonnissa sille kerrotaan palkin leveys ja korkeus. Lisätään palkki peliin.
+- Tämän jälkeen luodaan uusi `ProgressBar`, sidotaan se näyttämään laskurin arvoa (`BindTo`). Palkin luonnissa sille kerrotaan palkin leveys ja korkeus. Lisätään palkki peliin.
 
 ```csharp,ignore
 void LuoElamalaskuri()
@@ -57,10 +57,10 @@ void ElamaLoppui()
 
 ### Elämälaskurin arvon vähentäminen
 
-Sopivassa paikassa koodissa voimme nyt vähentää elämälaskurin arvoa (esim. milloin pelaaja osuu viholliseen):
+Sopivassa paikassa koodissa voimme nyt vähentää elämälaskurin arvoa (esim. kun pelaaja osuu viholliseen):
 
 ```csharp,ignore
-elamamittari.Value -= 1;
+elamalaskuri.Value -= 1;
 ```
 
 Kun elämät menevät nollaan, elämälaskurin `LowerLimit`-tapahtuma laukeaa ja suoritetaan aliohjelma `ElamaLoppui`.
@@ -92,7 +92,7 @@ Tehdään tässä esimerkissä kasvava voimamittari. Kasvavalla mittarilla voida
 
 ### Voimamittarin tekeminen
 
-Kasvavaa palkkia varten tarvitsemme mittarin, joka laskee voimien määrää ja palkin, joka näyttää mittarin arvoa.
+Kasvavaa palkkia varten tarvitsemme mittarin, joka laskee voimien määrää, ja palkin, joka näyttää mittarin arvoa.
 
 Voimamittaristamme kannattaa tehdä attribuutti, jotta pääsemme siihen käsiksi kaikista aliohjelmista:
 
@@ -118,7 +118,7 @@ voimapalkki.BindTo(voimamittari);
 Add(voimapalkki);
 ```
 
-Palkin luonnissa sille kerrotaan palkin leveys ja korkeus. Muistetaan sitoa laskuri palkkiin (**BindTo**). Lopuksi lisätään palkki ruudulle (**Add**).
+Palkin luonnissa sille kerrotaan palkin leveys ja korkeus. Muistetaan sitoa laskuri palkkiin (`BindTo`). Lopuksi lisätään palkki ruudulle (`Add`).
 
 Palkin sijainti ruudulla voidaan asettaa sen x- ja y-koordinaateista:
 
@@ -148,7 +148,7 @@ voimapalkki.Angle = Angle.FromDegrees(30);
 
 ### Voimamittarin arvon kasvattaminen
 
-Sopivassa paikassa koodissa voimme nyt vähentää elämälaskurin arvoa (esim. kun jokin näppäin on painettuna pohjaan):
+Sopivassa paikassa koodissa voimme nyt kasvattaa voimamittarin arvoa (esim. kun jokin näppäin on painettuna pohjaan):
 
 ```csharp,ignore
 voimamittari.Value += 1;
@@ -165,7 +165,7 @@ voimamittari.Value = 0;
 Jos pelissämme halutaan tietää, milloin kasvava mittari on täynnä, se voidaan tehdä mittarin tapahtumalla `UpperLimit`.
 
 ```csharp,ignore
-voimamittari.UpperLimit = VoimamittariTaynna;
+voimamittari.UpperLimit += VoimamittariTaynna;
 ```
 
 Aliohjelmaa `VoimamittariTaynna` kutsutaan, kun voimamittari saavuttaa maksimiarvonsa:

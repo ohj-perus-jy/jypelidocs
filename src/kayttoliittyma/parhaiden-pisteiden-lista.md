@@ -4,11 +4,11 @@ Jypeli sisältää valmiit luokat `EasyHighScore` ja `ScoreList` parhaiden piste
 
 Näistä `EasyHighScore` on helppokäyttöisempi ja nopeampi toteuttaa.
 
-`ScoreList` tarjoaa enemmän mahdollisuusksia muokata parhaiden pisteiden listaa, mutta samalla sen käyttö vaatii myös hieman enemmän työtä
+`ScoreList` tarjoaa enemmän mahdollisuuksia muokata parhaiden pisteiden listaa, mutta samalla sen käyttö vaatii myös hieman enemmän työtä.
 
 ## EasyHighScore - parhaiden pisteiden lista nopeasti
 
-`EasyHighScore`n käyttäminen on nopea tapa tehdä omaan peliin parhaiden pisteiden lista. `EasyHighScore` osaa automaattisesti tallentaa pisteet tiedostoon, jossa ne säilyvät vaikka pelin sulkee välillä.
+`EasyHighScore`n käyttäminen on nopea tapa tehdä omaan peliin parhaiden pisteiden lista. `EasyHighScore` osaa automaattisesti tallentaa pisteet tiedostoon, jossa ne säilyvät, vaikka pelin sulkee välillä.
 
 ### EasyHighScore-listan luominen
 
@@ -28,7 +28,7 @@ public class Peli : Game
 
 Kun halutaan syöttää pisteitä listalle, kutsutaan metodia `EnterAndShow`, jolle annetaan parametrina se pistemäärä, jolla listalle pyritään, esimerkiksi pistelaskurin arvo.
 
-Parhaiden pisteiden listalle voi lisäksi kertoa, mikä aliohjelma suoritetaan kun parhaat pisteet näyttävä ikkuna suljetaan.
+Parhaiden pisteiden listalle voi lisäksi kertoa, mikä aliohjelma suoritetaan, kun parhaat pisteet näyttävä ikkuna suljetaan.
 
 ```csharp,ignore
 private void PelaajaKuoli()
@@ -60,7 +60,7 @@ topLista.Show();
 
 ## ScoreList - muokattavamman pistelistan tekeminen
 
-Jos EasyHighScore on riittämätön, voi parhaiden pisteiden tekemiseen käyttää vapaammin muokattavaa ScoreListiä. ScoreListissä joutuu itse huolehtimaan mm. milloin pisteet tallennetaan tiedostoon, mutta vastineeksi saa muokattavamman parhaiden pisteiden listan.
+Jos `EasyHighScore` on riittämätön, voi parhaiden pisteiden tekemiseen käyttää vapaammin muokattavaa `ScoreList`iä. `ScoreList`issä joutuu itse huolehtimaan mm. siitä, milloin pisteet tallennetaan tiedostoon, mutta vastineeksi saa muokattavamman parhaiden pisteiden listan.
 
 ### ScoreList-listan luominen
 
@@ -85,7 +85,7 @@ public class Peli : Game
 
 On syytä huomioida, että jos järjestyksen asettaa käänteiseksi, myös raja muuttuu käänteiseksi, eli ainoastaan rajaa pienemmät pisteet hyväksytään.
 
-Listan lataaminen tiedostosta voidaan tehdä esimerkiksi `Begin`-aliohjelmass pelin alustuksen yhteydessä. Tässä tapauksessa tiedoston nimi on `pisteet.xml`.
+Listan lataaminen tiedostosta voidaan tehdä esimerkiksi `Begin`-aliohjelmassa pelin alustuksen yhteydessä. Tässä tapauksessa tiedoston nimi on `pisteet.xml`.
 
 ```csharp,ignore
 public override void Begin()
@@ -113,8 +113,8 @@ Add(topIkkuna);
 `HighScoreWindow`-olion rakentajan parametrit ovat järjestyksessä:
 
 - **"Parhaat pisteet"** - ennen tuloksia näytettävä viesti
-- **"Onneksi olkoon, pääsit listalle pisteillä %p! Syötä nimesi:"** - viesti joka näytetään, jos pisteet oikeuttavat listasijoitukseen
-- **topLista** - lista jonka sisältö näytetään, ja jolle uusi nimi lisätään tarvittaessa
+- **"Onneksi olkoon, pääsit listalle pisteillä %p! Syötä nimesi:"** - viesti, joka näytetään, jos pisteet oikeuttavat listasijoitukseen
+- **topLista** - lista, jonka sisältö näytetään ja jolle uusi nimi lisätään tarvittaessa
 - **pisteet** - edellisessä pelissä saavutettu pistemäärä
 
 Jos pistemäärä oikeuttaa sijoitukseen listalla, kysytään pelaajan nimeä ennen listan näyttämistä.
@@ -129,7 +129,7 @@ topIkkuna.Closed += TallennaPisteet;
 Add(topIkkuna);
 ```
 
-Ensimmäinen rivi luo pisteikkunan ja kiinnittää `topLista`n siihen. Toinen rivi lisää tapahtuman `TallennaPisteet` suoritettavaksi, kun ikkuna suljetaan. Tapahtuman nimi `TallennaPisteet` vastaa saman nimistä aliohjelmaa pelissä, ja siihen pisteiden tallennuksen yhteydessä. Kolmas rivi lisää ikkunan ruudulle.
+Ensimmäinen rivi luo pisteikkunan ja kiinnittää `topLista`n siihen. Toinen rivi lisää tapahtuman `TallennaPisteet` suoritettavaksi, kun ikkuna suljetaan. Tapahtuman nimi `TallennaPisteet` vastaa samannimistä aliohjelmaa pelissä, ja siihen palataan pisteiden tallennuksen yhteydessä. Kolmas rivi lisää ikkunan ruudulle.
 
 ### ScoreList-listan tallentaminen tiedostoon
 
@@ -146,18 +146,18 @@ Näin pisteet tallentuvat samaan `pisteet.xml`-tiedostoon, josta ne ladattiinkin
 
 ## Pisteiden esitystavan muuttaminen
 
-Oletuksena pisteet näytetään niin monen desimaalin tarkkuudella kuin ne on annettu, mutta aina näin ei haluta. Pisteiden esitystapaa voidaan muuttaa EasyHighScoren tapauksessa seuraavasti:
+Oletuksena pisteet näytetään niin monen desimaalin tarkkuudella kuin ne on annettu, mutta aina näin ei haluta. Pisteiden esitystapaa voidaan muuttaa `EasyHighScore`n tapauksessa seuraavasti:
 
 ```csharp,ignore
 helppoLista.HighScoreWindow.NameInputWindow.Message.Text = "Onneksi olkoon! Sait {0:0.00} pistettä!";
 helppoLista.HighScoreWindow.List.ScoreFormat = "{0:0.00}";
 ```
 
-Vastaavasti HighScoreListille
+Vastaavasti `HighScoreWindow`-ikkunalle:
 
 ```csharp,ignore
 hsLista.NameInputWindow.Message.Text = "Onneksi olkoon! Sait {0:0.00} pistettä. Anna nimesi";
 hsLista.List.ScoreFormat = "{0:0.00}";
 ```
 
-Ensimmäinen rivi määrää tekstin ikkunassa joka kysyy pelaajan nimeä, ja toinen pisteiden esitystavan itse listassa. Lisätietoja C#:n muotoilumerkkijonoista löydät esimerkiksi [​täältä](http://www.csharp-examples.net/string-format-double).
+Ensimmäinen rivi määrää tekstin ikkunassa, joka kysyy pelaajan nimeä, ja toinen pisteiden esitystavan itse listassa. Lisätietoja C#:n muotoilumerkkijonoista löydät esimerkiksi [täältä](http://www.csharp-examples.net/string-format-double).

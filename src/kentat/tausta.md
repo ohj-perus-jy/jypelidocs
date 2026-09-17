@@ -104,7 +104,7 @@ Level.Background.Color = Color.Green;
 
 </details>
 
-Näet eri värivaihtoehdot kirjoittamalla Color ja piste. Listasta voit valita useista valmiista väreistä haluamasi nuolinäppäimillä ja sitten enteriä painamalla.
+Näet eri värivaihtoehdot kirjoittamalla `Color` ja pisteen. Listasta voit valita useista valmiista väreistä haluamasi nuolinäppäimillä ja sitten enteriä painamalla.
 
 ![](images/Varivalinta.png)
 
@@ -114,13 +114,13 @@ Toinen tapa asettaa taustaväri on asettaa jokaisen värin arvo tarkalleen:
 Level.Background.Color = new Color(150, 150, 150);
 ```
 
-- Nyt kentästä tuli harmaa. Väriarvot voivat vaihdella 0-255 välillä.
+- Nyt kentästä tuli harmaa. Väriarvot voivat vaihdella välillä 0–255.
 
 Eri väriarvoja voit kokeilla esimerkiksi [Googlen ColorPickerillä](https://www.google.com/search?q=color+picker).
 
 ## 1. Kuvatiedostosta {#taustakuva}
 
-Jos haluat asettaa kentälle oman taustakuvan tehdään se seuraavasti.
+Jos haluat asettaa kentälle oman taustakuvan, tehdään se seuraavasti.
 
 - Piirrä taustakuva kuvankäsittelyohjelmalla. Taustakuvan koko on hyvä olla kentän kokoinen (esim. 1024x768). Tallenna taustakuva esimerkiksi png-muodossa. Lisää kuvatiedosto projektiin, katso ohjeet sisällön tuomisesta projektiin. Sen jälkeen kun kuva on lisätty projektiin, ladataan kuva ensin muuttujaan luokan alussa seuraavasti.
 
@@ -147,7 +147,7 @@ Level.Background.Image = taustakuva;
 
 ![](images/taustakuva3.png)
 
-Jos halutaan luoda liukuväritausta, esimerkiksi että alaosa valkoinen ja yläosa on sininen, luodaan taustakuva seuraavasti:
+Jos halutaan luoda liukuväritausta, esimerkiksi niin, että alaosa on valkoinen ja yläosa sininen, luodaan taustakuva seuraavasti:
 
 ```csharp,ignore
 Level.Background.CreateGradient(Color.White, Color.Blue);
@@ -159,7 +159,7 @@ Tai käyttämällä itse määritettyjä värejä:
 Level.Background.CreateGradient(new Color(0, 0, 0), new Color(150, 150, 150));
 ```
 
-Värien määrityksessä ensimmäinen arvo kertoo punaisen värin määrän, toinen arvo vihreän värin määrän ja kolmas sinisen värin määrän. "Värimaailman" lyhenne RGB (Red Green Blue) tulee tästä. Lyhenteestä on helppo muistaa missä järjestyksessä värit tulevat. Määrät ovat välillä 0-255.
+Värien määrityksessä ensimmäinen arvo kertoo punaisen värin määrän, toinen arvo vihreän värin määrän ja kolmas sinisen värin määrän. "Värimaailman" lyhenne RGB (Red Green Blue) tulee tästä. Lyhenteestä on helppo muistaa, missä järjestyksessä värit tulevat. Määrät ovat välillä 0–255.
 
 ## 3. Avaruustausta
 
@@ -177,7 +177,7 @@ Jos haluat valita tähtien lukumäärän, niin anna niiden määrä parametrina:
 Level.Background.CreateStars(10000);
 ```
 
-## 4. Kuvien piirtäminen vierekkäin täyttämään koko kenttä
+## 4. Kuvien piirtäminen vierekkäin täyttämään koko kentän
 
 Oletuksena taustakuva piirretään kentälle juuri sen kokoisena kuin se on tiedostossa.
 
@@ -218,16 +218,16 @@ ScaleToLevelFull()     - skaalaa käyttäen jompaakumpaa niin että kentälle ei
 
 ## 6. Liikkuva taustakuva {#liukuva}
 
-### Liukuvan taustakuvan tekeminen (taustakuva liikkuu kun kamera liikkuu)
+### Liukuvan taustakuvan tekeminen (taustakuva liikkuu, kun kamera liikkuu)
 
 Piirrä kuva, lisää se projektiin ja lataa kuva muuttujaan kuten kohdassa 1.
 
-Nyt sen sijaan, että kuva annetaan taustakuvaksi, tehdään siitä peliolio joka lisätään kentän taustalle.
+Nyt sen sijaan, että kuva annetaan taustakuvaksi, tehdään siitä peliolio, joka lisätään kentän taustalle.
 
 1.  Tehdään uusi peliolio.
 2.  Annetaan peliolion kuvaksi haluamamme kuva.
 3.  Lisätään peliolio kentälle muiden siellä olevien olioiden takana olevalle [kerrokselle](../oliot/kerrokset.md) Add-komennolla.
-4.  Annetaan kerrokselle vektori, joka kertoo kuinka paljon tämän kerroksen olioiden paikka muuttuu kameran siirtyessä suhteessa muihin kerroksiin. Esimerkiksi arvo 0.5 aiheuttaa siirtymän joka on puolet normaalista.
+4.  Annetaan kerrokselle vektori, joka kertoo, kuinka paljon tämän kerroksen olioiden paikka muuttuu kameran siirtyessä suhteessa muihin kerroksiin. Esimerkiksi arvo 0.5 aiheuttaa siirtymän, joka on puolet normaalista.
 
 ```csharp,ignore
 GameObject taustapilvet = new GameObject(Screen.Width, Screen.Height);
@@ -242,7 +242,7 @@ Vinkki: tekemällä liikkuvasta kuvasta läpinäkyvän, kentän oikea taustakuva
 
 ### Saman taustakuvan pyörittäminen
 
-Alla karuselli, joka pyörii y-akselilla tasaisella nopeudella ajan mukana. Kuvia voi lisätä vapaasti `LisaaTaustakuva(...)`-rivejä lisäämällä. Idea on että on (vähintään) kaksi kuvaoliota joita sitten pyöritellään. Positiivisella skrollausnopeudella kuvat liikkuvat alhaalta ylös ja negatiivisella ylhäältä alas. Kokeile, testaa ja paranna.
+Alla karuselli, joka pyörii y-akselilla tasaisella nopeudella ajan mukana. Kuvia voi lisätä vapaasti `LisaaTaustakuva(...)`-rivejä lisäämällä. Idea on, että on (vähintään) kaksi kuvaoliota, joita sitten pyöritellään. Positiivisella skrollausnopeudella kuvat liikkuvat alhaalta ylös ja negatiivisella ylhäältä alas. Kokeile, testaa ja paranna.
 
 ```csharp,ignore
 int scrollausnopeus = -5;

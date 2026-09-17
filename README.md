@@ -10,7 +10,7 @@ osoitteessa <https://ohj-perus-jy.github.io/jypelidocs/>.
 Jos haluat osallistua sivuston kehittämiseen, kloonaa repo ja aloita muokkaus.
 
 Sivusto rakennetaan **Zensicalilla**. Suositeltu tapa on mukana oleva
-DevContainer, joka asentaa tarvittavat työkalut (`zensical/setup.sh`) avatessa. Ilman
+DevContainer, joka asentaa tarvittavat työkalut (`zensical/setup.sh`) avattaessa. Ilman
 DevContaineria riittää Python 3.11 ja `./zensical/setup.sh`.
 
 Kehityspalvelin, joka seuraa `src/`-puun muutoksia:
@@ -21,9 +21,9 @@ Kehityspalvelin, joka seuraa `src/`-puun muutoksia:
 ./zensical/run.sh test       # testit (pytest + Playwright)
 ```
 
-**Muokattava sisältö on kansiossa `src/`. 
+**Muokattava sisältö on kansiossa `src/`.**
 
-Tee pull request, kun olet valmis. 
+Tee pull request, kun olet valmis.
 
 ## Ongelmista ilmoittaminen
 

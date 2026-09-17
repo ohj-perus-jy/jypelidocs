@@ -37,4 +37,4 @@ Huomaa myös, että hiiren tai kosketusnäytön kuuntelu olisi yleensä toivotta
 Game.Mouse.ListenOn(this, MouseButton.Left, ButtonState.Pressed, KasitteleKlikkaus, null).InContext(this);
 ```
 
-Näin ohjaintapahtuma tulee vain kun hiiren kursori tai käyttäjän sormi on kyseisen olion päällä. Lisätietoja ohjainten kuuntelusta löydät [täältä](../ohjaimet/ohjainten-lisays.md).
+Näin ohjaintapahtuma tulee vain, kun hiiren kursori tai käyttäjän sormi on kyseisen olion päällä. Lisätietoja ohjainten kuuntelusta löydät [täältä](../ohjaimet/ohjainten-lisays.md).

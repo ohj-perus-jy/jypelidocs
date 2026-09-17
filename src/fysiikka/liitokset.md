@@ -10,7 +10,7 @@ Useimmin käytetty liitos on `AxleJoint`. Liitokselle on useita käyttötapoja.
 
 ### Kahden olion kiinnittäminen toisiinsa
 
-Akseliliitoksella voidaan kiinnittää kaksi oliota toisiinsa niin, että kun ne liikkuvat, niiden etäisyys pysyy vakiona. Tällainen liitos voidaan luoda antamalla AxleJoint-olion rakentajalle kaksi oliota ja piste ensimmäisen kappaleen koordinaateissa, jonka läpi akseli lyödään.
+Akseliliitoksella voidaan kiinnittää kaksi oliota toisiinsa niin, että kun ne liikkuvat, niiden etäisyys pysyy vakiona. Tällainen liitos voidaan luoda antamalla `AxleJoint`-olion rakentajalle kaksi oliota ja piste ensimmäisen kappaleen koordinaateissa, jonka läpi akseli lyödään.
 
 ```csharp,ignore
 AxleJoint liitos = new AxleJoint(olio1, olio2, akselinPaikka);
@@ -82,7 +82,7 @@ public class Liitos2 : PhysicsGame
 
 ### Liitoksen pehmeys
 
-Liitokselle voidaan asettaa myös pehmeys, eli kuinka paljon liitos joustaa kappaleidein liikkuessa.
+Liitokselle voidaan asettaa myös pehmeys, eli kuinka paljon liitos joustaa kappaleiden liikkuessa.
 
 ```csharp,ignore
 liitos.Softness = 0.5;
@@ -100,13 +100,13 @@ liitos.Destroy();
 
 ## WheelJoint
 
-Liitos joka on erityisesti tarkoitettu ajoneuvojen renkaita varten. Sisältää sisäänrakennetun moottorin pyöritystä varten.
+Liitos, joka on erityisesti tarkoitettu ajoneuvojen renkaita varten. Sisältää sisäänrakennetun moottorin pyöritystä varten.
 
 ### Kappaleiden liittäminen toisiinsa
 
 Rengasliitos toimii melko samalla tavalla kuin akseliliitos, jonka pituudeksi olisi asetettu nolla. Liitos kiinnittää kappaleet toisiinsa niin, että liitospisteessä oleva moottori voi pyörittää niitä.
 
-Oletuksena liitos tulee juuri siihen pisteeseen missä toisena annettu kappale on. Tässä tapauksessa renkaan keskipisteeseen:
+Oletuksena liitos tulee juuri siihen pisteeseen, missä toisena annettu kappale on. Tässä tapauksessa renkaan keskipisteeseen:
 
 ```csharp,ignore
 WheelJoint moottori = new WheelJoint(auto, rengas);
@@ -122,7 +122,7 @@ Liitoksen ominaisuuksia:
 
 | Nimi | Tyyppi | Selitys |
 |:---|:---|:---|
-| Axis | Vector | Akseli jonka suhteen liitos joustaa. Oletuksena `Vector.One`, eli joustaa joka suuntaan. Esimerkiksi `Vector.UnitY` tarkoittaa että joustaa ainoastaan pystysuunnassa. |
+| Axis | Vector | Akseli, jonka suhteen liitos joustaa. Oletuksena `Vector.One`, eli joustaa joka suuntaan. Esimerkiksi `Vector.UnitY` tarkoittaa, että liitos joustaa ainoastaan pystysuunnassa. |
 | DampingRatio | double | Liitoksen oskillaation vaimennuskerroin. |
 | Softness | double | Kuinka helposti liitos joustaa. |
 
@@ -132,7 +132,7 @@ Liitoksen moottorille on myös muutamia ominaisuuksia:
 |:---|:---|:---|
 | MaxMotorTorque | double | Kuinka kovaa moottori vääntää, vaikuttaa esimerkiksi auton kiihtyvyyteen. |
 | MotorSpeed | double | Kuinka nopeasti moottori yrittää pyöriä, radiaaneina sekunnissa. `2 * Math.PI` = yksi kierros sekunnissa. |
-| MotorEnabled | bool | Moottori päälle/pois. Pois päältä ollessa rengas pyörii vapaasti. |
+| MotorEnabled | bool | Moottori päälle/pois. Moottorin ollessa pois päältä rengas pyörii vapaasti. |
 
 Lopuksi liitos pitää muistaa lisätä peliin:
 
@@ -291,19 +291,19 @@ Add(p1);
 
 PhysicsObject p2 = new PhysicsObject(2 * 25.0, 2 * 25.0, Shape.Circle);
 p2.X = 200;
-p2.Y = 200 + p1.Y + 50 + 25;
-Add(p1);
+p2.Y = p1.Y + 50 + 25;
+Add(p2);
 
 PhysicsObject p3 = new PhysicsObject(2 * 15.0, 2 * 15.0, Shape.Circle);
 p3.X = 200;
-p3.Y = 200 + p2.Y + 25 + 15;
-Add(p1);
+p3.Y = p2.Y + 25 + 15;
+Add(p3);
 
 PhysicsStructure lumiukko = new PhysicsStructure( p1, p2, p3 );
 Add(lumiukko);
 ```
 
-Toinen vaihtoehto on tehdä rakenne ensin ja vasta sitten lisätä fysiikkaoliot rakenteeseen. Huomaa kuitenkin, että tällä tavalla lisättäessä osaolioiden koordinaatit ovat suhteessa rakenneolion keskipisteeseen, eli esim. seuraava esimerkki vastaa täysin ylläolevaa, vaikka palloille asetetut koordinaatit poikkeavatkin edellisistä.
+Toinen vaihtoehto on tehdä rakenne ensin ja vasta sitten lisätä fysiikkaoliot rakenteeseen. Huomaa kuitenkin, että tällä tavalla lisättäessä osaolioiden koordinaatit ovat suhteessa rakenneolion keskipisteeseen, eli esim. seuraava esimerkki vastaa täysin yllä olevaa, vaikka palloille asetetut koordinaatit poikkeavatkin edellisistä.
 
 ```csharp,ignore
 PhysicsStructure lumiukko = new PhysicsStructure();
@@ -337,7 +337,7 @@ lumiukko.Softness = 3;
 
 ### Rakenteet ja törmäysten käsittely
 
-Rakenteille on myös mahdollista asettaa törmäyskäsittelijöitä. Näin saadaan törmäystapahtuma kun mikä tahansa rakenteen osista törmää.
+Rakenteille on myös mahdollista asettaa törmäyskäsittelijöitä. Näin saadaan törmäystapahtuma, kun mikä tahansa rakenteen osista törmää.
 
 ```csharp,ignore
 void TeeLumiukko()
@@ -363,7 +363,7 @@ if (olio.ParentStructure == ukko)
 }
 ```
 
-`ParentStructure` on suora viite fysiikkarakenteeseen johon olio kuuluu. Jos olio ei kuulu mihinkään rakenteeseen, `ParentStructure` saa arvon `null`.
+`ParentStructure` on suora viite fysiikkarakenteeseen, johon olio kuuluu. Jos olio ei kuulu mihinkään rakenteeseen, `ParentStructure` saa arvon `null`.
 
 ```csharp,ignore
 if (olio.ParentStructure != null)
@@ -372,4 +372,4 @@ if (olio.ParentStructure != null)
 }
 ```
 
-Ylläoleva esimerkki ensin tarkistaa, kuuluuko olio johonkin rakenteeseen ja jos kuuluu, lyö koko rakennetta suuntaan (100, 0). Jos tarkistusta ei tehdä ja olio ei kuulu mihinkään rakenteeseen, ohjelma kaatuu `NullPointerException`-poikkeukseen (koska yritetään "lyödä tyhjää").
+Yllä oleva esimerkki ensin tarkistaa, kuuluuko olio johonkin rakenteeseen, ja jos kuuluu, lyö koko rakennetta suuntaan (100, 0). Jos tarkistusta ei tehdä ja olio ei kuulu mihinkään rakenteeseen, ohjelma kaatuu `NullReferenceException`-poikkeukseen (koska yritetään "lyödä tyhjää").

@@ -2,15 +2,15 @@
 
 Jypelissä pelin olioille voi lisätä animaatioita eli liikkuvaa kuvaa. Oikeastaan animaatio koostuu useasta yksittäisestä kuvasta, jotka näytetään peräkkäin.
 
-Aluksi täytyy siis piirtää animaatio piirto-ohjelmaa (esimerkiksi Paint.NET) käyttäen, esimerkiksi näin.
+Aluksi täytyy siis piirtää animaatio piirto-ohjelmaa (esimerkiksi Paint.NET) käyttäen.
 
-!
+<!-- kuva puuttuu -->
 
-<span class="red">TODO: TIMIIN</span>
+<!-- TODO: TIMIIN -->
 
 ## Animaation lataaminen
 
-Kuvat on ensin liitettävä projektiin yksitellen (lue [Sisällön tuominen peliin](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin). Sen jälkeen kuvat ladataan koodissa taulukkoon, jonka jälkeen niistä voidaan koostaa animaatio.
+Kuvat on ensin liitettävä projektiin yksitellen (lue [Sisällön tuominen peliin](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin)). Sen jälkeen kuvat ladataan koodissa taulukkoon, jonka jälkeen niistä voidaan koostaa animaatio.
 
 ```csharp,ignore
 public class Peli : PhysicsGame
@@ -29,11 +29,11 @@ Rivi
 private Image[] ukkelinKavely = LoadImages("uk2anoik1", "uk2anoik2", "uk2anoik3");
 ```
 
-siis lataa kuvat taulukkoon. Kuvien nimet laitetaan lainausmerkkeihin ja erotetaan pilkulla, huomaa että tiedostopäätettä (esim .png) ei tarvitse kirjoittaa.
+siis lataa kuvat taulukkoon. Kuvien nimet laitetaan lainausmerkkeihin ja erotetaan pilkulla, huomaa, että tiedostopäätettä (esim. .png) ei tarvitse kirjoittaa.
 
 ## Animaation asettaminen oliolle
 
-Kun animaatio on ladattu jommalla kummalla yo. tavoista, se voidaan asettaa oliolle missä vaiheessa halutaan. Yleensä animaatio asetetaan heti olion luonnin jälkeen.
+Kun animaatio on ladattu jommallakummalla yo. tavoista, se voidaan asettaa oliolle missä vaiheessa halutaan. Yleensä animaatio asetetaan heti olion luonnin jälkeen.
 
 ```csharp,ignore
 pelaaja.Animation = new Animation(ukkelinKavely);
@@ -68,7 +68,7 @@ pelaaja.Animation.FPS = 10;
 
 ### Animaation peilaaminen pysty- tai vaakasuunnassa
 
-Animaatio voidaan **peilata** (Mirror) tai **kääntää ylöalaisin** (Flip) koodissa, jolloin saadaan sama animaatio eri suuntiin, esimerkiksi eri suuntiin liikkumista varten.
+Animaatio voidaan **peilata** (Mirror) tai **kääntää ylösalaisin** (Flip) koodissa, jolloin saadaan sama animaatio eri suuntiin, esimerkiksi eri suuntiin liikkumista varten.
 
 ```csharp,ignore
 Animation ukkeliPeilattu = Animation.Mirror(ukkeli);
@@ -89,9 +89,9 @@ Animation ukkeliYlosalaisin = Animation.Flip(ukkeli);
 
 Kuvat kannattaa piirtää niin, että niissä **pelaajan rintamasuunta on oikealle**. Silloin animaatiot **kääntyvät automaattisesti vasemmalle ja oikealle**, jos liikuttamiseen käyttää hahmon **Walk**-metodia.
 
-Kuvat kannattaa ladata muuttujiin pelin alussa. Katso tämän ohjeen alusta, jos et muista miten se tehdään.
+Kuvat kannattaa ladata muuttujiin pelin alussa. Katso tämän ohjeen alusta, jos et muista, miten se tehdään.
 
-Kun kuvat on ladattu mukaan peliin, asetetaan kuvista uudet animaatiot `PlatformCharacterille` pelaaja1:
+Kun kuvat on ladattu mukaan peliin, asetetaan kuvista uudet animaatiot `PlatformCharacter`-oliolle `pelaaja1`:
 
 ```csharp,ignore
 pelaaja1.AnimWalk = new Animation(kavelyAnimaatio);

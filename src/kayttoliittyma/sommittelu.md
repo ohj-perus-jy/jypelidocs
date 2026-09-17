@@ -1,13 +1,13 @@
 # Sommittelu
 
-Sommitteluilla (layout) asemoidaan käyttöliittymän elementtejä automaattisesti. Sommitteluiden avulla välttyy itse kirjoittamasta koodia, joilla komponentit sijoitetaan paikoilleen. Näin käyttöliittymä on myös helppo saada toimimaan erikokoisilla ruuduilla.
+Sommitteluilla (layout) asemoidaan käyttöliittymän elementtejä automaattisesti. Sommitteluiden avulla välttyy itse kirjoittamasta koodia, jolla komponentit sijoitetaan paikoilleen. Näin käyttöliittymä on myös helppo saada toimimaan erikokoisilla ruuduilla.
 
 Jypelissä on valmiina seuraavat sommittelut:
 
 - `HorizontalLayout` sommittelee widgetit vierekkäin vaakasuunnassa.
 - `VerticalLayout` sommittelee widgetit päällekkäin pystysuunnassa.
 
-Sommittelua varten tarvitaan aina joku emo-widgetti, jonka sisälle asemoitavat oliot lisätään. Sommittelun voi antaa suoraan rakentajassa tai käyttämällä ominaisuutta `Layout`. Tällöin emo-widgettiin lisätyt oliot asemoidaan sommittelun mukaan:
+Sommittelua varten tarvitaan aina jokin emo-widgetti, jonka sisälle asemoitavat oliot lisätään. Sommittelun voi antaa suoraan rakentajassa tai käyttämällä ominaisuutta `Layout`. Tällöin emo-widgettiin lisätyt oliot asemoidaan sommittelun mukaan:
 
 ```csharp,ignore
 Widget alusta = new Widget(new HorizontalLayout());
@@ -24,14 +24,14 @@ alusta.Add(lapsiolio);
 Sommittelu tapahtuu seuraavien sommiteltavien olioiden ominaisuuksien perusteella:
 
 - `PreferredSize` - Kuinka suuri olio haluaisi olla
-- `HorizontalSizing` - Kuinka olio käyttäytyy jos käytössä oleva leveys on eri kuin toivottu (PreferredSize.X)
-- `VerticalSizing` - Kuinka olio käyttäytyy jos käytössä oleva korkeus on eri kuin toivottu
+- `HorizontalSizing` - Kuinka olio käyttäytyy, jos käytössä oleva leveys on eri kuin toivottu (`PreferredSize.X`)
+- `VerticalSizing` - Kuinka olio käyttäytyy, jos käytössä oleva korkeus on eri kuin toivottu
 
 **HUOM!** Olion koon muuttaminen ei saa muuttaa `PreferredSize`-ominaisuutta! (koska jos layout asettaa koon, mikä muuttaa toivottua kokoa, mikä aiheuttaa uuden koon muutoksen, mikä muuttaa toivottua kokoa, mikä taas...)
 
 ## Automaattinen koko
 
-Esimerkki yksinkertaisesta pystysuuntaisesta asettelusta. Tässä emo-widget (muuttujassa `lista`) asettaa kokonsa automaattisesti sellaiseksi, että lapsioliot mahtuvat sen sisälle.
+Esimerkki yksinkertaisesta pystysuuntaisesta asettelusta. Tässä emo-widgetti (muuttujassa `lista`) asettaa kokonsa automaattisesti sellaiseksi, että lapsioliot mahtuvat sen sisälle.
 
 ```csharp,ignore
 Widget lista = new Widget(new VerticalLayout());
@@ -120,7 +120,7 @@ lista.SizingByLayout = false;
 lista.Layout = new VerticalLayout();
 ```
 
-Jos koko on pienempi kuin mitä lapsiolioiden toivoma koko (`PreferredSize`) yhteensä, niin lapsiolioita kutistetaan jotta ne mahtuvat emon sisälle. Tässä esimerkissä koko on suurempi, kuin mitä tarvitaan. Tällöin jää tyhjää tilaa:
+Jos koko on pienempi kuin mitä lapsiolioiden toivoma koko (`PreferredSize`) yhteensä, niin lapsiolioita kutistetaan, jotta ne mahtuvat emon sisälle. Tässä esimerkissä koko on suurempi, kuin mitä tarvitaan. Tällöin jää tyhjää tilaa:
 
 ```csharp,ignore
 Widget lista = new Widget(400, 400);

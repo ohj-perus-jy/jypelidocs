@@ -1,6 +1,6 @@
 # Olion luominen
 
-Jos sinulla on käytössä Fysiikkapeli-projektimalli ja haluat kappaleen johon vaikuttaa fysiikka, tee `PhysicsObject`. Jos kappaleelle ei haluta mitään fysiikkaan liittyviä ominaisuuksia, kuten törmäyksiä, tällöin `GameObject` on parempi valinta.
+Jos sinulla on käytössä Fysiikkapeli-projektimalli ja haluat kappaleen, johon vaikuttaa fysiikka, tee `PhysicsObject`. Jos kappaleelle ei haluta mitään fysiikkaan liittyviä ominaisuuksia, kuten törmäyksiä, tällöin `GameObject` on parempi valinta.
 
 Yksinkertainen esimerkki kappaleen luonnista.
 
@@ -19,8 +19,8 @@ Add(kissa);
 //-}
 ```
 
-- Ensimmäisellä rivillä luodaan muuttuja jolle annetaan nimeksi kissa, joka siis tyypiltään fysiikkaolio.
-  - Fysiikkaoliota luodessa täytyy antaa tieto olion leveydestä ja korkeudesta. Tässä olion leveydeksi laitetaan 40 ja korkeudeksi 20. Kokeile muokata näitä arvoja.
+- Ensimmäisellä rivillä luodaan muuttuja, jolle annetaan nimeksi kissa ja joka on siis tyypiltään fysiikkaolio.
+  - Fysiikkaoliota luotaessa täytyy antaa tieto olion leveydestä ja korkeudesta. Tässä olion leveydeksi laitetaan 40 ja korkeudeksi 20. Kokeile muokata näitä arvoja.
 - `Add`-funktiolla lisätään olio kenttään.
 
 Olion luonnin jälkeen sille voi asettaa muitakin ominaisuuksia, kuten muodon tai värin.
@@ -34,7 +34,7 @@ Add(kissa);
 
 Ominaisuuksia voi muuttaa vielä senkin jälkeen, kun olio on lisätty kenttään `Add`:illä.
 
-Muut oliot tehdään vastaavalla tavalla, `PhysicsObjectin` tilalla vaan on halutun olion tyyppi. Eri oliot voivat kuitenkin haluta enemmän (tai vähemmän) tietoja jo luotaessa.
+Muut oliot tehdään vastaavalla tavalla, `PhysicsObject`-tyypin tilalla on vain halutun olion tyyppi. Eri oliot voivat kuitenkin haluta enemmän (tai vähemmän) tietoja jo luotaessa.
 
 ## Muodot
 
@@ -56,7 +56,7 @@ hattu.Shape = Shape.Rectangle;
 hattu.Color = Color.Green;
 hattu.Position = pallo.Position; // Sijoitetaan hattu aluksi samaan kohtaan pallon kanssa
 hattu.X += 0;                    // Siirretään hattua x-akselin suunnassa alkuperäisestä sijainnista
-hattu.Y += 50;                   // Siirretään hattua y-akselin suunnassa  alkuperäisestä sijainnista
+hattu.Y += 50;                   // Siirretään hattua y-akselin suunnassa alkuperäisestä sijainnista
 pallo.Add(hattu);                // Huom! Hattu lisätään pallon lapsiolioksi
 ```
 

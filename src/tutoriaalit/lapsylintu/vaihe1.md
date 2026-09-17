@@ -5,7 +5,7 @@ Tässä ohjeessa neuvotaan Läpsylintu-nimisen pelin tekeminen. Pelissä ohjataa
 ## Projektin luominen
 
 - Jos et ole vielä asentanut tarvittavia työvälineitä, asenna ne nyt.
-- Avaa Rider tai joku muu C#-kielellä toimiva ohjelmointiympäristö ja klikkaa New Solution.
+- Avaa Rider tai jokin muu C#-kielellä toimiva ohjelmointiympäristö ja klikkaa New Solution.
 - Valitse pohjaksi **Tasohyppelypeli** klikkaamalla yhden kerran **Tasohyppelypeli**-pohjan nimeä.
 - Anna solutionille nimeksi esimerkiksi Lapsylintu. Älä vielä paina Createa. (Nimissä ei kannata käyttää välilyöntejä tai erikoismerkkejä!)
 - Valitse **Solution directory** -kohtaan kansio, johon peli tallennetaan, esimerkiksi `C:\Users\Käyttäjänimi\Koodiprojektit` (Macilla esimerkiksi `/Users/käyttäjänimi/Koodiprojektit`). **Yliopiston koneilla** kansioksi on annettava `C:\MyTemp\Omanimi`, ei Omat tiedostot -kansiota.
@@ -44,7 +44,7 @@ Muokataan pelaajan hyppäämistä siten, että hypyn voi suorittaa myös ilmassa
 hahmo.Jump(nopeus);
 ```
 
-Ja muokkaa metodi `Jump()` muotoon `ForceJump()`
+Ja muokkaa metodi `Jump()` muotoon `ForceJump()`:
 
 ```csharp,ignore
 hahmo.ForceJump(nopeus);
@@ -53,7 +53,7 @@ hahmo.ForceJump(nopeus);
 ## Tutki!
 
 > [!KYSYMYS]
-> Osaatko etsiä koodista mitä mikäkin näppäin tekee?
+> Osaatko etsiä koodista, mitä mikäkin näppäin tekee?
 
 ## Kokeile!
 

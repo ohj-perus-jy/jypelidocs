@@ -77,7 +77,7 @@ class Vihu : PhysicsObject
 Vihu vihu = new Vihu();
 ```
 
-Omia parametreja, kuten elämien määrä, voi lisätä vapaasti; ks.
+Omia parametreja, kuten elämien määrää, voi lisätä vapaasti; ks.
 [Omat ominaisuudet ja metodit](ominaisuudet.md#rakentajan-parametrit).
 
 ## Mistä luokasta peritään
@@ -113,7 +113,7 @@ jolla on jotain lisää. Mitä kantaluokat osaavat, on koottu sivulle
 Luokka kirjoitetaan **toisen luokan ulkopuolelle**, ei `Peli`-luokan eikä
 minkään aliohjelman sisään. Kaksi tapaa:
 
-1. **Oma tiedosto**, esimerkiksi `Vihu.cs` samassa projektissa. Riderissä
+1. **Oma tiedosto**, esimerkiksi `Vihu.cs` samassa projektissa. Riderissa
    klikkaa projektia hiiren oikealla, valitse **Add** › **Class** ja anna nimeksi
    `Vihu`. Rider tekee tiedoston, jonka alkuun lisätään `using Jypeli;`.
    Tämä on selkein tapa, kun luokka on pitkä.

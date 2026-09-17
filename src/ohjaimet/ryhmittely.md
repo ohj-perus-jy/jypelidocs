@@ -4,7 +4,7 @@ Jos pelissä on esimerkiksi useita pelaajia tai pelitilanteita, voi olla järkev
 
 ## Ohjainryhmä (ListenContext) ja sen luominen
 
-Ohjainryhmä on tyypiltään `ListenContext`. Yleensä ryhmä on hyvä asettaa peliin attribuutiksi (class-sanan ja aaltosulun jälkeen) jotta siihen pääsee kiinni kaikista aliohjelmista.
+Ohjainryhmä on tyypiltään `ListenContext`. Yleensä ryhmä on hyvä asettaa peliin attribuutiksi (`class`-sanan ja aaltosulun jälkeen), jotta siihen pääsee kiinni kaikista aliohjelmista.
 
 ```csharp,ignore
 public class Peli : PhysicsGame
@@ -18,7 +18,7 @@ Ryhmä voidaan alustaa ennen ohjainten kuuntelua (aliohjelman sisällä!) seuraa
 ohjaimet = ControlContext.CreateSubcontext();
 ```
 
-Sen jälkeen ohjaimet voidaan lisätä kirjoittamalla kuuntelurivin perään `.InContext` ja sille parametriksi luotu ryhmän nimi. Esimerkiksi
+Sen jälkeen ohjaimet voidaan lisätä kirjoittamalla kuuntelurivin perään `.InContext` ja sille parametriksi luodun ryhmän nimi. Esimerkiksi
 
 ```csharp,ignore
 pelaajan1Kontrollit = this.ControlContext.CreateSubcontext();
@@ -50,7 +50,7 @@ Jos kontrollit halutaan poistaa kokonaan (esimerkiksi jos ne halutaan luoda uude
 pelaajan1Kontrollit.Destroy();
 ```
 
-Huomaa, että tuhottua kontekstia (ryhmää) ei voi enää käyttää uudelleen ennen kuin se on alustettu uudelleen (CreateSubcontext)!
+Huomaa, että tuhottua kontekstia (ryhmää) ei voi enää käyttää uudelleen, ennen kuin se on alustettu uudelleen (CreateSubcontext)!
 
 ## Aliryhmien luominen
 
@@ -78,7 +78,7 @@ poistaa käytöstä myös ryhmän `pelaajan1Ampuminen`.
 
 ## Ikkunoihin liittyvät ohjainryhmät
 
-Jokaisella ikkunalla on myös `ControlContext` niin kuin pelilläkin. Näin vain päällimmäisellä ikkunalla on ns. fokus eli sen alla olevien ikkunoiden (tai pelin) ohjaimet eivät toimi ennen kuin ikkuna on suljettu.
+Jokaisella ikkunalla on myös `ControlContext` niin kuin pelilläkin. Näin vain päällimmäisellä ikkunalla on ns. fokus eli sen alla olevien ikkunoiden (tai pelin) ohjaimet eivät toimi, ennen kuin ikkuna on suljettu.
 
 Ikkunalle voi lisätä vastaavasti ohjaimia joko yksitellen
 
@@ -89,7 +89,7 @@ Keyboard.Listen(...).InContext(ikkuna);
 tai uutena ryhmänä
 
 ```csharp,ignore
-ListenContext ryhma = ikkuna.ContolContext.CreateSubcontext();
+ListenContext ryhma = ikkuna.ControlContext.CreateSubcontext();
 Keyboard.Listen(...).InContext(ryhma);
 Keyboard.Listen(...).InContext(ryhma);
 ```

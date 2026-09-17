@@ -11,7 +11,7 @@ Käsittelijäksi annetaan aliohjelman nimi ilman sulkuja. Aliohjelman
 parametrien pitää vastata tapahtuman muotoa. Useimmat tämän sivun tapahtumat
 kutsuvat parametritonta `void`-aliohjelmaa; poikkeukset on mainittu erikseen.
 Jos käsittelijälle pitää viedä omia parametreja, katso
-[Delegaatit](../ohjelmointi/delegaatit.md).
+[Delegaatit](delegaatit.md).
 
 ## Olion tuhoutuminen: Destroyed
 
@@ -74,7 +74,7 @@ ja ohjainten asettaminen sivulla
 [Omat käyttöliittymäkomponentit](../kayttoliittyma/omat-kayttoliittymakomponentit.md).
 
 Vastaavasti `Removed` laukeaa, kun olio poistetaan pelistä. Myös `Destroy`
-poistaa olion, joten tuhotessa laukeavat sekä `Destroyed` että `Removed`.
+poistaa olion, joten oliota tuhottaessa laukeavat sekä `Destroyed` että `Removed`.
 
 ## Laskurin arvon muuttuminen: Changed
 
@@ -212,7 +212,7 @@ aliohjelma.
 Peli näyttää pallon, joka tuhoutuu hiirellä klikkaamalla. Tuhoutuminen
 laukaisee `Destroyed`-tapahtuman, jonka käsittelijä avaa ilmoitusikkunan.
 Ikkunan sulkeminen laukaisee `Closed`-tapahtuman, jonka käsittelijä aloittaa
-pelin alusta. Ajonappi näyttää vain pelin alkutilanteen, joten klikkaus
+pelin alusta. Ajonappi näyttää vain pelin alkutilanteen, joten klikkausta
 kannattaa kokeilla omalla koneella.
 
 ```csharp,feature-jypeli

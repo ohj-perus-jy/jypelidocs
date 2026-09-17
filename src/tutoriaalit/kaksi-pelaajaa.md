@@ -8,7 +8,7 @@ Ensimmäinen osa näyttää vain, miten toinen pelaaja lisätään kentälle ilm
 
 Tehdään aluksi TasoHyppelyPeli-mallin mukainen projekti.
 
-Poistetaan kenttäkuvasta 'N'-merkki ja lisää sinne merkit '1' ja '2' pelaajien aloituspaikoiksi.
+Poistetaan kenttätiedostosta `N`-merkki ja lisätään sinne merkit `1` ja `2` pelaajien aloituspaikoiksi.
 
 Lisätään sitten toinen pelaaja luokkamuuttujaksi ensimmäisen pelaajan tapaan. Laitetaan tässä esimerkissä kummankin tekstuuriksi sama norsu.
 
@@ -19,7 +19,7 @@ private Image pelaajan1Kuva = LoadImage("norsu.png");
 private Image pelaajan2Kuva = LoadImage("norsu.png");
 ```
 
-Muokataan sitten LuoKentta-aliohjelmaa. Luodaan pelaaja-oliot jo tässä, jotta ne voidaan välittää argumentteina LisaaPelaaja-aliohjelmalle. Välitetään argumenttina myös pelaajan kuva.
+Muokataan sitten `LuoKentta`-aliohjelmaa. Luodaan pelaajaoliot jo tässä, jotta ne voidaan välittää argumentteina `LisaaPelaaja`-aliohjelmalle. Välitetään argumenttina myös pelaajan kuva.
 
 ```csharp,ignore
 pelaaja1 = new PlatformCharacter(RUUDUN_KOKO, RUUDUN_KOKO);
@@ -28,7 +28,7 @@ kentta.SetTileMethod('1', LisaaPelaaja, pelaaja1, pelaajan1Kuva);
 kentta.SetTileMethod('2', LisaaPelaaja, pelaaja2, pelaajan2Kuva);
 ```
 
-Nyt LisaaPelaaja-aliohjelma vaatii muutoksia.
+Nyt `LisaaPelaaja`-aliohjelma vaatii muutoksia.
 
 ```csharp,ignore
 private void LisaaPelaaja(Vector paikka, double leveys, double korkeus, PlatformCharacter pelaaja, Image kuva)

@@ -31,11 +31,11 @@ void LuoPistelaskuri()
 
 Ensin luodaan `IntMeter`-tyyppinen laskuri (huom. se on tässä esimerkissä attribuuttina) ja `Label`-tyyppinen tekstikenttä ja tehdään niille halutut asetukset. Tekstikentästä ei tarvitse tehdä attribuuttia, jos sen paikkaa, väriä tai muuta ominaisuutta ei muuteta sen luomisen jälkeen.
 
-Tekstikentän tekstin väriä voi muuttaa `TextColor`-ominaisuudesta jotta se erottuu paremmin. `Color`-ominaisuus asettaa tekstikentälle taustavärin, jos sellainen halutaan. Oletustaustaväri on läpinäkyvä, eli `Color.Transparent`.
+Tekstikentän tekstin väriä voi muuttaa `TextColor`-ominaisuudesta, jotta se erottuu paremmin. `Color`-ominaisuus asettaa tekstikentälle taustavärin, jos sellainen halutaan. Oletustaustaväri on läpinäkyvä, eli `Color.Transparent`.
 
 Laskurin luonnissa parametrina annetaan sen **oletusarvo**, eli mistä arvosta laskuri lähtee liikkeelle (tässä laskuri lähtee nollasta).
 
-Lopuksi pitää muistaa **kiinnittää** laskuri tekstikenttään. Silloin tekstikenttä osaa automaattisesti näyttää laskurin arvon, vaikka arvo muuttuukin. Lopuksi vielä **lisätään** tekstikenttä ruudulle Add-kutsulla. Esimerkissä tehtiin nämä asiat riveillä:
+Lopuksi pitää muistaa **kiinnittää** laskuri tekstikenttään. Silloin tekstikenttä osaa automaattisesti näyttää laskurin arvon, vaikka arvo muuttuukin. Lopuksi vielä **lisätään** tekstikenttä ruudulle `Add`-kutsulla. Esimerkissä tehtiin nämä asiat riveillä:
 
 ```csharp,ignore
 pistenaytto.BindTo(pistelaskuri);
@@ -48,11 +48,9 @@ Lopuksi kutsutaan tätä kirjoittamaamme `LuoPistelaskuri`-aliohjelmaa pelin `Be
 LuoPistelaskuri();
 ```
 
-!
-
 ## Laskurin laskentaväli
 
-Oletuksena laskuri voi saada arvoja nollasta ylöspäin niin pitkälle kuin lukualuetta riittää. Laskurin oletusarvo, eli arvo josta se aloittaa on 0. Näitä kaikkia voidaan muuttaa parametreilla haluttaessa.
+Oletuksena laskuri voi saada arvoja nollasta ylöspäin niin pitkälle kuin lukualuetta riittää. Laskurin oletusarvo, eli arvo, josta se aloittaa, on 0. Näitä kaikkia voidaan muuttaa parametreilla haluttaessa.
 
 Esimerkiksi jos laskurin halutaan saavan myös negatiivisia arvoja, on sille alustettaessa annettava parametrina negatiivinen minimiarvo.
 
@@ -82,7 +80,7 @@ IntMeter laskuri = new IntMeter(0, int.MinValue, int.MaxValue)
 DoubleMeter laskuri = new DoubleMeter(0, double.NegativeInfinity, double.PositiveInfinity)
 ```
 
-### Lukuväli -100:sta 100:an oletusarvolla 10
+### Lukuväli -100:sta 100:aan oletusarvolla 10
 
 kokonaisluvuilla
 
@@ -98,27 +96,27 @@ DoubleMeter laskuri = new DoubleMeter(10, -100, 100)
 
 ## Otsikko laskurille
 
-Usein on järkevää lisätä tekstikentällä otsikko, jotta tiedetään mitä laskuri ruudulla laskee. Tämä voidaan tehdä asettamalla teksti sen `Title`-ominaisuuteen:
+Usein on järkevää lisätä tekstikentälle otsikko, jotta tiedetään, mitä laskuri ruudulla laskee. Tämä voidaan tehdä asettamalla teksti sen `Title`-ominaisuuteen:
 
 ```csharp,ignore
 pistenaytto.Title = "Pisteet";
 ```
 
-Nyt luomamme tekstikenttä näyttää tältä:
+Nyt luomamme tekstikenttä näyttää myös otsikon.
 
-!
+<!-- kuva puuttuu -->
 
 ### Tarkempi otsikon määrittäminen
 
-Jos haluat vaikuttaa tarkemmin siihen, miltä laskurin arvo näyttää otsikossa, voit käyttää siihen C#:n [​muotoilumerkkijonoja](http://msdn.microsoft.com/en-us/library/dwhawy9k.aspx).
+Jos haluat vaikuttaa tarkemmin siihen, miltä laskurin arvo näyttää otsikossa, voit käyttää siihen C#:n [muotoilumerkkijonoja](http://msdn.microsoft.com/en-us/library/dwhawy9k.aspx).
 
 ```csharp,ignore
 pistenaytto.IntFormatString = "Pisteitä: {0:D1}";
 ```
 
-Samoin jos labelille annetaan taustaväri, voi esim formaatilla: " Pisteitä: {0:D1} " laittaa tyhjän molemmin puolin tekstiä. Muoto D3 tulostaisi laskurin aina niin, että siinä on vähintään kolme numeroa, esim 005.
+Samoin jos `Label`ille annetaan taustaväri, voi esim. formaatilla `" Pisteitä: {0:D1} "` laittaa tyhjän molemmin puolin tekstiä. Muoto `D3` tulostaisi laskurin aina niin, että siinä on vähintään kolme numeroa, esim. 005.
 
-Vastaavasti jos halutaan DoubleMeter, niin käytetään DoubleFormatString, esim `laskuri.DoubleFormatString = {0:N5}` näyttäisi viisi lukua desimaaliapisteen oikealla puolen.
+Vastaavasti jos halutaan `DoubleMeter`, niin käytetään `DoubleFormatString`, esim. `laskuri.DoubleFormatString = {0:N5}` näyttäisi viisi lukua desimaalipisteen oikealla puolen.
 
 ## Laskurin arvon muuttaminen
 
@@ -150,7 +148,7 @@ Jos halutaan, että laskuri kasvaa vaikkapa viiden sekunnin aikana kolme yksikk�
 pistelaskuri.AddOverTime(3, 5);
 ```
 
-Haluttaessa kolmanneksi parametriksi voidaan antaa aliohjelman nimi, joka suoritetaan kun lisäys on tehty. Näin saadaan helposti tehtyä esimerkiksi erilaisia voimamittareita.
+Haluttaessa kolmanneksi parametriksi voidaan antaa aliohjelman nimi, joka suoritetaan, kun lisäys on tehty. Näin saadaan helposti tehtyä esimerkiksi erilaisia voimamittareita.
 
 Mittarista voidaan myös vähentää samalla periaatteella käyttämällä negatiivista arvoa.
 
@@ -172,11 +170,11 @@ Pistelaskuriin voi myös lisätä tapahtuman, kun se saavuttaa sille asetetun su
 
 ```csharp,ignore
 IntMeter keratytEsineet = new IntMeter(0);
-laskuri.MaxValue = 5;
-laskuri.UpperLimit += KaikkiKeratty;
+keratytEsineet.MaxValue = 5;
+keratytEsineet.UpperLimit += KaikkiKeratty;
 ```
 
-Tässä tapahtuman käsittelijän `KaikkiKeratty` suoritukseen siirrytään, kun laskuri saavuttaa suurimman arvonsa (5).
+Tässä tapahtumankäsittelijän `KaikkiKeratty` suoritukseen siirrytään, kun laskuri saavuttaa suurimman arvonsa (5).
 
 Tapahtumankäsittelijä on yksinkertainen aliohjelma ilman parametreja. Seuraava aliohjelma näyttää tekstin "Pelaaja 1 voitti pelin".
 
@@ -191,8 +189,8 @@ Vastaavasti voidaan tehdä alarajalle:
 
 ```csharp,ignore
 IntMeter pelaajanElamat = new IntMeter(3);
-laskuri.MinValue = 0;
-laskuri.LowerLimit += PelaajaHaviaa;
+pelaajanElamat.MinValue = 0;
+pelaajanElamat.LowerLimit += PelaajaHaviaa;
 ```
 
 missä tapahtumankäsittelijä voi olla esimerkiksi
@@ -220,7 +218,7 @@ void SoitaAani()
 
 `AddTrigger`-aliohjelman ensimmäinen parametri on luonnollisesti mittarin arvo, ja kolmanneksi annetaan aliohjelma, jonka tapahtuma laukaisee.
 
-Toinen parametri määrää, kummasta suunnasta tultaessa tapahtuma suoritetaan. Esimerkiksi ylläolevassa esimerkissä mittarin laskiessa arvon 9000 alapuolelle ääntä ei soiteta. Sallitut arvot ovat `TriggerDirection.Up` (mittarin arvo kasvaa), `TriggerDirection.Down` (mittarin arvo vähenee) ja `TriggerDirection.Irrelevant` (ei väliä, suoritetaan kummassakin tapauksessa).
+Toinen parametri määrää, kummasta suunnasta tultaessa tapahtuma suoritetaan. Esimerkiksi yllä olevassa esimerkissä mittarin laskiessa arvon 9000 alapuolelle ääntä ei soiteta. Sallitut arvot ovat `TriggerDirection.Up` (mittarin arvo kasvaa), `TriggerDirection.Down` (mittarin arvo vähenee) ja `TriggerDirection.Irrelevant` (ei väliä, suoritetaan kummassakin tapauksessa).
 
 ## Tapahtumien poistaminen
 

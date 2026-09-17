@@ -1,7 +1,7 @@
 # Uuden projektin luominen
 
 Tässä ohjeessa kerrotaan, miten aloitat uuden projektin (eli pelin)
-Riderissa. Ennen tätä Rider ja Jypeli pitää olla asennettuina, ks.
+Riderissa. Ennen tätä Riderin ja Jypelin pitää olla asennettuina, ks.
 [Asennus](asentaminen.md).
 
 *Projekti* on työtila, jossa käsitellään pelin koodia ja siihen liittyviä

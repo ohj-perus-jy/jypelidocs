@@ -10,17 +10,17 @@ protected override void Paint(Canvas canvas)
 }
 ```
 
-Jypeli kutsuu `Paint`-aliohjelmaa jokaisella pelinpäivityksellä (60 kertaa sekunnissa) pelin ollessa käynnissä. Siinä voi siis toteuttaa animaatioita muuttamalla koordinaatteja sen mukaan millä ajanhetkellä piirretään.
+Jypeli kutsuu `Paint`-aliohjelmaa jokaisella pelinpäivityksellä (60 kertaa sekunnissa) pelin ollessa käynnissä. Siinä voi siis toteuttaa animaatioita muuttamalla koordinaatteja sen mukaan, millä ajanhetkellä piirretään.
 
 ## Canvas-luokka
 
 Itse piirtäminen tapahtuu parametrina saatavan `canvas`-olion metodeilla. Nykyisellään niitä on yksi:
 
-- DrawLine - Piirtää janan. Parametrina alku- ja loppupisteen koordinaatit joko vektoreina tai luettelemalla molempien pisteiden x- ja y-koordinaatit.
+- `DrawLine` – piirtää janan. Parametreina alku- ja loppupisteen koordinaatit joko vektoreina tai luettelemalla molempien pisteiden x- ja y-koordinaatit.
 
 Värin voi asettaa `BrushColor`-ominaisuuden kautta. Lisäksi piirtoalueen reunojen koordinaatteja voi lukea samaan tapaan kuin kentänkin reunoja:
 
-|                    |                                |
+| Ominaisuus         | Selitys                        |
 |:-------------------|--------------------------------|
 | canvas.Left        | Vasemman reunan x-koordinaatti |
 | canvas.Right       | Oikean reunan x-koordinaatti   |

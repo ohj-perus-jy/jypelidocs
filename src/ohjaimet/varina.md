@@ -28,4 +28,4 @@ Esimerkkikoodi:
 Phone.Vibrate(100);
 ```
 
-Parametri määrittää montako millisekuntia puhelin tärisee.
+Parametri määrittää, montako millisekuntia puhelin tärisee.

@@ -2,13 +2,11 @@
 
 Kun kaksi fysiikkaoliota törmää toisiinsa, syntyy *törmäystapahtuma*. Näitä tapahtumia voidaan tarkkailla *tapahtumankäsittelijöillä*, joiden avulla reagoidaan törmäykseen esimerkiksi tuhoamalla toinen olioista tai kasvattamalla pistelaskurin arvoa.
 
-Katso myös kuinka törmäyksiä voidaan estää [täältä](tormayksen-estaminen.md).
+Katso myös, kuinka törmäyksiä voidaan estää [täältä](tormayksen-estaminen.md).
 
 ## Törmäyksenkäsittely yhdelle tunnetulle oliolle
 
-Aluksi tapahtumankäsittelijä täytyy asettaa seuraamaan tietyn olion törmäyksiä. Esimerkiksi jos pelissä on olio nimeltä `pelaaja` jonka törmäyksistä toisiin olioihin ollaan kiinnostuneita, voidaan `pelaajan` luomisen jälkeen asettaa *tapahtumakäsittelijä*:
-
-importante
+Aluksi tapahtumankäsittelijä täytyy asettaa seuraamaan tietyn olion törmäyksiä. Esimerkiksi jos pelissä on olio nimeltä `pelaaja`, jonka törmäyksistä toisiin olioihin ollaan kiinnostuneita, voidaan `pelaaja`-olion luomisen jälkeen asettaa *tapahtumankäsittelijä*:
 
 ```csharp,ignore
 AddCollisionHandler(pelaaja, PelaajaTormasi);
@@ -16,7 +14,7 @@ AddCollisionHandler(pelaaja, PelaajaTormasi);
 
 Aina kun pelaaja törmää johonkin, mihin tahansa, fysiikkaolioon pelikentällä, kutsutaan aliohjelmaa `PelaajaTormasi`.
 
-Ennen kuin törmäyksenkäsittely toimii, tarvitaan aliohjelma joka käsittelee törmäyksen. Törmäyksen käsittelevälle aliohjelmalle tulee parametreina törmänneet kaksi oliota.
+Ennen kuin törmäyksenkäsittely toimii, tarvitaan aliohjelma, joka käsittelee törmäyksen. Törmäyksen käsittelevälle aliohjelmalle tulee parametreina törmänneet kaksi oliota.
 
 ```csharp,ignore
 void PelaajaTormasi(PhysicsObject tormaaja, PhysicsObject kohde)
@@ -25,7 +23,7 @@ void PelaajaTormasi(PhysicsObject tormaaja, PhysicsObject kohde)
 }
 ```
 
-Näin joka kerran kun `pelaaja` törmää johonkin, suoritetaan aliohjelma `PelaajaTormasi`. Parametreista `tormaaja` viittaa tässä tapauksessa pelaajaan ja `kohde` olioon johon pelaaja törmäsi.
+Näin joka kerta, kun `pelaaja` törmää johonkin, suoritetaan aliohjelma `PelaajaTormasi`. Parametreista `tormaaja` viittaa tässä tapauksessa pelaajaan ja `kohde` olioon, johon pelaaja törmäsi.
 
 ## Törmäys kahden tunnetun olion välillä
 
@@ -35,7 +33,7 @@ Jos halutaan reagoida törmäykseen kahden tietyn olion välillä, voidaan *tapa
 AddCollisionHandler(pelaaja1, pelaaja2, PelaajatTormaavat);
 ```
 
-Törmäävät oliot ovat tässä tapauksessa `pelaaja1` ja `pelaaja2`. Tapahtumankäsittelijä `pelaajatTormaavat` voidaan tehdä samaan tapaan kuin yhden tunnetun olion kanssa.
+Törmäävät oliot ovat tässä tapauksessa `pelaaja1` ja `pelaaja2`. Tapahtumankäsittelijä `PelaajatTormaavat` voidaan tehdä samaan tapaan kuin yhden tunnetun olion kanssa.
 
 ```csharp,ignore
 void PelaajatTormaavat(PhysicsObject tormaaja, PhysicsObject kohde)
@@ -46,7 +44,7 @@ void PelaajatTormaavat(PhysicsObject tormaaja, PhysicsObject kohde)
 
 ## Törmäys yhden tunnetun ja useamman samantyyppisen olion välillä
 
-Usein pelissä on yksi pelaaja ja useampia erityyppisiä olioita: vihollisia, aarteita, piikkiesteitä jne. Törmäyskäsittelyyn ei enää riitäkään tieto siitä, että pelaaja törmää johonkin olioon tai pelaaja törmää tiettyyn yhteen olioon. Samantyyppisille olioille voidaan antaa yhteinen [tagi](../oliot/olioiden-erottaminen-toisistaan.md), jolla olioryhmät voidaan erottaa toisistaan. Tagi on järkevintä asettaa samalla kun olio luodaan.
+Usein pelissä on yksi pelaaja ja useampia erityyppisiä olioita: vihollisia, aarteita, piikkiesteitä jne. Törmäyskäsittelyyn ei enää riitäkään tieto siitä, että pelaaja törmää johonkin olioon tai pelaaja törmää tiettyyn yhteen olioon. Samantyyppisille olioille voidaan antaa yhteinen [tagi](../oliot/olioiden-erottaminen-toisistaan.md), jolla olioryhmät voidaan erottaa toisistaan. Tagi on järkevintä asettaa samalla, kun olio luodaan.
 
 ```csharp,ignore
 void LuoVihollinen(Vector paikka, double leveys, double korkeus)
@@ -104,7 +102,7 @@ public class OmaPeli : Game
 
 ## Törmäykset muuntyyppisiin olioihin kuin PhysicsObject
 
-Pelissä voi olla muunkintyyppisiä olioita kuin `PhysicsObject`, esimerkiksi `PlatformCharacter`. Olion täytyy kuitenkin periytyä PhysicsObjectista, jotta sen törmäyksiä voidaan käsitellä.
+Pelissä voi olla muunkintyyppisiä olioita kuin `PhysicsObject`, esimerkiksi `PlatformCharacter`. Olion täytyy kuitenkin periytyä `PhysicsObject`-luokasta, jotta sen törmäyksiä voidaan käsitellä.
 
 Jos esimerkiksi `PlatformCharacter`-tyyppistä oliota käsitellään `PhysicsObject`:ina, esimerkiksi sen `Walk`-metodia ei voi käyttää, sillä `PhysicsObject`:illa ei ole sellaista!
 
@@ -129,7 +127,7 @@ AddCollisionHandler<PlatformCharacter, PhysicsObject>(pelaaja, HahmonTormays);
 Tämä kertoo, että törmäyksenkäsittelijäaliohjelman `HahmonTormays` parametrit ovat tyyppiä `PlatformCharacter` (törmääjä) ja `PhysicsObject` (kohde). Nyt voidaan kirjoittaa törmäyksenkäsittelijä suoraan muotoon
 
 ```csharp,ignore
-void Tormays(PlatformCharacter tormaaja, PhysicsObject kohde)
+void HahmonTormays(PlatformCharacter tormaaja, PhysicsObject kohde)
 {
    tormaaja.Walk(Direction.Right);
 }
@@ -139,7 +137,7 @@ Huomaa, että jos yrität käyttää yo. aliohjelmaa tavalliselle, tyyppiparamet
 
 ## Valmiit törmäystapahtumat
 
-CollisionHandler-luokka sisältää valmiita käsittelijöitä yleisimmille törmäystapahtumille.
+`CollisionHandler`-luokka sisältää valmiita käsittelijöitä yleisimmille törmäystapahtumille.
 
 ### Olioiden tuhoaminen
 
@@ -149,7 +147,7 @@ CollisionHandler-luokka sisältää valmiita käsittelijöitä yleisimmille tör
 AddCollisionHandler(pelaaja, vihollinen, CollisionHandler.DestroyObject);
 ```
 
-`DestroyTarget` tuhoaa olion johon törmätään.
+`DestroyTarget` tuhoaa olion, johon törmätään.
 
 ```csharp,ignore
 ase.ProjectileCollision = CollisionHandler.DestroyTarget;
@@ -163,13 +161,13 @@ ase.ProjectileCollision = CollisionHandler.DestroyBoth;
 
 ### Räjähdykset
 
-`ExplodeObject` räjäyttää törmäävän olion. Se ottaa parametriksi räjähdyksen säteen `(int)` ja totuusarvon `(true/false)` siitä, tuhotaanko olio samalla.
+`ExplodeObject` räjäyttää törmäävän olion. Se ottaa parametriksi räjähdyksen säteen (`int`) ja totuusarvon (`true`/`false`) siitä, tuhotaanko olio samalla.
 
 ```csharp,ignore
 AddCollisionHandler(pelaaja, vihollinen, CollisionHandler.ExplodeObject(100, true));
 ```
 
-`ExplodeObject` toimii kuten `ExplodeTarget`, mutta se räjäyttää olion, johon törmätään.
+`ExplodeTarget` toimii kuten `ExplodeObject`, mutta se räjäyttää olion, johon törmätään.
 
 ```csharp,ignore
 AddCollisionHandler(salama, CollisionHandler.ExplodeTarget(150, false));
@@ -181,14 +179,12 @@ AddCollisionHandler(salama, CollisionHandler.ExplodeTarget(150, false));
 AddCollisionHandler(salama, CollisionHandler.ExplodeBoth(200, true));
 ```
 
-Jos pelissä on käytössä ExplosionSystem (ks. [Efektit](../grafiikka/efektit.md)), voidaan käyttää `AddEffect`-käsittelijää. AddEffect ottaa parametrikseen räjähdysjärjestelmän ja käytettävien partikkelien määrän. AddEffect ei tuhoa olioita automaattisesti, mutta sekin onnistuu lisäämällä erillinen DestroyObject-käsittelijä:
+Jos pelissä on käytössä `ExplosionSystem` (ks. [Efektit](../grafiikka/efektit.md)), voidaan käyttää `AddEffect`-käsittelijää. `AddEffect` ottaa parametrikseen räjähdysjärjestelmän ja käytettävien partikkelien määrän. `AddEffect` ei tuhoa olioita automaattisesti, mutta sekin onnistuu lisäämällä erillisen `DestroyObject`-käsittelijän:
 
 ```csharp,ignore
 AddCollisionHandler(pelaaja, vihollinen, CollisionHandler.AddEffectOnTarget(paukkupatteri, 40));
 AddCollisionHandler(pelaaja, vihollinen, CollisionHandler.DestroyObject);
 ```
-
-Tai
 
 Efektit ilman olion tuhoamista:
 
@@ -205,11 +201,11 @@ AddCollisionHandler(pelaaja, "bonus", CollisionHandler.AddMeterValue(pisteet, 10
 AddCollisionHandler(pelaaja, "piikki", CollisionHandler.AddMeterValue(health, -1));
 ```
 
-Tätä tapaa ei voida käyttää mikäli, pisteiden laskemisella on jotakin muita ehtoja kuin pelkkä törmääminen. Tällöin pistelaskuri pitää käsitellä normaalissa törmäystapahtumassa ja kirjoittaa sinne ehto, jonka avulla laskurin arvoa muutetaan (ks. [laskurin arvon muuttaminen](../kayttoliittyma/pistelaskuri.md#laskurin-arvon-muuttaminen)).
+Tätä tapaa ei voida käyttää, mikäli pisteiden laskemisella on joitakin muita ehtoja kuin pelkkä törmääminen. Tällöin pistelaskuri pitää käsitellä normaalissa törmäystapahtumassa ja kirjoittaa sinne ehto, jonka avulla laskurin arvoa muutetaan (ks. [laskurin arvon muuttaminen](../kayttoliittyma/pistelaskuri.md#laskurin-arvon-muuttaminen)).
 
 ### Ääniefektin soittaminen
 
-Ääniefektin soittaminen törmäyksen yhteydessä onnistuu tapahtumankäsittelijällä `PlaySound`, jolle annetaan parametriksi ääniefektin nimi. Nimi on yleensä sama kun tiedoston nimi, mutta <span class="red">ilman</span> tiedostopäätettä.
+Ääniefektin soittaminen törmäyksen yhteydessä onnistuu tapahtumankäsittelijällä `PlaySound`, jolle annetaan parametriksi ääniefektin nimi. Nimi on yleensä sama kuin tiedoston nimi, mutta **ilman** tiedostopäätettä.
 
 ```csharp,ignore
 AddCollisionHandler(pelaaja, "tuli", CollisionHandler.PlaySound("tuskan_parahdus"));
@@ -220,7 +216,7 @@ AddCollisionHandler(pelaaja, "tuli", CollisionHandler.PlaySound("tuskan_parahdus
 `HitObject` lyö törmäävää oliota ja `HitTarget` oliota, johon törmätään. Molemmat ottavat parametrikseen vektorin, joka kertoo lyönnin suunnan ja voiman.
 
 ```csharp,ignore
-Vector ylos = new Vector(200, 0);
+Vector ylos = new Vector(0, 200);
 AddCollisionHandler(pelaaja, "trampoliini", CollisionHandler.HitObject(ylos));
 ```
 

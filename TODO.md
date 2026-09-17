@@ -43,16 +43,18 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
       törmäyksen estäminen; Kentät + kamera + ikkuna + pelin kulku;
       Grafiikka + äänet; Käyttöliittymä + laskurit; Fysiikka + liitokset + aseet; Grafiikka +
       räjähdykset (Aseet ja räjähdykset -osio poistettu 16.9.2026).
-      Tag-ominaisuus jäi Oliot-osioon (se on olion ominaisuus); Ohjelmointi
-      linkittää siihen.
+      Tag-ominaisuus jäi Oliot-osioon (se on olion ominaisuus).
+      Ohjelmointi-osio poistettu 17.9.2026, kun siihen ei jäänyt sivuja;
+      `delegaatit.md` siirretty `tapahtumat/`-hakemistoon, jonka valikossa
+      se jo oli.
 - [x] Siirrä `ohjaimet/kaksi-pelaajaa.md` Oppaisiin (esimerkkipeli).
 - [x] Päivitä osioiden etusivujen taulukot vastaamaan uutta ryhmittelyä ja
       poista tarpeettomat etusivut (`pelin-kulku/`, `aanet/`, `laskurit/`, `aseet/`).
 - [x] Etusivu: "Aloita tästä" -polku (3 askelta) ja lyhyt kuvaus valikon
       osioista (pitkä aihehakemisto poistettu 16.9.2026).
 - [ ] Pudota valikon numerointi ohjeosioista ja säilytä se vain oppaiden
-      vaiheissa. Vaatii muutoksen `zensical/convert.py`:n `build_nav`-
-      funktioon (numerointi on nyt kaikilla luettelokohdilla); convert.py on
+      vaiheissa. Vaatii muutoksen `zensical/convert.py`:n `build_nav`-funktioon
+      (numerointi on nyt kaikilla luettelokohdilla); `convert.py` on
       jaettu ohj1:n ja ohj2:n kanssa, joten muutos kannattaa tehdä
       asetuksena.
 - [ ] Päivitä `tools/tim-tuonti/tim2md.py`:n osiokartta (SECTION_DIRS,
@@ -60,10 +62,10 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
 
 ## 3. Uudet sivut
 
-- [x] `aloittaminen/ensimmainen-peli.md`: 10 rivin peli ajonapilla, ctrl-F5,
+- [x] `aloittaminen/ensimmainen-peli.md`: 10 rivin peli ajonapilla, Ctrl+F5,
       mitä `Begin` tekee.
-- [x] `aloittaminen/pelin-rakenne.md`: PhysicsGame vs Game, `Begin`,
-      mihin koodi kirjoitetaan (paikallinen muuttuja vs attribuutti, oma
+- [x] `aloittaminen/pelin-rakenne.md`: PhysicsGame vs. Game, `Begin`,
+      mihin koodi kirjoitetaan (paikallinen muuttuja vs. attribuutti, oma
       aliohjelma, tapahtumankäsittelijän parametrit; oli erillinen sivu
       `ohjelmointi/mihin-koodi-kirjoitetaan.md`, yhdistetty 16.9.2026),
       koordinaatisto (origo keskellä, y ylös), yksiköt, Level/Camera/Screen.
@@ -82,7 +84,7 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
 ## 4. Sivujen sisäinen rakenne (jatkuva)
 
 - [~] Jokaiselle ohjesivulle: lyhyt kuvaus, "Tarvitset ensin", yksi
-      kokonainen esimerkki (näkyy mihin aliohjelmaan koodi kirjoitetaan),
+      kokonainen esimerkki (näkyy, mihin aliohjelmaan koodi kirjoitetaan),
       muunnelmat, "Katso myös". Tehty: törmäykset, ohjainten lisäys,
       ajastimet, pistelaskuri, olioiden luonti. Tekemättä: loput 44 sivua,
       joilla ei ole yhtään sisäistä linkkiä.
@@ -95,7 +97,7 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
       `ohjaimet/ohjainten-lisays.md`:hen.
 - [ ] Näkyvät `TODO`-merkinnät: `oliot/animaatio.md`, `grafiikka/kuvat.md`.
 - [ ] Puuttuvat kuvat (trac ei vastaa): `oliot/animaatio.md`,
-      `laskurit/pistelaskuri.md`, `ohjaimet/ohjainten-lisays.md`.
+      `kayttoliittyma/pistelaskuri.md`, `ohjaimet/ohjainten-lisays.md`.
 - [ ] Videot `kentat/`- ja `grafiikka/`-sivuilla: lisää tekstivastine tai
       kuvakaappaus.
 
@@ -111,4 +113,4 @@ linkittänyt yhteenkään toiseen sivuun. Aloitusosio oli ohut: asennus pelkkä
 linkkilista, projektinluontisivulla tyhjä lohko ja katkennut polku, ja
 mallipelisivu toisti samat ohjeet. Tutoriaalien vaiheet olivat nimettömiä.
 `muut/`-hakemisto oli kaatoluokka. 29 linkkiä osoitti kuolleeseen
-trac-wikiin ja 6 sivua neuvoi Visual Studiota, vaikka työkalu on Rider.
+trac-wikiin ja 6 sivua neuvoi käyttämään Visual Studiota, vaikka työkalu on Rider.

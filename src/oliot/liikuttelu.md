@@ -35,7 +35,7 @@ pelaaja1.Push(new Vector(1000, 0));
 
 Tämä on yleensä suositeltava tapa, jos oliota pitää liikutella esim. nuolinäppäimillä. Tätä metodia käyttämällä olion vauhti kiihtyy.
 
-Olion massa vaikuttaa siihen kuinka nopeasti se kiihtyy. Mitä suurempi massa on, sitä enemmän voimaa tarvitaan sen kiihdyttämiseen tai hidastamiseen.
+Olion massa vaikuttaa siihen, kuinka nopeasti se kiihtyy. Mitä suurempi massa on, sitä enemmän voimaa tarvitaan sen kiihdyttämiseen tai hidastamiseen.
 
 Jos haluat, ettei vauhti kiihdy loputtomasti, aseta olion LinearDamping-ominaisuus pienemmäksi, esimerkiksi näin.
 
@@ -69,18 +69,18 @@ pelaaja1.Push(new Vector(0, 3000), TimeSpan.FromSeconds(2.0));
 
 ## Olion liikuttaminen siihen suuntaan, mihin se kulloinkin osoittaa
 
-Usein ylhäältäpäin kuvatussa pelissä pelaajaa halutaan pyörittää ja sitten työntää eteenpäin siihen suuntaan mihin nokka osoittaa.
+Usein ylhäältäpäin kuvatussa pelissä pelaajaa halutaan pyörittää ja sitten työntää eteenpäin siihen suuntaan, mihin nokka osoittaa.
 
-Olion suunnan saa selville sen `Angle`-ominaisuudesta. Olion suuntaisen vektorin voi luoda `Vector.FromLengthAndAngle`-metodilla, joka luo uuden vektorin kun sille annetaan vektorin pituus ja `Angle`-olio.
+Olion suunnan saa selville sen `Angle`-ominaisuudesta. Olion suuntaisen vektorin voi luoda `Vector.FromLengthAndAngle`-metodilla, joka luo uuden vektorin, kun sille annetaan vektorin pituus ja `Angle`-olio.
 
-Esim:
+Esimerkki:
 
 ```csharp,ignore
 Vector pelaajanSuunta = Vector.FromLengthAndAngle(500.0, pelaaja1.Angle);
-pelaaja.Push(pelaajanSuunta);
+pelaaja1.Push(pelaajanSuunta);
 ```
 
-Muista myös ominaisuudet `LinearDamping`, `MaxVelocity` ja `Restitution` (kts. [kohta Push](#push)). Olion pyörittäminen näppäimillä onnistuu [ApplyTorque](#applytorque)-metodilla tai asettamalla [kulmanopeus](#pyorittaminen).
+Muista myös ominaisuudet `LinearDamping`, `MaxVelocity` ja `Restitution` (ks. [kohta Push](#push)). Olion pyörittäminen näppäimillä onnistuu [ApplyTorque](#applytorque)-metodilla tai asettamalla [kulmanopeus](#pyorittaminen).
 
 ## ApplyTorque
 
@@ -90,7 +90,7 @@ Muista myös ominaisuudet `LinearDamping`, `MaxVelocity` ja `Restitution` (kts. 
 pelaaja1.ApplyTorque(1000);
 ```
 
-Olion massa vaikuttaa myös sen vääntövoiman vaikutukseen, mutta sitäkin suorempaan siihen vaikuttaa olion *hitausmomentti*. Hitausmomentti voidaan asettaa olion `MomentOfInertia`-ominaisuudella.
+Olion massa vaikuttaa myös sen vääntövoiman vaikutukseen, mutta sitäkin suoremmin siihen vaikuttaa olion *hitausmomentti*. Hitausmomentti voidaan asettaa olion `MomentOfInertia`-ominaisuudella.
 
 ```csharp,ignore
 pelaaja1.MomentOfInertia = 600;
@@ -116,11 +116,11 @@ Hit kohdistaa olioon impulssin (hetkellinen voima), jolla olion saa nopeasti lii
 pelaaja1.Hit(new Vector(1000, 0));
 ```
 
-Olion massa vaikuttaa siihen kuinka paljon impulssi vaikuttaa siihen. Mitä suurempi massa, sitä suurempi impulssi tarvitaan sen liikuttamiseen.
+Olion massa vaikuttaa siihen, kuinka paljon impulssi liikuttaa sitä. Mitä suurempi massa, sitä suurempi impulssi tarvitaan sen liikuttamiseen.
 
 ## Walk ja Jump (vain PlatformCharacter-oliolla)
 
-`PlatformCharacter`-olioilla on erityiset kävelemiseen ja hyppämiseen tarkoitetut aliohjelmat. Lue niistä lisää [täältä](oliotyypit.md#platformcharacter).
+`PlatformCharacter`-olioilla on erityiset kävelemiseen ja hyppäämiseen tarkoitetut aliohjelmat. Lue niistä lisää [täältä](oliotyypit.md#platformcharacter).
 
 ## Move
 
@@ -140,7 +140,7 @@ Paikka ilmaistaan vektorina ja nopeus desimaalilukuna.
 pelaaja1.MoveTo(new Vector(500, 200), 400);
 ```
 
-Jos halutaan tehdä jotain kun olio on päässyt perille, voidaan `MoveTo`:lle antaa kolmantena parametrina suoritettavan aliohjelman nimi.
+Jos halutaan tehdä jotain, kun olio on päässyt perille, voidaan `MoveTo`:lle antaa kolmantena parametrina suoritettavan aliohjelman nimi.
 
 ```csharp,ignore
 pelaaja1.MoveTo(new Vector(500, 200), 400, PelaajaSaapuiKohteeseen);
@@ -179,7 +179,7 @@ Fysiikkaolion saa pyörimään antamalla sille kulmanopeuden. Kulmanopeuden voi 
 pelaaja1.AngularVelocity = 10.0;
 ```
 
-Pyörimisen suunta vaihtuu kun antaa negatiivisia arvoja.
+Pyörimisen suunta vaihtuu, kun antaa negatiivisia arvoja.
 
 Pyörimisliike hidastuu ja pysähtyy itsestään, kun `AngularDamping`-ominaisuuden arvoksi asettaa ykköstä pienempiä lukuja:
 
@@ -189,9 +189,9 @@ pelaaja1.AngularDamping = 0.5;
 
 ## Olion liikuttaminen edestakaisin (värähtely)
 
-Olion saa värähtelemään edestakaisin `Oscillate`-nimisellä metodilla. Metodi ottaa parametrikseen akselin jonka suunnassa värähtely tapahtuu sekä värähtelyn amplitudin (maksimietäisyys keskikohdasta) ja taajuuden (kuinka monta kertaa sekunnissa liikutaan koko matka). Värähtelyn yksikkö on hertsi (Hz).
+Olion saa värähtelemään edestakaisin `Oscillate`-nimisellä metodilla. Metodi ottaa parametrikseen akselin, jonka suunnassa värähtely tapahtuu, sekä värähtelyn amplitudin (maksimietäisyys keskikohdasta) ja taajuuden (kuinka monta kertaa sekunnissa liikutaan koko matka). Taajuuden yksikkö on hertsi (Hz).
 
-Seuraava esimerkki liikuttaa `vihu`-nimistä oliota vaakasuunnassa sadan yksikön matkalla 2 Hz taajuudella:
+Seuraava esimerkki liikuttaa `vihu`-nimistä oliota vaakasuunnassa sadan yksikön matkalla 2 Hz:n taajuudella:
 
 ```csharp,ignore
 vihu.Oscillate(Vector.UnitX, 100, 2);

@@ -20,5 +20,5 @@ luodaan, miltä se näyttää ja miten se poistetaan.
 Katso myös [Liitokset](../fysiikka/liitokset.md) (Fysiikka-osiossa) ja
 [Ohjainten lisääminen](../ohjaimet/ohjainten-lisays.md) (Ohjaus-osiossa), jos
 olion liikuttaminen halutaan kytkeä näppäimiin tai hiireen. Kun oliolle
-tarvitaan omia ominaisuuksia, kuten elämät, katso osio
+tarvitaan omia ominaisuuksia, kuten elämiä, katso osio
 [Oma oliotyyppi](../oma-oliotyyppi/index.md).

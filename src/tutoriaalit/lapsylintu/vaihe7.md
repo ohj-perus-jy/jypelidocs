@@ -4,7 +4,7 @@ Peli alkaa olla jo melko pelattava. Lisätään peliä vaikeuttamaan vielä viho
 
 ## Vihollislintu tiedostoon
 
-Avaa kenttätiedosto kentta1.txt ja lisää sinne merkki 'v' niinkuin vihollinen. Lisätään aluksi vain yksi vihollinen, ja kun se toimii, voidaan merkkejä lisätä enemmänkin.
+Avaa kenttätiedosto kentta1.txt ja lisää sinne merkki `v` niin kuin vihollinen. Lisätään aluksi vain yksi vihollinen, ja kun se toimii, voidaan merkkejä lisätä enemmänkin.
 
 Muutoksen jälkeen tiedosto voisi näyttää esimerkiksi seuraavalta:
 
@@ -27,11 +27,11 @@ Vihollinen on sijainniltaan melko lähellä pelaajan lintua, jotta vihollinen n�
 
 ## Vihollislintu esille pelimaailmaan
 
-Pelkkä 'v'-kirjaimen lisääminen kenttätiedostoon ei vielä automaattisesti lisää mitään pelikentälle.
+Pelkkä `v`-kirjaimen lisääminen kenttätiedostoon ei vielä automaattisesti lisää mitään pelikentälle.
 
 Etsi koodista kohta, jossa kerrotaan, mitä mikäkin merkki kenttätiedostossa tarkoittaa kentänlataimelle.
 
-Oikea kohta on LuoKentta-aliohjelmassa, ja näyttää seuraavalta:
+Oikea kohta on `LuoKentta`-aliohjelmassa ja näyttää seuraavalta:
 
 ```csharp,ignore
 void LuoKentta()
@@ -46,15 +46,15 @@ void LuoKentta()
 }
 ```
 
-Lisää rivin kentta.SetTileMethod('L', LisaaPelaaja); jälkeen seuraava rivi:
+Lisää rivin `kentta.SetTileMethod('L', LisaaPelaaja);` jälkeen seuraava rivi:
 
 ```csharp,ignore
 kentta.SetTileMethod('v', LisaaVihollinen);
 ```
 
-Rivi kertoo, että aina niihin kohtiin, joista löytyy merkki 'v', pitää lisätä vihollinen kutsumalla aliohjelmaa LisaaVihollinen.
+Rivi kertoo, että aina niihin kohtiin, joista löytyy merkki `v`, pitää lisätä vihollinen kutsumalla aliohjelmaa `LisaaVihollinen`.
 
-Ohejelmointiympäristö valittaa, että LisaaVihollinen-aliohjelmaa ei ole olemassakaan. Sellainen täytyy siis luoda.
+Ohjelmointiympäristö valittaa, että LisaaVihollinen-aliohjelmaa ei ole olemassakaan. Sellainen täytyy siis luoda.
 
 Lisää seuraava tyhjä aliohjelma esimerkiksi aliohjelman LisaaPelaaja jälkeen (eli päättävän }-sulun jälkeen):
 
@@ -87,7 +87,7 @@ Kokeile, miten peli toimii tässä vaiheessa.
 
 Vihollislintumme on vielä valkoinen neliö, joka putoaa painovoiman vaikutuksesta alas maahan. **Ei välitetä vielä vihollisen ulkonäöstä**, vaan korjataan se pysymään ensin ilmassa.
 
-Lisää rivin vihollinen.Position = paikka; jälkeen seuraava rivi:
+Lisää rivin `vihollinen.Position = paikka;` jälkeen seuraava rivi:
 
 ```csharp,ignore
 vihollinen.IgnoresGravity = true;
@@ -134,9 +134,9 @@ vihollinen.Oscillate(new Vector(0, 1), korkeus * 1.5, 0.3);
 
 Tässä kutsutaan Oscillate-metodia, joka saa vihollisen värähtelemään. Värähtely:
 
-- Tapahtuu suuntaan (0, 1) eli vaakasuunnassa ei mihinkään, pystysuunnassa ylöspäin.
-- On korkeudeltaan vihollishahmon korkeus puolitoistakertaisena
-- On taajuudeltaan 0.3 hertsiä eli tapahtuu 0.3 kertaa sekunnin aikana. Jos taajuutena olisi 1, tapahtuisi yksi kokonainen värähtely (aaltoliike) yhden sekunnin aikana.
+- tapahtuu suuntaan (0, 1) eli vaakasuunnassa ei mihinkään, pystysuunnassa ylöspäin
+- on korkeudeltaan vihollishahmon korkeus puolitoistakertaisena
+- on taajuudeltaan 0.3 hertsiä eli tapahtuu 0.3 kertaa sekunnin aikana. Jos taajuutena olisi 1, tapahtuisi yksi kokonainen värähtely (aaltoliike) yhden sekunnin aikana.
 
 Kokeile pelin toimivuutta! Voit lisäillä vihollisia enemmänkin vartioimaan tähtiä ja muuttaa vihollisen värähtelyasetuksia.
 

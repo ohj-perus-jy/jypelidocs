@@ -1,11 +1,11 @@
 # Teksti ruudulla
 
-- MessageDisplay on viestinäyttö, joka tulee oletuksena pelien mukana (ks. tarkemmat ohjeet alempana).
-- Label on olio, joka näyttää tekstiä kuten MessageDisplay tai erilaisten mittareiden arvoja, kuten IntMeter ja DoubleMeter. Ei tule oletuksena pelien mukana. Täytyy siis lisätä itse.
+- `MessageDisplay` on viestinäyttö, joka tulee oletuksena pelien mukana (ks. tarkemmat ohjeet alempana).
+- `Label` on olio, joka näyttää tekstiä kuten `MessageDisplay` tai erilaisten mittareiden arvoja, kuten `IntMeter` ja `DoubleMeter`. Ei tule oletuksena pelien mukana. Täytyy siis lisätä itse.
 
 ## MessageDisplay
 
-Kaikissa Jypeli-kirjastolla tehdyissä peleissä on mukana yksi viestinäyttö nimeltään **MessageDisplay**. Se sijaitsee oletuksena näytön vasemmassa yläreunassa.
+Kaikissa Jypeli-kirjastolla tehdyissä peleissä on mukana yksi viestinäyttö nimeltään `MessageDisplay`. Se sijaitsee oletuksena näytön vasemmassa yläreunassa.
 
 Viestin voi lisätä seuraavasti:
 
@@ -25,7 +25,7 @@ Tekstin väri on oletuksena musta, joten viestit eivät näy, jos taustakuva on 
 MessageDisplay.TextColor = Color.White;
 ```
 
-Viesten kestoajan, jonka jälkeen ne häipyvät, voi asettaa MessageDisplayn `MessageTime`-ominaisuuteen. Viestien kestoaika täytyy silloin ilmaista TimeSpan-oliona. Se on olio, joka pitää sisällään erilaisia aikajaksoja. Uuden TimeSpan-olion voi luoda monella eri tavalla. Tässä MessageTimeksi asetetaan 10 sekunnin mittainen aikajakso.
+Viestien kestoajan, jonka jälkeen ne häipyvät, voi asettaa `MessageDisplay`n `MessageTime`-ominaisuuteen. Viestien kestoaika täytyy silloin ilmaista TimeSpan-oliona. Se on olio, joka pitää sisällään erilaisia aikajaksoja. Uuden TimeSpan-olion voi luoda monella eri tavalla. Tässä MessageTimeksi asetetaan 10 sekunnin mittainen aikajakso.
 
 ```csharp,ignore
 MessageDisplay.MessageTime = new TimeSpan(0, 0, 10);
@@ -71,16 +71,16 @@ Label tekstikentta = new Label(50.0, 20.0, "teksti");
 Add(tekstikentta);
 ```
 
-Esimerkkien lopussa tekstikenttä aina lisätään ruudulle **Add**-komennolla.
+Esimerkkien lopussa tekstikenttä aina lisätään ruudulle `Add`-komennolla.
 
-Tekstikentän voi sijoittaa ruudulle haluamaansa paikkaan vaihtamalla tavalliseen tapaan sen **X**- ja **Y**-koordinaatteja:
+Tekstikentän voi sijoittaa ruudulle haluamaansa paikkaan vaihtamalla tavalliseen tapaan sen `X`- ja `Y`-koordinaatteja:
 
 ```csharp,ignore
 tekstikentta.X = Screen.Left + 100;
 tekstikentta.Y = Screen.Top - 100;
 ```
 
-Huomaa että Label sijaitsee ruutukoordinaateissa, eikä pelimaailman koordinaateissa. Se ei siis esimerkiksi reagoi kameran liikutteluun.
+Huomaa, että `Label` sijaitsee ruutukoordinaateissa eikä pelimaailman koordinaateissa. Se ei siis esimerkiksi reagoi kameran liikutteluun.
 
 ### Tekstin asettaminen
 

@@ -19,9 +19,9 @@ void LuoKentta()
 }
 ```
 
-Kenttä on siis jo olemassa kun ohjelman suoritus alkaa `Begin`-aliohjelmasta. Aliohjelmassa `LuoKentta` vain lisätään olemassa olevaan kenttään kissa-niminen `PhysicsObject`-luokan olio.
+Kenttä on siis jo olemassa, kun ohjelman suoritus alkaa `Begin`-aliohjelmasta. Aliohjelmassa `LuoKentta` vain lisätään olemassa olevaan kenttään kissa-niminen `PhysicsObject`-luokan olio.
 
-Jos kentän luomisen toteuttaa tällä tavalla, nyt on helppo vaikka aloittaa kenttä aina alusta jos pelaaja epäonnistuu, siihen on kätevä `ClearAll`-aliohjelma:
+Jos kentän luomisen toteuttaa tällä tavalla, nyt on helppo vaikka aloittaa kenttä aina alusta, jos pelaaja epäonnistuu, siihen on kätevä `ClearAll`-aliohjelma:
 
 ```csharp,ignore
 PhysicsObject kissa;
@@ -53,7 +53,7 @@ void AsetaOhjaimet()
 
 void KissaTormasi(PhysicsObject kissa, PhysicsObject kohde)
 {
-    if ((kohde == vasenreuna) || (kohde == oikeaReuna))
+    if ((kohde == vasenReuna) || (kohde == oikeaReuna))
     {
          AloitaAlusta();
     }
@@ -67,8 +67,8 @@ void AloitaAlusta()
 }
 ```
 
-Esimerkissä kissan liikuttamista ei ole toteutettu, mutta pääasia onkin huomata, mitä tapahtuu kun kissa *törmää*. Tutkitaan siis kissan törmäyksenkäsittelijää, aliohjelmaa `KissaTormasi`.
+Esimerkissä kissan liikuttamista ei ole toteutettu, mutta pääasia onkin huomata, mitä tapahtuu, kun kissa *törmää*. Tutkitaan siis kissan törmäyksenkäsittelijää, aliohjelmaa `KissaTormasi`.
 
-If-lauseen mukaan jos kissan törmäyksen kohde on kentän vasen tai oikea reuna, kutsutaan `AloitaAlusta`-nimistä aliohjelmaa (kaksi tolppamerkkiä `||` voidaan lukea "tai", vastaavasti kuin `&&`-merkintä tarkoittaa "ja").
+If-lauseen mukaan, jos kissan törmäyksen kohde on kentän vasen tai oikea reuna, kutsutaan `AloitaAlusta`-nimistä aliohjelmaa (kaksi tolppamerkkiä `||` voidaan lukea "tai", vastaavasti kuin `&&`-merkintä tarkoittaa "ja").
 
-`AloitaAlusta` kutsuu ensin `ClearAll`-nimistä (suom. tyhjennä kaikki) aliohjelmaa. Se pyyhkii kentän tyhjäksi kaikista sinne luoduista olioista ja sille tehdyistä asetuksista. Tyhjentämisen jälkeen tilanne on kuin olisimme juuri käynnistäneet pelin, ja asetukset täytyy tehdä uudelleen. Voidaankin kutsua jälleen `LuoKentta`-aliohjelmaamme, joka tekee kentälle halutut asetukset ja oliot. Myös ohjaimet täytyy asettaa uudestaan - `ClearAll` tyhjentää nimensä mukaan kaikki asetukset.
+`AloitaAlusta` kutsuu ensin `ClearAll`-nimistä (suom. tyhjennä kaikki) aliohjelmaa. Se pyyhkii kentän tyhjäksi kaikista sinne luoduista olioista ja sille tehdyistä asetuksista. Tyhjentämisen jälkeen tilanne on kuin olisimme juuri käynnistäneet pelin, ja asetukset täytyy tehdä uudelleen. Voidaankin kutsua jälleen `LuoKentta`-aliohjelmaamme, joka tekee kentälle halutut asetukset ja oliot. Myös ohjaimet täytyy asettaa uudestaan – `ClearAll` tyhjentää nimensä mukaan kaikki asetukset.

@@ -1,6 +1,6 @@
 # Ajastimet
 
-Ajastimilla voi saada peliin tapahtumia esimerkiksi, että uusia vihollisia ilmestyy aina 10 sekunnin välein. Jos sen sijaan haluat pelissäsi mitata aikaa, katso ohjetta [aikalaskurin tekemisestä](../kayttoliittyma/aikalaskuri.md).
+Ajastimilla voi saada peliin tapahtumia, esimerkiksi niin, että uusia vihollisia ilmestyy aina 10 sekunnin välein. Jos sen sijaan haluat pelissäsi mitata aikaa, katso ohjetta [aikalaskurin tekemisestä](../kayttoliittyma/aikalaskuri.md).
 
 ## Ajastimen käyttö
 
@@ -42,7 +42,7 @@ ajastin.Stop();
 
 ## Ajastimen suorittaminen useita kertoja
 
-Muuten samoin kuin edellä, mutta ajastinta käynnistettäessä kerrotaan kuinka monta kertaa ajastintapahtuma suoritetaan:
+Muuten samoin kuin edellä, mutta ajastinta käynnistettäessä kerrotaan, kuinka monta kertaa ajastintapahtuma suoritetaan:
 
 ```csharp,ignore
 ajastin.Start(3);
@@ -56,7 +56,7 @@ Jos tarvitsee vain kerran laukeavaa ajastinta, voi käyttää `Timer`-luokan `Si
 Timer.SingleShot(5.0, LisaaAsteroidi);
 ```
 
-Yllä `LisaaAsteroidi` on valmis aliohjelma, joka ei ota parametreja. Jos haluat tehdä jotain vähän "erikoisempaa", voit käyttää delegaatteja ([Lisätietoa delegaateista](../ohjelmointi/delegaatit.md)). Alla esimerkki hahmon paikan muuttamisesta.
+Yllä `LisaaAsteroidi` on valmis aliohjelma, joka ei ota parametreja. Jos haluat tehdä jotain vähän "erikoisempaa", voit käyttää delegaatteja ([Lisätietoa delegaateista](delegaatit.md)). Alla esimerkki hahmon paikan muuttamisesta.
 
 ```csharp,ignore
 Timer.SingleShot(5.0,
@@ -66,7 +66,7 @@ Timer.SingleShot(5.0,
 
 ## Parametrin vieminen aliohjelmalle
 
-Joskus aliohjelmalle tarvitsee viedä jokin olio. Otetaan esimerkiksi tilanne, jossa jokaisen vihollisen pitäisi ampua tietyn ajan välein. Jos vihollisia on monta, oman käsittelijä-aliohjelman kirjoittaminen jokaiselle viholliselle olisi työlästä. Tämähän voitaisiin ratkaista siten, että ampumisen hoitava aliohjelma ottaa vihollisen parametrina. Tälläinen aliohjelma ei kuitenkaan kelpaa ajastimelle suoraan, joten tarvitaan **delegaattia**:
+Joskus aliohjelmalle tarvitsee viedä jokin olio. Otetaan esimerkiksi tilanne, jossa jokaisen vihollisen pitäisi ampua tietyn ajan välein. Jos vihollisia on monta, oman käsittelijäaliohjelman kirjoittaminen jokaiselle viholliselle olisi työlästä. Tämähän voitaisiin ratkaista siten, että ampumisen hoitava aliohjelma ottaa vihollisen parametrina. Tällainen aliohjelma ei kuitenkaan kelpaa ajastimelle suoraan, joten tarvitaan **delegaattia**:
 
 ```csharp,ignore
 void LuoVihollinen()
@@ -93,8 +93,7 @@ void VihollinenAmpuu(PhysicsObject vihu)
 Huomaa:
 
 - Vaikka aliohjelmissa on viholliselle erinimiset muuttujat (`vihollinen` ja `vihu`), ne voivat silti viitata samaan olioon.
-- Muuttujaa vihollinen voi käyttää ainoastaan aliohjelman `LuoVihollinen`
-- sisällä (koska se on määritelty siellä!). Vastaavasti muuttuja vihu näkyy ainoastaan aliohjelman `VihollinenAmpuu` sisällä. Tämän takia tarvittiin delegaattia vihollis-olion välittämiseen.
+- Muuttujaa `vihollinen` voi käyttää ainoastaan aliohjelman `LuoVihollinen` sisällä (koska se on määritelty siellä!). Vastaavasti muuttuja `vihu` näkyy ainoastaan aliohjelman `VihollinenAmpuu` sisällä. Tämän takia tarvittiin delegaattia vihollisolion välittämiseen.
 
 ## Ajastimen nopeuttaminen
 
@@ -159,5 +158,5 @@ olioidenSynnyttamisenNopeutin.Start();
 
 - [Aikalaskuri](../kayttoliittyma/aikalaskuri.md): ajastin ja laskuri yhdessä.
 - [Elinikä](../oliot/elinika.md): olio tuhoutuu itsestään ilman ajastinta.
-- [Delegaatit](../ohjelmointi/delegaatit.md): miksi `Timeout += Aliohjelma` toimii.
+- [Delegaatit](delegaatit.md): miksi `Timeout += Aliohjelma` toimii.
 - [Miten Jypeli-peli toimii](../aloittaminen/pelin-rakenne.md#paikallinen-muuttuja-vai-attribuutti): ajastin attribuutiksi, jotta sen voi pysäyttää toisesta aliohjelmasta.

@@ -25,7 +25,7 @@ Mutta kun mailat kerran tehdään ihan samaan tapaan, eikö tässä tehdä sama 
 
 Voitaisiinko mailan luominen ohjelmoida kerran niin, että ainoastaan mailan paikka kerrotaan kummallekin mailalle erikseen?
 
-Kyllä voidaan! Mailan tekeminen voisi olla oma aliohjelma, jolle ainoastaan kerrotaan mihin halutaan tehdä uusi maila. Näin samalla aliohjelmalla voitaisiin tehdä monta eri mailaa.
+Kyllä voidaan! Mailan tekeminen voisi olla oma aliohjelma, jolle ainoastaan kerrotaan, mihin halutaan tehdä uusi maila. Näin samalla aliohjelmalla voitaisiin tehdä monta eri mailaa.
 
 ## 2. Mailoja luova aliohjelma ja parametrit
 
@@ -36,7 +36,7 @@ Koska eri mailoille tarvitaan eri koordinaatit, täytyy tämä pystyä jotenkin 
 - Aliohjelman parametrit luetellaan aliohjelman nimen jälkeen sulkujen sisällä.
 - Ensin kerrotaan **parametrin tyyppi** ja sen jälkeen **parametrin nimi**.
 - Useammat parametrit erotetaan pilkulla toisistaan.
-- Kun aliohjelmaa kutsutaan, sille täytyy antaa juuri sellaiset parametrit mitä se haluaa.
+- Kun aliohjelmaa kutsutaan, sille täytyy antaa juuri sellaiset parametrit, joita se haluaa.
 
 **Lisää** siis seuraavanlainen aliohjelma:
 

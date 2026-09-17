@@ -17,12 +17,14 @@ Tehdään ajastimesta attribuutti, jotta pääsemme siihen käsiksi muuallakin k
 
 Ajastimella on olemassa sekunteja laskeva `SecondCounter`, joka voidaan sitoa suoraan aikanäyttöön.
 
-Luodaan ajastin ja aikanäyttö, joka näyttää aikaa yhden desimaalin tarkkuudella ja sidotaan ajastimen sekuntimittari aikanäyttöön:
+Luodaan ajastin ja aikanäyttö, joka näyttää aikaa yhden desimaalin tarkkuudella, ja sidotaan ajastimen sekuntimittari aikanäyttöön:
 
 ```csharp,ignore
+Timer aikalaskuri;
+
 void LuoAikalaskuri()
 {
-    Timer aikalaskuri = new Timer();
+    aikalaskuri = new Timer();
     aikalaskuri.Start();
 
     Label aikanaytto = new Label();
@@ -35,7 +37,7 @@ void LuoAikalaskuri()
 
 Ajastin pitää muistaa käynnistää ja aikanäyttö pitää muistaa lisätä peliin.
 
-`DecimalPlaces` kertoo kuinka monen desimaalin tarkkuudella aika näytetään. Ajastimen sekuntilaskuri `aikalaskuri.SecondCounter` sidotaan aikanäyttöön `BindTo`-metodilla. Lopuksi aikanäyttökin pitää muistaa lisätä kenttään.
+`DecimalPlaces` kertoo, kuinka monen desimaalin tarkkuudella aika näytetään. Ajastimen sekuntilaskuri `aikalaskuri.SecondCounter` sidotaan aikanäyttöön `BindTo`-metodilla. Lopuksi aikanäyttökin pitää muistaa lisätä kenttään.
 
 Nyt aikalaskurin arvoon päästään halutussa paikassa käsiksi:
 
@@ -47,7 +49,7 @@ double aikaaKulunut = aikalaskuri.SecondCounter.Value;
 
 Aikalaskuri laskee aikaa aloittaen 0:sta ja päätyen (esimerkiksi) 30 sekuntiin.
 
-Muuten lähes samanlainen kuin ensimmäisessä esimerkissä, mutta nyt lisätään ajastimelle tapahtuma, joka suoritetaan kun haluttu aikaväli eli `Interval` on kulunut. Katso tarkemmin ajastimista ja tapahtumista [ajastimien ohjeesta.](../tapahtumat/ajastimet.md)
+Muuten lähes samanlainen kuin ensimmäisessä esimerkissä, mutta nyt lisätään ajastimelle tapahtuma, joka suoritetaan, kun haluttu aikaväli eli `Interval` on kulunut. Katso tarkemmin ajastimista ja tapahtumista [ajastimien ohjeesta](../tapahtumat/ajastimet.md).
 
 ```csharp,ignore
 void LuoAikalaskuri()
@@ -72,17 +74,17 @@ void AikaLoppui()
 }
 ```
 
-Aikalaskurin `Interval`-arvosta riippuu milloin, eli monenko sekunnin kuluttua ajastimen käynnistämisestä, `AikaLoppui`-aliohjelma suoritetaan.
+Aikalaskurin `Interval`-arvosta riippuu, milloin eli monenko sekunnin kuluttua ajastimen käynnistämisestä `AikaLoppui`-aliohjelma suoritetaan.
 
 ## Esimerkki 3
 
-Aikalaskuri laskee aikaa aloittaen (esimerkiksi) 30 sekunnista päätyen 0 sekuntiin.
+Aikalaskuri laskee aikaa aloittaen (esimerkiksi) 30 sekunnista ja päätyen 0 sekuntiin.
 
 Koska ajastimen sekuntilaskuria ei saa laskemaan takaperin, joudumme toteuttamaan alaspäin laskevan laskurin itse. Tässä on esitelty yksi tapa toteuttaa se. Tarvitaan kolme osaa: desimaalilukujen laskuri, ajastin ja näyttö.
 
-Ideana on käyttää desimaalilukuja laskevaa laskuria ja ajastinta. Laskuri alustetaan haluttuun sekuntimäärään ja ajastimen avulla vähennetään sen arvoa aina kuluneen ajan verran. Nyt aikanäyttöön sidotaan laskurin arvo, <u>ei</u> ajastimen sekuntilaskuria.
+Ideana on käyttää desimaalilukuja laskevaa laskuria ja ajastinta. Laskuri alustetaan haluttuun sekuntimäärään ja ajastimen avulla vähennetään sen arvoa aina kuluneen ajan verran. Nyt aikanäyttöön sidotaan laskurin arvo, **ei** ajastimen sekuntilaskuria.
 
-Tehdään `DoubleMeter`-tyyppisestä laskuristamme attribuutti. Annetaan sille aloitusarvoksi 30. Aina kun ajastin laukeaa, vähennetään laskurin arvoa ja tarkastetaan onko arvo nolla tai pienempi. Katso tarkemmin ajastimista ja tapahtumista [ajastimien ohjeesta.](../tapahtumat/ajastimet.md)
+Tehdään `DoubleMeter`-tyyppisestä laskuristamme attribuutti. Annetaan sille aloitusarvoksi 30. Aina kun ajastin laukeaa, vähennetään laskurin arvoa ja tarkastetaan, onko arvo nolla tai pienempi. Katso tarkemmin ajastimista ja tapahtumista [ajastimien ohjeesta](../tapahtumat/ajastimet.md).
 
 **Tärkeää** on huomata, että laskurimme arvoa vähennetään aina sen verran, mitä on ajastimen `Interval`-arvo! Muuten se ei pysy ajassa.
 

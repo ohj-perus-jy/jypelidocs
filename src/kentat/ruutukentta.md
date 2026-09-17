@@ -1,6 +1,6 @@
 # Ruutukenttä
 
-Jypelissä on mahdollista luoda kenttä merkkijonotauluukoon, kuvatiedostoon tai tekstitiedostoon "piirretyn" mallin mukaisesti.
+Jypelissä on mahdollista luoda kenttä merkkijonotaulukkoon, kuvatiedostoon tai tekstitiedostoon "piirretyn" mallin mukaisesti.
 
 Tällöin puhutaan, että tehdään ns. *ruutukenttä*, sillä kuvatiedoston jokainen pikseli tai tekstitiedoston jokainen merkki asetetaan vastaamaan tietyn kokoista ruutua pelikentässä.
 
@@ -22,9 +22,9 @@ private static readonly String[] lines = {
               };
 ```
 
-Taulukkoon kuvataan itse valituilla kirjaimille mihin kohti kenttää halutaan mitäkin elementtejä.
+Taulukkoon kuvataan itse valituilla kirjaimilla, mihin kohti kenttää halutaan mitäkin elementtejä.
 
-Sitten lasketaan millaista leveyttä ja korkeutta kukin elementti edustaa.
+Sitten lasketaan, millaista leveyttä ja korkeutta kukin elementti edustaa.
 
 Itse kentän kuvaus luodaan sitten tästä taulukosta:
 
@@ -32,7 +32,7 @@ Itse kentän kuvaus luodaan sitten tästä taulukosta:
 TileMap tiles = TileMap.FromStringArray(lines);
 ```
 
-Sitten kerrotaan mitä piirtometodia kutsutaan kunkin kirjaimen kohdalle. Metodille voidaan vielä lisäksi haluttu määrä lisäparametreja. Esimerkissä kullekin elementille on viety sen väri.
+Sitten kerrotaan, mitä piirtometodia kutsutaan kunkin kirjaimen kohdalla. Metodille voidaan vielä lisäksi antaa haluttu määrä lisäparametreja. Esimerkissä kullekin elementille on viety sen väri.
 
 ```csharp,ignore
     tiles.SetTileMethod('X', LuoSeina, Color.Wheat);
@@ -48,7 +48,7 @@ Lopuksi pyydetään piirtämään kenttä kuvauksen perusteella:
 tiles.Execute(tileWidth, tileHeight);
 ```
 
-Kun `Excecute`-metodi löytää kentänkuvaustaulukosta jonkin kirjaimen, niin se kutsuu vastaavaa piirtometodia. Esimerkiksi
+Kun `Execute`-metodi löytää kentänkuvaustaulukosta jonkin kirjaimen, niin se kutsuu vastaavaa piirtometodia. Esimerkiksi
 
 ```csharp,ignore
 private void LuoSeina(Vector paikka, double leveys, double korkeus, Color vari)
@@ -63,7 +63,7 @@ private void LuoSeina(Vector paikka, double leveys, double korkeus, Color vari)
 
 Piirtometodille tulee parametrina `tiles`-olion kirjaimelle laskema paikka ja kirjainta vastaavan ruudun (*tile*) koko, johon elementti pitää piirtää.
 
-Fysiikkamoottorin (Farsee) takia elementit pitää luoda hieman pienemmiksi kuin yhden ruudun koko, muuten elementit (oliot) työntävät toisiaan pois.
+Fysiikkamoottorin (Farseer) takia elementit pitää luoda hieman pienemmiksi kuin yhden ruudun koko, muuten elementit (oliot) työntävät toisiaan pois.
 
 Aja alla oleva ohjelma, niin näet tuloksen. Voit myös muutella kentän asettelua ja Alusta-linkistä palata alkuperäiseen.
 
@@ -167,7 +167,7 @@ public class AngryLego : PhysicsGame
     }
 
     /// <summary>
-    /// Luodaan vihollinen, joka hajoaa osuessaan rekenteeseen
+    /// Luodaan vihollinen, joka hajoaa osuessaan rakenteeseen
     /// </summary>
     private void LuoVihollinen(Vector paikka, double leveys, double korkeus, Color vari)
     {
@@ -180,13 +180,13 @@ public class AngryLego : PhysicsGame
 }
 ```
 
-Enemmän elävyyttä saada tietysti jos elementeille asetetaan kuvia tyyliin:
+Enemmän elävyyttä saadaan tietysti, jos elementeille asetetaan kuvia tyyliin:
 
 ```csharp,ignore
 seina.Image = LoadImage("tiili");
 ```
 
-#### Kuvia elementeille
+### Kuvia elementeille
 
 ```csharp,ignore
 //-using Jypeli;
@@ -290,7 +290,7 @@ public class AngryLego : PhysicsGame
     }
 
     /// <summary>
-    /// Luodaan vihollinen, joka hajoaa osuessaan rekenteeseen
+    /// Luodaan vihollinen, joka hajoaa osuessaan rakenteeseen
     /// </summary>
     private void LuoVihollinen(Vector paikka, double leveys, double korkeus, Color vari)
     {
@@ -304,13 +304,13 @@ public class AngryLego : PhysicsGame
 }
 ```
 
-Mikäli peliin lisätään painovoima, tulee tällä tavalla piirretyssä kentässä ongelmia kun kappaleet eivät kannattele toisiaan.
+Mikäli peliin lisätään painovoima, tulee tällä tavalla piirretyssä kentässä ongelmia, kun kappaleet eivät kannattele toisiaan.
 
 ```csharp,ignore
     Gravity = new Vector(0, -500);
 ```
 
-#### Painovoiman ongelmat
+### Painovoiman ongelmat
 
 ```csharp,ignore
 //-using Jypeli;
@@ -416,7 +416,7 @@ public class AngryLego : PhysicsGame
     }
 
     /// <summary>
-    /// Luodaan vihollinen, joka hajoaa osuessaan rekenteeseen
+    /// Luodaan vihollinen, joka hajoaa osuessaan rakenteeseen
     /// </summary>
     private void LuoVihollinen(Vector paikka, double leveys, double korkeus, Color vari)
     {
@@ -430,7 +430,7 @@ public class AngryLego : PhysicsGame
 }
 ```
 
-Tähän auttaa hieman kun tehdään rakennelmasta sellainen, että ylimmät seinäelementit ovat muita leveämpiä ja näin kannattelevat kattoelementtejä:
+Tähän auttaa hieman, kun tehdään rakennelmasta sellainen, että ylimmät seinäelementit ovat muita leveämpiä ja näin kannattelevat kattoelementtejä:
 
 ```csharp,ignore
 private void LuoYlaSeina(Vector paikka, double leveys, double korkeus, Color vari)
@@ -444,7 +444,7 @@ private void LuoYlaSeina(Vector paikka, double leveys, double korkeus, Color var
 }
 ```
 
-#### Isommat yläseinät
+### Isommat yläseinät
 
 ```csharp,ignore
 //-using Jypeli;
@@ -563,7 +563,7 @@ public class AngryLego : PhysicsGame
     }
 
     /// <summary>
-    /// Luodaan vihollinen, joka hajoaa osuessaan rekenteeseen
+    /// Luodaan vihollinen, joka hajoaa osuessaan rakenteeseen
     /// </summary>
     private void LuoVihollinen(Vector paikka, double leveys, double korkeus, Color vari)
     {
@@ -587,11 +587,11 @@ Aiempaa esimerkkiä mukaillen, kentän pohjana olevan tekstin voi myös halutess
 
 Helpoin tapa on tehdä ruudukko erilliseen tekstitiedostoon, josta se sitten luetaan. Vaihtoehtoinen tapa on [määrittää ruudut suoraan koodissa](#stringlines).
 
-Tekeminen ja muokkaaminen onnistuu helpoiten Notepad++-ohjelmalla, mutta mikä tahansa tekstieditori (eli EI word!) käy.
+Tekeminen ja muokkaaminen onnistuu helpoiten Notepad++-ohjelmalla, mutta mikä tahansa tekstieditori (eli EI Word!) käy.
 
 Luo uusi tiedosto. Tekstitiedostoon voi nyt "piirtää" kirjoitusmerkeillä haluamansa kentän. Ruudukon leveydeksi tulee tiedoston pisimmän rivin pituus ja korkeudeksi tiedoston rivien määrä. Käytä tyhjien ruutujen merkitsemiseen välilyöntiä, **älä** käytä Tab-näppäintä.
 
-**Vinkki:** Laita tyhjien merkkien näyttö:
+**Vinkki:** Laita tyhjien merkkien näyttö päälle:
 
 - View » Show Symbol » Show White Space and TAB
 
@@ -599,21 +599,21 @@ Luo uusi tiedosto. Tekstitiedostoon voi nyt "piirtää" kirjoitusmerkeillä halu
 
 **Vinkki:** Kentän muokkaaminen voi olla helpompaa, kun painat `Insert`-näppäintä (tekstin korvaustila), jos näppäimistössäsi on sellainen. Paina `Insert`-näppäintä uudelleen päästäksesi takaisin normaaliin kirjoitustilaan.
 
-**Vinkki:** Käytä merkkeinä pelkästään isoja ja pieniä kirjaimia sekä numeroita. Erikoismerkit (Esim £) eivät välttämättä toimi oikein.
+**Vinkki:** Käytä merkkeinä pelkästään isoja ja pieniä kirjaimia sekä numeroita. Erikoismerkit (esim. £) eivät välttämättä toimi oikein.
 
-Kun olet piirtänyt kentän, klikkaa tallennuskuvaketta, tai mene File » Save (Ctrl+S) ja anna tiedostolle nimeksi esimerkiksi "kentta1.txt" (ilman lainausmerkkejä), jos teit ensimmäisen kentän.
+Kun olet piirtänyt kentän, klikkaa tallennuskuvaketta tai mene File » Save (Ctrl+S) ja anna tiedostolle nimeksi esimerkiksi "kentta1.txt" (ilman lainausmerkkejä), jos teit ensimmäisen kentän.
 
 Kun kenttä on valmis, palaa Rideriin.
 
 ### 2. Kenttätiedoston lisääminen projektiin
 
-Kentän lataamiseksi lisätään kenttätiedosto content-kansioon. Katso tarkemmat ohjeet: [Sisällön tuominen peliin](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin)
+Kentän lataamiseksi lisätään kenttätiedosto `Content`-kansioon. Katso tarkemmat ohjeet: [Sisällön tuominen peliin](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin)
 
 ### 3. Ruutukartan luominen
 
-Ruutukentän luomista varten tarvitsee koodissa luoda ruutukartta-olio (`TileMap`). Sopiva paikka ruutukartan luomiseksi on aliohjelma, joka luo kentän (esim. `LuoKentta()`).
+Ruutukentän luomista varten tarvitsee koodissa luoda ruutukarttaolio (`TileMap`). Sopiva paikka ruutukartan luomiseksi on aliohjelma, joka luo kentän (esim. `LuoKentta()`).
 
-Ruutukartta-olio luodaan seuraavasti (vaihda nimen `kentta` tilalle tiedosto, jonka liitit projektiin):
+Ruutukarttaolio luodaan seuraavasti (vaihda nimen `kentta1` tilalle tiedosto, jonka liitit projektiin):
 
 ```csharp,ignore
 TileMap ruudut = TileMap.FromLevelAsset("kentta1");
@@ -621,7 +621,7 @@ TileMap ruudut = TileMap.FromLevelAsset("kentta1");
 
 ### 4. Merkit / pikselit vastaamaan olioita
 
-Tarkoitus on, että jokaista erilaista kirjoitusmerkkiä tai pikseliä vastaa joku tietynlainen olio. Jokainen käyttämäsi <u>merkki tai pikseli liitetään</u> sitä vastaavan <u>olion luovaan aliohjelmaan</u> seuraavalla tavalla:
+Tarkoitus on, että jokaista erilaista kirjoitusmerkkiä tai pikseliä vastaa joku tietynlainen olio. Jokainen käyttämäsi **merkki tai pikseli liitetään** sitä vastaavan **olion luovaan aliohjelmaan** seuraavalla tavalla:
 
 Tekstitiedostolle:
 
@@ -630,7 +630,7 @@ ruudut.SetTileMethod('=', LuoPalikka);
 ruudut.SetTileMethod('*', LuoTahti);
 ```
 
-`LuoPalikka` sekä `LuoTahti` ovat joita kutsutaan jokaisen annetun merkin kohdalla, joita kenttätiedostosta löytyy. Tällaisessa aliohjelmassa voidaan esimerkiksi luoda uusi olio.
+`LuoPalikka` sekä `LuoTahti` ovat aliohjelmia, joita kutsutaan jokaisen annetun merkin kohdalla, joita kenttätiedostosta löytyy. Tällaisessa aliohjelmassa voidaan esimerkiksi luoda uusi olio.
 
 Nyt täytyy vielä kirjoittaa oliot luovat aliohjelmat. Esimerkiksi `LuoPalikka` voisi olla seuraavanlainen:
 
@@ -645,7 +645,7 @@ void LuoPalikka(Vector paikka, double leveys, double korkeus)
 }
 ```
 
-Jos teet paljon samantyyppisiä elementtejä, jotka eroavat toisistaan vain vähän, esimerkiksi kuvan tai värin suhteen, voit antaa muuttuvat tiedot parametrina. Samoin voit toimia toki muidenkin ominaisuuksien kanssa. Alla esimerkki kahden eri värisen palikan tekemisestä samalla aliohjelmalla, sama toimii kuville kun pistät parametriksi Imagen.
+Jos teet paljon samantyyppisiä elementtejä, jotka eroavat toisistaan vain vähän, esimerkiksi kuvan tai värin suhteen, voit antaa muuttuvat tiedot parametrina. Samoin voit toimia toki muidenkin ominaisuuksien kanssa. Alla esimerkki kahden erivärisen palikan tekemisestä samalla aliohjelmalla, sama toimii kuville, kun pistät parametriksi Imagen.
 
 ```csharp,ignore
 public override void Begin()
@@ -677,7 +677,7 @@ Tässä yhden ruudun kooksi tulisi (20, 20).
 
 **HUOM!** Tämä komento muuttaa kentän kokoa! Jos siis lisäät kenttään reunoja tai zoomaat kameran näyttämään koko kentän, tee se vasta tämän jälkeen.
 
-Toinen vaihtoehto on antaa kirjaston laskea edellämainitut attribuutit jolloin kentän koko ei muutu. Tällöin käytä komentoa:
+Toinen vaihtoehto on antaa kirjaston laskea edellä mainitut attribuutit, jolloin kentän koko ei muutu. Tällöin käytä komentoa:
 
 ```csharp,ignore
 ruudut.Execute();
@@ -685,7 +685,7 @@ ruudut.Execute();
 
 ### 6. Valmis esimerkki
 
-Tässä eräs ratkaisu ruutukentän tekemiseen, kun kenttä on tehty erilliseen tekstitiedostoon nimeltä "kentta.txt":
+Tässä eräs ratkaisu ruutukentän tekemiseen, kun kenttä on tehty erilliseen tekstitiedostoon nimeltä "kentta1.txt":
 
 ```csharp,ignore
 public void LuoKentta()
@@ -734,7 +734,7 @@ Eriväriset pikselit vastaavat siten eri olioita, joten vaikkapa mustat pikselit
 
 ### 1. Kentän piirtäminen Paint.NETillä
 
-Mikroluokissa piirtämiseen on käytössä Paint.NET -niminen ohjelma. Voit piirtää ruutukentän muullakin ohjelmalla, tärkeintä on että kuvan yksittäisiä pisteitä eli pikseleitä pääsee muokkaamaan ja niiden väriarvot ovat helposti nähtävissä.
+Mikroluokissa piirtämiseen on käytössä Paint.NET-niminen ohjelma. Voit piirtää ruutukentän muullakin ohjelmalla, tärkeintä on, että kuvan yksittäisiä pisteitä eli pikseleitä pääsee muokkaamaan ja niiden väriarvot ovat helposti nähtävissä.
 
 Avataan ensin Paint.NET Käynnistä-valikosta tai työpöydältä. Näkyville pitäisi tulla seuraavanlainen ikkuna:
 
@@ -746,13 +746,13 @@ Valitse **File**-valikosta **New...** luodaksesi uuden kuvan. Avautuvaan ikkunaa
 
 ![](images/paintnew.jpeg)
 
-Kuvan zoomaustasoa voi säätää valikosta View » Zoom In / Zoom Out, tai painamalla **Ctrl** pohjaan ja käyttämällä hiiren rullaa.
+Kuvan zoomaustasoa voi säätää valikosta View » Zoom In / Zoom Out tai painamalla **Ctrl** pohjaan ja käyttämällä hiiren rullaa.
 
 Poista vielä valkoinen tausta valitsemalla kaikki (Edit » Select All tai **Ctrl+A**) ja poistamalla valinta (Edit » Erase Selection tai **Delete**). Nyt kuvan pitäisi näyttää tältä:
 
 ![](images/painttyhja.jpeg)
 
-Tallenna kuva pelin Content-hakemistoon.
+Tallenna kuva pelin `Content`-kansioon.
 
 Kuva pitää tallentaa png-muodossa, jotta läpinäkyvyys säilyy ja jotta kuvaan ei tule pakkausartifakteja. (Ks. myös [Miten teen kuvaan läpinäkyviä osia](../grafiikka/kuvan-lapinakyvyys.md).)
 
@@ -766,11 +766,11 @@ Voit itse päättää, mitä oliota mikäkin väri vastaa. Esimerkiksi mustat pi
 
 ### 2. Kenttätiedoston lisääminen projektiin
 
-Kentän lataamiseksi kuvasta lisätään kenttätiedosto content-kansioon. Katso tarkemmat ohjeet TIMistä: [​https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin)
+Kentän lataamiseksi kuvasta lisätään kenttätiedosto `Content`-kansioon. Katso tarkemmat ohjeet TIMistä: [https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin)
 
 ### 3. Kentän luominen projektiin lisätystä kuvatiedostosta
 
-Kun kuva on liitetty Content-kansioon, voimme ottaa sen käyttöön koodissa.
+Kun kuva on liitetty `Content`-kansioon, voimme ottaa sen käyttöön koodissa.
 
 Sopiva paikka kentän luomiseksi on aliohjelma, joka luo kentän (esim. `LuoKentta`).
 
@@ -778,14 +778,14 @@ Kentän luomisen vaiheet:
 
 - Luodaan uusi `ColorTileMap` nimeltä ruudut, johon kuvatiedosto luetaan.
 
-- Kerrotaan `ColorTileMapille` mitä aliohjelmaa kutsutaan, kun tietyn värinen pikseli tulee vastaan kuvatiedostossa. (Ja toteutetaan tarvittavat aliohjelmat.)
+- Kerrotaan `ColorTileMap`ille, mitä aliohjelmaa kutsutaan, kun tietyn värinen pikseli tulee vastaan kuvatiedostossa. (Ja toteutetaan tarvittavat aliohjelmat.)
 
   - Aliohjelmassa luodaan olio, sijoitetaan se oikeaan paikkaan ja lisätään peliin
   - Aliohjelmille tulee parametrina vektori, joka kertoo olion paikan pelikentällä.
   - Lisäksi parametreina tulevat yhdelle pikselille varatun ruudun leveys ja korkeus pelikentällä.
-  - Listan väreistä ja nimet Paint.netin väreille näet allaolevasta kuvasta.
+  - Listan väreistä ja niiden nimistä Paint.NETissä näet alla olevasta kuvasta.
 
-![Lista paint.NETin valmiista väreistä](images/jypeli-varit.png).
+  ![Lista Paint.NETin valmiista väreistä](images/jypeli-varit.png)
 
 - Luodaan kenttä `Execute`-komennolla. Parametreina annetaan yhden pikselin leveys ja korkeus pelikentällä.
 
@@ -837,21 +837,21 @@ void LuoTahti(Vector paikka, double leveys, double korkeus)
 
 **HUOM!** `Execute`-komento muuttaa kentän kokoa! Jos siis lisäät kenttään reunoja tai zoomaat kameran näyttämään koko kentän, tee se vasta tämän jälkeen.
 
-**Vinkki:** Mikäli teet kentän, jossa on paljon samoja staattisia olioita (maasto, seinät, jne.), lisää seuraava rivi olion luovaan aliohjelmaan:
+**Vinkki:** Mikäli teet kentän, jossa on paljon samoja staattisia olioita (maasto, seinät jne.), lisää seuraava rivi olion luovaan aliohjelmaan:
 
 ```csharp,ignore
     palikka.CollisionIgnoreGroup = 1;
 ```
 
-Tämän rivin vaikutus on se, että kaikki oliot, joilla on sama `CollisionIgnoreGroup` eivät törmää keskenään. Pelissä vierekkäiset tasot törmäilevät muuten huomaamattamme keskenään, ja näiden törmäysten käsittely syö tietokoneen laskentatehoa.
+Tämän rivin vaikutus on se, että kaikki oliot, joilla on sama `CollisionIgnoreGroup`, eivät törmää keskenään. Pelissä vierekkäiset tasot törmäilevät muuten huomaamattamme keskenään, ja näiden törmäysten käsittely syö tietokoneen laskentatehoa.
 
 ## Tekstuurin lisääminen
 
 Ruutukentän luomille olioille halutaan usein asettaa jokin kuva eli tekstuuri. Koska samaa kuvaa käytetään monta kertaa, se kannattaa ladata muuttujaan pelin alussa. Sitten samaa kuvaa voi helposti käyttää samanlaisia olioita luovassa aliohjelmassa.
 
-Piirrä tekstuuri kuvankäsittelyohjelmalla ja katso sitten ohjeet [sisällön tuomisesta projektiin.](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin)
+Piirrä tekstuuri kuvankäsittelyohjelmalla ja katso sitten ohjeet [sisällön tuomisesta projektiin](https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/sisallon-tuominen-peliin).
 
-Kun kuva on olemassa ja tuotu projektiin sitä voidaan käyttää seuraavasti:
+Kun kuva on olemassa ja tuotu projektiin, sitä voidaan käyttää seuraavasti:
 
 Ladataan kuva muuttujaan luokan alussa:
 
@@ -894,6 +894,6 @@ tai tekstikentälle
 kentta.Optimize('x');
 ```
 
-Huom. älä käytä esim. kerättäville esineille, pelaajille tai muille joiden lukumäärällä on merkitystä
+Huom. älä käytä esim. kerättäville esineille, pelaajille tai muille, joiden lukumäärällä on merkitystä.
 
 On myös tärkeää huomioida, että tämä muuttaa kappaleiden kokoa yhdistämällä vierekkäin olevia samanlaisia kappaleita yhdeksi. Eli jos jonkin kappaleen fyysiset mitat ovat tärkeät, tämä voi tuottaa ongelmia (esimerkiksi tekstuurien venymisen suhteen).

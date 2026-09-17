@@ -26,7 +26,7 @@ public override void Begin()
 }
 ```
 
-**Begin-aliohjelma suoritetaan ensimmäisenä kun peli käynnistetään**. Se on siten sopiva paikka tehdä pelin alustukset, kuten pelihahmojen luominen ja sijoittaminen oikeille paikoilleen.
+**Begin-aliohjelma suoritetaan ensimmäisenä, kun peli käynnistetään**. Se on siten sopiva paikka tehdä pelin alustukset, kuten pelihahmojen luominen ja sijoittaminen oikeille paikoilleen.
 
 Etsi `Begin` koodista. **Aliohjelman nimi** `Begin` on kerrottu ensimmäisen rivin lopussa ja nimen jälkeen on **kaarisulut** `(` ja `)`.
 
@@ -34,15 +34,15 @@ Nimen ja kaarisulkujen jälkeen tulee **aaltosulut** `{` ja `}`.
 
 **Aaltosulkujen väliin kirjoitetaan aliohjelmalle kuuluvat koodirivit.**
 
-**//** -alkuinen vihreällä näkyvä rivi on kommentti. Se ei tee pelin kannalta mitään, vaan on ainoastaan muistuttamassa pelin ohjelmoijaa eli sinua, että pelin alustus tehdään tässä. Voit halutessasi poistaa tuon rivin.
+`//`-alkuinen vihreällä näkyvä rivi on kommentti. Se ei tee pelin kannalta mitään, vaan on ainoastaan muistuttamassa pelin ohjelmoijaa eli sinua, että pelin alustus tehdään tässä. Voit halutessasi poistaa tuon rivin.
 
-Kommenttirivin jälkeen on kaksi riviä, jotka tekevät peliin lopetuspainikkeen. Koska emme nyt tee peliä puhelimelle, **voit pyyhkiä rivin**, joka alkaa sanalla *PhoneBackButton*.
+Kommenttirivin jälkeen on kaksi riviä, jotka tekevät peliin lopetuspainikkeen. Koska emme nyt tee peliä puhelimelle, **voit pyyhkiä rivin**, joka alkaa sanalla `PhoneBackButton`.
 
 ## 3. Olion luominen
 
-Ensimmäisenä haluamme lisätä peliimme pallon. Palloa varten luodaan olio, joka on tyyppiä `PhysicsObject` eli fysiikkaolio. Koska teemme fysiikkapeliä, käytämme fysiikkaolioita, jotka käyttäytyvät fysiikan lakien mukaan eli pomppivat, törmäävät, jne. Fysiikkaolio pitää sisällään kappaleille kuuluvia ominaisuuksia, kuten esimerkiksi kuva tai massa.
+Ensimmäisenä haluamme lisätä peliimme pallon. Palloa varten luodaan olio, joka on tyyppiä `PhysicsObject` eli fysiikkaolio. Koska teemme fysiikkapeliä, käytämme fysiikkaolioita, jotka käyttäytyvät fysiikan lakien mukaan eli pomppivat, törmäävät jne. Fysiikkaolio pitää sisällään kappaleille kuuluvia ominaisuuksia, kuten esimerkiksi kuva tai massa.
 
-**Kirjoita** `Begin`-aliohjelmaan, aaltosulkujen väliin uuden fysiikkaolion luominen:
+**Kirjoita** `Begin`-aliohjelmaan aaltosulkujen väliin uuden fysiikkaolion luominen:
 
 ```csharp,ignore
 PhysicsObject pallo = new PhysicsObject(40.0, 40.0);
@@ -50,11 +50,11 @@ PhysicsObject pallo = new PhysicsObject(40.0, 40.0);
 
 Uusi `PhysicsObject`-tyyppinen olio luodaan ja sijoitetaan `PhysicsObject`-tyyppiseen muuttujaan nimeltä `pallo`.
 
-- Ensin kerrotaan, että käytössämme on PhysicsObject-tyyppinen muuttuja jonka nimi on pallo.
+- Ensin kerrotaan, että käytössämme on `PhysicsObject`-tyyppinen muuttuja, jonka nimi on `pallo`.
 
-- Muuttujan pallo arvoksi asetetaan uusi PhysicsObject-olio, jonka tekee meille samanniminen aliohjelma.
+- Muuttujan `pallo` arvoksi asetetaan uusi `PhysicsObject`-olio, jonka tekee meille samanniminen aliohjelma.
 
-- Aliohjelman nimen jälkeen annetaan suluissa parametreja, jotka kertovat minkä kokoisen fysiikkaolion haluamme. Parametrien järjestyksellä on väliä.
+- Aliohjelman nimen jälkeen annetaan suluissa parametreja, jotka kertovat, minkä kokoisen fysiikkaolion haluamme. Parametrien järjestyksellä on väliä.
 
 Fysiikkaolion parametrit ovat desimaalilukuja ja ne annetaan järjestyksessä ensin leveys, sitten korkeus. Tässä pallon leveydeksi ja korkeudeksi asetettiin `40.0` (huomaa, että desimaaleja erottamaan käytetään **pistettä**). Mittayksikkö voi olla mitä tahansa, voit vaikka kuvitella sen olevan senttimetrejä.
 
@@ -82,7 +82,7 @@ public override void Begin()
 
 **Rider tallentaa työsi automaattisesti**. Jos käytät jotakin muuta ohjelmaa koodin kirjoittamiseen, muista tallentaa koodisi muutaman minuutin välein.
 
-Kokeile toimiiko peli!
+Kokeile, toimiiko peli!
 
 > [!KOKEILE]
 
@@ -111,7 +111,7 @@ public override void Begin()
 }
 ```
 
-Huomaa, että vaikka meillä oli muuttuja nimeltä pallo, se olikin aluksi pelissä neliön muotoinen. *Tietokone ei siis ymmärrä mitä muuttujien nimet tarkoittavat.* Se ei yleensä välitä niistä niin kauan kuin nimiä vain käyttää sen mielestä oikein. Nimet ovat kuitenkin tärkeitä ihmisille, jotka yrittävät ymmärtää ohjelmakoodia. Hyvin ja kuvaavasti nimetyt muuttujat ja aliohjelmat helpottavat huomattavasti koodin lukemista niin koodin kirjoittajan kuin lukijankin kannalta! Eihän olisi ymmärrettävää antaa pallolle nimeksi esimerkiksi "kolmio", "olio1" tai "sdaydfs".
+Huomaa, että vaikka meillä oli muuttuja nimeltä pallo, se olikin aluksi pelissä neliön muotoinen. *Tietokone ei siis ymmärrä, mitä muuttujien nimet tarkoittavat.* Se ei yleensä välitä niistä niin kauan kuin nimiä vain käyttää sen mielestä oikein. Nimet ovat kuitenkin tärkeitä ihmisille, jotka yrittävät ymmärtää ohjelmakoodia. Hyvin ja kuvaavasti nimetyt muuttujat ja aliohjelmat helpottavat huomattavasti koodin lukemista niin koodin kirjoittajan kuin lukijankin kannalta! Eihän olisi ymmärrettävää antaa pallolle nimeksi esimerkiksi "kolmio", "olio1" tai "sdaydfs".
 
 Nyt kun ajat ohjelman (Riderissa vihreä **Run**-kolmio), pitäisi keskellä ruutua näkyä pallo, kuten tämän sivun alussa olevassa kuvassa.
 

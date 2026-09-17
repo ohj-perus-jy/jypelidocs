@@ -4,11 +4,11 @@ Monissa peleissä on useita eri kenttiä. Tässä on yksi tapa tai periaate, mit
 
 Periaatteena on se, että pidetään koodissa jossain muuttujassa yllä tietoa siitä, missä kentässä ollaan menossa. Tämän tiedon perusteella valitaan, mikä kenttä luodaan.
 
-Kun kenttä vaihtuu, edellinen kenttä täytyy ensin tyhjentää. Tämän jälkeen voidaan luoda tilalle uusi kenttä. Kannattaa muistaa, että `ClearAll` tyhjentää myös ohjainasetukset, joten kannattaa miettiä missä näppäimet luodaan.
+Kun kenttä vaihtuu, edellinen kenttä täytyy ensin tyhjentää. Tämän jälkeen voidaan luoda tilalle uusi kenttä. Kannattaa muistaa, että `ClearAll` tyhjentää myös ohjainasetukset, joten kannattaa miettiä, missä näppäimet luodaan.
 
-Tässä esimerkissä kuvitellaan, että [kentät luodaan tekstitiedostosta.](ruutukentta.md) Kentän luovalle aliohjelmalle viedään parametrina sen tekstitiedoston nimi, josta kenttä luodaan.
+Tässä esimerkissä kuvitellaan, että [kentät luodaan tekstitiedostosta](ruutukentta.md). Kentän luovalle aliohjelmalle viedään parametrina sen tekstitiedoston nimi, josta kenttä luodaan.
 
-Esimerkkikoodi (Huom! Koodi on Nuorten pelikurssia varten, Ohjelmointi 1 kurssilaisten pitää osata korvat suurin osa if-lauseita järkevämmin):
+Esimerkkikoodi (Huom! Koodi on Nuorten pelikurssia varten, Ohjelmointi 1 -kurssilaisten pitää osata korvata suurin osa if-lauseista järkevämmin):
 
 ```csharp,ignore
 //Pelin alussa ollaan kentässä 1
@@ -55,9 +55,9 @@ void TormasiPiikkiin(PhysicsObject pelaaja, PhysicsObject piikki)
 }
 ```
 
-**VAROITUS:** Yllä esitetyllä tavalla on valitettavan helppo saada peli solmuun. Tämä tapa toimii parhaiten niissä tilanteissa, joissa *aivan kaikki* (myös kontrollit) tuhotaan kentän päätteeksi, ja luodaan uudelleen seuraavassa kentässä. Koska tämä ei läheskään aina ole ihanteellinen tapa toimia, niin `ClearAll`-metodin käyttöä tulisikin oikeastaan välttää ja pyrkiä tuhoamaan vain ne oliot jotka oikeasti halutaan tuhota.
+**VAROITUS:** Yllä esitetyllä tavalla on valitettavan helppo saada peli solmuun. Tämä tapa toimii parhaiten niissä tilanteissa, joissa *aivan kaikki* (myös kontrollit) tuhotaan kentän päätteeksi ja luodaan uudelleen seuraavassa kentässä. Koska tämä ei läheskään aina ole ihanteellinen tapa toimia, niin `ClearAll`-metodin käyttöä tulisikin oikeastaan välttää ja pyrkiä tuhoamaan vain ne oliot, jotka oikeasti halutaan tuhota.
 
-Jos kuitenkin haluat käyttää ClearAll-metodia, niin on huolehdittava pelaajan toiminnasta. Jos pelaaja-olio on attribuuttina (ts. sama pelaajaolion ilmentymä jatkaa kentästä toiseen), voit käyttää kentän luonnin yhteydessä sellaista pelaajan luontimetodia joka palauttaa pelaajaolion viitteen. Tästä tulee hieman ikävän näköinen koodi, alla esimerkki:
+Jos kuitenkin haluat käyttää `ClearAll`-metodia, niin on huolehdittava pelaajan toiminnasta. Jos pelaajaolio on attribuuttina (ts. sama pelaajaolion ilmentymä jatkaa kentästä toiseen), voit käyttää kentän luonnin yhteydessä sellaista pelaajan luontimetodia, joka palauttaa pelaajaolion viitteen. Tästä tulee hieman ikävän näköinen koodi, alla esimerkki:
 
 ```csharp,ignore
 void LuoKentta(string kenttaTiedosto)

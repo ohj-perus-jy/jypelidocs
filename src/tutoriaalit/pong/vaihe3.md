@@ -15,7 +15,7 @@ Lisäämme pian pelikenttään lisää olioita, tällä kertaa mailan. Jotta koo
 
 <u>Aliohjelma on pienempi osa koodia, jota voidaan kutsua jostain muusta kohtaa koodia</u>. Aliohjelmasta näkee usein käytettävän myös nimityksiä funktio tai metodi. Ne tarkoittavat (melkein) samaa asiaa.
 
-Kirjoita aliohjelma `LuoKentta`. Aliohjelman koodi on seuraavassa merkattu vihreällä värillä. Harmaalla oleva koodi pitäisi olla jo koodissasi, joten sitä ei pidä kirjoittaa.
+Kirjoita aliohjelma `LuoKentta`. Aliohjelman koodi on seuraavassa merkattu vihreällä värillä. Harmaalla olevan koodin pitäisi olla jo koodissasi, joten sitä ei pidä kirjoittaa.
 
 **Kiinnitä erityisesti huomiota siihen, miten aaltosulut tulevat.** Rivin `void LuoKentta()` jälkeen tulee yksi aaltosulku auki `{` ja toinen kiinni `}`. Niiden väliin kirjoitetaan `LuoKentta`-aliohjelmaan kuuluvat koodirivit.
 
@@ -42,22 +42,22 @@ public class Pong : PhysicsGame
         Level.Background.Color = Color.Black;
 
         Camera.ZoomToLevel();
-// HIGHLIGHT_GREEN_BEGIN
 
         Vector impulssi = new Vector(500.0, 0.0);
         pallo.Hit(impulssi * pallo.Mass);
-// HIGHLIGHT_GREEN_END
 
         Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
     }
 
+// HIGHLIGHT_GREEN_BEGIN
     void LuoKentta()
     {
     }
+// HIGHLIGHT_GREEN_END
 }
 ```
 
-Aliohjelman alussa, ennen sen nimeä, kerrotaan minkä tyyppistä tietoa aliohjelma paluttaa. Koska tämä aliohjelma ei palauta mitään arvoa, tyypin kohdalle tulee vain sana `void`. Aliohjelman nimen jälkeen tulee sulut, joiden väliin tulee mahdolliset parametrit (joita tässä ei ole yhtään).
+Aliohjelman alussa, ennen sen nimeä, kerrotaan, minkä tyyppistä tietoa aliohjelma palauttaa. Koska tämä aliohjelma ei palauta mitään arvoa, tyypin kohdalle tulee vain sana `void`. Aliohjelman nimen jälkeen tulee sulut, joiden väliin tulee mahdolliset parametrit (joita tässä ei ole yhtään).
 
 Nyt meillä on tyhjä aliohjelma, jonne haluaisimme siirtää kaikki kentän luomiseen liittyvät koodirivit.
 
@@ -67,9 +67,9 @@ Aliohjelma ei itsessään tee mitään ennen kuin sitä **kutsutaan** jostakin.
 
 Aliohjelman kutsuminen tarkoittaa, että tietokonetta käsketään suorittamaan aliohjelmaan kuuluvat koodirivit.
 
-Mistä voisimme kutsua tuota aliohjelmaa? Tietysti `Begin`-aliohjelmasta, jota olemme edellisissä vaiheissa tehneet. Tuo aliohjelmahan suoritetaan ensimmäisenä kun peli käynnistetään.
+Mistä voisimme kutsua tuota aliohjelmaa? Tietysti `Begin`-aliohjelmasta, jota olemme edellisissä vaiheissa tehneet. Tuo aliohjelmahan suoritetaan ensimmäisenä, kun peli käynnistetään.
 
-**Siirrä** kentän luontiin liittyvät rivit `Begin`:ista aliohjelmaan `LuoKentta` alla olevan kuvan osoittamalla tavalla. Ctrl+X (Macilla Cmd+X) leikkaa valitun tekstin ja Ctrl+V (Cmd+V) liittää sen kursorin kohdalle. Katso tarvittaessa tarkemmat ohjeet tekstin editointiin Riderin omasta ohjeesta.
+**Siirrä** kentän luontiin liittyvät rivit `Begin`istä aliohjelmaan `LuoKentta` alla olevan kuvan osoittamalla tavalla. Ctrl+X (Macilla Cmd+X) leikkaa valitun tekstin ja Ctrl+V (Cmd+V) liittää sen kursorin kohdalle. Katso tarvittaessa tarkemmat ohjeet tekstin editointiin Riderin omasta ohjeesta.
 
 **Huomaa, että omassa koodissasi rivit saattavat olla hieman eri järjestyksessä kuin kuvassa.**
 
@@ -79,13 +79,13 @@ Pallon liikuttamiseen liittyvät kaksi riviä (vektorin luominen ja pallon töyt
 
 Kirjoitetaan sitten aliohjelmakutsu. **Aliohjelman kutsu on käsky tietokoneelle käydä suorittamassa aliohjelmalle kuuluvat koodirivit.**
 
-Kutsu tapahtuu yksinkertaisesti kirjoittamalla <u>aliohjelman nimi</u>, jonka jälkeen tulee <u>sulut</u> ja sulkujen sisään mahdolliset <u>parametrit</u> (joita aliohjelmallamme ei ole yhtään) ja lopuksi puolipiste `;`.
+Kutsu tapahtuu yksinkertaisesti kirjoittamalla <u>aliohjelman nimen</u>, jonka jälkeen tulee <u>sulut</u> ja sulkujen sisään mahdolliset <u>parametrit</u> (joita aliohjelmallamme ei ole yhtään) ja lopuksi puolipiste `;`.
 
 **Kirjoita siirrettyjen rivien tilalle** aliohjelman `LuoKentta` kutsu kuten kuvassa:
 
 ![](images/aliohjelma2.1.png)
 
-Koska kirjoitimme aliohjelmakutsun ennen rivejä, joilla luodaan vektori nimeltä `impulssi` ja sysätään pallo liikkeelle, `LuoKentta`-aliohjelman rivit suoritetaan <u>ennen</u> `impulssin` luomista ja pallon liikuttamista. Pelimme toiminta ei siis muutu oikeastaan millään tavalla. Jäsentelemme vain koodia pienempiin osiin.
+Koska kirjoitimme aliohjelmakutsun ennen rivejä, joilla luodaan vektori nimeltä `impulssi` ja sysätään pallo liikkeelle, `LuoKentta`-aliohjelman rivit suoritetaan <u>ennen</u> `impulssi`-vektorin luomista ja pallon liikuttamista. Pelimme toiminta ei siis muutu oikeastaan millään tavalla. Jäsentelemme vain koodia pienempiin osiin.
 
 Pelissämme on vielä kuitenkin virhe.
 
@@ -150,7 +150,7 @@ Näillä toimenpiteillä pallo-olioon päästään käsiksi kaikista aliohjelmis
 
 ## 4. Mailan lisääminen kenttään
 
-Lisätään kenttään maila. Haluaisimme, että maila on paikallaan pysyvä eli *staattinen* vaikka pallo törmäilee siihen.
+Lisätään kenttään maila. Haluaisimme, että maila on paikallaan pysyvä eli *staattinen*, vaikka pallo törmäilee siihen.
 
 Staattisen eli paikallaan pysyvän fysiikkaolion luominen tapahtuu aliohjelmakutsulla `PhysicsObject.CreateStaticObject`.
 
@@ -188,9 +188,9 @@ Y-koordinaatin asetamme nollaksi, jotta maila menee pystysuunnassa ruudun keskel
 
 X-koordinaattia varten kysymme pelikentältä sen vasemman reunan x-koordinaatin (`Level.Left`) ja lisäämme siihen `20.0`, jotta maila pysyy kentän rajojen sisällä.
 
-Olisimmeko voineet sijoittaa x-koordinaattiin yksinkertaisesti jonkun arvon, esimerkiksi `-300.0`? Olisimme toki. Äsken käyttämämme tapa on kuitenkin siitä parempi, että maila tulee aina kentän vasempaan reunaan vaikka päättäisimme myöhemmin muuttaa kentän kokoa. Näin peli on helpommin muokattavissa.
+Olisimmeko voineet sijoittaa x-koordinaattiin yksinkertaisesti jonkin arvon, esimerkiksi `-300.0`? Olisimme toki. Äsken käyttämämme tapa on kuitenkin siitä parempi, että maila tulee aina kentän vasempaan reunaan, vaikka päättäisimme myöhemmin muuttaa kentän kokoa. Näin peli on helpommin muokattavissa.
 
-Laitamme myös mailalle `Restitution`-ominaisuuden arvoon `1.0`, koska törmäykseen vaikuttaa kummankin törmäävän kappaleen ominaisuudet.
+Laitamme myös mailalle `Restitution`-ominaisuuden arvoon `1.0`, koska törmäykseen vaikuttavat kummankin törmäävän kappaleen ominaisuudet.
 
 > [!KOKEILE]
 
@@ -212,7 +212,7 @@ void AloitaPeli()
 
 Siirretään koodirivejä aliohjelmasta toiseen samoin kuin kentän luomisen yhteydessä.
 
-**Siirrä** pelin aloitukseen liittyvät rivit (`Vector impulssi` ja `pallo.Hit`) `Begin`-aliohjelmasta `AloitaPeliin`:
+**Siirrä** pelin aloitukseen liittyvät rivit (`Vector impulssi` ja `pallo.Hit`) `Begin`-aliohjelmasta `AloitaPeli`-aliohjelmaan:
 
 ```csharp,ignore
 void AloitaPeli()
@@ -242,10 +242,10 @@ Huomaa, että koodin voi jakaa aliohjelmiin monin eri tavoin, tämä on vain yks
 
 Näiden muutosten jälkeen luokka `Pong` eli Pong-pelimme on tämän näköinen.
 
-Huomaa että pallo saattaa kimmota seinästä oudolla kulmalla tai hidastua osuessaan mailaan. Et ole tehnyt mitään väärin, vaan vika on Jypelin käyttämässä fysiikkamoottorissa jota ei ole tarkoitettu tämän tyylisille peleille.
+Huomaa, että pallo saattaa kimmota seinästä oudolla kulmalla tai hidastua osuessaan mailaan. Et ole tehnyt mitään väärin, vaan vika on Jypelin käyttämässä fysiikkamoottorissa, jota ei ole tarkoitettu tämän tyylisille peleille.
 
 > [!KYSYMYS]
-> Montako aliohjelmaa koodissa on nyt? Näet vastauksen sivun lopusta, mutta mieti hetki ennen kuin katsot. Muista, että jokaisessa aliohjelmassa on aloittava aaltosulku { sekä lopettava aaltosulku }.
+> Montako aliohjelmaa koodissa on nyt? Näet vastauksen sivun lopusta, mutta mieti hetki ennen kuin katsot. Muista, että jokaisessa aliohjelmassa on aloittava aaltosulku `{` sekä lopettava aaltosulku `}`.
 
 ```csharp,feature-jypeli
 using System;
@@ -308,28 +308,28 @@ Koodissa on kolme aliohjelmaa. Ne on merkitty seuraavassa keltaisella värillä.
 ```csharp,feature-jypeli
 //-using System;
 //-using System.Collections.Generic;
-// HIGHLIGHT_BLUE_BEGIN
 //-using Jypeli;
-// HIGHLIGHT_BLUE_END
 //-using Jypeli.Assets;
-// HIGHLIGHT_YELLOW_BEGIN
 //-using Jypeli.Controls;
 //-using Jypeli.Effects;
 //-using Jypeli.Widgets;
 public class Pong : PhysicsGame
 {
+// HIGHLIGHT_BLUE_BEGIN
     PhysicsObject pallo;
+// HIGHLIGHT_BLUE_END
 
-// HIGHLIGHT_YELLOW_END
-    public override void Begin()
 // HIGHLIGHT_YELLOW_BEGIN
+    public override void Begin()
     {
         LuoKentta();
         AloitaPeli();
 
         Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
     }
+// HIGHLIGHT_YELLOW_END
 
+// HIGHLIGHT_YELLOW_BEGIN
     void LuoKentta()
     {
         pallo = new PhysicsObject(40.0, 40.0);
@@ -344,22 +344,22 @@ public class Pong : PhysicsGame
         maila.X = Level.Left + 20.0;
         maila.Y = 0.0;
         maila.Restitution = 1.0;
-// HIGHLIGHT_YELLOW_END
         Add(maila);
-// HIGHLIGHT_YELLOW_BEGIN
 
         Level.CreateBorders(1.0, false);
         Level.Background.Color = Color.Black;
 
         Camera.ZoomToLevel();
-// HIGHLIGHT_YELLOW_END
     }
+// HIGHLIGHT_YELLOW_END
 
+// HIGHLIGHT_YELLOW_BEGIN
     void AloitaPeli()
     {
         Vector impulssi = new Vector(500.0, 0.0);
         pallo.Hit(impulssi * pallo.Mass);
     }
+// HIGHLIGHT_YELLOW_END
 }
 ```
 

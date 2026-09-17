@@ -2,15 +2,15 @@
 
 ## Ikkunan koon vaihtaminen
 
-Jos haluat, voit vaihtaa peli-ikkunan kokoa, voit tehdä sen lisäämällä aivan Begin-aliohjelman alkuun rivin:
+Jos haluat vaihtaa peli-ikkunan kokoa, voit tehdä sen lisäämällä aivan `Begin`-aliohjelman alkuun rivin:
 
 ```csharp,ignore
 SetWindowSize(1280, 720);
 ```
 
-Jossa numerot kertovat ikkunan leveyden ja korkeuden. Kokeile millä luvuilla ikkuna on hyvän kokoinen, ei kuitenkaan kannata laittaa ikkunaa suuremmaksi kuin mitä sinun näyttö on :)
+Numerot kertovat ikkunan leveyden ja korkeuden. Kokeile, millä luvuilla ikkuna on hyvänkokoinen. Ikkunaa ei kuitenkaan kannata laittaa suuremmaksi kuin näyttösi. :)
 
-Useimmiten kannettavissa on myös näytönskaalaus käytössä, jolloin ikkunan resoluutio ei täysin vastaa näytön todellista resoluutiota. Kokeile ja muokkaa arvoja. Oman näyttösi resoluution koneesi näyttöasetuksista.
+Useimmiten kannettavissa on myös näytönskaalaus käytössä, jolloin ikkunan resoluutio ei täysin vastaa näytön todellista resoluutiota. Kokeile ja muokkaa arvoja. Oman näyttösi resoluution näet koneesi näyttöasetuksista.
 
 ## Kuolemiseen erilainen kuva
 
@@ -20,9 +20,9 @@ Lataa oheinen kuva omalle tietokoneellesi kuten aiemmatkin kuvat. Yliopiston kon
 
 ![](images/kuollut.png)
 
-Tallenna kuva nimellä kuollut.png.
+Tallenna kuva nimellä `kuollut.png`.
 
-Muistatko vielä miten tiedosto lisättiin projektiin? Katso mallia [vaiheesta 3](vaihe3.md)
+Muistatko vielä, miten tiedosto lisättiin projektiin? Katso mallia [vaiheesta 3](vaihe3.md).
 
 Koodissa on attribuutteina esitelty muun muassa seuraavat kuvat.
 
