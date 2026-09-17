@@ -248,7 +248,12 @@ Noista kahdesta `if`-lauseesta ei siis koskaan suoriteta molempia samalla kertaa
 
 Jotta oikeaan ja vasempaan reunaan päästään käsiksi `KasittelePallonTormays`-aliohjelmassa, ne täytyy taas lisätä attribuuttien joukkoon, josta ne näkyvät kaikille aliohjelmille.
 
-**Tee** vielä seuraavat muutokset:
+**Tee** vielä kaksi muutosta:
+
+1. **Lisää** attribuutteihin `PhysicsObject`-tyyppiset muuttujat `vasenReuna` ja `oikeaReuna`.
+2. **Poista** `LuoKentta`-aliohjelmassa vasemman ja oikean reunan luontirivien alusta tyyppi `PhysicsObject`. Muuten aliohjelmaan tehtäisiin uudet samannimiset paikalliset muuttujat, eivätkä attribuutit saisi arvoa.
+
+Muutosten jälkeen koodi näyttää tältä (muuttuneet rivit vihreällä):
 
 ```csharp,ignore
 public class Pong : PhysicsGame
@@ -260,8 +265,10 @@ public class Pong : PhysicsGame
     PhysicsObject maila1;
     PhysicsObject maila2;
 
+// HIGHLIGHT_GREEN_BEGIN
     PhysicsObject vasenReuna;
     PhysicsObject oikeaReuna;
+// HIGHLIGHT_GREEN_END
 
     IntMeter pelaajan1Pisteet;
     IntMeter pelaajan2Pisteet;
@@ -281,15 +288,15 @@ public class Pong : PhysicsGame
         maila1 = LuoMaila(Level.Left + 20.0, 0.0);
         maila2 = LuoMaila(Level.Right - 20.0, 0.0);
 
-// HIGHLIGHT_RED_BEGIN
-        PhysicsObject vasenReuna = Level.CreateLeftBorder();
-// HIGHLIGHT_RED_END
+// HIGHLIGHT_GREEN_BEGIN
+        vasenReuna = Level.CreateLeftBorder();
+// HIGHLIGHT_GREEN_END
         vasenReuna.Restitution = 1.0;
         vasenReuna.IsVisible = false;
 
-// HIGHLIGHT_RED_BEGIN
-        PhysicsObject oikeaReuna = Level.CreateRightBorder();
-// HIGHLIGHT_RED_END
+// HIGHLIGHT_GREEN_BEGIN
+        oikeaReuna = Level.CreateRightBorder();
+// HIGHLIGHT_GREEN_END
         oikeaReuna.Restitution = 1.0;
         oikeaReuna.IsVisible = false;
 
