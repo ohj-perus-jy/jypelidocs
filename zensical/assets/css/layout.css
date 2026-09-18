@@ -181,32 +181,6 @@
   transition: none;
 }
 
-/* Kapean näytön laatikon vierityspalkki pyöristettyjen kulmien väliin. Palkki
- * on aina vieritysalueen korkuinen, ja teeman vieritysalue täyttää koko
- * laatikon, joten palkin päät (työpöytäselaimessa nuolineen) piirtyivät
- * kulmien pyöristyksen ulkopuolelle. Vieritysaluetta lyhennetään molemmista
- * päistä pyöristyksen säteen (.md-sidebar--primary: border-radius) verran;
- * laatikkoon itseensä ei kosketa. border-radius vieritysalueelle ei auta,
- * koska Chromium ei leikkaa palkkia sillä, eikä palkin raitaa voi lyhentää
- * kuin ::-webkit-scrollbar-trackin marginaalilla, jota Firefox ei tunne ja
- * jonka Chromium ohittaa teeman scrollbar-widthin takia. Sisältö pysyy
- * levossa paikallaan, kun sama mitta otetaan pois laatikon otsikon
- * ylätäytteestä (teemassa 0,8rem) ja valikon alamarginaalista (0,4rem). */
-@media screen and (max-width: 76.2344em) {
-  .md-sidebar--primary .md-sidebar__scrollwrap {
-    top: 0.8rem;
-    bottom: 0.8rem;
-  }
-
-  .md-nav .md-nav__title[for="__drawer"] {
-    padding-top: 0;
-  }
-
-  .md-nav--primary {
-    margin-bottom: 0;
-  }
-}
-
 @media screen and (min-width: 76.25em) {
 
   /* 1. Kisko: kiinteä, koko korkeus, oma tausta ja erotinviiva. Yläosaan jää
