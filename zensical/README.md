@@ -34,9 +34,10 @@ submodulea; `git config submodule.recurse true` korjaa sen tässä kloonissa.
 - `cache/svgbob/`: `ekstrat/konepellin-alla.md`:n kaksi bob-kaaviota ja
   `aloittaminen/pelin-rakenne.md`:n koordinaatisto (svgbob_cli 0.7.6). Kuvat
   ovat versionhallinnassa, koska julkaisu ei asenna svgbobia: uusi tai muutettu
-  kaavio piirretään paikallisesti (`./zensical/run.sh build`) ja syntynyt
-  tiedosto committoidaan. Julkaisun `convert.py --strict` kaatuu, jos kuva
-  puuttuu.
+  kaavio piirretään paikallisesti (`./zensical/run.sh build`; `convert.py`
+  asentaa `svgbob_cli`:n cargolla, DevContainerissa Rust on valmiina) ja
+  syntynyt tiedosto committoidaan. Julkaisun `convert.py --strict` kaatuu,
+  jos kuva puuttuu.
 - `run.sh`: kääre, joka kutsuu `tyokalut/run.sh`:ta.
 
 ## Työkalujen päivittäminen

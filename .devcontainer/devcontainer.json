@@ -4,7 +4,9 @@
 	"features": {
 		"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
-		"ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+		"ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {},
+		// Rust, jolla convert.py asentaa svgbob_cli:n bob-kaavioita varten.
+		"ghcr.io/devcontainers/features/rust:1": {}
 	},
 
 	"mounts": [
