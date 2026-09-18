@@ -14,7 +14,7 @@ sellaisenaan tätä johdantoa lukuun ottamatta; kohta "Ohj1-kohtaiset
 muutokset" kertoo, mitä ohj2:n versioon on muutettu, ja "Jypeli-ohjeiden
 muutokset" tämän varaston omat muutokset.
 
-## Käynnistys
+## Käynnistys 
 
 ```bash
 ./zensical/run.sh
