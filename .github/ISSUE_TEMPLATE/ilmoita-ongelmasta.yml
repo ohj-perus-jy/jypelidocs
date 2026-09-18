@@ -13,7 +13,7 @@ body:
     attributes:
       label: Sivun osoite tai polku
       description: Kopioi tähän sen sivun URL-osoite tai polku, jossa ongelma esiintyy
-      placeholder: "https://ohj-perus-jy.github.io/jypelidocs/..."
+      placeholder: "https://jypeli.it.jyu.fi/..."
     validations:
       required: true
   

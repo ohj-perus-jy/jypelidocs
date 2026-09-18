@@ -3,7 +3,7 @@
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 Jypeli-pelikirjaston käyttöohjeet aiheittain. Sivusto on katseltavissa
-osoitteessa <https://ohj-perus-jy.github.io/jypelidocs/>.
+osoitteessa <https://jypeli.it.jyu.fi/>.
 
 ## Haluatko osallistua?
 
