@@ -96,11 +96,11 @@
     </marker>
   </defs>
   <rect class="backdrop" x="0" y="0" width="456" height="176"></rect>
-  <text x="178" y="12" >y</text>
   <polygon points="176,28 180,16 184,28" class="filled"></polygon>
   <line x1="180" y1="28" x2="180" y2="160" class="solid"></line>
   <line x1="16" y1="88" x2="424" y2="88" class="solid"></line>
   <polygon points="424,84 432,88 424,92" class="filled"></polygon>
+  <text x="194" y="28" >y</text>
   <circle cx="116" cy="56" r="4" class="filled"></circle>
   <text x="442" y="92" >x</text>
   <circle cx="308" cy="136" r="4" class="filled"></circle>

@@ -297,8 +297,8 @@ Mitä ohj1:n kopioon on muutettu tässä varastossa:
 - `mkdocs.yml`: `site_name`, `copyright`, `repo_url`.
 - `convert.py`: `NEST_UNDER` ja `DROP_SECTIONS` tyhjiksi (ohj1:n sivusiirrot ja
   etusivun navigointiosio), `PLANTUML_AGENT`; `puhe.py`: `User-Agent`.
-- `cache/svgbob/`: `aloittaminen/pelin-rakenne.md`:n kaksi bob-kaaviota
-  (svgbob_cli 0.7.6).
+- `cache/svgbob/`: `ekstrat/konepellin-alla.md`:n kaksi bob-kaaviota ja
+  `aloittaminen/pelin-rakenne.md`:n koordinaatisto (svgbob_cli 0.7.6).
 - Koekirja (`tests/book`) ja testit ovat ohj1:n sellaisenaan, paitsi
   `tests/test_sitemenu.py`: sivustovalikon lista (`extra.sites`) on sama kuin
   ohj1:ssä, mutta oma sivusto on täällä Jypeli-ohjeet ja ulos vie

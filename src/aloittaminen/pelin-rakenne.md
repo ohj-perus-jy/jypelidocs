@@ -136,8 +136,8 @@ omia yksiköitä, eivät näytön pikseleitä. Kuinka suurena olio ruudulla
 näkyy, riippuu muun muassa kamerasta.
 
 ```bob
-                      y
-                      ^
+
+                      ^ y
                       |
   "(-100, 50)"●       |
                       |
