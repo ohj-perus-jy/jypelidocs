@@ -11,16 +11,20 @@ Tarvitset ensin: [Oman luokan periminen](luokan-periminen.md) ja
 ## Rakentajassa olio ei ole vielä pelissä: AddedToGame {#addedtogame}
 
 Rakentaja ajetaan `new`-rivillä, ennen `Add`-kutsua. Silloin olio ei ole
-vielä pelissä, joten rakentajassa ei voi lisätä peliin muita olioita,
-asettaa ohjaimia tai kysyä kentän kokoa. Nämä tehdään
-`AddedToGame`-tapahtuman käsittelijässä, jonka Jypeli kutsuu heti
-`Add`-kutsun jälkeen.
+vielä pelissä, eikä sen paikkaa ole asetettu: `Position` on rakentajassa
+aina (0, 0), koska peli asettaa paikan vasta `new`-rivin jälkeen.
+Rakentajassa ei siksi kannata tehdä asioita, jotka riippuvat olion paikasta
+tai joiden pitää olla voimassa vain olion ollessa pelissä: osien lisäämistä
+olion viereen, ohjainten asettamista tai ajastimen käynnistämistä. Muuten
+esimerkiksi näppäimet ohjaisivat oliota, jota ei ole lisätty peliin.
 
-Luokan sisällä Jypelin valmiisiin pelin aliohjelmiin päästään käsiksi
-`Game`-sanan kautta: `Game.Add(...)`, `Game.Level`, `Game.Keyboard`
-(`Peli`-luokkaan itse kirjoitetut asiat: ks.
-[Kun olio tarvitsee jotain pelistä](paivitys.md#peli)). Alla pelaaja
-asettaa itse omat näppäimensä.
+Nämä tehdään `AddedToGame`-tapahtuman käsittelijässä. Jypeli kutsuu sitä
+`Add`-kutsua seuraavan päivityksen alussa, joten käsittelijä näkee myös
+paikan, joka asetetaan vasta `Add`-rivin jälkeen.
+
+Alla pelaaja asettaa itse omat näppäimensä. Näppäimistö löytyy luokan
+sisällä `Game`-sanan kautta, ks.
+[Pelin tiedot olion sisällä](pelin-tiedot.md).
 
 ```csharp,feature-jypeli
 //-using System;
@@ -212,7 +216,9 @@ liittää käsittelijä rakentajassa `Destroyed`-tapahtumaan:
 Luokka voi ilmoittaa pelille asioista omalla tapahtumalla, samaan tapaan
 kuin `Destroyed`. Tapahtuma esitellään `event`-sanalla, ja luokka laukaisee
 sen kutsumalla sitä kuin aliohjelmaa. Pelin puolella siihen liitetään
-käsittelijä `+=`-merkinnällä.
+käsittelijä `+=`-merkinnällä. Näin olio saa pelin tekemään jotain, esimerkiksi
+lisäämään pisteitä, vaikka se ei itse näe pelin pistelaskuria (muut tavat:
+[Pelin tiedot olion sisällä](pelin-tiedot.md)).
 
 Alla vihu laukaisee `Kuoli`-tapahtuman, kun elämät loppuvat. `Destroyed`
 ei kelpaisi samaan: se laukeaa myös silloin, kun vihu poistetaan
@@ -300,4 +306,5 @@ void VihuKuoli(Vihu vihu)
 - [Muita tapahtumia](../tapahtumat/muita.md): `Destroyed`, `AddedToGame`, `Removed` ja laskurin tapahtumat.
 - [Delegaatit](../tapahtumat/delegaatit.md): parametrien vieminen käsittelijälle.
 - [Ajastimet](../tapahtumat/ajastimet.md).
+- [Pelin tiedot olion sisällä](pelin-tiedot.md): `Game`-sana ja muut tavat päästä käsiksi pelin tietoihin.
 - [Omat käyttöliittymäkomponentit](../kayttoliittyma/omat-kayttoliittymakomponentit.md): ohjaimet `AddedToGame`-tapahtumassa ja `ListenOn`.

@@ -103,6 +103,7 @@
    * [Olion käyttäminen pelissä](./oma-oliotyyppi/kaytto.md)
    * [Oma päivitysmetodi](./oma-oliotyyppi/paivitys.md)
    * [Tapahtumat omassa luokassa](./oma-oliotyyppi/tapahtumat.md)
+   * [Pelin tiedot olion sisällä](./oma-oliotyyppi/pelin-tiedot.md)
  * [Ekstrat](./ekstrat/index.md)
    * [Pikaohje](./ekstrat/pikaohje.md)
    * [Yleiset virheet](./ekstrat/yleiset-virheet.md)

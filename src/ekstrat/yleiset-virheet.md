@@ -15,6 +15,7 @@ Problems-välilehdellä.
 | `No overload for 'X' matches delegate ...` | Tapahtumankäsittelijän parametrit eivät vastaa tapahtumaa. Esimerkiksi törmäyskäsittelijällä pitää olla kaksi `PhysicsObject`-parametria. | Katso oikea muoto sivulta [Miten Jypeli-peli toimii](../aloittaminen/pelin-rakenne.md#aliohjelman-parametrit-tulevat-tapahtumasta). |
 | `Cannot implicitly convert type 'double' to 'int'` | Desimaaliluku on sijoitettu kokonaislukumuuttujaan. | Käytä `double`-tyyppiä tai pyöristä. |
 | `A local variable named 'X' is already defined in this scope` | Sama muuttuja on esitelty kahdesti samassa aliohjelmassa. | Poista toinen esittely; jos tarkoitus oli antaa attribuutille arvo, jätä tyyppi pois rivin alusta. |
+| `'Game' does not contain a definition for 'X'` | Omassa oliotyypissä on yritetty käyttää `Game`-sanan kautta jotain, mikä on kirjoitettu itse `Peli`-luokkaan (esim. `Game.pisteet`), tai fysiikkapelin ominaisuutta (`Game.Gravity`). | Anna laskuri oliolle rakentajassa tai käytä tapahtumaa; painovoima on `PhysicsGame.Instance.Gravity`. Ks. [Pelin tiedot olion sisällä](../oma-oliotyyppi/pelin-tiedot.md). |
 | `'X' is a type, which is not valid in the given context` | Luokan nimeä on käytetty kuin muuttujaa (esim. `PhysicsObject.Shape`). | Käytä muuttujan nimeä, esim. `pallo.Shape`. |
 
 Punainen alleviivaus näkyy usein jo kesken kirjoittamisen. Kirjoita rivi

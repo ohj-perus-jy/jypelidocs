@@ -121,7 +121,7 @@ Luokan sisällä kuva ladataan `Game.LoadImage`-kutsulla, koska `LoadImage`
 kuuluu peliin eikä olioon. Samoin muut Jypelin valmiit pelin aliohjelmat ja
 ominaisuudet löytyvät `Game`-sanan takaa: `Game.Level`, `Game.Add(...)`,
 `Game.Keyboard`. `Peli`-luokkaan itse kirjoitetut attribuutit ja aliohjelmat
-eivät löydy, ks. [Kun olio tarvitsee jotain pelistä](paivitys.md#peli).
+eivät löydy, ks. [Pelin tiedot olion sisällä](pelin-tiedot.md).
 
 ## Laskuri ominaisuutena
 

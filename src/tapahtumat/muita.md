@@ -47,9 +47,9 @@ päätyttyä, ks. [Elinikä](../oliot/elinika.md).
 
 `AddedToGame` laukeaa, kun olio on lisätty peliin `Add`-aliohjelmalla. Sitä
 tarvitaan lähinnä [omissa oliotyypeissä](../oma-oliotyyppi/tapahtumat.md): olion
-rakentajassa olio ei ole vielä pelissä, joten esimerkiksi ohjainten
-asettaminen tai muiden olioiden lisääminen peliin onnistuu vasta tässä
-tapahtumassa. Alla vihu lisää itselleen kilven, kun se on lisätty peliin.
+rakentajassa olio ei ole vielä pelissä eikä sen paikkaa ole asetettu, joten
+esimerkiksi ohjainten asettaminen tai osien lisääminen olion viereen tehdään
+vasta tässä tapahtumassa. Alla vihu lisää itselleen kilven, kun se on lisätty peliin.
 
 ```csharp,ignore
 public class Vihu : PhysicsObject
@@ -64,7 +64,7 @@ public class Vihu : PhysicsObject
     {
         PhysicsObject kilpi = new PhysicsObject(Width, 10);
         kilpi.Position = Position + new Vector(0, Height / 2);
-        Game.Instance.Add(kilpi);
+        Game.Add(kilpi);
     }
 }
 ```

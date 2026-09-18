@@ -158,7 +158,8 @@ toimimasta. Kutsu sitä aina, yleensä metodin lopussa.
   päivityksellä, ja sen `Update` ajetaan sitä ennen. Kantaluokan `Update`
   ei silloin tee mitään, mutta oma koodi ajetaan. Jos `Update` muuttaa
   jotain olion ulkopuolella, kuten laskuria, aloita se tarkistuksella
-  `if (IsDestroyed) return;`.
+  `if (IsDestroyed) return;` (esimerkki:
+  [Pelin tiedot olion sisällä](pelin-tiedot.md#1-anna-tarvittava-olio-rakentajassa)).
 - `IsUpdated` menee päälle itsestään, kun oliolle annetaan aivot (`Brain`),
   elinikä (`LifetimeLeft`) tai nopeusraja (`MaxVelocity`), ja
   `PlatformCharacter`-hahmolla se on aina päällä. Omassa luokassa se
@@ -217,164 +218,10 @@ Viimeiseen tapaukseen [ajastin](../tapahtumat/ajastimet.md) on yleensä
 selkeämpi. Ajastimen käyttö omassa luokassa on sivulla
 [Tapahtumat omassa luokassa](tapahtumat.md#destroy).
 
-## Kun olio tarvitsee jotain pelistä {#peli}
-
-`Peli`-luokassa voi kirjoittaa suoraan `Level.Bottom`, `Add(olio)` tai
-`pisteet.Value++`, koska koodi on `Peli`-luokan sisällä. Oma oliotyyppi on
-eri luokka, joten siellä nämä nimet eivät toimi sellaisenaan. Ratkaisu
-riippuu siitä, onko tarvittava asia Jypelin valmis vai itse kirjoitettu.
-
-Jypelin valmiit asiat saa käyttöön kirjoittamalla eteen `Game.`. Jokaisella
-pelioliolla on `Game`-ominaisuus, joka viittaa käynnissä olevaan peliin.
-
-| `Peli`-luokassa | Omassa luokassa |
-| --- | --- |
-| `Level.Bottom` | `Game.Level.Bottom` |
-| `Add(olio)` | `Game.Add(olio)` |
-| `Keyboard.Listen(...)` | `Game.Keyboard.Listen(...)` |
-| `MessageDisplay.Add("...")` | `Game.MessageDisplay.Add("...")` |
-| `LoadImage("kuva")` | `Game.LoadImage("kuva")` |
-
-`Peli`-luokkaan itse kirjoitetut asiat, kuten pistelaskuri `pisteet` tai
-aliohjelma `PeliLoppui`, eivät löydy samalla tavalla. Rivi
-`Game.pisteet.Value++` antaa käännösvirheen:
-
-```text
-error CS1061: 'Game' does not contain a definition for 'pisteet'
-```
-
-`Game`-ominaisuus lupaa vain, että kyseessä on jokin Jypeli-peli. Kääntäjä
-ei tiedä, että peli on juuri sinun `Peli`-luokkasi, joten se hyväksyy vain
-ne asiat, jotka ovat jokaisessa Jypeli-pelissä. Saman virheen antavat
-`Game.Gravity` ja `Game.AddCollisionHandler(...)`, koska painovoima ja
-törmäyskäsittelijät ovat vain fysiikkapeleissä (`PhysicsGame`).
-
-Itse kirjoitettuihin asioihin pääsee käsiksi kolmella tavalla. Kaksi
-ensimmäistä sopivat useimpiin tilanteisiin.
-
-### 1. Anna tarvittava olio rakentajassa
-
-Laskuri, pelaaja tai muu olio, jota luokka tarvitsee, viedään sille
-rakentajan parametrina ja tallennetaan attribuuttiin. Näin sai myös ohjus
-yllä kohteensa. Alla pallot vähentävät pelin elämälaskuria, kun ne putoavat
-kentän alareunan alapuolelle.
-
-```csharp,ignore
-//-using System;
-//-using Jypeli;
-//-
-class Putoaja : PhysicsObject
-{
-    private IntMeter elamat;
-
-    public Putoaja(IntMeter elamat)
-        : base(40, 40)
-    {
-        this.elamat = elamat;
-        Shape = Shape.Circle;
-        Color = Color.Red;
-        IsUpdated = true;
-    }
-
-    public override void Update(Time time)
-    {
-        if (IsDestroyed)
-        {
-            return;                           // tuhottu, älä vähennä toista kertaa
-        }
-        if (Y < Game.Level.Bottom - Height)   // Jypelin oma: Game-sanan kautta
-        {
-            elamat.Value--;                   // pelin oma: saatu rakentajassa
-            Destroy();
-        }
-        base.Update(time);
-    }
-}
-
-public class Peli : PhysicsGame
-{
-    IntMeter elamat = new IntMeter(3, 0, 3);
-
-    public override void Begin()
-    {
-        Gravity = new Vector(0, -800);
-
-        Label naytto = new Label();
-        naytto.Title = "Elämät: ";
-        naytto.BindTo(elamat);
-        naytto.Y = Screen.Top - 50;
-        Add(naytto);
-
-        elamat.LowerLimit += delegate { MessageDisplay.Add("Peli loppui"); };
-
-        for (int i = 0; i < 3; i++)
-        {
-            Putoaja putoaja = new Putoaja(elamat);
-            putoaja.Position = new Vector(-100 + i * 100, i * 200);
-            Add(putoaja);
-        }
-    }
-}
-```
-
-Pelissä ja jokaisessa pallossa on sama laskuriolio, joten pallon tekemä
-muutos näkyy pelissä heti. Elämien loppumiseen peli reagoi laskurin omalla
-`LowerLimit`-tapahtumalla (ks. [Laskurit](../kayttoliittyma/pistelaskuri.md)),
-eikä pallon tarvitse tietää, mitä silloin tapahtuu. Tarkistus
-`if (IsDestroyed)` tarvitaan, koska tuhotun olion `Update` ajetaan vielä
-kerran (ks. [Milloin Updatea kutsutaan](#milloin-updatea-kutsutaan)); ilman
-sitä jokainen pallo veisi kaksi elämää.
-
-### 2. Ilmoita pelille tapahtumalla
-
-Kun olion pitää saada peli tekemään jotain, esimerkiksi vaihtamaan kenttää
-tai aloittamaan alusta, olio laukaisee oman tapahtuman ja `Peli`-luokka
-liittää siihen aliohjelmansa. Olio ei tiedä pelistä mitään, joten samaa
-luokkaa voi käyttää monessa pelissä. Tapahtuman kirjoittaminen on
-selitetty sivulla [Tapahtumat omassa luokassa](tapahtumat.md#omat-tapahtumat).
-
-```csharp,ignore
-// Putoaja-luokassa
-public event Action Putosi;
-
-public override void Update(Time time)
-{
-    if (IsDestroyed)
-    {
-        return;
-    }
-    if (Y < Game.Level.Bottom - Height)
-    {
-        Putosi?.Invoke();
-        Destroy();
-    }
-    base.Update(time);
-}
-
-// Peli-luokassa
-putoaja.Putosi += AloitaAlusta;
-```
-
-### 3. Tyyppimuunnos Peli-tyypiksi
-
-Tyyppimuunnos `(Peli)Game` kertoo kääntäjälle, että käynnissä oleva peli on
-nimenomaan `Peli`. Silloin `Peli`-luokan julkiset (`public`) attribuutit ja
-aliohjelmat näkyvät. Käytä oman peliluokkasi nimeä.
-
-```csharp,ignore
-// Peli-luokassa
-public IntMeter Pisteet = new IntMeter(0);
-
-// Oman olion luokassa
-Peli peli = (Peli)Game;
-peli.Pisteet.Value += 10;
-```
-
-Samoin `((PhysicsGame)Game).Gravity` antaa käyttöön painovoiman. Tapa
-toimii, mutta se sitoo luokan yhteen peliin, eikä luokkaa voi käyttää
-sellaisenaan toisessa projektissa. Lisäksi `Peli`-luokan sisältöä on
-avattava julkiseksi. Käytä sitä vasta, kun kaksi ensimmäistä tapaa eivät
-sovi.
+Katkelmissa `Game.Level` on pelin kenttä. Mitä muuta `Game`-sanan kautta
+löytyy ja miten `Update` pääsee käsiksi pelin pistelaskuriin tai muuhun
+`Peli`-luokkaan itse kirjoitettuun, on sivulla
+[Pelin tiedot olion sisällä](pelin-tiedot.md).
 
 ## Vaihtoehto: omat aivot
 
@@ -420,3 +267,4 @@ tarvitse sitä.
 - [Ajastimet](../tapahtumat/ajastimet.md): kun jotain tehdään säännöllisin väliajoin.
 - [Aivot ja tekoäly](../oliot/tekoaly.md): valmiit aivot.
 - [Tapahtumat omassa luokassa](tapahtumat.md): `AddedToGame`, `Destroy` ja omat tapahtumat.
+- [Pelin tiedot olion sisällä](pelin-tiedot.md): `Game`-sana ja pelin laskurit `Update`-metodissa.
