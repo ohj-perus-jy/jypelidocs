@@ -35,7 +35,8 @@ Kehityspalvelin, joka seuraa `src/`-puun muutoksia:
 
 **Muokattava sisältö on kansiossa `src/`.**
 
-Tee pull request, kun olet valmis.
+Tee pull request, kun olet valmis. Työntö ja pull request tarkistavat myös
+ulkoiset linkit (lychee, `.github/workflows/links.yml`).
 
 Lisää: [zensical/README.md](zensical/README.md) (tämän sivuston asetukset,
 kaaviot ja työkalujen päivittäminen) ja
