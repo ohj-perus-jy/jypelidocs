@@ -135,16 +135,17 @@ grafiikkakirjastoissa, joissa y kasvaa alaspäin). Koordinaatit ovat Jypelin
 omia yksiköitä, eivät näytön pikseleitä. Kuinka suurena olio ruudulla
 näkyy, riippuu muun muassa kamerasta.
 
-```text
-                 y
-                 ^
-                 |
-  (-100, 50) o   |
-                 |
-  ---------------+---------------> x
-                 | (0, 0)
-                 |
-                 |     o (200, -80)
+```bob
+                      y
+                      ^
+                      |
+  "(-100, 50)"●       |
+                      |
+  --------------------+------------------------------> x
+                      | "(0, 0)"
+                      |
+                      |               ● "(200, -80)"
+                      |
 ```
 
 Sijainti annetaan `Vector`-oliona tai erikseen: `olio.Position = new
