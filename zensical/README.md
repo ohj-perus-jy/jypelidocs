@@ -275,6 +275,44 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
   tagin sisältö varalla ilman skriptiä ja tulosteessa), git.md ja tyokalut.md
   käyttävät git-ht-ohjeen `avaa-windows`-kohtausta; koesivun lopussa
   välilehdellä, testit samoissa tiedostoissa. *Yleiskäyttöinen.*
+- Testaa tietosi -visa (ohj1:n lukujen `<visa>`-osio): `convert.py`:n uusi
+  `convert_quizzes` (`<vaittama vastaus>` ja `<kysymys>` → `.jyu-visa-q`-div,
+  vaihtoehdot listaksi, `<perustelu>` → `<details>`), `assets/js/visa.js` ja
+  `assets/css/visa.css`. Valinta paljastaa oikean vastauksen ja perustelun,
+  eikä vastausta voi vaihtaa; "Tyhjennä vastaukset" nollaa sivun visan.
+  Merkkaus: koko osio on `<visa>`-kääreen sisällä, kukin tagi omalla rivillään.
+  Väittämä on `<vaittama vastaus="totta|tarua">`, monivalinta `<kysymys>`, jonka
+  vaihtoehdot ovat tehtävälistan rivejä: `- [x]` oikea, `- [ ]` väärä (pitkä
+  vaihtoehto jatkuu kahdella välilyönnillä sisennettynä). Kysymyksen koodilohko
+  tulee ennen vaihtoehtoja, ja kummankin lopussa on `<perustelu>`. Numerot ja
+  kirjaimet tulevat sivustolta, joten niitä ei kirjoiteta; perustelu alkaa silti
+  oikealla vastauksella (`**Tarua.**`, `**b.**`). Täysi esimerkki on koesivu
+  `tests/book/src/osa1/visa.md`.
+  - Oikea vastaus merkitään vaihtoehtoon itseensä (`- [x]`) eikä kirjaimena
+    tagiin, jotta vaihtoehtojen järjestyksen voi muuttaa rikkomatta vastausta.
+    Numerot ja kirjaimet tulevat CSS-laskureista samasta syystä.
+  - Ilman skriptiä kysymys on tekstiä, vaihtoehdot kirjainlista ja perustelu
+    avattava `<details>`. Tulostussivulle (print.js) napit jätetään
+    tarkoituksella tekemättä, joten paperilla on sama muoto.
+  - Vastaukset ovat localStoragen avaimessa `jyu-visa` (kysymyksen `data-id`
+    → valittu arvo). Tunniste on kysymyksen lähdetekstin tiiviste eikä
+    järjestysnumero: kysymysten lisääminen tai siirtäminen ei sekoita
+    tallennettuja vastauksia, ja muutettu kysymys unohtaa vanhan vastauksen.
+    Siksi muunnos ajetaan ennen `convert_fences`iä.
+  - Ilme on teeman tehtävälistan kevyt pallukka eikä reunustettu nappi.
+    Kirjain on pallukan sisällä, koska perustelut viittaavat kirjaimiin. Oma
+    valinta on täytetty pallukka, ja ✓/✗ tekstin perässä kertoo tuloksen
+    myös ilman väriä. Oikean ja väärän värit ovat omia tokeneita
+    (`--jyu-visa-ok`, `--jyu-visa-wrong`), koska teeman vihreä ja punainen
+    eivät riitä tekstin kontrastiin; perustelulaatikko käyttää
+    admonitions.css:n `--adm`-muuttujaa ja teeman check-kuvaketta, rasti on
+    saman Lucide-sarjan x.
+  - Koesivu `tests/book/src/osa1/visa.md` SUMMARY.md:n ulkopuolella, testit
+    `tests/test_visa.py`; oikean kirjan visat tarkistaa `tests/test_book.py`.
+  *Yleiskäyttöinen.*
+- `tests/test_book.py`: `source_uses` kääntää kuvion `re.MULTILINE`-lipulla.
+  Ilman sitä `^`-alkuiset kuviot (plantuml- ja bob-aidat) eivät osuneet
+  koskaan, ja kaavioiden olemassaolon tarkistus jäi ajamatta. *Yleiskäyttöinen.*
 - `tests/test_convert.py`: testit yllä oleville. `tests/test_book.py`:
   `*`-luettelomerkki, `source_uses`-ohitukset ominaisuuksille joita kirja ei
   käytä (*yleiskäyttöinen*). `KNOWN_BROKEN_IMAGES` poistettu, koska ohj1:n
