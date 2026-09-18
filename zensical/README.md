@@ -337,6 +337,13 @@ Mitä ohj1:n kopioon on muutettu tässä varastossa:
   etusivun navigointiosio), `PLANTUML_AGENT`; `puhe.py`: `User-Agent`.
 - `cache/svgbob/`: `ekstrat/konepellin-alla.md`:n kaksi bob-kaaviota ja
   `aloittaminen/pelin-rakenne.md`:n koordinaatisto (svgbob_cli 0.7.6).
+- `assets/css/diagrams.css`: bob-kaavion tekstin koko `calc(8px / .6)`.
+  svgbob sijoittaa jokaisen sanan ja ä:n/ö:n jälkeen katkaisemansa palan 8 px:n
+  ruutuihin, mutta JetBrains Monon merkki on 14 px:n koossa 8,4 px, joten
+  palat menivät päällekkäin ("tapahtumankäsittelijät") ja sanavälit kutistuivat.
+  Testi `test_diagram_text_fits_the_svgbob_grid` (`tests/test_book.py`). Linuxin
+  Chromium pyöristää merkin 8 px:ään, joten vika näkyy siellä vain lipulla
+  `--font-render-hinting=none`. *Yleiskäyttöinen.*
 - Koekirja (`tests/book`) ja testit ovat ohj1:n sellaisenaan, paitsi
   `tests/test_sitemenu.py`: sivustovalikon lista (`extra.sites`) on sama kuin
   ohj1:ssä, mutta oma sivusto on täällä Jypeli-ohjeet ja ulos vie
