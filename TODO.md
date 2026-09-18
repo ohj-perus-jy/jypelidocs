@@ -53,10 +53,11 @@ Merkinnät: `[x]` tehty, `[ ]` tekemättä, `[~]` osittain.
 - [x] Etusivu: "Aloita tästä" -polku (3 askelta) ja lyhyt kuvaus valikon
       osioista (pitkä aihehakemisto poistettu 16.9.2026).
 - [ ] Pudota valikon numerointi ohjeosioista ja säilytä se vain oppaiden
-      vaiheissa. Vaatii muutoksen `zensical/convert.py`:n `build_nav`-funktioon
-      (numerointi on nyt kaikilla luettelokohdilla); `convert.py` on
-      jaettu ohj1:n ja ohj2:n kanssa, joten muutos kannattaa tehdä
-      asetuksena.
+      vaiheissa. Vaatii muutoksen `zensical/tyokalut/convert.py`:n
+      `build_nav`-funktioon (numerointi on nyt kaikilla luettelokohdilla).
+      Työkalut ovat ohj1:n ja ohj2:n kanssa yhteinen submodule
+      (kirjatyokalut-repo), joten muutos tehdään sinne asetuksena, jonka
+      tämä kirja kytkee päälle `zensical/kirja.toml`issa.
 - [ ] Päivitä `tools/tim-tuonti/tim2md.py`:n osiokartta (SECTION_DIRS,
       EXTRA_PAGES) uuteen rakenteeseen, jos TIMistä tuodaan vielä uudelleen.
 

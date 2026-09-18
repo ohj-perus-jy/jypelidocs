@@ -2,7 +2,9 @@
 
 Rivinumerot: commit `bb4c0a0`.
 
-## zensical/ (korjataan ohj1:ssä ja ohj2:ssa)
+## Työkalut (korjataan kirjatyokalut-repossa, submodule `zensical/tyokalut`)
 
-- `zensical/PERUSTELUT.md:1656`: rivin alun ```` ``` ```` avaa koodilohkon.
-- `zensical/README.md:128, 157, 190, 191`: linkit puuttuviin `KAYTTOONOTTO.md` ja `PURKUSUUNNITELMA.md`.
+- `PERUSTELUT.md:1656`: rivin alun ```` ``` ```` avaa koodilohkon.
+- Vanhan `zensical/README.md`:n linkit puuttuviin `KAYTTOONOTTO.md` ja
+  `PURKUSUUNNITELMA.md`: tiedosto on nyt työkalujen `TAUSTA.md`, jonka johdanto
+  kertoo, että nuo dokumentit ovat kirjojen omissa repoissa.

@@ -7,11 +7,23 @@ osoitteessa <https://jypeli.it.jyu.fi/>.
 
 ## Haluatko osallistua?
 
-Jos haluat osallistua sivuston kehittämiseen, kloonaa repo ja aloita muokkaus.
+Jos haluat osallistua sivuston kehittämiseen, kloonaa repo submoduleineen ja
+aloita muokkaus:
 
-Sivusto rakennetaan **Zensicalilla**. Suositeltu tapa on mukana oleva
-DevContainer, joka asentaa tarvittavat työkalut (`zensical/setup.sh`) avattaessa. Ilman
-DevContaineria riittää Python 3.11 ja `./zensical/setup.sh`.
+```bash
+git clone --recurse-submodules https://github.com/ohj-perus-jy/jypelidocs.git
+cd jypelidocs
+git config submodule.recurse true    # git pull päivittää jatkossa myös työkalut
+```
+
+Sivusto rakennetaan **[Zensicalilla](https://zensical.org)**. Työkalut
+(muunnos, tyylit, skriptit, testit) ovat git-submodule `zensical/tyokalut`, repo
+[kirjatyokalut](https://github.com/ohj-perus-jy/kirjatyokalut), joka on yhteinen
+Ohjelmointi 1:n ja Ohjelmointi 2:n materiaalien kanssa.
+
+Suositeltu tapa on mukana oleva DevContainer, joka hakee työkalut ja asentaa
+tarvittavan avattaessa. Ilman DevContaineria riittää Python 3.11 tai uudempi:
+`run.sh` hakee submodulen ja asentaa Zensicalin ensimmäisellä ajolla.
 
 Kehityspalvelin, joka seuraa `src/`-puun muutoksia:
 
@@ -24,6 +36,11 @@ Kehityspalvelin, joka seuraa `src/`-puun muutoksia:
 **Muokattava sisältö on kansiossa `src/`.**
 
 Tee pull request, kun olet valmis.
+
+Lisää: [zensical/README.md](zensical/README.md) (tämän sivuston asetukset,
+kaaviot ja työkalujen päivittäminen) ja
+[kirjatyokalut/README.md](https://github.com/ohj-perus-jy/kirjatyokalut#readme)
+(rakenne, merkkaus, työkalujen muuttaminen).
 
 ## Ongelmista ilmoittaminen
 
