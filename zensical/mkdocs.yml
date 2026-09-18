@@ -9,8 +9,8 @@ site_name: Jypeli-ohjeet
 # sivuston sisäiset linkit ovat suhteellisia ilmankin.
 site_url: https://jypeli.it.jyu.fi/
 
-# Alatunniste: tekijät ja lisenssi kuten mdBookin footerissa. Arvo menee
-# malliin escapettamatta, joten HTML on sallittu.
+# Alatunniste: tekijät ja lisenssi. Arvo menee malliin escapettamatta, joten
+# HTML on sallittu.
 copyright: >-
   Jypeli-ohjeet &copy; Jyväskylän yliopisto &middot;
   <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fi"
