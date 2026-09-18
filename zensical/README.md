@@ -242,6 +242,21 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
   - Uusi `dedent_headings`: 1–3 välilyönnillä sisennetty otsikko, jonka
     CommonMark sallii mutta Python-Markdown ei (ohj1:ssä kaksi, korjattu
     myös `src`:ssä e816bc7). *Yleiskäyttöinen.*
+  - Uusi `svgbob_problems`: varoitus, kun svgbob 0.7.6 piirtää kaavion
+    tekstin väärin. Peräkkäiset ääkköset hajoavat päällekkäisiksi paloiksi
+    (`Käännä` → `Kän` + `änä`), ja kirjaimen vieressä oleva sulku piirtyy
+    kaarena (`Main()`). Kumpikin korjaantuu lainausmerkeillä (`"Main()"`),
+    joita svgbob ei piirrä; siksi merkkijonoliteraalin lainausmerkit eivät
+    näy kaaviossa. *Yleiskäyttöinen.*
+  - Uusi `svgbob_fit_text`: svgbob 0.7.6 laskee kuvan koon vain viivoista
+    ja lainaamattomasta tekstistä, joten juuri edellisen kohdan suosittelema
+    lainattu teksti leikkautui oikeasta tai alareunasta pois (ohj1:ssä neljä
+    kaaviota kymmenestä, esim. `TulostaViiva()` sivulla
+    `osa2/4-aliohjelmat.md`). Koko kasvatetaan upotettaessa tekstien mukaan,
+    joten `cache/svgbob/` pysyy svgbobin omana tulosteena. Merkin leveys on
+    8,4 px (0,6 em 14 px:n koodikirjasimella) eikä svgbobin olettama 8 px;
+    pitkä teksti ylittäisi muuten reunan lainaamattomanakin.
+    *Yleiskäyttöinen.*
 - `assets/js/playground.js`: `csharp` kieliin; `feature-*`-määre kielen
   perään (`csharp-jypeli`) ja tulosteen data-URI-kuvat `<img>`-elementeiksi
   kuten ../theme/playground_ext.js. `multifile`-kenttä vain
