@@ -77,7 +77,7 @@
    * [Kuvan läpinäkyvyys](./grafiikka/kuvan-lapinakyvyys.md)
    * [Efektit](./grafiikka/efektit.md)
    * [Räjähdykset](./grafiikka/rajahdykset.md)
-   * [Piirtäminen](./grafiikka/piirtaminen.md)
+   * [Piirtäminen Canvakselle](./grafiikka/piirtaminen.md)
    * [Kuvan käsittely pikselitasolla](./grafiikka/kuvankasittely.md)
    * [Äänet ja musiikki](./grafiikka/aanien-lisays.md)
  * [Käyttöliittymä ja laskurit](./kayttoliittyma/index.md)

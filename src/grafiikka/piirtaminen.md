@@ -1,24 +1,57 @@
-# Piirtäminen
+# Piirtäminen Canvakselle
 
-Piirtämistä varten peliluokkaan lisätään `Paint`-aliohjelma:
+Yleensä kaikki pelissä näkyvä on [olioita](../oliot/index.md): olio luodaan
+kerran ja lisätään peliin `Add`-kutsulla, minkä jälkeen Jypeli muistaa sen ja
+huolehtii sen piirtämisestä, liikkeestä ja törmäyksistä. `Paint`-aliohjelmassa
+piirretään sen sijaan suoraan ruudulle, eikä Jypeli muista piirrettyä: viiva
+näkyy vain sen yhden ruudunpäivityksen ajan, jolla se piirrettiin. Siksi Jypeli
+kutsuu `Paint`-aliohjelmaa jokaisella ruudunpäivityksellä, 60 kertaa
+sekunnissa, ja kaikki, minkä halutaan pysyvän näkyvissä, piirretään joka kerta
+uudelleen. Piirretty viiva ei törmää mihinkään, eikä sitä tarvitse tuhota: kun
+sitä ei enää haluta, se jätetään piirtämättä. `Paint` sopii siis pelkkään
+kuvaan, joka muuttuu koko ajan, kuten tähtäysviivaan, kahden olion välille
+vedettyyn naruun tai kuvaajaan. Kaikki, mihin pitää voida törmätä tai minkä
+pitää liikkua fysiikan mukaan, tehdään olioina.
 
-```csharp,ignore
+Piirtämistä varten peliluokkaan lisätään `Paint`-aliohjelma. Tämä piirtää
+janan pisteestä (−200, −100) pisteeseen (200, 100):
+
+```csharp,feature-jypeli
+//-using Jypeli;
+//-
+//-public class Peli : Game
+//-{
 protected override void Paint(Canvas canvas)
 {
-  // TÄHÄN VÄLIIN TULEE PIIRTÄMINEN...
+  canvas.DrawLine(-200, -100, 200, 100);
   base.Paint(canvas);
 }
+//-}
 ```
 
-Jypeli kutsuu `Paint`-aliohjelmaa jokaisella pelinpäivityksellä (60 kertaa sekunnissa) pelin ollessa käynnissä. Siinä voi siis toteuttaa animaatioita muuttamalla koordinaatteja sen mukaan, millä ajanhetkellä piirretään.
+`Paint` piirtää kaikkien olioiden päälle. Koordinaatit ovat samat kuin
+olioilla, ja kamera vaikuttaa piirrettyyn samoin kuin olioihin, joten
+esimerkiksi `pelaaja.Position` on pelaajan keskipiste myös piirrettäessä.
 
-## Canvas-luokka
+## Janat ja kuvat
 
-Itse piirtäminen tapahtuu parametrina saatavan `canvas`-olion metodeilla. Nykyisellään niitä on yksi:
+Piirtäminen tapahtuu parametrina saatavan `canvas`-olion metodeilla:
 
-- `DrawLine` – piirtää janan. Parametreina alku- ja loppupisteen koordinaatit joko vektoreina tai luettelemalla molempien pisteiden x- ja y-koordinaatit.
+- `DrawLine` – piirtää janan. Parametreina alku- ja loppupisteen koordinaatit
+  joko vektoreina tai luettelemalla molempien pisteiden x- ja y-koordinaatit.
+- `DrawImage` – piirtää [kuvan](kuvat.md) niin, että kuvan keskipiste on
+  annetussa pisteessä: `canvas.DrawImage(paikka, kuva)`. Lisäksi voi antaa
+  skaalauksen ja kiertokulman: `canvas.DrawImage(paikka, kuva, new Vector(2, 1), Angle.FromDegrees(45))`
+  piirtää kuvan kaksi kertaa leveämpänä ja 45 astetta kierrettynä.
 
-Värin voi asettaa `BrushColor`-ominaisuuden kautta. Lisäksi piirtoalueen reunojen koordinaatteja voi lukea samaan tapaan kuin kentänkin reunoja:
+Janan värin voi asettaa `BrushColor`-ominaisuuden kautta. Väri on jokaisen
+`Paint`-kutsun alussa musta.
+
+## Piirtoalueen reunat
+
+Piirtoalueen reunat ovat samat kuin
+[kentän](../aloittaminen/pelin-rakenne.md#kentta-kamera-ja-ruutu) reunat
+(`Level.Left` jne.), eivät ikkunan reunat:
 
 | Ominaisuus         | Selitys                        |
 |:-------------------|--------------------------------|
@@ -33,9 +66,16 @@ Värin voi asettaa `BrushColor`-ominaisuuden kautta. Lisäksi piirtoalueen reuno
 
 ## Esimerkkejä
 
-- Punaisen rastin piirtäminen vasempaan ylänurkkaan
+### Rasti kentän nurkassa
 
-```csharp,ignore
+Punainen rasti piirretään 100 yksikön päähän vasemmasta ylänurkasta
+reunojen avulla, joten se pysyy nurkassa kentän koosta riippumatta.
+
+```csharp,feature-jypeli
+//-using Jypeli;
+//-
+//-public class Peli : Game
+//-{
 protected override void Paint(Canvas canvas)
 {
   canvas.BrushColor = Color.Red;
@@ -48,9 +88,43 @@ protected override void Paint(Canvas canvas)
 
   base.Paint(canvas);
 }
+//-}
 ```
 
-- Jana, joka pyörii alkupisteensä ympäri
+### Tähtäysviiva pelaajasta hiireen
+
+Pelaaja on olio, joka lisätään peliin kerran, mutta viiva piirretään joka
+ruudunpäivityksellä uudelleen pelaajan ja hiiren senhetkisten paikkojen mukaan.
+
+```csharp,feature-jypeli
+using Jypeli;
+
+public class Peli : PhysicsGame
+{
+  PhysicsObject pelaaja;
+
+  public override void Begin()
+  {
+    pelaaja = new PhysicsObject(40, 40, Shape.Circle);
+    pelaaja.X = -200;
+    Add(pelaaja);
+    Mouse.IsCursorVisible = true;
+  }
+
+  protected override void Paint(Canvas canvas)
+  {
+    canvas.BrushColor = Color.Red;
+    canvas.DrawLine(pelaaja.Position, Mouse.PositionOnWorld);
+    base.Paint(canvas);
+  }
+}
+```
+
+### Pyörivä jana
+
+Koska kaikki piirretään joka kerta uudelleen, animaation saa laskemalla
+koordinaatit siitä, paljonko aikaa on kulunut. Jana pyörii alkupisteensä
+ympäri kierroksen 2π sekunnissa.
 
 ```csharp,ignore
 protected override void Paint(Canvas canvas)
