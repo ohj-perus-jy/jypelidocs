@@ -73,6 +73,8 @@ void LiikutaPelaajaa(Vector vektori)
 
 Ohjetekstin arvo on `null` eli tyhjä.
 
+### Näppäinyhdistelmät
+
 Jatketaan vielä edellistä esimerkkiä asettamalla kuuntelija näppäinyhdistelmälle. Näppäimet voidaan antaa esim. taulukossa tai listassa ja kuuntelijaan voi myös antaa valinnaisia parametreja, kuten yhden näppäimen kuuntelijassa:
 
 ```csharp,ignore
