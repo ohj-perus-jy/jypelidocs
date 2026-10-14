@@ -1,18 +1,12 @@
 # Peli-ikkuna ja resoluutio
 Oletuksena ikkunan resoluutio on 1024x768. Ikkunan todelliseen kokoon vaikuttaa kuitenkin järjestelmässä mahdollisesti käytössä oleva skaalauskerroin. Läppäreillä se on lähestulkoon aina oletuksena käytössä.
 
-Oletuksena peli näytetään ikkunassa. Tämä sen takia, että debuggaus tuottaa ongelmia, jos peli näytetään koko ruudulla.
+Oletuksena peli näytetään ikkunassa. 
 
-Resoluutio / kokoruututila kannattaa asettaa heti ensimmäisenä `Begin`-aliohjelmassa.
-
-Pelin saa näkymään koko ruudulla (fullscreen) seuraavasti:
+Peli-ikkunan saa koko ruudun kokoiseksi seuraavasti:
 
 ```csharp,ignore
-public override void Begin()
-{
-      IsFullScreen = true;
-      // muu koodi...
-}
+IsMaximized = true;
 ```
 
 Jos haluaa vaihtaa pelin käyttämään tiettyä resoluutiota, tulee se tehdä hieman eri tavalla:
@@ -25,7 +19,17 @@ public override void Begin()
 }
 ```
 
-Resoluutiota muutetaan `SetWindowSize`-kutsulla. Parametreiksi ensin leveys, sitten korkeus ja viimeiseksi `true` tai `false` kokoruututilan tai ikkunan merkiksi (eli int leveys, int korkeus, bool kokoruutu).
+Parametrit ovat ensin leveys, korkeus ja viimeiseksi se, käytetäänkö
+kokoruututilaa vai ei. Jos haluat, että peli näkyy tavallisena ikkunana, valitse
+`false`. 
+
+Myös reunaton kokoruututila on mahdollista asettaa:
+
+```csharp,ignore
+IsFullScreen = true;
+```
+
+Emme kuitenkaan suosittele kokoruututilaa, koska se aiheuttaa ongelmia debuggaamisessa. 
 
 ## Ikkunan sijainnin muuttaminen
 
