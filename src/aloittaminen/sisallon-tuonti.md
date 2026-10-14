@@ -5,7 +5,8 @@ ensin liittää mukaan projektiin, jotta ohjelmointiympäristö tietää, mistä
 kuva- ja äänitiedostot löytyvät. Tiedostot laitetaan projektin
 `Content`-kansioon, josta ne kopioidaan pelin mukaan.
 
-Mikäli peliprojektissasi ei jo ole kansiota nimeltä `Content`, tee sellainen.
+<details closed><summary>Mikäli peliprojektissasi ei ole vielä Content-kansiota, voit luoda sen näillä ohjeilla</summary>
+
 Valitse käyttämäsi ohjelmointiympäristö. 
 
 ### [Rider](#tab/rider)
@@ -42,6 +43,8 @@ Kansio ilmestyy muiden kansioiden joukkoon.
 </animation>
 
 ***
+
+</details>
 
 ## Tiedostojen tuominen
 
