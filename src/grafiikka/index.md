@@ -6,7 +6,7 @@
 | [Kuvan läpinäkyvyys](kuvan-lapinakyvyys.md) | Läpinäkyvän taustan tekeminen kuvaan piirto-ohjelmassa. |
 | [Efektit](efektit.md) | Partikkeliefektit: räjähdys, liekki, savu ja tuuli. |
 | [Räjähdykset](rajahdykset.md) | Fysiikkaräjähdys, jonka paineaalto heittää olioita. |
-| [Piirtäminen](piirtaminen.md) | Viivojen ja kuvioiden piirtäminen Canvas-piirtoalustalle. |
+| [Piirtäminen Canvakselle](piirtaminen.md) | Viivojen ja kuvien piirtäminen suoraan ruudulle ilman olioita: tähtäysviivat, narut, kuvaajat. |
 | [Kuvan käsittely pikselitasolla](kuvankasittely.md) | Yksittäisten pikselien lukeminen ja muokkaaminen. |
 | [Äänet ja musiikki](aanien-lisays.md) | Äänitehosteet ja taustamusiikki. |
 

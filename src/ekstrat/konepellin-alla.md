@@ -65,7 +65,7 @@ Tapahtumankäsittelijöitäsi kutsutaan sen osan kohdalla, johon ne kuuluvat.
 Piirrossa Jypeli tyhjentää ruudun, piirtää kentän taustan, sitten oliot
 kerros kerrallaan kameran läpi katsottuna, sen päälle käyttöliittymän osat
 (kuten pistenäytön), ja lopuksi kutsuu `Paint`-aliohjelmaa, jos olet
-kirjoittanut sellaisen. Ks. [Piirtäminen](../grafiikka/piirtaminen.md).
+kirjoittanut sellaisen. Ks. [Piirtäminen Canvakselle](../grafiikka/piirtaminen.md).
 
 ## Mitä tästä seuraa käytännössä
 

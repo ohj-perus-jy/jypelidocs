@@ -16,6 +16,11 @@ cd jypelidocs
 git config submodule.recurse true    # git pull päivittää jatkossa myös työkalut
 ```
 
+Windowsissa kloonaa WSL:n levylle, älä Windowsin kansioon (`C:\…`): sieltä
+kontti lukee tiedostot 9p-liitoksen läpi, ja Zensicalin asennus kestää lähes
+8 minuuttia, WSL:n levyllä noin 12 sekuntia. Avaa WSL-pääte (`wsl`), kloonaa
+kotihakemistoosi ja avaa kansio VS Codessa komennolla `code jypelidocs`.
+
 Sivusto rakennetaan **[Zensicalilla](https://zensical.org)**. Työkalut
 (muunnos, tyylit, skriptit, testit) ovat git-submodule `zensical/tyokalut`, repo
 [kirjatyokalut](https://github.com/ohj-perus-jy/kirjatyokalut), joka on yhteinen
