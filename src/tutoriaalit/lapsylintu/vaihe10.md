@@ -33,7 +33,7 @@ Camera.FollowOffset = new Vector(Screen.Width / 2.5 - RUUDUN_KOKO, 0.0);
 
 Vektori kertoo kameran sijainnin seurattavan olion keskipisteeseen nähden. Piste annetaan muodossa (x, y) eli tässä kameran vaakasuuntainen koordinaatti x olisi pelihahmon koordinaattiin lisättynä `Screen.Width / 2.5 - RUUDUN_KOKO` eli näyttöruudun leveys jaettuna kahdella ja puolella (voisi olla myös esim. pelkästään jaettuna kahtia, mutta 2.5 sattuu olemaan visuaalisesti kauniimpi) ja siitä vielä vähennettynä hahmon leveyden verran, jotta hahmo jää varmasti näkyville. Y-suunnassa kameraa ei siirretä lainkaan, siksi arvo `0.0`.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## Ohjeen päättyminen
 

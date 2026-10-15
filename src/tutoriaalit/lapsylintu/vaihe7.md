@@ -81,7 +81,7 @@ Add(vihollinen);
 
 Kokeile, miten peli toimii tässä vaiheessa.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## Vihollislintu pysymään ilmassa
 
@@ -95,7 +95,7 @@ vihollinen.IgnoresGravity = true;
 
 Kokeile, että vihollinen jää nyt ilmaan.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## Vihollislintu pysymään pyörimättömänä
 
@@ -119,7 +119,7 @@ vihollinen.IgnoresCollisionResponse = true;
 
 Nyt viholliseen törmääminen ei enää vaikuta vihollisen sijaintiin mitenkään.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## Vihollislintu liikkumaan ylös ja alas
 
@@ -140,4 +140,4 @@ Tässä kutsutaan Oscillate-metodia, joka saa vihollisen värähtelemään. Vär
 
 Kokeile pelin toimivuutta! Voit lisäillä vihollisia enemmänkin vartioimaan tähtiä ja muuttaa vihollisen värähtelyasetuksia.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"

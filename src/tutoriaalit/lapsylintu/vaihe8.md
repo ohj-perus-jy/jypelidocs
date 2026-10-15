@@ -22,7 +22,7 @@ vihollinen.Image = vihollisenKuva;
 
 Nyt kuvan pitäisi olla käytössä. Kokeile.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## Viholliseen törmääminen
 
@@ -61,7 +61,7 @@ AddCollisionHandler(pelaaja1, "vihu", TormaaTasoon);
 
 Nyt pelaajan törmätessä seinään tai viholliseen pelaaja kuolee.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## Refaktorointia
 

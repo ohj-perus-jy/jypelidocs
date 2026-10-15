@@ -30,7 +30,7 @@ Voit poistaa Explorer-näkymästä koko kuvatiedoston `norsu.png`, koska sitä e
 
 Kokeile, että pelisi toimii uudella kuvalla!
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## Läpsyanimaation lisääminen
 
@@ -123,4 +123,4 @@ kentta.SetTileMethod('L', LisaaPelaaja);
 
 Ilman tätä muutosta pelikentässäsi ei ole pelaajaa lainkaan.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"

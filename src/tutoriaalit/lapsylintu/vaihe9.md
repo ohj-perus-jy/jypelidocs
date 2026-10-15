@@ -105,7 +105,7 @@ MessageDisplay.Add("Pääsit kentän läpi!");
 
 Kokeile, kuinka hyvin maaliviivaan eli kentän oikeaan laitaan törmääminen toimii! Vinkki: voit testausvaiheessa "huijata" ja siirtää linnun aloituspaikan `kentta1.txt`-tiedostossa lähemmäs oikeaa reunaa, jotta koko kenttää ei tarvitse pelata läpi.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## Maaliviivan törmäyksen parantelut
 
@@ -123,4 +123,4 @@ StopAll(); // Pysäyttää kaikki oliot, mm. vihollisten liikkeen
 Keyboard.Disable(Key.Up); // Poistaa pelinäppäimen käytöstä
 ```
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"

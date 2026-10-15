@@ -53,4 +53,4 @@ pelaaja1.AnimJump = kuolemisanimaatio;
 
 Pelihahmon kuolemisanimaatio voisi olla myös useamman kuvan sisältävä, mutta tässä esimerkissä käytetään vain yksittäistä kuvaa, jossa linnun silmät ovat sarjakuvamaisesti ristissä.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"

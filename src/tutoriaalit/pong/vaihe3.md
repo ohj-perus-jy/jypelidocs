@@ -89,8 +89,9 @@ Koska kirjoitimme aliohjelmakutsun ennen rivejä, joilla luodaan vektori nimelt�
 
 Pelissämme on vielä kuitenkin virhe.
 
-> [!EI TOIMI VIELÄ]
-> Älä turhaan yritä ajaa peliä.
+!!! ei-toimi "Ei toimi vielä"
+
+    Älä turhaan yritä ajaa peliä.
 
 ## 3. Pallo attribuutiksi
 
@@ -146,7 +147,7 @@ Nyt uusi fysiikkaolio sijoitetaan siihen palloon, jonka äsken lisäsimme koodin
 
 Näillä toimenpiteillä pallo-olioon päästään käsiksi kaikista aliohjelmista.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## 4. Mailan lisääminen kenttään
 
@@ -192,7 +193,7 @@ Olisimmeko voineet sijoittaa x-koordinaattiin yksinkertaisesti jonkin arvon, esi
 
 Laitamme myös mailalle `Restitution`-ominaisuuden arvoon `1.0`, koska törmäykseen vaikuttavat kummankin törmäävän kappaleen ominaisuudet.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 Kun nyt käynnistät pelin, siinä näkyy pallo sekä yksi maila.
 
@@ -234,7 +235,7 @@ public override void Begin()
 }
 ```
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 Huomaa, että koodin voi jakaa aliohjelmiin monin eri tavoin, tämä on vain yksi tapa.
 
@@ -244,8 +245,9 @@ Näiden muutosten jälkeen luokka `Pong` eli Pong-pelimme on tämän näköinen.
 
 Huomaa, että pallo saattaa kimmota seinästä oudolla kulmalla tai hidastua osuessaan mailaan. Et ole tehnyt mitään väärin, vaan vika on Jypelin käyttämässä fysiikkamoottorissa, jota ei ole tarkoitettu tämän tyylisille peleille.
 
-> [!KYSYMYS]
-> Montako aliohjelmaa koodissa on nyt? Näet vastauksen sivun lopusta, mutta mieti hetki ennen kuin katsot. Muista, että jokaisessa aliohjelmassa on aloittava aaltosulku `{` sekä lopettava aaltosulku `}`.
+!!! kysymys "Kysymys"
+
+    Montako aliohjelmaa koodissa on nyt? Näet vastauksen sivun lopusta, mutta mieti hetki ennen kuin katsot. Muista, että jokaisessa aliohjelmassa on aloittava aaltosulku `{` sekä lopettava aaltosulku `}`.
 
 ```csharp,feature-jypeli
 using System;

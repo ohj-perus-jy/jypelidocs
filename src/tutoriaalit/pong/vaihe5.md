@@ -100,7 +100,7 @@ Toisessa kutsussa kerrotaan, mitä tehdään (`PysaytaMaila1`), kun näppäin va
 
 **Emme ole vielä toteuttaneet tällaisia aliohjelmia**, mutta mietitään sitä vasta seuraavaksi.
 
-> [!EI TOIMI VIELÄ]
+!!! ei-toimi "Ei toimi vielä"
 
 ## 3. Aliohjelma mailan liikuttamiseksi
 
@@ -108,7 +108,7 @@ Koska maila on fysiikkaolio, sen yhtenä ominaisuutena on nopeus (*engl. velocit
 
 Nopeus esitetään vektorina. Vektorin x-arvo kertoo mailan nopeuden vaakasuunnassa ja y-arvo pystysuunnassa. Millaisia vektoreita siis tarvitsemme mailan liikuttamiseen ylös ja alas? Entä miten voisimme ilmaista mailan pysäyttämisen?
 
-> [!EI TOIMI VIELÄ]
+!!! ei-toimi "Ei toimi vielä"
 
 Tarvitsemme kolme eri nopeusvektoria:
 
@@ -143,7 +143,7 @@ void AsetaNopeus(PhysicsObject maila, Vector nopeus)
 }
 ```
 
-> [!EI TOIMI VIELÄ]
+!!! ei-toimi "Ei toimi vielä"
 
 ### 3.1. Mailat ja vektorit attribuuteiksi
 
@@ -178,7 +178,7 @@ public class Pong : PhysicsGame
     }
 ```
 
-> [!EI TOIMI VIELÄ]
+!!! ei-toimi "Ei toimi vielä"
 
 ### 3.2. Mailojen sijoitus attribuutteihin
 
@@ -233,7 +233,7 @@ void LuoKentta()
 
 Nyt meillä on olemassa mailat `maila1` ja `maila2`, jotka näkyvät kaikille aliohjelmille.
 
-> [!EI TOIMI VIELÄ]
+!!! ei-toimi "Ei toimi vielä"
 
 ### 3.3. Maila liikkumaan ylöspäin
 
@@ -251,8 +251,9 @@ void AsetaOhjaimet()
 }
 ```
 
-> [!KOKEILE]
-> Ellei pelisi toimi, yritä selvittää, mistä vika johtuu, tai pyydä ohjaajaa auttamaan.
+!!! kokeile "Kokeile käynnistää pelisi"
+
+    Ellei pelisi toimi, yritä selvittää, mistä vika johtuu, tai pyydä ohjaajaa auttamaan.
 
 ## 4. Molempien mailojen liikuttaminen
 
@@ -288,7 +289,7 @@ Kuten nyt nähdään, mailan ja nopeuden vieminen parametrina `Keyboard.Listen`-
 
 Kokeile, miten pelisi toimii!
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## 5. Lopputulos
 

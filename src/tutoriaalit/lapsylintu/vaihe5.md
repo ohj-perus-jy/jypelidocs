@@ -67,7 +67,7 @@ public class Lapsylintu : PhysicsGame
 
 Testaa, toimiiko ohjelma vielä.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## Ajastimen pysäyttäminen
 
@@ -95,4 +95,4 @@ Nyt kun pelaaja törmää seinään, hän kuolee.
 
 Koska ajastin, joka kutsui päällä ollessaan pelaajaa oikeammalle työntävää aliohjelmaa, pysäytetään, myös pelaajan liike loppuu. Testaa koodisi.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"

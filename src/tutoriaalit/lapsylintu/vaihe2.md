@@ -66,4 +66,4 @@ ControllerOne.Listen(Button.DPadLeft, ButtonState.Down, Liikuta, "Pelaaja liikku
 ControllerOne.Listen(Button.DPadRight, ButtonState.Down, Liikuta, "Pelaaja liikkuu oikealle", pelaaja1, NOPEUS);
 ```
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"

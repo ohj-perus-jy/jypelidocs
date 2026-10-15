@@ -143,7 +143,7 @@ Laskureiden x-koordinaatit on laskettu käyttäen hyväksi ruudun vasemman ja oi
 
 Y-koordinaatti lasketaan ruudun yläreunasta (`Screen.Top`) lukien.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 Kun nyt ajat ohjelman, pitäisi ruudun yläreunassa näkyä kaksi laskuria, jotka näyttävät arvoa 0.
 
@@ -164,7 +164,7 @@ Törmäyksiin reagoimista varten Jypeli-kirjastossa on aliohjelma nimeltä `AddC
 AddCollisionHandler(pallo, KasittelePallonTormays);
 ```
 
-> [!EI TOIMI VIELÄ]
+!!! ei-toimi "Ei toimi vielä"
 
 Aliohjelman, jossa törmäys käsitellään, **täytyy olla** aina seuraavanlainen:
 
@@ -244,7 +244,7 @@ Toisen `if`-lauseen edessä sana `else` (suom. muuten) tarkoittaa sitä, että `
 
 Noista kahdesta `if`-lauseesta ei siis koskaan suoriteta molempia samalla kertaa. On myös hyvin mahdollista, että kumpaakaan niistä ei suoriteta, jos vaikkapa pallo osuu mailaan.
 
-> [!EI TOIMI VIELÄ]
+!!! ei-toimi "Ei toimi vielä"
 
 Jotta oikeaan ja vasempaan reunaan päästään käsiksi `KasittelePallonTormays`-aliohjelmassa, ne täytyy taas lisätä attribuuttien joukkoon, josta ne näkyvät kaikille aliohjelmille.
 
@@ -315,7 +315,7 @@ public class Pong : PhysicsGame
     // ...
 ```
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## Hienosäätöä
 

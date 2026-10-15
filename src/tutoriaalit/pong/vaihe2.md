@@ -28,7 +28,7 @@ Peliolioiden `x`- ja `y`-koordinaatit voi asettaa muuttamalla fysiikkaobjektin `
 
 Lisää edelliset rivit koodiin pallon luonnin jälkeen. Kokeile erilaisilla `X`:n ja `Y`:n arvoilla, mihin pallo sijoittuu ruudulla.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## 2. Vektoreista
 
@@ -51,10 +51,11 @@ pallo.Hit(impulssi * pallo.Mass);
 
 Mitä isompia arvoja annat vektorille, sitä kovempaa pallo lähtee. Kokeile tehdä vektori erilaisilla `x`- ja `y`-arvoilla ja katso, mihin suuntaan pallo lähtee.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
-> [!KYSYMYS]
-> Miten laittaisit pallon liikkumaan yläviistoon?
+!!! kysymys "Kysymys"
+
+    Miten laittaisit pallon liikkumaan yläviistoon?
 
 Tässä on vielä tärkeä huomata, että `Hit`-aliohjelmalle annettiin nyt vektori kerrottuna pallon massalla. Pallon massa on tässä yhteydessä vain jokin desimaaliluku, joka kertolaskun myötä kasvattaa vektorin pituutta, eli tässä yhteydessä annettua voimaa.
 
@@ -86,7 +87,7 @@ Level.CreateBorders();
 
 Kun nyt ajat peliä, pelikentässä pitäisi olla reunat, joihin pallo myös törmää.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 Miksi pallo törmää, vaikka emme ole törmäystä mitenkään ohjelmoineet? Siksi, että projektia luodessamme teimme fysiikkapelin. Fysiikkapelin (`PhysicsGame`) *fysiikkamoottori* laskee pallon liikkeitä meidän puolestamme.
 
@@ -127,7 +128,7 @@ Eli vapaasti sanottuna:
 
 "Tee näkymättömät reunat, joiden kimmoisuus on yksi"
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## 6. Kentän taustavärin vaihtaminen
 
@@ -137,10 +138,11 @@ Eli vapaasti sanottuna:
 Level.Background.Color = Color.Black;
 ```
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
-> [!KYSYMYS]
-> Miten asettaisit taustavärin vihreäksi?
+!!! kysymys "Kysymys"
+
+    Miten asettaisit taustavärin vihreäksi?
 
 Muista tallentaa työsi välillä.
 

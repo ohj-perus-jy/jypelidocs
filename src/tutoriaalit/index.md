@@ -13,11 +13,14 @@ opitaan Jypelin käyttöä ja ohjelmoinnin perusasioita. Ennen aloittamista
 
 ## Oppaissa käytetyt merkinnät
 
-> [!KOKEILE]
-> Kokeile ajaa peliäsi. Klikkaa Riderissa vihreää kolmiota (**Run**). Peliä kannattaa ajaa usein, jotta näet, miten tekemäsi muutokset vaikuttavat.
+!!! kokeile "Kokeile käynnistää pelisi"
 
-> [!EI TOIMI VIELÄ]
-> Pelisi ei toimi, eikä sen kuulukaan toimia vielä, jos olet seurannut ohjeita. Seuraa ohjetta eteenpäin, tilanne korjaantuu. Mieti kuitenkin, miksi peli ei vielä toimi.
+    Kokeile ajaa peliäsi. Klikkaa Riderissa vihreää kolmiota (**Run**). Peliä kannattaa ajaa usein, jotta näet, miten tekemäsi muutokset vaikuttavat.
 
-> [!KYSYMYS]
-> Tällaisen merkinnän kohdalla esitetään kysymys, jota voit miettiä ja mielellään myös kokeilla ehdotettua muutosta koodiin. Kysymyksen yli voi halutessaan hypätä.
+!!! ei-toimi "Ei toimi vielä"
+
+    Pelisi ei toimi, eikä sen kuulukaan toimia vielä, jos olet seurannut ohjeita. Seuraa ohjetta eteenpäin, tilanne korjaantuu. Mieti kuitenkin, miksi peli ei vielä toimi.
+
+!!! kysymys "Kysymys"
+
+    Tällaisen merkinnän kohdalla esitetään kysymys, jota voit miettiä ja mielellään myös kokeilla ehdotettua muutosta koodiin. Kysymyksen yli voi halutessaan hypätä.

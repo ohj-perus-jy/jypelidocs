@@ -84,7 +84,7 @@ public override void Begin()
 
 Kokeile, toimiiko peli!
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## 4. Olio palloksi
 
@@ -115,7 +115,7 @@ Huomaa, että vaikka meillä oli muuttuja nimeltä pallo, se olikin aluksi pelis
 
 Nyt kun ajat ohjelman (Riderissa vihreä **Run**-kolmio), pitäisi keskellä ruutua näkyä pallo, kuten tämän sivun alussa olevassa kuvassa.
 
-> [!KOKEILE]
+!!! kokeile "Kokeile käynnistää pelisi"
 
 ## 5. Lopputulos
 

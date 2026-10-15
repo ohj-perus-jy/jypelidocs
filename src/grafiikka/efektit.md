@@ -18,8 +18,9 @@ using Jypeli.Effects;
 
 ## Räjähdys
 
-> [!HUOMAUTUS]
-> Tämä on pelkkä näkyvä efekti. Jos räjähdyksen halutaan myös vaikuttavan fysiikkaan, käytä fysiikkaräjähdystä, ks. [Räjähdykset](rajahdykset.md).
+!!! note "Huomautus"
+
+    Tämä on pelkkä näkyvä efekti. Jos räjähdyksen halutaan myös vaikuttavan fysiikkaan, käytä fysiikkaräjähdystä, ks. [Räjähdykset](rajahdykset.md).
 
 Räjähdykset tehdään `ExplosionSystem`-järjestelmällä. Alla oleva koodi luo järjestelmän ja käynnistää sillä yhden räjähdyksen:
 

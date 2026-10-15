@@ -55,8 +55,9 @@ Tämän vaiheen valmis koodi löytyy täältä:
 
 Ks. <https://gitlab.jyu.fi/tie/ohj1/jypeli-esimerkit/kaksi-pelaajaa/-/blob/main/KaksiPelaajaa.cs?ref_type=heads>
 
-> [!KOKEILE]
-> Aja peli ja kävele hahmoilla eri suuntiin. Pelaaja 2 katoaa pian ruudulta, koska kamera seuraa vain pelaajaa 1. Se korjataan seuraavaksi.
+!!! kokeile "Kokeile käynnistää pelisi"
+
+    Aja peli ja kävele hahmoilla eri suuntiin. Pelaaja 2 katoaa pian ruudulta, koska kamera seuraa vain pelaajaa 1. Se korjataan seuraavaksi.
 
 ## Kameran seuranta
 
@@ -80,8 +81,9 @@ Camera.FollowYMargin = 100;
 
 Lisää kameran käytöstä: [Kamera ja zoomaus](../kentat/kameran-kaytto.md).
 
-> [!KOKEILE]
-> Kävele hahmoilla kauas toisistaan. Kamera zoomaa kauemmas, ja molemmat pysyvät kuvassa.
+!!! kokeile "Kokeile käynnistää pelisi"
+
+    Kävele hahmoilla kauas toisistaan. Kamera zoomaa kauemmas, ja molemmat pysyvät kuvassa.
 
 ## Kilpailu: kumpi kerää enemmän tähtiä
 
@@ -151,8 +153,9 @@ private void JulistaVoittaja()
 
 Ensimmäinen rivi on kahden pelaajan pelin erikoisuus. Jos molemmat hahmot osuvat samaan tähteen samalla hetkellä, käsittelijä suoritetaan kahdesti, ja ilman tarkistusta sama tähti antaisi pisteen molemmille. Tuhottu olio poistuu kentältä vasta päivityksen lopussa, mutta sen `IsDestroyed`-ominaisuus on jo `true`, joten toinen osuma jätetään huomiotta.
 
-> [!KOKEILE]
-> Kerätkää kaikki tähdet. Kun viimeinen tähti katoaa, ruudulle tulee voittajan nimi.
+!!! kokeile "Kokeile käynnistää pelisi"
+
+    Kerätkää kaikki tähdet. Kun viimeinen tähti katoaa, ruudulle tulee voittajan nimi.
 
 ## Yhteistyö: ovi ja kytkin
 
@@ -237,8 +240,9 @@ private bool OnKytkimella(PlatformCharacter pelaaja)
 
 Hahmo on kytkimellä, kun sen keskipiste on alle yhden ruudun päässä kytkimen keskipisteestä.
 
-> [!KOKEILE]
-> Jättäkää toinen hahmo kytkimelle ja viekää toinen ovesta. Kokeilkaa myös, mitä tapahtuu, jos kytkimeltä lähtee pois, kun toinen on vielä oviaukossa.
+!!! kokeile "Kokeile käynnistää pelisi"
+
+    Jättäkää toinen hahmo kytkimelle ja viekää toinen ovesta. Kokeilkaa myös, mitä tapahtuu, jos kytkimeltä lähtee pois, kun toinen on vielä oviaukossa.
 
 ## Tönäisy
 
@@ -273,8 +277,9 @@ Tönäisy tehoaa vain, jos toinen hahmo on enintään kahden ruudun päässä. S
 
 Tasohyppelyhahmo pysäyttää itsensä vaakasuunnassa joka päivityksessä, kun kävelynäppäintä ei paineta, joten pelkkä sysäys ei liikuttaisi sitä juuri lainkaan. `MaintainMomentum` antaa hahmon liukua, ja kertalaukeava ajastin ottaa sen puolen sekunnin päästä taas pois päältä, jotta hahmo ei jää liukkaaksi.
 
-> [!KOKEILE]
-> Tönäiskää toisianne tasanteen reunalla. Muuta `TONAISYVOIMA`-vakion arvoa ja katso, miten sysäys muuttuu.
+!!! kokeile "Kokeile käynnistää pelisi"
+
+    Tönäiskää toisianne tasanteen reunalla. Muuta `TONAISYVOIMA`-vakion arvoa ja katso, miten sysäys muuttuu.
 
 ## Jatkokehittely
 
