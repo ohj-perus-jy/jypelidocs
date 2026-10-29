@@ -783,9 +783,9 @@ Kentän luomisen vaiheet:
   - Aliohjelmassa luodaan olio, sijoitetaan se oikeaan paikkaan ja lisätään peliin
   - Aliohjelmille tulee parametrina vektori, joka kertoo olion paikan pelikentällä.
   - Lisäksi parametreina tulevat yhdelle pikselille varatun ruudun leveys ja korkeus pelikentällä.
-  - Listan väreistä ja niiden nimistä Paint.NETissä näet alla olevasta kuvasta.
+  - Listan Jypelin väreistä ja niiden RGB-arvoista näet alla olevasta taulukosta. Kuvan pikselin värin ei tarvitse olla täsmälleen sama: `ColorTileMap` hyväksyy lähellä olevat sävyt (`ColorTolerance`, oletus 30).
 
-  ![Lista Paint.NETin valmiista väreistä](images/jypeli-varit.png)
+{{#include ../oliot/varit-taulukko.md}}
 
 - Luodaan kenttä `Execute`-komennolla. Parametreina annetaan yhden pikselin leveys ja korkeus pelikentällä.
 

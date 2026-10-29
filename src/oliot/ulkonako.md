@@ -58,9 +58,9 @@ Värin voi vaihtaa seuraavalla tavalla:
 olio.Color = Color.Gray;
 ```
 
-Esimerkissä siis oliosta tehtiin harmaa. Värejä on valmiina paljon ja niistä voi valita haluamansa. Lista Jypelin sisäänrakennetuista väreistä:
+Esimerkissä siis oliosta tehtiin harmaa. Värejä on valmiina paljon ja niistä voi valita haluamansa. Alla on lista Jypelin sisäänrakennetuista väreistä; nimeä käytetään muodossa `Color.Nimi`, esimerkiksi `Color.SkyBlue`.
 
-![](images/jypeli-varit.png)
+{{#include varit-taulukko.md}}
 
 Omia värejä voi myös tehdä seuraavasti:
 
