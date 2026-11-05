@@ -66,7 +66,15 @@ pelaajan2Ampuminen = pelaajan2Kontrollit.CreateSubcontext();
 
 Jos ryhmät piirrettäisiin nyt puurakenteeksi (hierarkia), se näyttäisi tältä:
 
-![](images/kontekstihierarkia.png)
+```mermaid
+flowchart TD
+    CC[ControlContext] --> PK[pelaajienKontrollit]
+    CC -.- MUUT[mahd. muita ryhmiä]
+    PK --> P1[pelaajan1Kontrollit]
+    PK --> P2[pelaajan2Kontrollit]
+    P1 --> A1[pelaajan1Ampuminen]
+    P2 --> A2[pelaajan2Ampuminen]
+```
 
 Huomaa, että `ControlContext` on aina hierarkiassa ylimpänä. Se on pelin ns. pääkonteksti. Metodit vaikuttavat aina alaspäin puussa, eli esimerkiksi
 
