@@ -1,0 +1,4851 @@
+
+<!doctype html>
+<html lang="fi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jypeli.it.jyu.fi/fysiikka/liitokset/">
+      
+      
+      
+        <link rel="prev" href="../fysiikan-ilmiot/">
+      
+      
+        <link rel="next" href="../aseiden-lisaaminen/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.1.1">
+    
+    
+      
+        <title>6.3 Liitokset - Jypeli-ohjeet</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.ebb7f775.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/fonts.css">
+    
+      <link rel="stylesheet" href="../../assets/css/paletti.css">
+    
+      <link rel="stylesheet" href="../../assets/css/typography.css">
+    
+      <link rel="stylesheet" href="../../assets/css/fontmenu.css">
+    
+      <link rel="stylesheet" href="../../assets/css/layout.css">
+    
+      <link rel="stylesheet" href="../../assets/css/sitemenu.css">
+    
+      <link rel="stylesheet" href="../../assets/css/search.css">
+    
+      <link rel="stylesheet" href="../../assets/css/admonitions.css">
+    
+      <link rel="stylesheet" href="../../assets/css/tasks.css">
+    
+      <link rel="stylesheet" href="../../assets/css/icons.css">
+    
+      <link rel="stylesheet" href="../../assets/css/tables.css">
+    
+      <link rel="stylesheet" href="../../assets/css/code.css">
+    
+      <link rel="stylesheet" href="../../assets/css/requirements.css">
+    
+      <link rel="stylesheet" href="../../assets/css/diagrams.css">
+    
+      <link rel="stylesheet" href="../../assets/css/codebuttons.css">
+    
+      <link rel="stylesheet" href="../../assets/css/playground.css">
+    
+      <link rel="stylesheet" href="../../assets/css/highlights.css">
+    
+      <link rel="stylesheet" href="../../assets/css/hidelines.css">
+    
+      <link rel="stylesheet" href="../../assets/css/copy.css">
+    
+      <link rel="stylesheet" href="../../assets/css/hints.css">
+    
+      <link rel="stylesheet" href="../../assets/css/print.css">
+    
+      <link rel="stylesheet" href="../../assets/css/walkthrough.css">
+    
+      <link rel="stylesheet" href="../../assets/css/puhe.css">
+    
+      <link rel="stylesheet" href="../../assets/css/visa.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <link rel="preload" href="../../assets/fonts/source-serif-4/normal.woff2" as="font" type="font/woff2" crossorigin>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Hyppää sisältöön
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Ylätunniste"><button type="button" class="md-header__button md-icon jyu-rail-button" id="jyu-rail-button"
+            title="Piilota valikko" aria-label="Piilota valikko"
+            aria-expanded="true" aria-controls="jyu-rail" aria-keyshortcuts="b">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-panel-left" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg>
+    </button>
+    <script>try{if(localStorage.getItem("jyu-rail")==="hidden")document.documentElement.setAttribute("data-jyu-rail","hidden")}catch(e){}</script>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigaatio</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        
+        <div class="md-header__topic jyu-sites" data-md-component="jyu-sites">
+          <span class="md-ellipsis"><a href="../..">Jypeli-ohjeet</a>
+          </span>
+            <button type="button" class="jyu-sites__button" id="jyu-sites-button"
+                    title="Vaihda sivustoa" aria-label="Vaihda sivustoa"
+                    aria-haspopup="true" aria-expanded="false" aria-controls="jyu-sites-list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="jyu-sites__list" id="jyu-sites-list" role="menu" aria-label="Sivustot" hidden>
+              
+                <li role="none">
+                  <a class="jyu-sites__item" role="menuitem" href="https://ohjelmointi1.it.jyu.fi/">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+                    <span>Ohjelmointi 1</span>
+                  </a>
+                </li>
+              
+                <li role="none">
+                  <a class="jyu-sites__item" role="menuitem" href="../.." aria-current="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+                    <span>Jypeli-ohjeet</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6.3 Liitokset
+            
+          </span>
+        </div>
+      </div>
+    </div><button type="button" class="md-header__button md-icon jyu-puhe-button" hidden
+            title="Kuuntele sivu" aria-label="Kuuntele sivu" aria-pressed="false">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-volume-2" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298zM16 9a5 5 0 0 1 0 6M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
+    </button>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Haku</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Haku">
+  <button type="button" class="md-search__button" title="Haku (Ctrl+K)">
+    Haku
+  </button>
+</div><script>if(/^Mac/.test(document.documentElement.dataset.platform))document.querySelectorAll(".md-search__button").forEach(b=>b.title=b.title.replace("Ctrl+K","⌘K"))</script>
+      
+    <div class="md-header__option jyu-font" data-md-component="jyu-font" data-steps="90 100 110 120 135 150 175">
+      <button type="button" class="jyu-font__button" id="jyu-font-button"
+              title="Leipäteksti: Serif, 100 %" aria-label="Leipäteksti: Serif, 100 %"
+              aria-haspopup="dialog" aria-expanded="false" aria-controls="jyu-font-panel">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-type" viewBox="0 0 24 24"><path d="M12 4v16M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2M9 20h6"/></svg>
+        <span class="jyu-font__chevron"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+      </button>
+      <div class="jyu-font__panel" id="jyu-font-panel" role="dialog" aria-label="Leipäteksti" hidden>
+        <div class="jyu-font__size" role="group" aria-labelledby="jyu-font-size-label">
+          <span class="jyu-font__size-label" id="jyu-font-size-label">Tekstin koko</span>
+          <button type="button" class="jyu-font__step" data-step="-1" aria-label="Pienennä tekstiä">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></svg>
+          </button>
+          <button type="button" class="jyu-font__reset" title="Palauta 100 %" aria-label="Palauta 100 %" aria-disabled="true"><span aria-live="polite">100 %</span></button>
+          <button type="button" class="jyu-font__step" data-step="1" aria-label="Suurenna tekstiä">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>
+          </button>
+        </div>
+        <ul class="jyu-font__list" id="jyu-font-list" role="listbox" aria-label="Leipätekstin kirjasin">
+          <li class="jyu-font__item" role="option" aria-selected="true" tabindex="-1" data-font="" data-short="Serif">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="jyu-font__name">Source Serif 4</span>
+            <span class="jyu-font__kind">serif</span>
+          </li>
+          <li class="jyu-font__item" role="option" aria-selected="false" tabindex="-1" data-font="atkinson" data-short="Atkinson">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="jyu-font__name">Atkinson Hyperlegible Next</span>
+            <span class="jyu-font__kind">sans-serif</span>
+          </li>
+          <li class="jyu-font__item" role="option" aria-selected="false" tabindex="-1" data-font="literata" data-short="Literata">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="jyu-font__name">Literata</span>
+            <span class="jyu-font__kind">serif</span>
+          </li>
+        </ul>
+      </div>
+    </div><script>try{var b=document.body,f=localStorage.getItem("jyu-font"),k=localStorage.getItem("jyu-text-size");if(f&&document.querySelector('.jyu-font__item[data-font="'+f+'"]'))b.setAttribute("data-jyu-font",f);if(k&&document.querySelector(".jyu-font").dataset.steps.split(" ").indexOf(k)>=0)b.style.setProperty("--jyu-text-scale",k/100)}catch(e){}</script>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Vaihda tummaan teemaan"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Vaihda tummaan teemaan" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Vaihda vaaleaan teemaan"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Vaihda vaaleaan teemaan" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    <a href="../../tulosta/" title="Tulosta koko kirja" aria-label="Tulosta koko kirja" class="md-header__button md-icon jyu-print-button">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-printer" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect width="12" height="8" x="6" y="14" rx="1"/></svg>
+    </a>
+    <div class="md-header__source">
+      
+        
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigaatio" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Jypeli-ohjeet" class="md-nav__button md-logo" aria-label="Jypeli-ohjeet" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Jypeli-ohjeet
+  </label>
+  
+    <div class="md-nav__source">
+      
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Etusivu
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../aloittaminen/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1 Aloittaminen
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  1 Aloittaminen
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aloittaminen/asentaminen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.1 Asennus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aloittaminen/projektin-luonti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.2 Uuden projektin luominen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aloittaminen/ensimmainen-peli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.3 Ensimmäinen peli
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aloittaminen/pelin-rakenne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.4 Miten Jypeli-peli toimii
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aloittaminen/sisallon-tuonti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.5 Kuvat ja äänet mukaan projektiin
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aloittaminen/erilaisia-peleja/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.6 Millaisia pelejä voin tehdä?
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutoriaalit/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2 Kokonaiset pelitutoriaalit
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  2 Kokonaiset pelitutoriaalit
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutoriaalit/pong/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.1 Pong
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  2.1 Pong
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/pong/vaihe1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.1.1 Vaihe 1: Pallo kentälle
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/pong/vaihe2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.1.2 Vaihe 2: Pallo liikkeelle
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/pong/vaihe3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.1.3 Vaihe 3: Aliohjelma
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/pong/vaihe4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.1.4 Vaihe 4: Kaksi mailaa
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/pong/vaihe5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.1.5 Vaihe 5: Mailojen liikuttaminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/pong/vaihe6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.1.6 Vaihe 6: Parantelua
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/pong/vaihe7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.1.7 Vaihe 7: Pistelasku
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutoriaalit/lapsylintu/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2 Läpsylintu
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  2.2 Läpsylintu
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/lapsylintu/vaihe1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2.1 Vaihe 1: Projekti ja kenttä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/lapsylintu/vaihe2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2.2 Vaihe 2: Pelaaja liikkeelle
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/lapsylintu/vaihe3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2.3 Vaihe 3: Norsusta linnuksi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/lapsylintu/vaihe4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2.4 Vaihe 4: Seinään törmääminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/lapsylintu/vaihe5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2.5 Vaihe 5: Ajastimen pysäyttäminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/lapsylintu/vaihe6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2.6 Vaihe 6: Ikkunan koko ja kuolema
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/lapsylintu/vaihe7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2.7 Vaihe 7: Vihollinen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/lapsylintu/vaihe8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2.8 Vaihe 8: Viholliseen törmääminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/lapsylintu/vaihe9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2.9 Vaihe 9: Maali
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/lapsylintu/vaihe10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2.10 Vaihe 10: Yleiset parantelut
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/lapsylintu/vaihe11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2.11 Vaihe 11: Pelin jatkokehittely
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriaalit/kaksi-pelaajaa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.3 Kahden pelaajan tasohyppely
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../oliot/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3 Oliot
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  3 Oliot
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oliot/luonti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.1 Olion luominen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oliot/oliotyypit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.2 Oliotyypit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oliot/muodot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.3 Muodot
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oliot/ulkonako/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.4 Ulkonäkö
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oliot/animaatio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.5 Animaatio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oliot/kerrokset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.6 Kerrokset
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oliot/liikuttelu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.7 Olioiden liikuttelu ja siirtely
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oliot/tuhoaminen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.8 Olion tuhoaminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oliot/elinika/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.9 Elinikä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oliot/tekoaly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.10 Aivot ja tekoäly
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oliot/olioiden-erottaminen-toisistaan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.11 Olioiden Tag-ominaisuus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ohjaimet/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4 Ohjaus
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  4 Ohjaus
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjaimet/ohjainten-lisays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.1 Ohjainten lisääminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjaimet/ryhmittely/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.2 Ohjainten ryhmittely
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjaimet/tahtays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.3 Tähtäys
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjaimet/varina/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.4 Värinä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tapahtumat/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5 Tapahtumat ja törmäykset
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  5 Tapahtumat ja törmäykset
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tapahtumat/ajastimet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.1 Ajastimet
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tapahtumat/tormaykset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.2 Törmäysten käsittely
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tapahtumat/tormayksen-estaminen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.3 Törmäysten estäminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tapahtumat/muita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.4 Muita tapahtumia
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tapahtumat/delegaatit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.5 Delegaatit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6 Fysiikka
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  6 Fysiikka
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../painovoima/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6.1 Painovoima
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fysiikan-ilmiot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6.2 Fysiikan ilmiöt
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6.3 Liitokset
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6.3 Liitokset
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisällysluettelo">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisällysluettelo
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#akseliliitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Akseliliitos
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Akseliliitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kahden-olion-kiinnittaminen-toisiinsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kahden olion kiinnittäminen toisiinsa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liitoksen-pehmeys" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Liitoksen pehmeys
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liitoksen-tuhoaminen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Liitoksen tuhoaminen
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wheeljoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WheelJoint
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WheelJoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kappaleiden-liittaminen-toisiinsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kappaleiden liittäminen toisiinsa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esimerkki" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Esimerkki
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rakenneolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rakenneolio
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rakenneolio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rakenneolion-luominen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rakenneolion luominen
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rakenteet-ja-tormaysten-kasittely" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rakenteet ja törmäysten käsittely
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kuuluuko-fysiikkaolio-rakenteeseen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kuuluuko fysiikkaolio rakenteeseen
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aseiden-lisaaminen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6.4 Aseet
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../kentat/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7 Kentät ja kamera
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  7 Kentät ja kamera
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kentat/ruutukentta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.1 Ruutukenttä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kentat/tausta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.2 Tausta
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kentat/maasto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.3 Reunat ja maasto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kentat/kentan-vaihtuminen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.4 Kentän vaihtaminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kentat/sivusuuntainen-skrollaus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.5 Sivulle vierivä kenttä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kentat/autorata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.6 Autorata
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kentat/kameran-kaytto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.7 Kamera ja zoomaus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grafiikka/ikkunan-asettelu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.8 Peli-ikkuna ja resoluutio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kentat/aloittaminen-alusta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.9 Pelin aloittaminen alusta
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kentat/pause/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.10 Pause
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../grafiikka/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8 Grafiikka ja äänet
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_9">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  8 Grafiikka ja äänet
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grafiikka/kuvat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.1 Kuvat
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grafiikka/kuvan-lapinakyvyys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.2 Kuvan läpinäkyvyys
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grafiikka/efektit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.3 Efektit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grafiikka/rajahdykset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.4 Räjähdykset
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grafiikka/piirtaminen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.5 Piirtäminen Canvakselle
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grafiikka/kuvankasittely/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.6 Kuvan käsittely pikselitasolla
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grafiikka/aanien-lisays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.7 Äänet ja musiikki
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../kayttoliittyma/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9 Käyttöliittymä ja laskurit
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  9 Käyttöliittymä ja laskurit
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/teksti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.1 Teksti ruudulla
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/tekstin-kysyminen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.2 Tekstin kysyminen pelaajalta
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/pistelaskuri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.3 Pistelaskuri
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/aikalaskuri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.4 Aikalaskuri
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/etenemispalkki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.5 Etenemispalkki
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/valikko/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.6 Valikot
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/parhaiden-pisteiden-lista/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.7 Parhaat pisteet
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/sommittelu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.8 Sommittelu
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/liukusaatimet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.9 Liukusäätimet
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/koostettu-ikkuna/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.10 Koostetut ikkunat
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/omat-kayttoliittymakomponentit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.11 Omat käyttöliittymäkomponentit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/fontti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.12 Fontit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kayttoliittyma/esimerkkeja/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.13 Käyttöliittymäesimerkkejä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../matematiikka/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  10 Satunnaisuus ja kulmat
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  10 Satunnaisuus ja kulmat
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matematiikka/satunnaisuus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  10.1 Satunnaisuus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matematiikka/kulma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  10.2 Kulma
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../oma-oliotyyppi/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  11 Oma oliotyyppi
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12" id="__nav_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_12">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  11 Oma oliotyyppi
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oma-oliotyyppi/luokan-periminen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  11.1 Oman luokan periminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oma-oliotyyppi/ominaisuudet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  11.2 Omat ominaisuudet ja metodit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oma-oliotyyppi/kaytto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  11.3 Olion käyttäminen pelissä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oma-oliotyyppi/paivitys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  11.4 Oma päivitysmetodi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oma-oliotyyppi/tapahtumat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  11.5 Tapahtumat omassa luokassa
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oma-oliotyyppi/pelin-tiedot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  11.6 Pelin tiedot olion sisällä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ekstrat/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  12 Ekstrat
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_13" id="__nav_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_13">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  12 Ekstrat
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ekstrat/pikaohje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  12.1 Pikaohje
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ekstrat/yleiset-virheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  12.2 Yleiset virheet
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ekstrat/konepellin-alla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  12.3 Mitä konepellin alla tapahtuu
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ekstrat/kirjaston-liittaminen-kasin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  12.4 Kirjaston liittäminen käsin
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisällysluettelo">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisällysluettelo
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#akseliliitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Akseliliitos
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Akseliliitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kahden-olion-kiinnittaminen-toisiinsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kahden olion kiinnittäminen toisiinsa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liitoksen-pehmeys" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Liitoksen pehmeys
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liitoksen-tuhoaminen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Liitoksen tuhoaminen
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wheeljoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WheelJoint
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WheelJoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kappaleiden-liittaminen-toisiinsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kappaleiden liittäminen toisiinsa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esimerkki" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Esimerkki
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rakenneolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rakenneolio
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rakenneolio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rakenneolion-luominen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rakenneolion luominen
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rakenteet-ja-tormaysten-kasittely" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rakenteet ja törmäysten käsittely
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kuuluuko-fysiikkaolio-rakenteeseen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kuuluuko fysiikkaolio rakenteeseen
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 id="liitokset">Liitokset<a class="headerlink" href="#liitokset" title="Pysyvä linkki tähän otsikkoon">&para;</a></h1>
+<p>Jypelin käyttämä Farseerphysics-fysiikkakirjasto tarjoaa erilaisia liitoksia, joilla fysiikkaolioita voi liittää toisiinsa.</p>
+<p>Jypelissä on toistaiseksi toteutettu muutama tapa liittää fysiikkaolioita toisiinsa.</p>
+<h2 id="akseliliitos">Akseliliitos<a class="headerlink" href="#akseliliitos" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<p>Useimmin käytetty liitos on <code>AxleJoint</code>. Liitokselle on useita käyttötapoja.</p>
+<h3 id="kahden-olion-kiinnittaminen-toisiinsa">Kahden olion kiinnittäminen toisiinsa<a class="headerlink" href="#kahden-olion-kiinnittaminen-toisiinsa" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Akseliliitoksella voidaan kiinnittää kaksi oliota toisiinsa niin, että kun ne liikkuvat, niiden etäisyys pysyy vakiona. Tällainen liitos voidaan luoda antamalla <code>AxleJoint</code>-olion rakentajalle kaksi oliota ja piste ensimmäisen kappaleen koordinaateissa, jonka läpi akseli lyödään.</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">AxleJoint</span><span class="w"> </span><span class="n">liitos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AxleJoint</span><span class="p">(</span><span class="n">olio1</span><span class="p">,</span><span class="w"> </span><span class="n">olio2</span><span class="p">,</span><span class="w"> </span><span class="n">akselinPaikka</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Jos pistettä ei anneta erikseen, on se oletuksena kappaleiden välin keskipisteessä.</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">AxleJoint</span><span class="w"> </span><span class="n">liitos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AxleJoint</span><span class="p">(</span><span class="n">olio1</span><span class="p">,</span><span class="w"> </span><span class="n">olio2</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Jos lisäksi halutaan, että oliot eivät välitä toistensa törmäyksistä, voidaan ne asettaa <a href="../../tapahtumat/tormayksen-estaminen/">samaan törmäysryhmään</a>:</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">olio1</span><span class="p">.</span><span class="n">CollisionIgnoreGroup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">olio2</span><span class="p">.</span><span class="n">CollisionIgnoreGroup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Tällä ei tietenkään ole merkitystä, jos kappaleet ovat tarpeeksi kaukana toisistaan.</p>
+<p>Liitos pitää vielä lisätä kenttään kaikkien muiden olioiden tapaan:</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">Add</span><span class="p">(</span><span class="n">liitos</span><span class="p">);</span>
+</span></code></pre></div>
+<div class="language-csharp feature-jypeli highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Jypeli</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">Jypeli.Assets</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">Jypeli.Controls</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">using</span><span class="w"> </span><span class="nn">Jypeli.Widgets</span><span class="p">;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Liitos2Peli</span><span class="p">;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Liitos2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PhysicsGame</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">{</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Begin</span><span class="p">()</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">300</span><span class="p">;</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">        </span><span class="n">Level</span><span class="p">.</span><span class="n">Background</span><span class="p">.</span><span class="n">Color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">Black</span><span class="p">;</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">osa1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">);</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">        </span><span class="n">osa1</span><span class="p">.</span><span class="n">Position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector</span><span class="p">(</span><span class="o">-</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">        </span><span class="n">osa1</span><span class="p">.</span><span class="n">MakeStatic</span><span class="p">();</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="n">osa1</span><span class="p">.</span><span class="n">AddCollisionIgnoreGroup</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">        </span><span class="n">Add</span><span class="p">(</span><span class="n">osa1</span><span class="p">);</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">osa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osa1</span><span class="p">;</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">osa2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">);</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">            </span><span class="n">osa2</span><span class="p">.</span><span class="n">AddCollisionIgnoreGroup</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">            </span><span class="n">osa2</span><span class="p">.</span><span class="n">Position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">osa</span><span class="p">.</span><span class="n">Width</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">            </span><span class="n">Add</span><span class="p">(</span><span class="n">osa2</span><span class="p">);</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">liitos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AxleJoint</span><span class="p">(</span><span class="n">osa</span><span class="p">,</span><span class="w"> </span><span class="n">osa2</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector</span><span class="p">(</span><span class="n">osa</span><span class="p">.</span><span class="n">Width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">            </span><span class="c1">// liitos.Softness = 0.5;</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">            </span><span class="n">Add</span><span class="p">(</span><span class="n">liitos</span><span class="p">);</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">            </span><span class="n">osa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osa2</span><span class="p">;</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">        </span><span class="n">Gravity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">400</span><span class="p">);</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="liitoksen-pehmeys">Liitoksen pehmeys<a class="headerlink" href="#liitoksen-pehmeys" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Liitos toimii jousen tavoin, ja sen jäykkyyttä säädetään <code>Softness</code>-ominaisuudella.</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">liitos</span><span class="p">.</span><span class="n">Softness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Nimestään huolimatta arvo on jousen värähtelytaajuus: mitä suurempi arvo, sitä jäykempi liitos, ja mitä pienempi arvo, sitä löysemmin liitos joustaa. Arvolla 0 jousto on kokonaan pois päältä eli liitos on täysin jäykkä. Oletusarvo on 2, kun liitokselle on annettu akselin paikka. Hyvin suuren arvon käyttö voi johtaa epäfysikaalisiin ilmiöihin.</p>
+<h3 id="liitoksen-tuhoaminen">Liitoksen tuhoaminen<a class="headerlink" href="#liitoksen-tuhoaminen" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Liitoksen tuhoamiseen voidaan käyttää Jypelistä tuttua <code>Destroy</code>-metodia. Kun liitos on tuhottu, oliot pääsevät liikkumaan taas vapaasti.</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">liitos</span><span class="p">.</span><span class="n">Destroy</span><span class="p">();</span>
+</span></code></pre></div>
+<h2 id="wheeljoint">WheelJoint<a class="headerlink" href="#wheeljoint" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<p>Liitos, joka on erityisesti tarkoitettu ajoneuvojen renkaita varten. Sisältää sisäänrakennetun moottorin pyöritystä varten.</p>
+<h3 id="kappaleiden-liittaminen-toisiinsa">Kappaleiden liittäminen toisiinsa<a class="headerlink" href="#kappaleiden-liittaminen-toisiinsa" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Rengasliitos toimii melko samalla tavalla kuin akseliliitos, jonka pituudeksi olisi asetettu nolla. Liitos kiinnittää kappaleet toisiinsa niin, että liitospisteessä oleva moottori voi pyörittää niitä.</p>
+<p>Oletuksena liitos tulee juuri siihen pisteeseen, missä toisena annettu kappale on. Tässä tapauksessa renkaan keskipisteeseen:</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">WheelJoint</span><span class="w"> </span><span class="n">moottori</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WheelJoint</span><span class="p">(</span><span class="n">auto</span><span class="p">,</span><span class="w"> </span><span class="n">rengas</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Liitokselle voidaan myös antaa vaihtoehtoinen sijainti, jos keskipiste ei ole haluttu:</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">WheelJoint</span><span class="w"> </span><span class="n">moottori</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WheelJoint</span><span class="p">(</span><span class="n">auto</span><span class="p">,</span><span class="w"> </span><span class="n">rengas</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
+</span></code></pre></div>
+<p>Liitoksen ominaisuuksia:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nimi</th>
+<th style="text-align: left;">Tyyppi</th>
+<th style="text-align: left;">Selitys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Axis</td>
+<td style="text-align: left;">Vector</td>
+<td style="text-align: left;">Akseli, jonka suhteen liitos joustaa. Oletuksena <code>Vector.One</code>, eli joustaa joka suuntaan. Esimerkiksi <code>Vector.UnitY</code> tarkoittaa, että liitos joustaa ainoastaan pystysuunnassa.</td>
+</tr>
+<tr>
+<td style="text-align: left;">DampingRatio</td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">Liitoksen oskillaation vaimennuskerroin.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Softness</td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">Liitoksen jousen taajuus: suurempi arvo on jäykempi, 0 ei jousta lainkaan. Oletus 5.</td>
+</tr>
+</tbody>
+</table>
+<p>Liitoksen moottorille on myös muutamia ominaisuuksia:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nimi</th>
+<th style="text-align: left;">Tyyppi</th>
+<th style="text-align: left;">Selitys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MaxMotorTorque</td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">Kuinka kovaa moottori vääntää, vaikuttaa esimerkiksi auton kiihtyvyyteen.</td>
+</tr>
+<tr>
+<td style="text-align: left;">MotorSpeed</td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">Kuinka nopeasti moottori yrittää pyöriä, radiaaneina sekunnissa. <code>2 * Math.PI</code> = yksi kierros sekunnissa.</td>
+</tr>
+<tr>
+<td style="text-align: left;">MotorEnabled</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Moottori päälle/pois. Moottorin ollessa pois päältä rengas pyörii vapaasti.</td>
+</tr>
+</tbody>
+</table>
+<p>Lopuksi liitos pitää muistaa lisätä peliin:</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">Add</span><span class="p">(</span><span class="n">moottori</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="esimerkki">Esimerkki<a class="headerlink" href="#esimerkki" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Esimerkki autosta, johon on liitetty kaksi pyörää:</p>
+<div class="language-csharp feature-jypeli highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">Jypeli</span><span class="p">;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">Jypeli.Controls</span><span class="p">;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">using</span><span class="w"> </span><span class="nn">Jypeli.Widgets</span><span class="p">;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">using</span><span class="w"> </span><span class="nn">Jypeli.Assets</span><span class="p">;</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">AutoPeli</span><span class="p">;</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1">/// &lt;summary&gt;</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c1">/// Sivusta päin kuvattu auto, jossa on kaksi pyörää.</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="c1">/// &lt;/summary&gt;</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="k">class</span><span class="w"> </span><span class="nc">Auto</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PhysicsObject</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">{</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="w"> </span><span class="n">vasenPyora</span><span class="p">;</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="w"> </span><span class="n">oikeaPyora</span><span class="p">;</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">WheelJoint</span><span class="w"> </span><span class="n">vasenLiitos</span><span class="p">;</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">WheelJoint</span><span class="w"> </span><span class="n">oikeaLiitos</span><span class="p">;</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Auto</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">leveys</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">korkeus</span><span class="p">)</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="k">base</span><span class="p">(</span><span class="n">leveys</span><span class="p">,</span><span class="w"> </span><span class="n">korkeus</span><span class="p">)</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">        </span><span class="n">CollisionIgnoreGroup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">        </span><span class="n">LinearDamping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.998</span><span class="p">;</span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">        </span><span class="n">AddedToGame</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">LisaaPyorat</span><span class="p">;</span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">    </span><span class="c1">/// &lt;summary&gt;</span>
+</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="w">    </span><span class="c1">/// Käynnistää auton moottorin ja kiihdyttää autoa annettuun nopeuteen</span>
+</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="w">    </span><span class="c1">/// &lt;/summary&gt;</span>
+</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="w">    </span><span class="c1">/// &lt;param name="nopeus"&gt;Renkaiden pyörimisnopeus radiaaneina sekunnissa&lt;/param&gt;</span>
+</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Kaasuta</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">nopeus</span><span class="p">)</span>
+</span><span id="__span-10-34"><a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-10-35"><a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="w">        </span><span class="n">vasenLiitos</span><span class="p">.</span><span class="n">MotorSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nopeus</span><span class="p">;</span>
+</span><span id="__span-10-36"><a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="w">        </span><span class="n">oikeaLiitos</span><span class="p">.</span><span class="n">MotorSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nopeus</span><span class="p">;</span>
+</span><span id="__span-10-37"><a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a>
+</span><span id="__span-10-38"><a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="w">        </span><span class="n">vasenLiitos</span><span class="p">.</span><span class="n">MotorEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+</span><span id="__span-10-39"><a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a><span class="w">        </span><span class="n">oikeaLiitos</span><span class="p">.</span><span class="n">MotorEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+</span><span id="__span-10-40"><a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-41"><a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a>
+</span><span id="__span-10-42"><a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a><span class="w">    </span><span class="c1">/// &lt;summary&gt;</span>
+</span><span id="__span-10-43"><a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a><span class="w">    </span><span class="c1">/// Sammuttaa auton moottorin</span>
+</span><span id="__span-10-44"><a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a><span class="w">    </span><span class="c1">/// &lt;/summary&gt;</span>
+</span><span id="__span-10-45"><a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Hidasta</span><span class="p">()</span>
+</span><span id="__span-10-46"><a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-10-47"><a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a><span class="w">        </span><span class="n">vasenLiitos</span><span class="p">.</span><span class="n">MotorEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+</span><span id="__span-10-48"><a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a><span class="w">        </span><span class="n">oikeaLiitos</span><span class="p">.</span><span class="n">MotorEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+</span><span id="__span-10-49"><a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-50"><a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a>
+</span><span id="__span-10-51"><a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">LisaaPyorat</span><span class="p">()</span>
+</span><span id="__span-10-52"><a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-10-53"><a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a><span class="w">        </span><span class="n">PhysicsGame</span><span class="w"> </span><span class="n">fysiikkaPeli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Game</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">PhysicsGame</span><span class="p">;</span>
+</span><span id="__span-10-54"><a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a>
+</span><span id="__span-10-55"><a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a><span class="w">        </span><span class="n">vasenPyora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LuoPyora</span><span class="p">();</span>
+</span><span id="__span-10-56"><a id="__codelineno-10-56" name="__codelineno-10-56" href="#__codelineno-10-56"></a><span class="w">        </span><span class="n">vasenPyora</span><span class="p">.</span><span class="n">Position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Position</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector</span><span class="p">(</span><span class="o">-</span><span class="n">Width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">Height</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-10-57"><a id="__codelineno-10-57" name="__codelineno-10-57" href="#__codelineno-10-57"></a>
+</span><span id="__span-10-58"><a id="__codelineno-10-58" name="__codelineno-10-58" href="#__codelineno-10-58"></a><span class="w">        </span><span class="n">oikeaPyora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LuoPyora</span><span class="p">();</span>
+</span><span id="__span-10-59"><a id="__codelineno-10-59" name="__codelineno-10-59" href="#__codelineno-10-59"></a><span class="w">        </span><span class="n">oikeaPyora</span><span class="p">.</span><span class="n">Position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Position</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector</span><span class="p">(</span><span class="n">Width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">Height</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-10-60"><a id="__codelineno-10-60" name="__codelineno-10-60" href="#__codelineno-10-60"></a>
+</span><span id="__span-10-61"><a id="__codelineno-10-61" name="__codelineno-10-61" href="#__codelineno-10-61"></a><span class="w">        </span><span class="n">vasenLiitos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WheelJoint</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">vasenPyora</span><span class="p">);</span>
+</span><span id="__span-10-62"><a id="__codelineno-10-62" name="__codelineno-10-62" href="#__codelineno-10-62"></a><span class="w">        </span><span class="n">vasenLiitos</span><span class="p">.</span><span class="n">MaxMotorTorque</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+</span><span id="__span-10-63"><a id="__codelineno-10-63" name="__codelineno-10-63" href="#__codelineno-10-63"></a><span class="w">        </span><span class="n">fysiikkaPeli</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">vasenLiitos</span><span class="p">);</span>
+</span><span id="__span-10-64"><a id="__codelineno-10-64" name="__codelineno-10-64" href="#__codelineno-10-64"></a>
+</span><span id="__span-10-65"><a id="__codelineno-10-65" name="__codelineno-10-65" href="#__codelineno-10-65"></a><span class="w">        </span><span class="n">oikeaLiitos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WheelJoint</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">oikeaPyora</span><span class="p">);</span>
+</span><span id="__span-10-66"><a id="__codelineno-10-66" name="__codelineno-10-66" href="#__codelineno-10-66"></a><span class="w">        </span><span class="n">oikeaLiitos</span><span class="p">.</span><span class="n">MaxMotorTorque</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+</span><span id="__span-10-67"><a id="__codelineno-10-67" name="__codelineno-10-67" href="#__codelineno-10-67"></a><span class="w">        </span><span class="n">fysiikkaPeli</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">oikeaLiitos</span><span class="p">);</span>
+</span><span id="__span-10-68"><a id="__codelineno-10-68" name="__codelineno-10-68" href="#__codelineno-10-68"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-69"><a id="__codelineno-10-69" name="__codelineno-10-69" href="#__codelineno-10-69"></a>
+</span><span id="__span-10-70"><a id="__codelineno-10-70" name="__codelineno-10-70" href="#__codelineno-10-70"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Destroy</span><span class="p">()</span>
+</span><span id="__span-10-71"><a id="__codelineno-10-71" name="__codelineno-10-71" href="#__codelineno-10-71"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-10-72"><a id="__codelineno-10-72" name="__codelineno-10-72" href="#__codelineno-10-72"></a><span class="w">        </span><span class="n">vasenLiitos</span><span class="p">.</span><span class="n">Destroy</span><span class="p">();</span>
+</span><span id="__span-10-73"><a id="__codelineno-10-73" name="__codelineno-10-73" href="#__codelineno-10-73"></a><span class="w">        </span><span class="n">oikeaLiitos</span><span class="p">.</span><span class="n">Destroy</span><span class="p">();</span>
+</span><span id="__span-10-74"><a id="__codelineno-10-74" name="__codelineno-10-74" href="#__codelineno-10-74"></a><span class="w">        </span><span class="n">vasenPyora</span><span class="p">.</span><span class="n">Destroy</span><span class="p">();</span>
+</span><span id="__span-10-75"><a id="__codelineno-10-75" name="__codelineno-10-75" href="#__codelineno-10-75"></a><span class="w">        </span><span class="n">oikeaPyora</span><span class="p">.</span><span class="n">Destroy</span><span class="p">();</span>
+</span><span id="__span-10-76"><a id="__codelineno-10-76" name="__codelineno-10-76" href="#__codelineno-10-76"></a><span class="w">        </span><span class="k">base</span><span class="p">.</span><span class="n">Destroy</span><span class="p">();</span>
+</span><span id="__span-10-77"><a id="__codelineno-10-77" name="__codelineno-10-77" href="#__codelineno-10-77"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-78"><a id="__codelineno-10-78" name="__codelineno-10-78" href="#__codelineno-10-78"></a>
+</span><span id="__span-10-79"><a id="__codelineno-10-79" name="__codelineno-10-79" href="#__codelineno-10-79"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="w"> </span><span class="nf">LuoPyora</span><span class="p">()</span>
+</span><span id="__span-10-80"><a id="__codelineno-10-80" name="__codelineno-10-80" href="#__codelineno-10-80"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-10-81"><a id="__codelineno-10-81" name="__codelineno-10-81" href="#__codelineno-10-81"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-10-82"><a id="__codelineno-10-82" name="__codelineno-10-82" href="#__codelineno-10-82"></a><span class="w">        </span><span class="n">PhysicsObject</span><span class="w"> </span><span class="n">pyora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">Shape</span><span class="p">.</span><span class="n">Circle</span><span class="p">);</span>
+</span><span id="__span-10-83"><a id="__codelineno-10-83" name="__codelineno-10-83" href="#__codelineno-10-83"></a><span class="w">        </span><span class="n">pyora</span><span class="p">.</span><span class="n">Color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">Gray</span><span class="p">;</span>
+</span><span id="__span-10-84"><a id="__codelineno-10-84" name="__codelineno-10-84" href="#__codelineno-10-84"></a><span class="w">        </span><span class="n">pyora</span><span class="p">.</span><span class="n">CollisionIgnoreGroup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="__span-10-85"><a id="__codelineno-10-85" name="__codelineno-10-85" href="#__codelineno-10-85"></a><span class="w">        </span><span class="n">pyora</span><span class="p">.</span><span class="n">AngularDamping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.95</span><span class="p">;</span>
+</span><span id="__span-10-86"><a id="__codelineno-10-86" name="__codelineno-10-86" href="#__codelineno-10-86"></a><span class="w">        </span><span class="n">pyora</span><span class="p">.</span><span class="n">KineticFriction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+</span><span id="__span-10-87"><a id="__codelineno-10-87" name="__codelineno-10-87" href="#__codelineno-10-87"></a><span class="w">        </span><span class="n">Game</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">pyora</span><span class="p">);</span>
+</span><span id="__span-10-88"><a id="__codelineno-10-88" name="__codelineno-10-88" href="#__codelineno-10-88"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">pyora</span><span class="p">;</span>
+</span><span id="__span-10-89"><a id="__codelineno-10-89" name="__codelineno-10-89" href="#__codelineno-10-89"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-90"><a id="__codelineno-10-90" name="__codelineno-10-90" href="#__codelineno-10-90"></a><span class="p">}</span>
+</span><span id="__span-10-91"><a id="__codelineno-10-91" name="__codelineno-10-91" href="#__codelineno-10-91"></a>
+</span><span id="__span-10-92"><a id="__codelineno-10-92" name="__codelineno-10-92" href="#__codelineno-10-92"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Peli</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PhysicsGame</span>
+</span><span id="__span-10-93"><a id="__codelineno-10-93" name="__codelineno-10-93" href="#__codelineno-10-93"></a><span class="p">{</span>
+</span><span id="__span-10-94"><a id="__codelineno-10-94" name="__codelineno-10-94" href="#__codelineno-10-94"></a><span class="w">    </span><span class="n">Auto</span><span class="w"> </span><span class="n">auto</span><span class="p">;</span>
+</span><span id="__span-10-95"><a id="__codelineno-10-95" name="__codelineno-10-95" href="#__codelineno-10-95"></a>
+</span><span id="__span-10-96"><a id="__codelineno-10-96" name="__codelineno-10-96" href="#__codelineno-10-96"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Begin</span><span class="p">()</span>
+</span><span id="__span-10-97"><a id="__codelineno-10-97" name="__codelineno-10-97" href="#__codelineno-10-97"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-10-98"><a id="__codelineno-10-98" name="__codelineno-10-98" href="#__codelineno-10-98"></a><span class="w">        </span><span class="n">LuoKentta</span><span class="p">();</span>
+</span><span id="__span-10-99"><a id="__codelineno-10-99" name="__codelineno-10-99" href="#__codelineno-10-99"></a><span class="w">        </span><span class="n">AsetaOhjaimet</span><span class="p">();</span>
+</span><span id="__span-10-100"><a id="__codelineno-10-100" name="__codelineno-10-100" href="#__codelineno-10-100"></a><span class="w">        </span><span class="c1">// Kommentoi seuraava pois jos et halua heti lähteä liikkeelle</span>
+</span><span id="__span-10-101"><a id="__codelineno-10-101" name="__codelineno-10-101" href="#__codelineno-10-101"></a><span class="w">        </span><span class="n">Timer</span><span class="p">.</span><span class="n">SingleShot</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="k">delegate</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">auto</span><span class="p">.</span><span class="n">Kaasuta</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-10-102"><a id="__codelineno-10-102" name="__codelineno-10-102" href="#__codelineno-10-102"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-103"><a id="__codelineno-10-103" name="__codelineno-10-103" href="#__codelineno-10-103"></a>
+</span><span id="__span-10-104"><a id="__codelineno-10-104" name="__codelineno-10-104" href="#__codelineno-10-104"></a><span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">LuoKentta</span><span class="p">()</span>
+</span><span id="__span-10-105"><a id="__codelineno-10-105" name="__codelineno-10-105" href="#__codelineno-10-105"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-10-106"><a id="__codelineno-10-106" name="__codelineno-10-106" href="#__codelineno-10-106"></a><span class="w">        </span><span class="n">Gravity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">400</span><span class="p">);</span>
+</span><span id="__span-10-107"><a id="__codelineno-10-107" name="__codelineno-10-107" href="#__codelineno-10-107"></a><span class="w">        </span><span class="n">Level</span><span class="p">.</span><span class="n">CreateBorders</span><span class="p">();</span>
+</span><span id="__span-10-108"><a id="__codelineno-10-108" name="__codelineno-10-108" href="#__codelineno-10-108"></a><span class="w">        </span><span class="n">Camera</span><span class="p">.</span><span class="n">ZoomToLevel</span><span class="p">();</span>
+</span><span id="__span-10-109"><a id="__codelineno-10-109" name="__codelineno-10-109" href="#__codelineno-10-109"></a>
+</span><span id="__span-10-110"><a id="__codelineno-10-110" name="__codelineno-10-110" href="#__codelineno-10-110"></a><span class="w">        </span><span class="n">auto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Auto</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span>
+</span><span id="__span-10-111"><a id="__codelineno-10-111" name="__codelineno-10-111" href="#__codelineno-10-111"></a><span class="w">        </span><span class="n">auto</span><span class="p">.</span><span class="n">Color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">Red</span><span class="p">;</span>
+</span><span id="__span-10-112"><a id="__codelineno-10-112" name="__codelineno-10-112" href="#__codelineno-10-112"></a><span class="w">        </span><span class="n">auto</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-10-113"><a id="__codelineno-10-113" name="__codelineno-10-113" href="#__codelineno-10-113"></a><span class="w">        </span><span class="n">auto</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Level</span><span class="p">.</span><span class="n">Bottom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span>
+</span><span id="__span-10-114"><a id="__codelineno-10-114" name="__codelineno-10-114" href="#__codelineno-10-114"></a><span class="w">        </span><span class="n">Add</span><span class="p">(</span><span class="n">auto</span><span class="p">);</span>
+</span><span id="__span-10-115"><a id="__codelineno-10-115" name="__codelineno-10-115" href="#__codelineno-10-115"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-116"><a id="__codelineno-10-116" name="__codelineno-10-116" href="#__codelineno-10-116"></a>
+</span><span id="__span-10-117"><a id="__codelineno-10-117" name="__codelineno-10-117" href="#__codelineno-10-117"></a><span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">AsetaOhjaimet</span><span class="p">()</span>
+</span><span id="__span-10-118"><a id="__codelineno-10-118" name="__codelineno-10-118" href="#__codelineno-10-118"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-10-119"><a id="__codelineno-10-119" name="__codelineno-10-119" href="#__codelineno-10-119"></a><span class="w">        </span><span class="n">Keyboard</span><span class="p">.</span><span class="n">Listen</span><span class="p">(</span><span class="n">Key</span><span class="p">.</span><span class="n">Escape</span><span class="p">,</span><span class="w"> </span><span class="n">ButtonState</span><span class="p">.</span><span class="n">Pressed</span><span class="p">,</span><span class="w"> </span><span class="n">Exit</span><span class="p">,</span><span class="w"> </span><span class="s">"Poistu"</span><span class="p">);</span>
+</span><span id="__span-10-120"><a id="__codelineno-10-120" name="__codelineno-10-120" href="#__codelineno-10-120"></a><span class="w">        </span><span class="n">Keyboard</span><span class="p">.</span><span class="n">Listen</span><span class="p">(</span><span class="n">Key</span><span class="p">.</span><span class="n">F1</span><span class="p">,</span><span class="w"> </span><span class="n">ButtonState</span><span class="p">.</span><span class="n">Pressed</span><span class="p">,</span><span class="w"> </span><span class="n">ShowControlHelp</span><span class="p">,</span><span class="w"> </span><span class="s">"Näytä ohjeet"</span><span class="p">);</span>
+</span><span id="__span-10-121"><a id="__codelineno-10-121" name="__codelineno-10-121" href="#__codelineno-10-121"></a>
+</span><span id="__span-10-122"><a id="__codelineno-10-122" name="__codelineno-10-122" href="#__codelineno-10-122"></a><span class="w">        </span><span class="n">Keyboard</span><span class="p">.</span><span class="n">Listen</span><span class="p">(</span><span class="n">Key</span><span class="p">.</span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="n">ButtonState</span><span class="p">.</span><span class="n">Pressed</span><span class="p">,</span><span class="w"> </span><span class="n">auto</span><span class="p">.</span><span class="n">Kaasuta</span><span class="p">,</span><span class="w"> </span><span class="s">"Aja vasemmalle"</span><span class="p">,</span><span class="w"> </span><span class="mf">20.0</span><span class="p">);</span>
+</span><span id="__span-10-123"><a id="__codelineno-10-123" name="__codelineno-10-123" href="#__codelineno-10-123"></a><span class="w">        </span><span class="n">Keyboard</span><span class="p">.</span><span class="n">Listen</span><span class="p">(</span><span class="n">Key</span><span class="p">.</span><span class="n">Right</span><span class="p">,</span><span class="w"> </span><span class="n">ButtonState</span><span class="p">.</span><span class="n">Pressed</span><span class="p">,</span><span class="w"> </span><span class="n">auto</span><span class="p">.</span><span class="n">Kaasuta</span><span class="p">,</span><span class="w"> </span><span class="s">"Aja oikealle"</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">20.0</span><span class="p">);</span>
+</span><span id="__span-10-124"><a id="__codelineno-10-124" name="__codelineno-10-124" href="#__codelineno-10-124"></a>
+</span><span id="__span-10-125"><a id="__codelineno-10-125" name="__codelineno-10-125" href="#__codelineno-10-125"></a><span class="w">        </span><span class="n">Keyboard</span><span class="p">.</span><span class="n">Listen</span><span class="p">(</span><span class="n">Key</span><span class="p">.</span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="n">ButtonState</span><span class="p">.</span><span class="n">Released</span><span class="p">,</span><span class="w"> </span><span class="n">auto</span><span class="p">.</span><span class="n">Hidasta</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">);</span>
+</span><span id="__span-10-126"><a id="__codelineno-10-126" name="__codelineno-10-126" href="#__codelineno-10-126"></a><span class="w">        </span><span class="n">Keyboard</span><span class="p">.</span><span class="n">Listen</span><span class="p">(</span><span class="n">Key</span><span class="p">.</span><span class="n">Right</span><span class="p">,</span><span class="w"> </span><span class="n">ButtonState</span><span class="p">.</span><span class="n">Released</span><span class="p">,</span><span class="w"> </span><span class="n">auto</span><span class="p">.</span><span class="n">Hidasta</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">);</span>
+</span><span id="__span-10-127"><a id="__codelineno-10-127" name="__codelineno-10-127" href="#__codelineno-10-127"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-128"><a id="__codelineno-10-128" name="__codelineno-10-128" href="#__codelineno-10-128"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="rakenneolio">Rakenneolio<a class="headerlink" href="#rakenneolio" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<p>Rakenneolio eli <code>PhysicsStructure</code> voidaan koostaa kahdesta tai useammasta oliosta. Rakenneolio vastaa kaikkien sen osaolioiden liittämistä liitoksilla toisiinsa, mutta lisäksi koko rakennetta voi käskeä esimerkiksi liikkumaan, pyörimään tai muuttamaan väriään.</p>
+<h3 id="rakenneolion-luominen">Rakenneolion luominen<a class="headerlink" href="#rakenneolion-luominen" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Rakenteen luomiseen on kaksi vaihtoehtoa. Ensimmäinen näistä on kentällä valmiiksi olevien olioiden lisääminen siihen.</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">PhysicsObject</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">50.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">50.0</span><span class="p">,</span><span class="w"> </span><span class="n">Shape</span><span class="p">.</span><span class="n">Circle</span><span class="p">);</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">p1</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">p1</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">Add</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">PhysicsObject</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">25.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">25.0</span><span class="p">,</span><span class="w"> </span><span class="n">Shape</span><span class="p">.</span><span class="n">Circle</span><span class="p">);</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">p2</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">p2</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p1</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">Add</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="n">PhysicsObject</span><span class="w"> </span><span class="n">p3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">15.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">15.0</span><span class="p">,</span><span class="w"> </span><span class="n">Shape</span><span class="p">.</span><span class="n">Circle</span><span class="p">);</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="n">p3</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="n">p3</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="n">Add</span><span class="p">(</span><span class="n">p3</span><span class="p">);</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="n">PhysicsStructure</span><span class="w"> </span><span class="n">lumiukko</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhysicsStructure</span><span class="p">(</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">,</span><span class="w"> </span><span class="n">p3</span><span class="w"> </span><span class="p">);</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="n">Add</span><span class="p">(</span><span class="n">lumiukko</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Toinen vaihtoehto on tehdä rakenne ensin ja vasta sitten lisätä fysiikkaoliot rakenteeseen. Huomaa kuitenkin, että tällä tavalla lisättäessä osaolioiden koordinaatit ovat suhteessa rakenneolion keskipisteeseen, eli esim. seuraava esimerkki vastaa täysin yllä olevaa, vaikka palloille asetetut koordinaatit poikkeavatkin edellisistä.</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">PhysicsStructure</span><span class="w"> </span><span class="n">lumiukko</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhysicsStructure</span><span class="p">();</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">lumiukko</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">lumiukko</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">Add</span><span class="p">(</span><span class="n">lumiukko</span><span class="p">);</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="n">PhysicsObject</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">50.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">50.0</span><span class="p">,</span><span class="w"> </span><span class="n">Shape</span><span class="p">.</span><span class="n">Circle</span><span class="p">);</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">p1</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="n">p1</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="n">lumiukko</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="n">PhysicsObject</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">25.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">25.0</span><span class="p">,</span><span class="w"> </span><span class="n">Shape</span><span class="p">.</span><span class="n">Circle</span><span class="p">);</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="n">p2</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="n">p2</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p1</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="n">lumiukko</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="n">PhysicsObject</span><span class="w"> </span><span class="n">p3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhysicsObject</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">15.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">15.0</span><span class="p">,</span><span class="w"> </span><span class="n">Shape</span><span class="p">.</span><span class="n">Circle</span><span class="p">);</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="n">p3</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="n">p3</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="n">lumiukko</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">p3</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="rakenteet-ja-tormaysten-kasittely">Rakenteet ja törmäysten käsittely<a class="headerlink" href="#rakenteet-ja-tormaysten-kasittely" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Rakenteille on myös mahdollista asettaa törmäyskäsittelijöitä. Näin saadaan törmäystapahtuma, kun mikä tahansa rakenteen osista törmää.</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">void</span><span class="w"> </span><span class="nf">TeeLumiukko</span><span class="p">()</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">{</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">   </span><span class="c1">// luodaan lumiukko...</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">   </span><span class="n">lumiukko</span><span class="p">.</span><span class="n">Collided</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">KasitteleLumiukonTormays</span><span class="p">;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">}</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="k">void</span><span class="w"> </span><span class="nf">KasitteleLumiukonTormays</span><span class="p">(</span><span class="n">IPhysicsObject</span><span class="w"> </span><span class="n">ukko</span><span class="p">,</span><span class="w"> </span><span class="n">IPhysicsObject</span><span class="w"> </span><span class="n">kohde</span><span class="p">)</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="p">{</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">   </span><span class="c1">// törmäyksenkäsittelijä</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="kuuluuko-fysiikkaolio-rakenteeseen">Kuuluuko fysiikkaolio rakenteeseen<a class="headerlink" href="#kuuluuko-fysiikkaolio-rakenteeseen" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Jos halutaan tietää, mihin rakenteeseen tietty fysiikkaolio kuuluu, voidaan tiedustella sen <code>ParentStructure</code>-ominaisuutta.</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">olio</span><span class="p">.</span><span class="n">ParentStructure</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ukko</span><span class="p">)</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">{</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">   </span><span class="c1">// olio kuuluu ukkoon, tehdään jotain</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>ParentStructure</code> on suora viite fysiikkarakenteeseen, johon olio kuuluu. Jos olio ei kuulu mihinkään rakenteeseen, <code>ParentStructure</code> saa arvon <code>null</code>.</p>
+<div class="language-csharp ignore highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">olio</span><span class="p">.</span><span class="n">ParentStructure</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">{</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">   </span><span class="n">olio</span><span class="p">.</span><span class="n">ParentStructure</span><span class="p">.</span><span class="n">Hit</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Vector</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Yllä oleva esimerkki ensin tarkistaa, kuuluuko olio johonkin rakenteeseen, ja jos kuuluu, lyö koko rakennetta suuntaan (100, 0). Jos tarkistusta ei tehdä ja olio ei kuulu mihinkään rakenteeseen, ohjelma kaatuu <code>NullReferenceException</code>-poikkeukseen (koska yritetään "lyödä tyhjää").</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          <script>var allowed=["Rider","VS Code"];var tabs=(__md_get("__tabs")||[]).filter(function(t){return allowed.indexOf(t)>=0});if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script><script>for(var set of document.querySelectorAll(".tabbed-set")){var labels=[].slice.call(set.querySelectorAll(".tabbed-labels label"));if(labels.some(function(l){return allowed.indexOf(l.innerText.trim())>=0}))continue;for(var input of set.querySelectorAll(":scope > input"))input.addEventListener("change",function(){var label=document.querySelector('label[for="'+this.id+'"]');if(label)label.setAttribute("data-md-switching","")})}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Alatunniste" >
+        
+          
+          <a href="../fysiikan-ilmiot/" class="md-footer__link md-footer__link--prev" aria-label="Edellinen: 6.2 Fysiikan ilmiöt">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Edellinen
+              </span>
+              <div class="md-ellipsis">
+                6.2 Fysiikan ilmiöt
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../aseiden-lisaaminen/" class="md-footer__link md-footer__link--next" aria-label="Seuraava: 6.4 Aseet">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Seuraava
+              </span>
+              <div class="md-ellipsis">
+                6.4 Aseet
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Jypeli-ohjeet &copy; Jyväskylän yliopisto &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fi" rel="license" title="Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen">CC BY-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+
+
+
+
+  
+  
+  
+  
+
+<div class="jyu-footer-links">
+    <a href="https://github.com/ohj-perus-jy/jypelidocs/edit/main/src/fysiikka/liitokset.md" class="md-copyright md-copyright--link" rel="edit" title="Muokkaa tätä sivua GitHubissa">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+      Muokkaa
+    </a>
+    <a href="https://github.com/ohj-perus-jy/jypelidocs/commits/main/src/fysiikka/liitokset.md" class="md-copyright md-copyright--link" title="Sivun muutokset GitHubissa">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5M12 7v5l4 2"/></svg>
+      Muutoshistoria
+    </a>
+  <a href="https://github.com/ohj-perus-jy/jypelidocs/issues/new?template=ilmoita-ongelmasta.yml&amp;url=fysiikka/liitokset.md" class="md-copyright md-copyright--link" title="Avaa issue GitHubissa">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-flag" viewBox="0 0 24 24"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/></svg>
+    Ilmoita ongelma
+  </a>
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.indexes","navigation.footer","content.tabs.link","content.footnote.tooltips","content.tooltips","toc.follow","content.code.copy"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Kopioitu leikepöydälle","clipboard.copy":"Kopioi leikepöydälle","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 lisää tällä sivulla","search.result.more.other":"# lisää tällä sivulla","search.result.none":"Ei täsmääviä dokumentteja","search.result.one":"1 täsmäävä dokumentti","search.result.other":"# täsmäävää dokumenttia","search.result.placeholder":"Kirjoita aloittaaksesi haun","search.result.term.missing":"Puuttuu","select.version":"Valitse versio"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.3cb411a8.min.js"></script>
+      
+        <script src="../../assets/js/tooltips.js"></script>
+      
+        <script src="../../assets/js/nav-scroll.js"></script>
+      
+        <script src="../../assets/js/rail.js"></script>
+      
+        <script src="../../assets/js/toc.js"></script>
+      
+        <script src="../../assets/js/print.js"></script>
+      
+        <script src="../../assets/js/fontmenu.js"></script>
+      
+        <script src="../../assets/js/theme.js"></script>
+      
+        <script src="../../assets/js/sitemenu.js"></script>
+      
+        <script src="../../assets/js/search.js"></script>
+      
+        <script src="../../assets/js/playground.js"></script>
+      
+        <script src="../../assets/js/hidelines.js"></script>
+      
+        <script src="../../assets/js/highlights.js"></script>
+      
+        <script src="../../assets/js/copy.js"></script>
+      
+        <script src="../../assets/js/hints.js"></script>
+      
+        <script src="../../assets/js/asciinema.js"></script>
+      
+        <script src="../../assets/js/walkthrough.js"></script>
+      
+        <script src="../../assets/js/visa.js"></script>
+      
+        <script src="../../assets/js/puhe.js"></script>
+      
+    
+  </body>
+</html>
